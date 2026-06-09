@@ -1,0 +1,132 @@
+/* @theme coursemaker */
+/* Marp theme matching the coursemaker design tokens (Just the Docs palette). */
+
+@import "default";
+
+:root {
+  --cm-primary: #7253ed;
+  --cm-primary-strong: #5739ce;
+  --cm-heading: #27262b;
+  --cm-body: #5c5962;
+  --cm-muted: #706e71;
+  --cm-faint: #959396;
+  --cm-sidebar: #f5f6fa;
+  --cm-border: #eeebee;
+  --cm-purple: #5739ce;
+  --cm-red: #d93c3c;
+  --cm-blue: #2869e6;
+  --cm-green: #10ac7d;
+}
+
+section {
+  background: #ffffff;
+  color: var(--cm-body);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 28px;
+  padding: 60px 70px;
+  line-height: 1.4;
+}
+
+section h1 {
+  color: var(--cm-heading);
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.3em;
+}
+
+section h2 {
+  color: var(--cm-heading);
+  font-weight: 500;
+  font-size: 36px;
+  margin: 0 0 0.5em;
+}
+
+section h3 {
+  color: var(--cm-heading);
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0 0 0.5em;
+}
+
+section a { color: var(--cm-primary); text-decoration: none; border-bottom: 1px solid rgba(114, 83, 237, 0.3); }
+section strong { color: var(--cm-heading); font-weight: 600; }
+section code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  background: var(--cm-sidebar);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+section pre {
+  background: #1c1b1f;
+  color: #f5f6fa;
+  border-radius: 8px;
+  padding: 18px 24px;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 22px;
+  line-height: 1.45;
+}
+section pre code { background: transparent; padding: 0; color: inherit; }
+
+section ul, section ol { padding-left: 1.2em; }
+section li { margin: 0.25em 0; }
+
+/* Title slide */
+section.title {
+  background: linear-gradient(135deg, var(--cm-primary) 0%, var(--cm-primary-strong) 100%);
+  color: #ffffff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 90px;
+}
+section.title h1 { color: #ffffff; font-size: 64px; font-weight: 300; margin-bottom: 0.2em; }
+section.title h2 { color: rgba(255, 255, 255, 0.85); font-weight: 400; font-size: 28px; margin-bottom: 1.5em; }
+section.title .meta { color: rgba(255, 255, 255, 0.7); font-size: 22px; }
+
+/* Section divider */
+section.divider {
+  background: var(--cm-sidebar);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+section.divider h1 {
+  color: var(--cm-primary-strong);
+  font-size: 72px;
+  font-weight: 300;
+}
+
+/* Quote slide */
+section.quote { background: var(--cm-sidebar); }
+section.quote blockquote {
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--cm-heading);
+  border-left: 4px solid var(--cm-primary);
+  padding: 0.25em 0.75em;
+  margin: 0;
+}
+section.quote .attr { color: var(--cm-muted); font-size: 24px; margin-top: 1em; }
+
+/* Footer slide number */
+section::after {
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+  position: absolute;
+  bottom: 24px;
+  right: 32px;
+  font-size: 14px;
+  color: var(--cm-faint);
+}
+
+/* Two-column layout */
+section.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+section.two-col h1 { grid-column: 1 / -1; }
+
+/* Image-right */
+section.image-right { display: grid; grid-template-columns: 3fr 2fr; gap: 32px; align-items: center; }
+section.image-right img { max-width: 100%; border-radius: 8px; }
