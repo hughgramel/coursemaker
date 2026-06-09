@@ -27,7 +27,6 @@ export const config: SiteConfig = {
   footer: {
     lines: [
       "A course website built with coursemaker.",
-      "© 2026 Course staff.",
     ],
   },
 };

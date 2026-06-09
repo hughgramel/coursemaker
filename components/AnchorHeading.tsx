@@ -1,4 +1,3 @@
-import { LinkIcon } from "./icons";
 import { cn } from "@/lib/cn";
 
 interface AnchorHeadingProps {
@@ -11,15 +10,8 @@ interface AnchorHeadingProps {
 export function AnchorHeading({ as, id, className, children }: AnchorHeadingProps) {
   const Tag = as;
   return (
-    <Tag id={id} className={cn("group", className)}>
-      <a
-        href={`#${id}`}
-        className="anchor-heading"
-        aria-label={`Permalink to ${typeof children === "string" ? children : id}`}
-      >
-        <LinkIcon />
-      </a>
-      <span>{children}</span>
+    <Tag id={id} className={cn(className)}>
+      {children}
     </Tag>
   );
 }
