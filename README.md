@@ -1,27 +1,19 @@
+<p align="center">
+  <img src="docs/readme-hero.svg" alt="coursemaker: publishable course websites from one prompt" width="100%">
+</p>
+
 # coursemaker
 
-A template + skill library that generates publishable course websites the
-way UW computer-science classes do them — except the lectures, readings,
-slides, syllabus, calendar, and hero art are produced end-to-end by Claude
-Code from a single topic prompt.
+A Next.js course-site template plus a small library of Claude Code skills that turn a single topic prompt into a publishable course site, end-to-end. One invocation produces the syllabus, ten weeks of lectures + readings + sections + slide PDFs, four assignments + a capstone, a custom SVG hero, a curriculum graph, and a vetted source library, all wired into a checkable Tasks page learners use as their day-to-day driver.
 
-Two things in one repo:
+## What it gives you, in six bullets
 
-1. **A Next.js template** modeled on the "Just the Docs" theme used by UW
-   CSE 457 — sidebar, calendar, syllabus, project handouts, per-week
-   modules with status labels. Every course lives in its own data-driven
-   folder under `content/courses/<slug>/`.
-2. **Three Claude Code skills** that turn a topic prompt into ~90 generated
-   files: a research-vetted curriculum graph, lecture pages, section
-   worksheets, weekly readings (the course's textbook), per-lecture slide
-   PDFs, assignment handouts, and a custom SVG hero — by dispatching one
-   subagent per week and rendering through this template.
-
-Look at [/c/cse457-26sp](https://github.com/hughgramel/coursemaker/tree/main/content/courses/cse457-26sp)
-for a hand-built reference: a recreation of the
-[UW CSE 457 Spring 2026 site](https://courses.cs.washington.edu/courses/cse457/26sp/).
-The week-1 reading at `/c/cse457-26sp/readings/wk01-affine` is the shape
-every generated reading takes.
+- **One prompt, a finished course.** `pnpm dev` and you're already serving the new course at `/c/<slug>` with calendar, lectures, readings, slides, assignments, and a Tasks tracker.
+- **Backward-designed pedagogy.** Every week declares Bloom-tagged outcomes (Apply / Analyze / Evaluate / Create); the synthesis week always ends on a Create. Lectures, sections, readings, and exercises are required to deliver at least one outcome each.
+- **Readings are the textbook.** No external book to buy. Each week's reading is original writing in TSX, cited from a vetted primary-source library (founder essays, operator newsletters, university course notes, recorded talks, books on the author's own page, platform docs; academic papers only as fallback).
+- **Daily working rhythm baked in.** Each week has a 5-weekday × 4-slot grid (morning growth move, customer hour, build block, measure + reflect), plus weekly planning, Friday review, and a mid-course pivot/persevere check. The skill steers against the build-build-build trap on every page.
+- **A Tasks page learners actually use.** Every reading, slide deck, section, milestone, and assignment becomes a circular checkbox; progress persists in `localStorage`; checked rows go to 45% opacity with strike-through; per-week and overall progress meters render in real time.
+- **Honest defaults, no placeholder fakery.** No invented instructor names, office hours, meeting times, classroom locations, Discord URLs, or grading percentages; the syllabus is a high-level roadmap, not a fake contract. The user fills the real specifics before the term begins.
 
 ## Quickstart
 
@@ -36,244 +28,156 @@ Have Claude Code build a whole course end-to-end:
 /coursemaker-create Make a 10-week course on modern cryptography for CS sophomores.
 ```
 
-That single invocation produces all of the following:
-
-| Artifact | Count (10-week course) |
-|----------|------:|
-| Curriculum graph + source library JSON | 2 |
-| Hero SVG | 1 |
-| Syllabus page | 1 |
-| Lecture pages (TSX) | 20 |
-| Section worksheets (TSX) | 10 |
-| Reading pages (TSX, the textbook) | 10 |
-| Slide decks (Marp `.md`) | 20 |
-| Slide PDFs (rendered) | 20 |
-| Assignment handouts (TSX) | ~5 |
-| Calendar wiring + page registry | 1 |
-| Local commit + push to `origin/main` | 1 |
-
-The skill pauses for your sign-off **twice** before any heavy fan-out runs
-— once on the curriculum graph, once on the source library — so the whole
-pipeline stays grounded in stuff you've actually approved.
-
-If you prefer to scaffold manually:
+Or scaffold an empty course you'll author by hand:
 
 ```bash
-pnpm new-course \
-  --slug intro-crypto-26au \
-  --title "Crypto 101" \
-  --full-title "Cryptography 101" \
+pnpm new-course --slug my-course-26au \
+  --title "My Course" \
+  --full-title "My Course: a one-quarter introduction" \
   --term "Autumn 2026" \
   --weeks 10
 ```
 
-## How the create skill runs
+Reference course sites already in the repo:
 
-Eleven steps. The skill file is at
-`.claude/skills/coursemaker-create/SKILL.md`; Claude reads it and executes
-each step in order when you invoke `/coursemaker-create <topic>`.
+- `/c/b2c-10k-mrr-26au`, 10-week B2C → $10k MRR (the canonical reference for the full skill output)
+- `/c/grow-on-x-26au`, 6-week creator-growth course (same patterns at 6 weeks)
+- `/c/cse457-26sp`, hand-built recreation of an undergrad CS course site (the visual reference)
 
-1. **Lock parameters** — slug, title, term, weeks. Write
-   `tmp/coursemaker/<slug>-brief.json`.
-2. **Build the curriculum graph** — 5 phases (Foundations → Core
-   mechanics → Composition → Frontier → Synthesis), concept-level
-   `depends_on` / `introduces` per week. Coherence-checked: no forward
-   references, no duplicates.
-   - **You sign off** before continuing.
-3. **Research pass** — collect every concept id, WebSearch + WebFetch
-   primary sources, verify URLs, record `author / year / host_kind /
-   summary / key_quote / informs_weeks / informs_concepts`. Save to
-   `tmp/coursemaker/<slug>-sources.json`. The rubric: *primary* means
-   authored, dated, hosted by author or canonical venue, written by a
-   practitioner with domain authority. For startup courses, Paul Graham
-   essays count. For crypto, NIST RFCs. For systems, Stripe engineering
-   blogs.
-   - **You sign off** before continuing.
-4. **Scaffold the course** via `pnpm new-course`.
-5. **Commission the hero SVG** — one subagent, 1200×400 viewBox, static,
-   1-2 colors from the coursemaker palette.
-6. **Draft the syllabus** — `SyllabusPage` with grading / late policy /
-   AI policy / "weekly readings ARE the textbook" note.
-7. **Fan out one subagent per week** in parallel. Each writes 6 files:
-   2 lecture pages, 1 section page, 2 Marp decks, 1 reading page. Each
-   receives the slice of `sources.json` tagged with its week's concepts
-   and is constrained to cite only from that slice.
-8. **Fan out assignment subagents** in parallel — 4-5 across the quarter
-   using `ProjectPage`.
-9. **Build the slides** — `pnpm slides <slug>` renders every `.md` to PDF
-   via Marp.
-10. **Consolidate** — master rewrites `index.tsx` to register every
-    page; rewrites `pages/home.tsx` so its calendar uses `WeekModule`
-    with links to every reading, lecture, slide PDF, and section.
-11. **Verify, commit, push** — `pnpm typecheck && pnpm build`, then
-    `git add` + `git commit` + `git push origin main`.
+## What every generated course contains
 
-Total wall-clock: typically 20-40 minutes, mostly bound by the parallel
-subagent fan-out and the one-time Chromium download on first
-`pnpm slides`.
+| Artifact | Count (10-week course) |
+|----------|---:|
+| Curriculum graph + source library JSON | 2 |
+| Hero SVG | 1 |
+| Syllabus page (high-level roadmap) | 1 |
+| Tasks page (localStorage-backed checklist) | 1 |
+| Index pages (Lectures / Sections / Readings / Assignments) | 4 |
+| Lecture pages (TSX) | 20 |
+| Section worksheets (TSX) | 10 |
+| Reading pages (TSX, the textbook) | 10 |
+| Slide decks (Marp `.md` source) | 20 |
+| Slide PDFs (rendered) | 20 |
+| Assignment handouts (TSX, HW1-4 + Capstone) | 5 |
+| Staff page (generic, no real names) | 1 |
+
+Total: roughly 75 files per course, plus the JSON metadata used for re-runs.
+
+## Pedagogy
+
+The skill encodes opinionated pedagogy the way a senior instructor would. The most load-bearing ideas:
+
+### Backward design with Bloom verbs
+
+Every week in the curriculum graph declares an `outcomes` array, each entry a `{verb, statement}` pair drawn from the revised Bloom taxonomy (Remember, Understand, Apply, Analyze, Evaluate, Create). Coherence checks enforce that every week has at least one Apply-or-higher outcome and that the Synthesis week has at least one Create. Subagents are told to ensure every lecture, section, reading, or exercise delivers at least one of these.
+
+### Curriculum coherence
+
+Every concept the course teaches gets a kebab-case id. Each week declares `introduces` (new ids) and `depends_on` (prior ids). Before fan-out, the master skill verifies that every `depends_on` id appears in some earlier `introduces`, no forward references. Subagents see only the prior-week concept set plus their week's `introduces`, so they can't accidentally use a concept the learner hasn't met.
+
+### Primary sources, not vibes
+
+A dedicated research pass runs before any week is written. The author hunts for primary sources by field (YouTube channels with named authority for the topic, practitioner essays, operator newsletters, free online textbooks, primary documents), URL-verifies each one, and assembles `tmp/coursemaker/<slug>-sources.json`. The user signs off on the source library before fan-out. Per-week subagents see only the source slice tagged for their week; they cannot hallucinate a source mid-flight.
+
+### Daily working rhythm
+
+Every reading begins with the week's mission (one sentence), learning goals, milestones, metrics to track, and a 5-weekday × 4-slot daily routine table. The four slots are fixed across the whole course: morning growth move (~30 min, includes the daily public output), customer hour (~60 min), build block (~3–4 h, doesn't open until the first two are done), and end-of-day measure + reflect (~15 min). Plus a Sunday weekly plan, a 5-minute daily plan, and a Friday review.
+
+### Public output as a course-tracked metric
+
+For applied / practitioner courses, the rhythm includes a daily public-output mandate: every weekday, one piece of public output (tweet, LinkedIn post, Reddit comment, IH update, TikTok, YT short, blog draft, community post), anything in front of an audience that isn't you. The target is course-tracked (50+ outputs by end of a 10-week course).
+
+### Generated readings, no external textbook
+
+The course's "required reading" is the weekly readings on the site itself. No external book is pushed on the student. Optional "going deeper" pointers link out to canonical books and longer essays, but they are clearly optional.
+
+## How a course gets built
+
+`/coursemaker-create <topic>` runs the master orchestrator. Sketch:
+
+1. **Lock parameters.** Slug, full title, term, weeks (default 10), audience, prerequisites, emphasis, goals. Saved to `tmp/coursemaker/<slug>-brief.json`.
+2. **Build the curriculum graph.** Phases (Foundations / Core mechanics / Composition / Frontier / Synthesis), week themes, Bloom-tagged outcomes, milestones, `introduces` / `depends_on` ids. The master shows the user a prose summary for sign-off. Saved to `tmp/coursemaker/<slug>-curriculum.json`.
+3. **Research pass.** WebSearch + WebFetch a vetted source library; show prose summary; user signs off. Saved to `tmp/coursemaker/<slug>-sources.json`.
+4. **Scaffold the site.** `pnpm new-course --slug <slug> ...` plus the master writes the syllabus, hero SVG, staff page, four index pages, and the Tasks page.
+5. **Fan out per-week subagents (parallel).** One subagent per week writes six files: 2 lecture pages, 1 section worksheet, 2 Marp slide decks, 1 reading page. Plus one subagent per assignment (HW1–4 + Capstone) writes a `ProjectSpec`.
+6. **Render slides.** `pnpm slides <slug>` builds all PDFs to `public/c/<slug>/slides/`.
+7. **Consolidate `index.tsx`.** Master registers every page. Subagents never edit `index.tsx`.
+8. **Rewrite the calendar.** Home page uses `WeekModule` (CSE-457-style dt/dd modules), not a wide schedule table.
+9. **Verify.** `pnpm typecheck && pnpm build`. Click through `/c/<slug>` and check the Tasks page renders, every link resolves, the calendar reaches every artifact.
+10. **Commit (but don't push).** Pushing is the user's call.
+
+## Repo structure
+
+```
+content/courses/                Each course lives here as data + components.
+  <slug>/
+    course.config.ts            SiteConfig: nav, hero, footer, slug, term.
+    index.tsx                   Page registry. Built by the master orchestrator.
+    pages/
+      home.tsx                  Calendar (WeekModule) + course intro.
+      syllabus.tsx              High-level roadmap. Custom JSX.
+      tasks.tsx                 localStorage-backed checklist (use client).
+      staff.tsx                 Generic role description. No real names.
+      lectures-index.tsx        Table view of every lecture (or lectures.tsx).
+      sections-index.tsx        Table view of every section.
+      readings-index.tsx        Table view of every reading.
+      hw-index.tsx              Table view of every assignment.
+      lectures/wkNN-l{1,2}.tsx  Per-lecture page.
+      sections/wkNN.tsx         Per-section worksheet.
+      readings/wkNN.tsx         Per-week reading (the textbook).
+      hw/{1,2,3,4,capstone}.tsx Per-assignment ProjectPage.
+    slides/wkNN-l{1,2}.md       Marp deck source.
+
+public/c/<slug>/
+  hero.svg                      Course hero art.
+  slides/wkNN-l{1,2}.pdf        Rendered slide PDFs.
+
+components/                     Shared UI primitives. AnchorHeading,
+                                WeekModule, Label, LecturePage, ProjectPage.
+
+types/course.ts                 The data contracts: SiteConfig, NavItem,
+                                CoursePage, LectureSpec, ProjectSpec, etc.
+
+scripts/
+  new-course.mjs                Scaffolder. Creates a course folder + stub
+                                files + registers in content/courses/index.tsx.
+  build-slides.mjs              Runs Marp to render all slide decks for a
+                                course to PDF.
+
+.claude/skills/                 The orchestration logic.
+  coursemaker-create/SKILL.md   The master end-to-end skill.
+  coursemaker-slides/SKILL.md   Per-lecture deck author.
+  coursemaker-readings/SKILL.md Per-week reading author.
+
+tmp/coursemaker/                Generated metadata: brief / curriculum /
+                                sources JSON per course. Used for re-runs.
+```
+
+## Sidebar and visual conventions
+
+- **Flat sidebar, no dropdowns.** Every top-level nav item lands on a real page. Clicking "Lectures" goes to the lectures index (a clean table), not an expanded tree. The skill explicitly disallows the `children` field on nav items.
+- **No anchor link icons.** Headings keep their `id`s for fragment deep-linking but render no `<a>` chain icon next to the text.
+- **No search bar in the header.** The header was removed; pages still export a `searchBody` text blob for future use.
+- **Tasks page is flat.** Circular SVG checkboxes, bold-uppercase small group headers (Reading / Slides / Section / Milestones / Assignments), week titles at font-weight 800, no left borders or side shadows. Checked items go to 45% opacity with strike-through.
 
 ## Skills
 
 ### `/coursemaker-create <topic>`
 
-Master orchestrator (above). Defaults to 10 weeks; override with
-`--weeks <N>` (6–12). No required external textbook — the per-week
-readings ARE the textbook. Pedagogy follows the `/teach` overlay
-(mission, ZPD, one-thing-per-lesson, cite-as-you-go, feedback loops).
+The end-to-end orchestrator described above. Detail and step-by-step are in `.claude/skills/coursemaker-create/SKILL.md`.
 
 ### `/coursemaker-slides <course> <lecture>`
 
-Writes one Marp slide deck for a single lecture using
-`themes/coursemaker.css`, renders to PDF. Used directly and as a
-sub-procedure by the create skill's per-week subagents.
+Build (or rebuild) a single Marp deck for one lecture in the coursemaker theme. Reads the curriculum row + source slice for that lecture, drafts the deck, renders to PDF.
 
 ### `/coursemaker-readings <course> <week>`
 
-Writes the week's reading as a TSX page — an original 2,000–3,500-word
-textbook chapter using the `<ReadingPage>` primitives (framing,
-sections, exercises, callouts, takeaways, bibliography). Renders at
-`/c/<slug>/readings/<name>`. Typography: Source Serif 4 body at 18px /
-1.65 in a 38rem measure, sans headings, no card chrome. Looks like a
-real textbook page.
-
-## Architecture
-
-```
-.
-├─ app/
-│  ├─ page.tsx                       # course directory
-│  ├─ design/                        # design library showing all primitives
-│  ├─ template/                      # how-to + Claude prompt
-│  └─ c/[course]/[[...slug]]/        # per-course dynamic route
-├─ components/
-│  ├─ Sidebar.tsx, SearchBar.tsx, MainLayout.tsx
-│  ├─ Hero.tsx                       # renders the per-course SVG
-│  ├─ AnchorHeading.tsx, Label.tsx, WeekModule.tsx
-│  ├─ SyllabusPage.tsx               # canonical UW syllabus layout
-│  ├─ ReadingPage.tsx                # ReadingPage + Framing + Exercise + ...
-│  ├─ ProjectPage.tsx                # canonical project handout
-│  ├─ LecturePage.tsx, StaffList.tsx
-│  └─ icons.tsx
-├─ content/courses/
-│  ├─ index.tsx                      # registry with marker comments
-│  └─ cse457-26sp/                   # example course
-│     ├─ course.config.ts            # SiteConfig
-│     ├─ index.tsx                   # page list
-│     ├─ pages/                      # React renderers
-│     │  └─ readings/                # weekly textbook chapters (TSX)
-│     └─ slides/                     # Marp .md decks → PDFs
-├─ types/course.ts                   # all data shapes
-├─ themes/
-│  └─ coursemaker.css                # Marp theme (slides)
-├─ scripts/
-│  ├─ new-course.mjs                 # scaffolder (--weeks N)
-│  └─ build-slides.mjs               # Marp .md → PDF
-├─ tmp/coursemaker/                  # curriculum + sources JSON, per course
-├─ docs/research/                    # UW patterns, design references
-└─ .claude/skills/
-   ├─ coursemaker-create/SKILL.md    # master orchestrator
-   ├─ coursemaker-slides/SKILL.md    # per-lecture deck author
-   └─ coursemaker-readings/SKILL.md  # per-week reading author
-```
-
-## Curriculum shape (five phases, locked)
-
-A course has **10 weeks of instruction** by default (override
-`--weeks 6..12`). Every curriculum the master builds uses the same five
-phases:
-
-| Phase | Weeks (10-week default) | Job |
-|-------|------------------------|-----|
-| Foundations | 1-2 | Vocabulary + mental models. Smallest building blocks. |
-| Core mechanics | 3-5 | The 2-3 essential techniques the rest depends on. |
-| Composition | 6-7 | How the core pieces combine into real systems. |
-| Frontier | 8-9 | Modern variants, edge cases, where the field is now. |
-| Synthesis | 10 | Capstone project demo + review. |
-
-Each week declares `depends_on: [concept-ids]` and `introduces: [...]`.
-The coherence check runs before fan-out: every concept used in week N
-must be introduced in some week M < N. You sign off on the curriculum
-graph before any subagent runs.
-
-The graph lives at `tmp/coursemaker/<slug>-curriculum.json` so you can
-edit and re-run.
-
-## Source rubric
-
-Primary sources are *authored, dated, hosted by author or canonical
-venue, written by a practitioner with domain authority.* By field:
-
-| Field | Canonical sources |
-|-------|-------------------|
-| ML / AI / theoretical CS | arXiv, NeurIPS/ICML/ICLR, distill.pub, Berkeley/Stanford/MIT notes, Goodfellow/Bishop/Murphy |
-| Systems engineering | USENIX, Stripe/Vercel/Notion/Google engineering blogs, conference talks, RFC drafts |
-| Cryptography | Boneh & Shoup, Katz & Lindell, CRYPTO/EUROCRYPT, IETF RFCs |
-| Programming languages | TC39 proposals, Rust RFCs, language designer essays, POPL/ICFP papers |
-| Startups | paulgraham.com, founder essays (Patrick Collison, DHH, Sam Altman), YC essays, a16z/USV |
-| Design / UX | Don Norman, Tufte, Refactoring UI, Nielsen Norman Group, Bringhurst |
-| History | Primary documents, peer-reviewed history journals, archived letters |
-| Economics | NBER/SSRN, key books, FRED data, central-bank speeches |
-| Music / art theory | Schenker, Schoenberg, Berklee notes, Open Music Theory |
-
-Rejected: Wikipedia, Medium spam, anonymous content, undated content,
-aggregator clickbait, other LLMs' summaries of papers.
-
-## Slide decks
-
-Authored as Marp Markdown under `content/courses/<slug>/slides/<name>.md`
-with the `coursemaker` theme.
-
-```bash
-pnpm slides                       # build all
-pnpm slides cse457-26sp           # one course
-pnpm slides cse457-26sp wk01      # one deck
-```
-
-PDFs land in `public/c/<slug>/slides/<name>.pdf`.
-
-> **First-run note.** `pnpm slides` runs via `pnpm dlx`. The first
-> invocation downloads `marp-cli` plus a headless Chromium (~150 MB,
-> 1-2 min). Subsequent runs are 2-4 s per deck.
-
-## Reading pages (the generated textbook, as web pages)
-
-Each week has one reading — an original textbook chapter authored by the
-create skill's per-week subagent as a TSX page. Body in Source Serif 4
-at a 38rem measure, sans headings, no card chrome — looks like Marschner
-& Shirley, not a vibe-coded shadcn dashboard.
-
-Source: `content/courses/<slug>/pages/readings/wkNN.tsx`
-Renders at: `/c/<slug>/readings/wkNN`
-
-Authored using the `<ReadingPage>` primitives in
-`components/ReadingPage.tsx` — `ReadingFraming`, `Exercise`, `Callout`,
-`Takeaways`, `Bibliography`. No PDF pipeline; students who want paper
-use the browser's Cmd-P → Save as PDF.
-
-The example `cse457-26sp/pages/readings/wk01-affine.tsx` shows the
-canonical structure (framing → numbered body sections → worked example
-→ exercises → going deeper → takeaways → bibliography).
-
-## Routes
-
-| Route | What |
-|-------|------|
-| `/` | Course directory |
-| `/c/<slug>` | Course home |
-| `/c/<slug>/<page>` | Course inner page (lecture, section, reading, project) |
-| `/design` | Design library (tokens, type, components) |
-| `/template` | Creator guide + Claude prompt |
-
-## Reference
-
-- [`docs/research/UW_COURSE_PATTERNS.md`](docs/research/UW_COURSE_PATTERNS.md) — patterns extracted from CSE 444 / 446 / 457 / 344
-- [`CREATING_COURSES.md`](CREATING_COURSES.md) — manual / CLI flow
+Write (or rewrite) a single week's reading page. Used both inside the fan-out and standalone if a reading needs a redo.
 
 ## Stack
 
-Next.js 16 (App Router, Turbopack) · React 19 · Tailwind v4 · TypeScript ·
-Source Serif 4 (readings) · Marp (slides only) · No backend.
+Next.js 16 (App Router, Turbopack) · React 19 · Tailwind v4 · TypeScript strict · Marp CLI for slide PDFs · Plus Jakarta Sans (system fallback) · pnpm.
 
 ## License
 
-MIT
+MIT.
