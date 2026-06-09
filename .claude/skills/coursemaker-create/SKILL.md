@@ -548,6 +548,20 @@ Every artifact this skill produces should follow these:
   section ends with a worksheet + solutions. Every reading ends with 3-5
   exercises.
 
+## Global prose rules (every subagent must follow)
+
+- **No em dashes (—).** Em dashes are the strongest AI tell in
+  long-form prose. Use periods, commas, parentheses, or colons. En
+  dashes for ranges (`weeks 3-5`) are fine; only the em dash is banned.
+  Applies in lecture pages, readings, slides, syllabus, project
+  handouts, and the calendar. Skim every authored file for em dash
+  characters before reporting back.
+- **No emoji.**
+- **Sentence case headings.** "Composition order matters", not
+  "Composition Order Matters".
+- **Voice: textbook-calm.** Declarative, authoritative, never
+  apologetic. Match Marschner and Shirley or Bishop's ML book.
+
 ## Common failure modes
 
 - **Topic too broad.** "Make a course on math." Ask for narrowing first.

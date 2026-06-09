@@ -73,6 +73,10 @@ paginate: true
 - **Headings:** sentence case, not title case. "Affine transformations" not
   "Affine Transformations".
 - **No emoji.** Inherit the calm UW typographic style.
+- **No em dashes (—) anywhere.** Em dashes are an AI tell; readers spot
+  them immediately. Use periods, commas, parentheses, or colons instead.
+  En dashes are fine for ranges (`weeks 3–5`). Applies in slide titles,
+  bullets, the title slide, take-aways, and quote attributions.
 - **At most one image per slide.** Place under `public/c/<slug>/slides/img/`
   so the relative paths work after PDF render.
 - **Code blocks:** dark slate background (set by theme). Keep them under 12
