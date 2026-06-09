@@ -12,6 +12,7 @@ import {
 } from "./pages/projects";
 import { LabsPage, labsSearchBody } from "./pages/labs";
 import { ArtifactWinnersPage, artifactWinnersSearchBody } from "./pages/artifact-winners";
+import { Wk01Reading, wk01ReadingSearchBody } from "./pages/readings/wk01-affine";
 
 export const course: Course = {
   config,
@@ -26,5 +27,6 @@ export const course: Course = {
     { segments: ["project", "artifact"], title: "Project 5 Artifact", render: () => <ArtifactPage /> },
     { segments: ["labs"], title: "Lab Resources", searchBody: labsSearchBody, render: () => <LabsPage /> },
     { segments: ["artifact-winners"], title: "Artifact Winners", searchBody: artifactWinnersSearchBody, render: () => <ArtifactWinnersPage /> },
+    { segments: ["readings", "wk01-affine"], title: "Week 1 — Affine transformations", searchBody: wk01ReadingSearchBody, render: () => <Wk01Reading /> },
   ],
 };

@@ -9,7 +9,6 @@
     "lint": "eslint",
     "new-course": "node scripts/new-course.mjs",
     "slides": "node scripts/build-slides.mjs",
-    "readings": "node scripts/build-readings.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

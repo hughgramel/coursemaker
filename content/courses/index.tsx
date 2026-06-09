@@ -9,6 +9,7 @@ import { course as cse457_26sp } from "./cse457-26sp";
 
 // COURSEMAKER:REGISTRY_START — do not delete this marker.
 export const courses: Course[] = [
+  cse457_26sp,
 ];
 // COURSEMAKER:REGISTRY_END — do not delete this marker.
 

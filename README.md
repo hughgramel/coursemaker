@@ -97,6 +97,7 @@ course has no external textbook; these readings are it.
 │  ├─ Hero.tsx                       # renders the per-course SVG
 │  ├─ AnchorHeading.tsx, Label.tsx, WeekModule.tsx
 │  ├─ SyllabusPage.tsx               # canonical UW syllabus layout
+│  ├─ ReadingPage.tsx                # ReadingPage + Exercise + Takeaways + ...
 │  ├─ ProjectPage.tsx                # canonical project handout
 │  ├─ LecturePage.tsx, StaffList.tsx
 │  └─ icons.tsx
@@ -106,16 +107,14 @@ course has no external textbook; these readings are it.
 │     ├─ course.config.ts            # SiteConfig
 │     ├─ index.tsx                   # page list
 │     ├─ pages/                      # React renderers for each page
-│     ├─ slides/                     # Marp .md decks → PDFs
-│     └─ readings/                   # weekly textbook chapters → PDFs
+│     │   └─ readings/                # weekly readings (TSX, not PDFs)
+│     └─ slides/                     # Marp .md decks → PDFs (only PDFs)
 ├─ types/course.ts                   # all data shapes
 ├─ themes/
-│  ├─ coursemaker.css                # Marp theme (slides)
-│  └─ coursemaker-reading.css        # md-to-pdf print theme (readings)
+│  └─ coursemaker.css                # Marp theme (slides)
 ├─ scripts/
 │  ├─ new-course.mjs                 # scaffolder (--weeks N)
-│  ├─ build-slides.mjs               # Marp .md → PDF
-│  └─ build-readings.mjs             # md-to-pdf → PDF
+│  └─ build-slides.mjs               # Marp .md → PDF
 ├─ docs/research/                    # behavior + topology + UW patterns
 └─ .claude/skills/
    ├─ coursemaker-create/SKILL.md    # master orchestrator
@@ -136,28 +135,27 @@ pnpm slides cse457-26sp wk01      # one deck
 
 PDFs land in `public/c/<slug>/slides/<name>.pdf`.
 
-## Reading PDFs (the generated textbook)
+## Readings (the generated textbook, as web pages)
 
-Each week has one reading handout — an original 4-8 page textbook
-chapter authored by the create skill's per-week subagent. Source under
-`content/courses/<slug>/readings/wkNN.md`, theme
-`themes/coursemaker-reading.css`.
+Each week has one reading — an original 2,000–3,500-word textbook
+chapter authored by the create skill's per-week subagent as a TSX page.
 
-```bash
-pnpm readings                     # build all
-pnpm readings cse457-26sp         # one course
-pnpm readings cse457-26sp wk01    # one reading
-```
+Source: `content/courses/<slug>/pages/readings/wkNN.tsx`
+Renders at: `/c/<slug>/readings/wkNN`
 
-PDFs land in `public/c/<slug>/readings/<name>.pdf`. The example
-`cse457-26sp/readings/wk01-affine.md` shows the canonical structure
-(framing → numbered body sections → worked example → exercises → going
-deeper → take-aways).
+Authored using the `<ReadingPage>` primitives in
+`components/ReadingPage.tsx` — `ReadingFraming`, `Exercise`, `Callout`,
+`Takeaways`, `Bibliography`. Same prose typography as every other page,
+same routing, same search index. No PDF pipeline; students who want
+paper use the browser's Cmd-P → Save as PDF.
 
-> **First-run note.** `pnpm slides` and `pnpm readings` both run via
-> `pnpm dlx`. The first run downloads `marp-cli` + `md-to-pdf` and a
-> headless Chromium (~200 MB total, ~2 min). Subsequent runs are 2-4 s
-> per file.
+The example `cse457-26sp/pages/readings/wk01-affine.tsx` shows the
+canonical structure (framing → numbered body sections → worked example
+→ exercises → going deeper → takeaways → bibliography).
+
+> **First-run note for slides.** `pnpm slides` runs via `pnpm dlx`. The
+> first invocation downloads `marp-cli` plus a headless Chromium
+> (~150 MB, ~1-2 min). Subsequent runs are 2-4s per deck.
 
 ## Weeks & curriculum shape
 
@@ -214,7 +212,7 @@ export function Syllabus() { return <SyllabusPage spec={spec} />; }
 ## Stack
 
 Next.js 16 (App Router, Turbopack) · React 19 · Tailwind v4 · TypeScript ·
-Marp (slides) · md-to-pdf (readings) · No backend.
+Marp (slides only) · No backend. Readings are first-class pages.
 
 ## License
 

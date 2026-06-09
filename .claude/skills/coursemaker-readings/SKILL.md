@@ -1,159 +1,210 @@
 ---
 name: coursemaker-readings
-description: Author a per-week reading handout (the "textbook" the course generates for itself) and render it to a styled PDF. Use when the user says "make the reading for week N of <course>", "write the week N primer", or when coursemaker-create fans out to per-week reading generation.
+description: Author a per-week reading page (the "textbook chapter" the course generates for itself) as a TSX page in this Next.js app. Renders at /c/<slug>/readings/<name>. Use when the user says "make the reading for week N of <course>", "write the week N primer", or when coursemaker-create fans out to per-week reading generation.
 ---
 
-# coursemaker-readings — original course-textbook chapters
+# coursemaker-readings — original course-textbook chapters (web pages, not PDFs)
 
-This skill produces **one reading handout per week**, rendered to a styled
-PDF using `themes/coursemaker-reading.css`. These readings are the
-course's textbook — they are *original writing*, not curated chapters
-from someone else's book. The course has no required textbook; the
-readings ARE the required reading.
+This skill produces **one reading page per week** as a TSX page in this
+Next.js app. The reading IS a webpage — same layout, same typography,
+same routing as every other course page. There is no PDF pipeline. If a
+student wants a PDF they can `Cmd-P → Save as PDF` in their browser.
+
+The course has **no required external textbook**. These weekly readings
+are the textbook — original writing, not curated chapters from someone
+else's book.
 
 ## When to use
 
-- The user asks for a reading / handout / primer for a specific week.
-- The master `coursemaker-create` skill fans out per-week sub-agents and
+- User asks for a reading / handout / primer for a specific week.
+- The master `coursemaker-create` skill fans out per-week subagents and
   one of those needs to write the week's reading.
 - An author wants to add a primer beyond the slide deck for one lecture.
 
 ## Inputs (must have)
 
 - **Course slug** (e.g. `cse457-26sp`).
-- **Filename** (e.g. `wk01-affine.md`) — kebab-case, `wkNN-<topic>`.
+- **Filename** (e.g. `wk01-affine.tsx`) — kebab-case, `wkNN-<topic>`.
 - **Week scope** — the row from the curriculum graph: theme, lectures,
   prerequisites (concepts already taught), introduces (new concepts).
 - **Pedagogical level** — undergrad intro vs. graduate seminar.
-- **Length target** — 4–8 printed pages is the default sweet spot.
+- **Length target** — roughly 2,000–3,500 words. Renders as a 4-8
+  printed page when the browser prints to PDF.
 
 ## What you produce
 
-A single Markdown file at
-`content/courses/<slug>/readings/<filename>.md` that renders to a PDF at
-`public/c/<slug>/readings/<filename>.pdf` via `pnpm readings`.
+ONE file:
+`content/courses/<slug>/pages/readings/<filename>.tsx`
 
-### Structure (every reading follows this skeleton)
+The component exports a function (e.g. `Wk01Reading`) and a string
+`<wkNN>ReadingSearchBody` for the search index. Both must be registered
+in `content/courses/<slug>/index.tsx` — append a line under the existing
+`pages` array.
 
-1. **H1: Week N — Topic.** Always this format.
-2. **Course / term / "Reading" line.** Renders as a kicker under the H1
-   (the CSS styles the paragraph immediately after H1 as a kicker).
-3. **"What this reading covers"** section.
-   - One paragraph framing what the learner will be able to do after.
-   - One paragraph declaring **Prerequisites assumed** (named concepts
-     from earlier weeks).
-4. **Numbered body sections** (H2: `1. …`, `2. …`).
-   - Build up the idea from first principles.
-   - Use small examples, not large ones — one figure per section is fine,
-     but most sections are pure prose + the occasional code block.
-   - Insert one blockquote per reading for a key definition or quote
-     ("A definition.", "An identity.", etc.).
-5. **Worked example.** A complete walk-through tying earlier sections
-   together. One full numerical example, with the matrices/equations
-   spelled out, not just described.
-6. **Exercises.** 3-5 problems, each wrapped in `<div class="exercise">`
-   so they don't break across pages. Use a hidden "key" exercise marked
-   "Try this first" if you want to scaffold.
-7. **Going deeper.** Pointers to the section worksheet, next lecture,
-   and the relevant project — internal references, NOT external books.
-8. **Take-aways.** 3-5 numbered points. Echoes the framing in §1.
-9. **(Optional) Bibliography.** A small `<div class="bibliography">`
-   block at the end. Only used if external references are mentioned;
-   don't fabricate citations.
+### Structure (every reading uses these primitives)
+
+```tsx
+import { AnchorHeading } from "@/components/AnchorHeading";
+import {
+  ReadingPage, ReadingFraming, Exercise, Takeaways, Bibliography, Callout,
+} from "@/components/ReadingPage";
+
+export function Wk01Reading() {
+  return (
+    <ReadingPage
+      id="wk01-affine"
+      title="Week 1 — Topic"
+      kicker="<Course code> <Course name> · <Term> · Reading"
+    >
+      <ReadingFraming>
+        <p>What this reading covers — concrete capability the learner will gain.</p>
+        <p><strong>Prerequisites assumed.</strong> Named concepts from earlier weeks.</p>
+      </ReadingFraming>
+
+      <AnchorHeading as="h2" id="1-section">1. First section</AnchorHeading>
+      <p>...</p>
+
+      <Callout title="A definition">
+        <p>Optional inline aside for a key definition or warning.</p>
+      </Callout>
+
+      <AnchorHeading as="h2" id="exercises">7. Exercises</AnchorHeading>
+      <Exercise n={1}>
+        <p>Question goes here.</p>
+      </Exercise>
+
+      <AnchorHeading as="h2" id="going-deeper">8. Going deeper</AnchorHeading>
+      <ul>
+        <li>Section worksheet</li>
+        <li>Next lecture</li>
+        <li>Related project</li>
+      </ul>
+
+      <Takeaways>
+        <li>One sentence per take-away. 3-5 total.</li>
+      </Takeaways>
+
+      <Bibliography>
+        <p>Optional. Hanging-indent prose references.</p>
+      </Bibliography>
+    </ReadingPage>
+  );
+}
+
+export const wk01ReadingSearchBody =
+  "Comma-separated index terms used by the in-app search...";
+```
+
+### Required structure, in order
+
+1. **`<ReadingPage>` wrapper** with `title`, `id`, `kicker`.
+2. **`<ReadingFraming>`** containing two paragraphs:
+   - "What this reading covers" — outcome framing.
+   - "Prerequisites assumed." — named concepts from the curriculum graph.
+3. **Numbered body sections.** H2 anchors `1. …`, `2. …`, etc.
+   - Each section teaches one idea. Build from first principles.
+   - Use small code blocks for matrices, equations, pseudo-code.
+   - At most ONE `<Callout>` per reading.
+4. **Worked example.** A full numerical walk-through, not a paraphrase.
+   Spell out the matrices / equations in `<pre>` blocks.
+5. **Exercises.** 3-5 `<Exercise>` blocks. Each block is self-contained
+   and answerable from the reading alone.
+6. **Going deeper.** Internal pointers ONLY — section worksheet, next
+   lecture, related project. Do NOT recommend external books unless the
+   syllabus explicitly assigns them.
+7. **`<Takeaways>`.** 3-5 numbered items. Echoes the framing in §1.
+8. **`<Bibliography>`** (optional). Only if you cite external references
+   you actually consulted.
 
 ### Style rules
 
-- **Voice: textbook-calm.** Not "tutorial-chirpy." Sentences declarative,
-  authoritative, never apologetic. Match the prose style of
-  Marschner & Shirley or the Bishop ML book.
-- **No emoji. No tables of contents at the top.** The H1 + section
-  numbers do all the orienting.
-- **Sentence case headings.** "Composition order matters", not
+- **Voice: textbook-calm.** Authoritative, declarative, never apologetic.
+  Match Marschner & Shirley or the Bishop ML book.
+- **Sentence case headings.** "Composition order matters" not
   "Composition Order Matters".
-- **Math in plain text or code blocks.** This pipeline uses Puppeteer to
-  print HTML, not MathJax. Render equations as monospace code blocks
-  with the matrix written out in ASCII, exactly like the example deck.
-  Don't try `$inline math$` — it won't typeset.
-- **Code blocks** are for matrices, equations, pseudo-code, and short
-  programs. Keep under 14 lines.
-- **Inline `code`** for symbols (`p`, `R(θ)`, `M_world`).
-- **Strong tags** for emphasis on *named concepts the first time they
-  appear.* This is how the learner sees what's introduced this week.
-- **Blockquotes** for definitions and short quotations only.
-- **Callouts** (`<div class="callout">…</div>` or
-  `<div class="callout callout-warn">…</div>`) for asides — use sparingly,
-  at most one per reading.
-- **Page breaks.** Insert `<div class="page-break"></div>` if you need to
-  force a break before exercises or going-deeper.
+- **No emoji.**
+- **Math in `<pre>` blocks.** ASCII matrices like the example. Do NOT
+  use `$inline math$` — there's no MathJax/KaTeX on this route.
+- **Inline `<code>` for symbols** (`p`, `R(θ)`, `M_world`).
+- **`<strong>` for named concepts the first time they appear** — this
+  is how the learner sees what's introduced this week.
+- **Escape entities.** Use `&rsquo;` not `'`, `&ldquo;`/`&rdquo;` not
+  `"`, `&amp;` not `&`. Avoid stray `<` or `>` in prose.
 
 ### Length
 
-Target 4–8 pages of printed PDF. The CSS aims for ~450 words per page;
-that's ~2,000-3,500 words.
+Target 2,000–3,500 words. The reading renders inside the existing
+`.prose` layout at `--content-max-width: 800px`, so word count is the
+right unit, not page count.
 
-- < 4 pages: the reading is too thin. Add a second example or a deeper
+- < 2,000 words: reading is too thin. Add a second example or a deeper
   derivation.
-- > 8 pages: the reading is doing too much. Split into two weeks or move
-  material to the slides.
+- > 3,500 words: reading is doing too much. Split into two weeks or
+  move material to the slides.
 
 ## Pedagogy (from /teach)
 
-- **One mission per reading.** The "What this reading covers" paragraph
-  states a concrete capability the learner will gain. Every section
-  should pay into that.
-- **Zone of proximal development.** The Prerequisites list must be
-  honest. Don't sneak in an idea the curriculum graph says hasn't been
-  introduced. If a sneaky prereq is unavoidable, write a half-page
-  primer section for it before using it.
+- **One mission per reading.** The framing block names a concrete
+  capability. Every section pays into that.
+- **Zone of proximal development.** The Prerequisites list must match
+  the curriculum graph's `depends_on` exactly. Don't sneak in a concept
+  the graph says hasn't been introduced.
 - **Inline rationale.** Don't just state results — say *why* the result
-  matters and *why* the convention is the way it is. ("The price is
-  small: every point carries an extra `1`. The payoff is huge: …")
+  matters and *why* the convention is the way it is.
 - **Feedback loop at the end.** Exercises must be answerable from the
-  reading alone, and the "Going deeper" pointers must reference real
-  course artifacts (worksheet, next lecture, project), NOT external
-  books that the user hasn't been told to buy.
+  reading alone. "Going deeper" must reference real course artifacts
+  (worksheet, next lecture, project).
 
-## How to run
+## Registering the reading
 
-```bash
-# After authoring the .md file:
-pnpm readings <course-slug> <filename-prefix>
-# e.g.
-pnpm readings cse457-26sp wk01
+After writing the TSX file, append to
+`content/courses/<slug>/index.tsx`:
 
-# Or all readings across all courses:
-pnpm readings
+```tsx
+import { Wk01Reading, wk01ReadingSearchBody } from "./pages/readings/wk01-affine";
+
+// ... in the `pages` array:
+{
+  segments: ["readings", "wk01-affine"],
+  title: "Week 1 — Affine transformations",
+  searchBody: wk01ReadingSearchBody,
+  render: () => <Wk01Reading />,
+},
 ```
 
-The script writes PDFs to `public/c/<slug>/readings/<filename>.pdf`.
-Link to them from the calendar / lecture page as
-`/c/<slug>/readings/<filename>.pdf`.
-
-The first run downloads `md-to-pdf` + a headless Chromium (~150MB) if
-you haven't run Marp yet. Subsequent runs are fast (~2-4s per reading).
+When coursemaker-create is fanning out, individual subagents do NOT
+edit `index.tsx` — they write only their own file. The master adds the
+registry entry in the consolidation step.
 
 ## Verifying
 
-1. `pnpm readings <slug> <name>` succeeds.
-2. Open the rendered PDF. Check:
-   - Title + kicker render cleanly
+1. `pnpm typecheck` passes — JSX errors are common (unescaped `&`, `<`,
+   stray `</p>`). Fix inline.
+2. `pnpm dev` and open `http://localhost:3000/c/<slug>/readings/<name>`.
+   Check:
+   - Title + kicker render cleanly under the sidebar
    - Section numbering is consistent
-   - Exercises don't break mid-question
-   - Page count is in the 4-8 range
-   - The reading stands alone — no `??` markers, no unfilled placeholders
-3. Click through to the linked project / section worksheet from "Going
-   deeper" — they should exist.
+   - Exercise cards have the "EXERCISE N" label
+   - Takeaways list has the purple numerals
+   - Bibliography (if present) has hanging-indent paragraphs
+   - All internal links resolve (no 404s on "Going deeper" pointers)
+3. Resize the browser to mobile (~390px). Reading should still be
+   readable — the prose wraps, the sidebar collapses to a top bar.
 
 ## Common mistakes
 
 - **Citing a real textbook the course doesn't assign.** This course
-  generates its own readings; don't reference Cormen / Bishop / Murphy
-  unless the syllabus explicitly says they're optional.
+  generates its own readings; don't push students to buy something.
 - **Padding with fluff.** If a paragraph doesn't advance the mission,
   delete it. Textbook-calm voice doesn't mean wordy.
 - **Skipping the worked example.** Every reading must include one fully
-  worked numerical or step-by-step example. Pure exposition is not enough.
+  worked numerical or step-by-step example. Pure exposition isn't enough.
 - **Forgetting prerequisites.** Always state what you assume the reader
   already knows. The curriculum graph says exactly this — copy from it.
-- **Using `$math$` syntax.** It won't typeset. Use code blocks for
+- **Using `$math$` syntax.** It won't render. Use `<pre>` blocks for
   equations.
+- **Forgetting to register the page.** A reading that exists in
+  `pages/readings/` but isn't in `index.tsx` won't show up in routing
+  or search.
+- **Unescaped entities.** `He's` should be `He&rsquo;s`, `A & B` should
+  be `A &amp; B`.
