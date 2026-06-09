@@ -2,6 +2,10 @@ import type { Course } from "@/types/course";
 import { config } from "./course.config";
 import { HomePage, homeSearchBody } from "./pages/home";
 import { SyllabusPage, syllabusSearchBody } from "./pages/syllabus";
+import { LecturesIndex, lecturesIndexSearchBody } from "./pages/lectures";
+import { SectionsIndex, sectionsIndexSearchBody } from "./pages/sections";
+import { HwIndex, hwIndexSearchBody } from "./pages/hw";
+import { ReadingsIndex, readingsIndexSearchBody } from "./pages/readings";
 
 import { Wk01L1, wk01L1SearchBody } from "./pages/lectures/wk01-l1";
 import { Wk01L2, wk01L2SearchBody } from "./pages/lectures/wk01-l2";
@@ -41,6 +45,11 @@ export const course: Course = {
   pages: [
     { segments: [],                                  title: "Home",                                          searchBody: homeSearchBody,             render: () => <HomePage /> },
     { segments: ["syllabus"],                        title: "Syllabus",                                      searchBody: syllabusSearchBody,         render: () => <SyllabusPage /> },
+
+    { segments: ["lectures"],                        title: "Lectures",                                      searchBody: lecturesIndexSearchBody,    render: () => <LecturesIndex /> },
+    { segments: ["sections"],                        title: "Sections",                                      searchBody: sectionsIndexSearchBody,    render: () => <SectionsIndex /> },
+    { segments: ["hw"],                              title: "Assignments",                                   searchBody: hwIndexSearchBody,          render: () => <HwIndex /> },
+    { segments: ["readings"],                        title: "Readings",                                      searchBody: readingsIndexSearchBody,    render: () => <ReadingsIndex /> },
 
     { segments: ["lectures", "wk01-l1"],             title: "Wk 1 — The follower funnel",                    searchBody: wk01L1SearchBody,           render: () => <Wk01L1 /> },
     { segments: ["lectures", "wk01-l2"],             title: "Wk 1 — Niche, voice, and bio",                  searchBody: wk01L2SearchBody,           render: () => <Wk01L2 /> },

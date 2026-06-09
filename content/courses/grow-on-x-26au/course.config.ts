@@ -71,16 +71,6 @@ export const config: SiteConfig = {
         },
       ],
     },
-    {
-      items: [
-        { label: "Kevin Kelly — 1,000 True Fans",              href: "https://kk.org/thetechnium/1000-true-fans/", external: true },
-        { label: "Paul Graham — Do Things That Don't Scale",   href: "https://paulgraham.com/ds.html", external: true },
-        { label: "X algorithm (open source)",                   href: "https://github.com/twitter/the-algorithm", external: true },
-        { label: "Justin Welsh — The Saturday Solopreneur",    href: "https://www.justinwelsh.me/newsletter", external: true },
-        { label: "Dan Koe — Letters",                           href: "https://thedankoe.com/letters/", external: true },
-        { label: "Growth in Reverse (Chenell Basilio)",         href: "https://growthinreverse.com/", external: true },
-      ],
-    },
   ],
   footer: {
     lines: [
