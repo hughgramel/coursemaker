@@ -17,17 +17,17 @@ const weeks: Week[] = [
     title: "Foundations",
     groups: [
       { kind: "Reading", tasks: [
-        { id: "wk01-reading", label: "Read Week 1 — Funnel, niche, bio", href: `${base}/readings/wk01` },
+        { id: "wk01-reading", label: "Read Week 1 reading: Funnel, niche, bio", href: `${base}/readings/wk01` },
       ]},
       { kind: "Slides", tasks: [
-        { id: "wk01-slides-l1", label: "Review slides — Lecture 1: The follower funnel", href: `${base}/slides/wk01-l1.pdf` },
-        { id: "wk01-slides-l2", label: "Review slides — Lecture 2: Niche, voice, and bio craft", href: `${base}/slides/wk01-l2.pdf` },
+        { id: "wk01-slides-l1", label: "Review Lecture 1 slides: The follower funnel", href: `${base}/slides/wk01-l1.pdf` },
+        { id: "wk01-slides-l2", label: "Review Lecture 2 slides: Niche, voice, and bio craft", href: `${base}/slides/wk01-l2.pdf` },
       ]},
       { kind: "Section", tasks: [
-        { id: "wk01-section", label: "Complete section — Audit five accounts in your niche", href: `${base}/sections/wk01` },
+        { id: "wk01-section", label: "Complete section worksheet: Audit five accounts in your niche", href: `${base}/sections/wk01` },
       ]},
       { kind: "Assignments", tasks: [
-        { id: "wk01-hw1-start", label: "Start HW1 — Define your niche and rewrite your bio", href: `${base}/hw/1` },
+        { id: "wk01-hw1-start", label: "Start HW1: Define your niche and rewrite your bio", href: `${base}/hw/1` },
       ]},
     ],
   },
@@ -36,18 +36,18 @@ const weeks: Week[] = [
     title: "Core mechanics: writing",
     groups: [
       { kind: "Reading", tasks: [
-        { id: "wk02-reading", label: "Read Week 2 — Hooks and formats", href: `${base}/readings/wk02` },
+        { id: "wk02-reading", label: "Read Week 2 reading: Hooks and formats", href: `${base}/readings/wk02` },
       ]},
       { kind: "Slides", tasks: [
-        { id: "wk02-slides-l1", label: "Review slides — Lecture 1: Anatomy of a hook", href: `${base}/slides/wk02-l1.pdf` },
-        { id: "wk02-slides-l2", label: "Review slides — Lecture 2: Post formats and when each wins", href: `${base}/slides/wk02-l2.pdf` },
+        { id: "wk02-slides-l1", label: "Review Lecture 1 slides: Anatomy of a hook", href: `${base}/slides/wk02-l1.pdf` },
+        { id: "wk02-slides-l2", label: "Review Lecture 2 slides: Post formats and when each wins", href: `${base}/slides/wk02-l2.pdf` },
       ]},
       { kind: "Section", tasks: [
-        { id: "wk02-section", label: "Complete section — Hook lab (twenty hooks)", href: `${base}/sections/wk02` },
+        { id: "wk02-section", label: "Complete section worksheet: Hook lab (twenty hooks)", href: `${base}/sections/wk02` },
       ]},
       { kind: "Assignments", tasks: [
-        { id: "wk02-hw1-submit", label: "Submit HW1 — Niche and bio rewrite", href: `${base}/hw/1` },
-        { id: "wk02-hw2-start",  label: "Start HW2 — Ship twenty posts in seven days", href: `${base}/hw/2` },
+        { id: "wk02-hw1-submit", label: "Submit HW1: Niche and bio rewrite", href: `${base}/hw/1` },
+        { id: "wk02-hw2-start",  label: "Start HW2: Ship twenty posts in seven days", href: `${base}/hw/2` },
       ]},
     ],
   },
@@ -56,17 +56,17 @@ const weeks: Week[] = [
     title: "Core mechanics: distribution",
     groups: [
       { kind: "Reading", tasks: [
-        { id: "wk03-reading", label: "Read Week 3 — The algorithm and the reply game", href: `${base}/readings/wk03` },
+        { id: "wk03-reading", label: "Read Week 3 reading: The algorithm and the reply game", href: `${base}/readings/wk03` },
       ]},
       { kind: "Slides", tasks: [
-        { id: "wk03-slides-l1", label: "Review slides — Lecture 1: How posts spread on X", href: `${base}/slides/wk03-l1.pdf` },
-        { id: "wk03-slides-l2", label: "Review slides — Lecture 2: The reply game and reaching out first", href: `${base}/slides/wk03-l2.pdf` },
+        { id: "wk03-slides-l1", label: "Review Lecture 1 slides: How posts spread on X", href: `${base}/slides/wk03-l1.pdf` },
+        { id: "wk03-slides-l2", label: "Review Lecture 2 slides: The reply game and reaching out first", href: `${base}/slides/wk03-l2.pdf` },
       ]},
       { kind: "Section", tasks: [
-        { id: "wk03-section", label: "Complete section — Reply sprint (10 replies + 5 DMs)", href: `${base}/sections/wk03` },
+        { id: "wk03-section", label: "Complete section worksheet: Reply sprint (10 replies, 5 DMs)", href: `${base}/sections/wk03` },
       ]},
       { kind: "Assignments", tasks: [
-        { id: "wk03-hw2-submit", label: "Submit HW2 — Twenty posts in seven days", href: `${base}/hw/2` },
+        { id: "wk03-hw2-submit", label: "Submit HW2: Twenty posts in seven days", href: `${base}/hw/2` },
       ]},
     ],
   },
@@ -75,18 +75,18 @@ const weeks: Week[] = [
     title: "Composition",
     groups: [
       { kind: "Reading", tasks: [
-        { id: "wk04-reading", label: "Read Week 4 — The weekly system", href: `${base}/readings/wk04` },
+        { id: "wk04-reading", label: "Read Week 4 reading: The weekly system", href: `${base}/readings/wk04` },
       ]},
       { kind: "Slides", tasks: [
-        { id: "wk04-slides-l1", label: "Review slides — Lecture 1: Content calendars and batching", href: `${base}/slides/wk04-l1.pdf` },
-        { id: "wk04-slides-l2", label: "Review slides — Lecture 2: Collaboration and the network", href: `${base}/slides/wk04-l2.pdf` },
+        { id: "wk04-slides-l1", label: "Review Lecture 1 slides: Content calendars and batching", href: `${base}/slides/wk04-l1.pdf` },
+        { id: "wk04-slides-l2", label: "Review Lecture 2 slides: Collaboration and the network", href: `${base}/slides/wk04-l2.pdf` },
       ]},
       { kind: "Section", tasks: [
-        { id: "wk04-section", label: "Complete section — Build your weekly system", href: `${base}/sections/wk04` },
+        { id: "wk04-section", label: "Complete section worksheet: Build your weekly system", href: `${base}/sections/wk04` },
       ]},
       { kind: "Assignments", tasks: [
-        { id: "wk04-hw3-start",      label: "Start HW3 — Run your weekly system for two weeks", href: `${base}/hw/3` },
-        { id: "wk04-capstone-start", label: "Start Capstone — 90-day playbook (early scaffolding)", href: `${base}/hw/capstone` },
+        { id: "wk04-hw3-start",      label: "Start HW3: Run your weekly system for two weeks", href: `${base}/hw/3` },
+        { id: "wk04-capstone-start", label: "Start Capstone: 90-day playbook (early scaffolding)", href: `${base}/hw/capstone` },
       ]},
     ],
   },
@@ -95,18 +95,18 @@ const weeks: Week[] = [
     title: "Frontier: analytics",
     groups: [
       { kind: "Reading", tasks: [
-        { id: "wk05-reading", label: "Read Week 5 — Analytics and iteration", href: `${base}/readings/wk05` },
+        { id: "wk05-reading", label: "Read Week 5 reading: Analytics and iteration", href: `${base}/readings/wk05` },
       ]},
       { kind: "Slides", tasks: [
-        { id: "wk05-slides-l1", label: "Review slides — Lecture 1: What to measure", href: `${base}/slides/wk05-l1.pdf` },
-        { id: "wk05-slides-l2", label: "Review slides — Lecture 2: Testing and iterating", href: `${base}/slides/wk05-l2.pdf` },
+        { id: "wk05-slides-l1", label: "Review Lecture 1 slides: What to measure", href: `${base}/slides/wk05-l1.pdf` },
+        { id: "wk05-slides-l2", label: "Review Lecture 2 slides: Testing and iterating", href: `${base}/slides/wk05-l2.pdf` },
       ]},
       { kind: "Section", tasks: [
-        { id: "wk05-section", label: "Complete section — Read your analytics (classify top 10 posts)", href: `${base}/sections/wk05` },
+        { id: "wk05-section", label: "Complete section worksheet: Read your analytics (classify top 10 posts)", href: `${base}/sections/wk05` },
       ]},
       { kind: "Assignments", tasks: [
-        { id: "wk05-hw3-submit", label: "Submit HW3 — Weekly system run", href: `${base}/hw/3` },
-        { id: "wk05-hw4-start",  label: "Start HW4 — Your thirty-day growth experiment", href: `${base}/hw/4` },
+        { id: "wk05-hw3-submit", label: "Submit HW3: Weekly system run", href: `${base}/hw/3` },
+        { id: "wk05-hw4-start",  label: "Start HW4: Your thirty-day growth experiment", href: `${base}/hw/4` },
       ]},
     ],
   },
@@ -115,18 +115,18 @@ const weeks: Week[] = [
     title: "Synthesis",
     groups: [
       { kind: "Reading", tasks: [
-        { id: "wk06-reading", label: "Read Week 6 — The 90-day playbook", href: `${base}/readings/wk06` },
+        { id: "wk06-reading", label: "Read Week 6 reading: The 90-day playbook", href: `${base}/readings/wk06` },
       ]},
       { kind: "Slides", tasks: [
-        { id: "wk06-slides-l1", label: "Review slides — Lecture 1: The 10k roadmap", href: `${base}/slides/wk06-l1.pdf` },
-        { id: "wk06-slides-l2", label: "Review slides — Lecture 2: Sustainable growth and life after 10k", href: `${base}/slides/wk06-l2.pdf` },
+        { id: "wk06-slides-l1", label: "Review Lecture 1 slides: The 10k roadmap", href: `${base}/slides/wk06-l1.pdf` },
+        { id: "wk06-slides-l2", label: "Review Lecture 2 slides: Sustainable growth and life after 10k", href: `${base}/slides/wk06-l2.pdf` },
       ]},
       { kind: "Section", tasks: [
-        { id: "wk06-section", label: "Present at section — Capstone demo day", href: `${base}/sections/wk06` },
+        { id: "wk06-section", label: "Present at section: Capstone demo day", href: `${base}/sections/wk06` },
       ]},
       { kind: "Assignments", tasks: [
-        { id: "wk06-hw4-submit",      label: "Submit HW4 — Design and week-1 data", href: `${base}/hw/4` },
-        { id: "wk06-capstone-submit", label: "Submit Capstone — 90-day playbook", href: `${base}/hw/capstone` },
+        { id: "wk06-hw4-submit",      label: "Submit HW4: Design and week-1 data", href: `${base}/hw/4` },
+        { id: "wk06-capstone-submit", label: "Submit Capstone: 90-day playbook", href: `${base}/hw/capstone` },
       ]},
     ],
   },
@@ -241,7 +241,7 @@ export function TasksPage() {
             }}
           >
             <AnchorHeading as="h2" id={`week-${w.n}`}>
-              Week {w.n} — {w.title} {mounted && <span className="fs-6 fw-300">({wkDone}/{wkTotal})</span>}
+              Week {w.n}: {w.title} {mounted && <span className="fs-6 fw-300">({wkDone}/{wkTotal})</span>}
             </AnchorHeading>
             {w.groups.map((g) => (
               <div key={g.kind}>

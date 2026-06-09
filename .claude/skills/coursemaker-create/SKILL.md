@@ -394,9 +394,19 @@ pnpm new-course --slug <slug> --title "<title>" \
 
 Then immediately edit `content/courses/<slug>/course.config.ts` to:
 - Set `hero` to `{ src: "/c/<slug>/hero.svg", alt: "<one-line concept>" }`.
-- Set up navGroups: Home, Syllabus, Calendar, Lectures, Sections,
-  Assignments, Readings, Staff. Add a second group with external links
-  the user mentioned.
+- Set up ONE navGroup with: Home, Syllabus, Lectures (with all 20 lecture
+  children), Sections (with all 10 section children), Assignments (with
+  all 5 hw children), Readings (with all 10 reading children), Tasks,
+  Staff. Do NOT add a second navGroup of "external resources" links —
+  the user can add their own marketing/community links later if they
+  want; the skill should not invent any.
+- **Every nav parent with children MUST have its own registered page**
+  (i.e. `LecturesIndexPage`, `SectionsIndexPage`, `ReadingsIndexPage`,
+  `HwIndexPage`). A parent NavItem whose `href` 404s is the most common
+  visible failure of this skill — clicking "Lectures" must show a real
+  index page, not a blank. Build these four list pages in step 5.
+- Footer: a single attribution line. No "© 2026 Course staff" — the
+  course has no real "course staff" until the user fills one in.
 
 ## Step 4 — Commission the hero SVG (subagent, parallel with step 5)
 
@@ -412,7 +422,11 @@ If the topic is abstract, tell the subagent to use a metaphorical visual
 (a brain made of thought-bubble waves, a Möbius-strip-as-a-question-mark)
 rather than something literal.
 
-## Step 5 — Write the syllabus + index (you)
+## Step 5 — Write the syllabus, the four index pages, the tasks page, the staff page (you)
+
+You author ALL non-week pages. Subagents only own per-week artifacts.
+
+### 5a. Syllabus
 
 Replace `content/courses/<slug>/pages/syllabus.tsx` with a `SyllabusPage`
 using the `SyllabusSpec` type. There is **no required textbook** — the
@@ -424,13 +438,23 @@ import type { SyllabusSpec } from "@/types/course";
 
 const spec: SyllabusSpec = {
   overview: ["…", "…"],
-  logistics: { meeting: "…", format: "…", location: "TBD" },
-  staff: [{ name: "TBD", role: "Instructor" }],
+  // logistics: no `location`, no specific meeting times. Describe the SHAPE
+  // (cadence, format) — never a real room or hour. No "TBD" strings either;
+  // omit fields you don't know rather than seeding placeholder fakery.
+  logistics: {
+    meeting: "Two lectures per week + one hands-on section. Weekly reading published at the start of each week.",
+    format: "Hybrid: lectures recorded; sections preferred live.",
+  },
+  staff: [],   // Empty. Do NOT seed "TBD" instructors / TAs / emails / office hours.
+               // The Staff page (built separately) describes the ROLE staff plays
+               // without naming anyone. The user fills real names before the term.
   prerequisites: [...],
   gettingHelp: [
-    "Post to Ed Discussion for content questions",
-    "Office hours for 1:1 help",
-    "Email the instructor only for personal matters",
+    "Bring your real numbers to section.",
+    "Office hours are for 1:1 help — bring your dashboard, not abstract questions.",
+    "Between sessions, use the course communication channel (announced in week 1).",
+    // Do NOT name a specific platform (Discord / Ed Discussion / Slack / etc).
+    // The user picks the platform when they actually run the course.
   ],
   grading: {
     breakdown: [
@@ -453,6 +477,124 @@ const spec: SyllabusSpec = {
 
 export function SyllabusContent() { return <SyllabusPage spec={spec} />; }
 ```
+
+### 5b. The four index pages (CANONICAL — saved style)
+
+Every nav parent with sub-content (Lectures, Sections, Assignments, Readings)
+MUST render a clean table-style index page at its own route. A nav item
+whose `href` 404s is the most common visible failure of this skill.
+
+Build four files at `pages/lectures-index.tsx`, `pages/sections-index.tsx`,
+`pages/readings-index.tsx`, `pages/hw-index.tsx`. Each one is the same
+template: a brief intro paragraph + a single `<table>` with one row per
+week (or per assignment). The rendered look is the canonical course
+landing for that category — clean, readable, scannable. Don't deviate
+from this style without user direction.
+
+Example (lectures index):
+
+```tsx
+import { AnchorHeading } from "@/components/AnchorHeading";
+import { config } from "../course.config";
+
+const base = `/c/${config.slug}`;
+const lectures = [/* { week, l1, l2, phase } per row */];
+
+export function LecturesIndexPage() {
+  return (
+    <>
+      <AnchorHeading as="h1" id="lectures">Lectures</AnchorHeading>
+      <p>Two lectures per week, paired with that week's reading and section. Slides render to PDF.</p>
+      <table>
+        <thead><tr><th>Wk</th><th>Lecture 1</th><th>Lecture 2</th><th>Phase</th></tr></thead>
+        <tbody>
+          {lectures.map((l) => {
+            const wk = `wk${l.week.toString().padStart(2, "0")}`;
+            return (
+              <tr key={l.week}>
+                <td>{l.week}</td>
+                <td>
+                  <a href={`${base}/lectures/${wk}-l1`}>{l.l1}</a>{" · "}
+                  <a href={`${base}/slides/${wk}-l1.pdf`}>slides</a>
+                </td>
+                <td>
+                  <a href={`${base}/lectures/${wk}-l2`}>{l.l2}</a>{" · "}
+                  <a href={`${base}/slides/${wk}-l2.pdf`}>slides</a>
+                </td>
+                <td>{l.phase}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </>
+  );
+}
+export const lecturesIndexSearchBody = "Lectures index ...";
+```
+
+The other three follow the same shape:
+- **Sections index**: Wk / Section title / What you ship (mission)
+- **Readings index**: Wk / Reading title / Mission
+- **Assignments index**: # / Title / Out / Due / Weight
+
+### 5c. The Tasks page (CANONICAL — saved pattern)
+
+The course gets a `pages/tasks.tsx` that lists EVERY task across all 10
+weeks, nested by week, sub-grouped by Reading / Slides / Section /
+Milestones / Assignments. Each task is a checkbox; checked tasks
+strike-through and go to 45% opacity. State persists in localStorage
+under key `<slug>:tasks`. Page is a "use client" component.
+
+Required sub-groupings, in this order, per week:
+
+1. **Reading** — one task: "Read the Week N reading: <theme>" linking to `/readings/wkNN`
+2. **Slides** — two tasks: "Review L1 slides: <title>" + "Review L2 slides: <title>", each linking to the lecture page + a sibling PDF link
+3. **Section** — one task: "Attend section: <section title>" linking to `/sections/wkNN`
+4. **Milestones** — one task per milestone from the week's curriculum row
+5. **Assignments** — one task per `out` / `due` entry on this week
+
+Plus a top-of-page **OverallProgress** showing `X / Y tasks (Z%)` with a
+filled progress bar, and a **Reset all** button (confirm() guard).
+
+The Tasks page is also added as a flat nav entry (see step 5d). See the
+reference implementation in
+`content/courses/b2c-10k-mrr-26au/pages/tasks.tsx` — copy its structure
+into new courses; only the per-week data array changes.
+
+### 5d. Update course.config.ts — FLAT sidebar, no dropdowns
+
+The sidebar is a single flat navGroup of top-level items. **Never** use
+the `children` field — dropdowns in the sidebar are explicitly disallowed.
+Detail pages are reached by clicking the parent (which lands on the
+index page from 5b) and following links from there.
+
+Required flat nav order:
+
+```ts
+navGroups: [{ items: [
+  { label: "Home",        href: "" },
+  { label: "Syllabus",    href: "syllabus" },
+  { label: "Lectures",    href: "lectures" },   // → LecturesIndexPage
+  { label: "Sections",    href: "sections" },   // → SectionsIndexPage
+  { label: "Assignments", href: "hw" },         // → HwIndexPage
+  { label: "Readings",    href: "readings" },   // → ReadingsIndexPage
+  { label: "Tasks",       href: "tasks" },      // → TasksPage
+  { label: "Staff",       href: "staff" },      // → StaffPage
+]}],
+```
+
+Do NOT add a second "External resources" navGroup of marketing links
+(Stripe Atlas, Indie Hackers, Lenny's Newsletter, etc.). The user adds
+their own community/marketing links later if they want; the skill
+should not invent any.
+
+### 5e. The Staff page
+
+Generic prose only — no real names, no emails, no office hours. Describe
+the ROLE staff plays (section guidance, office-hour scope, capstone
+defense panel) and that "specific staff names are confirmed before the
+term begins." The reference course's `pages/staff.tsx` is canonical.
 
 ## Step 6 — Fan out one subagent per week (parallel)
 
@@ -735,6 +877,26 @@ handouts, and the calendar.
 - **Readings cite a textbook the syllabus doesn't assign.** The course
   has no required textbook — its own readings ARE the textbook. Don't
   push students to buy something.
+- **Sidebar dropdowns.** The skill explicitly disallows `children` on
+  nav items — clicks must land on the relevant index page, not expand
+  a tree. If you find yourself nesting nav, you're wrong.
+- **Top-level nav item leads to a 404 / blank page.** Every nav parent
+  (Lectures, Sections, Assignments, Readings, Tasks) MUST have a real
+  registered page at its route. Build the four index pages + tasks
+  page in step 5b/5c — not as an afterthought at the end.
+- **Placeholder fakery.** Don't seed "TBD" instructor names, emails,
+  office hours, real-sounding meeting times, classroom locations, a
+  Discord URL, an Ed Discussion URL, a Gradescope link, or a Canvas
+  link the course doesn't actually have. Either omit the field (in
+  `logistics` / `staff`) or describe the SHAPE without the specific
+  (in `gettingHelp` — "the course communication channel, announced in
+  week 1"). The user fills concrete details before running the course.
+- **Case-studying the user's own product by name.** If the user
+  references a specific product as inspiration (e.g. langobee), DO NOT
+  use it as a named case study in lectures, readings, slides, or
+  sections. Case studies must come from the vetted source library — the
+  user's product is not a citable primary source for a course they're
+  about to teach.
 
 ## When you're done
 

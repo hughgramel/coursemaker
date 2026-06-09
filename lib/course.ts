@@ -1,5 +1,4 @@
 import type { Course, CoursePage, SiteConfig } from "@/types/course";
-import type { SearchDoc } from "@/components/SearchBar";
 
 /** Convert page segments to a URL-safe slug joined with "/". */
 export function segmentsToKey(segments: string[]): string {
@@ -17,16 +16,6 @@ export function pageHref(course: SiteConfig, segments: string[]): string {
 export function findPage(course: Course, segments: string[]): CoursePage | undefined {
   const key = segmentsToKey(segments);
   return course.pages.find((p) => segmentsToKey(p.segments) === key);
-}
-
-/** Build the search index for a course from its pages. */
-export function buildSearchDocs(course: Course): SearchDoc[] {
-  return course.pages.map((p) => ({
-    title: p.title,
-    href: pageHref(course.config, p.segments),
-    body: p.searchBody ?? p.description ?? p.title,
-    breadcrumb: course.config.title,
-  }));
 }
 
 /** Resolve a nav item href to an absolute URL for this course.

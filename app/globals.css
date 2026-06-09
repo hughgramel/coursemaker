@@ -263,14 +263,20 @@ body {
   margin: 0 auto;
 }
 
-/* Anchor link icon for headings */
+/* Anchor link icon for headings — positioned in the left gutter so it never
+   shifts the heading text. Hidden by default; revealed on hover. */
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  position: relative;
+}
 .anchor-heading {
+  position: absolute;
+  left: -1.75rem;
+  top: 0.6em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   color: var(--color-faint);
   opacity: 0;
   transition: opacity 120ms ease, color 120ms ease;
@@ -281,6 +287,10 @@ body {
 .prose h3:hover .anchor-heading,
 .prose h4:hover .anchor-heading,
 .anchor-heading:hover { opacity: 1; color: var(--color-primary); }
+@media (max-width: 768px) {
+  /* On mobile the left gutter would clip — hide entirely. */
+  .anchor-heading { display: none; }
+}
 
 /* ============================================================
    Labels (status pills)

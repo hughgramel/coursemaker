@@ -8,23 +8,15 @@ const spec: SyllabusSpec = {
     "The course is designed for the technical founder working solo or in a tiny team. You are expected to ship code. The course will teach you the un-fun work that technical founders avoid: instrumenting honest analytics, picking a price and defending it, picking ONE channel and committing, talking to users every weekday, and shipping public output before the build block opens.",
   ],
   logistics: {
-    meeting: "Two lectures per week (60 min each) + one section (90 min). Weekly reading published Sundays.",
-    format: "Hybrid: live lectures recorded; sections strongly preferred in-person for the cohort effect. Capstone defense in week 10 is in-person or live video; submissions are not.",
-    location: "TBD",
+    meeting: "Two lectures per week (60 min each) + one hands-on section (90 min). Weekly reading published at the start of each week.",
+    format: "Hybrid: lectures recorded; sections strongly preferred live for the cohort effect. Capstone defense in week 10 is presented live (in-person or video); written submissions are not.",
     extras: [
       "Daily working rhythm: 4 fixed slots — morning growth move (~30 min), customer hour (~60 min), build block (~3-4 h), end-of-day measure + reflect (~15 min). Plus a 15-min Sunday/Monday weekly plan, a 5-min daily plan, and a 30-min Friday review.",
-      "Public-output mandate: every weekday, one piece of public output (tweet, LinkedIn post, Reddit comment, IH update, Discord post, TikTok, YT short, blog draft) — anything in front of an audience that isn't you. Course-tracked target: 50+ weekday outputs by end of course.",
+      "Public-output mandate: every weekday, one piece of public output (tweet, LinkedIn post, Reddit comment, IH update, TikTok, YT short, blog draft, community post) — anything in front of an audience that isn't you. Course-tracked target: 50+ weekday outputs by end of course.",
       "Mid-course pivot/persevere check at end of week 5; capstone scaffold starts end of week 8.",
     ],
   },
-  staff: [
-    {
-      name: "TBD",
-      role: "Instructor",
-      officeHours: [{ when: "TBD", where: "TBD" }],
-      bio: "Practitioner with first-hand experience scaling at least one B2C product past $10k MRR.",
-    },
-  ],
+  staff: [],
   prerequisites: [
     "A B2C product idea you are serious about and have committed time to.",
     "A shipped MVP — even rough, even ugly. Web, mobile, or PWA all fine.",
@@ -32,10 +24,10 @@ const spec: SyllabusSpec = {
     "Surface-level familiarity with Stripe, landing pages, conversion funnels (the course goes deeper, but doesn't define every term from scratch).",
   ],
   gettingHelp: [
-    "Post to the course Discord for content questions — answered within 24 hours by staff or peers.",
     "Bring your real numbers to section every week. The section is where you get help, not where you get re-lectured.",
     "Office hours are for 1:1 product help. Bring your dashboard, your cohort chart, your paywall — not abstract questions.",
     "Peer accountability is built in: pair groups assigned in week 1, swapped at week 6 when channel commitments lock.",
+    "Between sessions, use the course communication channel (announced in week 1) for content questions and peer accountability.",
   ],
   grading: {
     breakdown: [

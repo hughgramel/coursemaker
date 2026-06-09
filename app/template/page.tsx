@@ -64,7 +64,6 @@ export default function TemplatePage() {
           <li><code>AnchorHeading</code> — h1/h2/h3 with anchor link icon (see <Link href="/design#prose-elements">design library</Link>).</li>
           <li><code>WeekModule</code> — the calendar dt/dd primitive. Pass a <code>CourseModule</code>.</li>
           <li><code>Label</code> — purple/red/blue/green/yellow status pill.</li>
-          <li><code>SearchBar</code> — wired automatically via <code>buildSearchDocs(course)</code>.</li>
           <li><code>Sidebar</code> — driven by <code>navGroups</code> in your config.</li>
         </ul>
 

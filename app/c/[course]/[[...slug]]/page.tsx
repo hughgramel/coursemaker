@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { MainLayout } from "@/components/MainLayout";
 import { allCourseSlugs, getCourseBySlug } from "@/content/courses";
-import { buildSearchDocs, findPage } from "@/lib/course";
+import { findPage } from "@/lib/course";
 
 interface PageProps {
   params: Promise<{ course: string; slug?: string[] }>;
@@ -39,7 +39,7 @@ export default async function CoursePage({ params }: PageProps) {
   if (!page) notFound();
 
   return (
-    <MainLayout site={course.config} searchDocs={buildSearchDocs(course)}>
+    <MainLayout site={course.config}>
       {page.render()}
     </MainLayout>
   );

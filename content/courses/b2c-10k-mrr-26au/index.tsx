@@ -4,6 +4,11 @@ import { config } from "./course.config";
 import { HomePage, homeSearchBody } from "./pages/home";
 import { SyllabusPage, syllabusSearchBody } from "./pages/syllabus";
 import { StaffPage, staffSearchBody } from "./pages/staff";
+import { LecturesIndexPage, lecturesIndexSearchBody } from "./pages/lectures-index";
+import { SectionsIndexPage, sectionsIndexSearchBody } from "./pages/sections-index";
+import { ReadingsIndexPage, readingsIndexSearchBody } from "./pages/readings-index";
+import { HwIndexPage,       hwIndexSearchBody }       from "./pages/hw-index";
+import { TasksPage,         tasksSearchBody }         from "./pages/tasks";
 
 import { Wk01L1Page, wk01L1SearchBody } from "./pages/lectures/wk01-l1";
 import { Wk01L2Page, wk01L2SearchBody } from "./pages/lectures/wk01-l2";
@@ -63,6 +68,12 @@ export const course: Course = {
     { segments: [], title: "Home", searchBody: homeSearchBody, render: () => <HomePage /> },
     { segments: ["syllabus"], title: "Syllabus", searchBody: syllabusSearchBody, render: () => <SyllabusPage /> },
     { segments: ["staff"], title: "Staff", searchBody: staffSearchBody, render: () => <StaffPage /> },
+
+    { segments: ["lectures"],   title: "Lectures",    searchBody: lecturesIndexSearchBody, render: () => <LecturesIndexPage /> },
+    { segments: ["sections"],   title: "Sections",    searchBody: sectionsIndexSearchBody, render: () => <SectionsIndexPage /> },
+    { segments: ["readings"],   title: "Readings",    searchBody: readingsIndexSearchBody, render: () => <ReadingsIndexPage /> },
+    { segments: ["hw"],         title: "Assignments", searchBody: hwIndexSearchBody,       render: () => <HwIndexPage /> },
+    { segments: ["tasks"],      title: "Tasks",       searchBody: tasksSearchBody,         render: () => <TasksPage /> },
 
     { segments: ["lectures", "wk01-l1"], title: "Wk 1 — The B2C funnel",           searchBody: wk01L1SearchBody, render: () => <Wk01L1Page /> },
     { segments: ["lectures", "wk01-l2"], title: "Wk 1 — Reading metrics honestly", searchBody: wk01L2SearchBody, render: () => <Wk01L2Page /> },

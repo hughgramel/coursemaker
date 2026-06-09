@@ -145,7 +145,7 @@ export function Wk08SectionPage() {
       <p>
         A Progressive Web App install prompt lets users add your web app to
         their home screen without going through a store. This is the correct
-        distribution path if your product is web-first (like langobee), if you
+        distribution path if your product is web-first, if you
         want to avoid the 30% store commission on subscriptions, or if your
         audience is primarily desktop users. The trade-off: discoverability via
         search is your responsibility, not the store&rsquo;s.

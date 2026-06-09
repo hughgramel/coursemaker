@@ -1,43 +1,50 @@
 import { AnchorHeading } from "@/components/AnchorHeading";
-import { StaffList } from "@/components/StaffList";
-import type { StaffMember } from "@/types/course";
-
-const staff: StaffMember[] = [
-  {
-    name: "TBD",
-    role: "Instructor",
-    officeHours: [{ when: "TBD", where: "TBD" }],
-    bio: "Practitioner with first-hand experience scaling at least one B2C product past $10k MRR. The instructor's own funnel, dashboard, and current MRR are shared with the class on Day 1 — the course practices what it teaches.",
-  },
-  {
-    name: "TBD",
-    role: "TA",
-    officeHours: [{ when: "TBD", where: "TBD" }],
-    bio: "Indie founder or growth practitioner who has shipped a B2C product. Available for 1:1 product help and dashboard debugging.",
-  },
-];
 
 export function StaffPage() {
   return (
     <>
       <AnchorHeading as="h1" id="staff">Staff</AnchorHeading>
       <p>
-        Staff slots are filled before the course begins. Office hours are 1:1
-        product help — bring your dashboard, your cohort chart, your paywall,
-        not abstract questions.
+        This course is taught by practitioners with first-hand experience
+        scaling at least one B2C product past $10k MRR. Staff bring their own
+        funnel, dashboard, and current MRR to share with the class on Day 1 —
+        the course practices what it teaches.
       </p>
-      <AnchorHeading as="h2" id="course-staff">Course staff</AnchorHeading>
-      <StaffList staff={staff} />
-      <AnchorHeading as="h2" id="getting-help">Getting help</AnchorHeading>
+
+      <AnchorHeading as="h2" id="how-staff-help">How staff help</AnchorHeading>
       <ul>
-        <li>Post to the course Discord for content questions — answered within 24 hours.</li>
-        <li>Bring your real numbers to section every week.</li>
-        <li>Office hours are for 1:1 product help.</li>
-        <li>Peer accountability groups are assigned in week 1 and swapped at week 6 when channel commitments lock.</li>
+        <li>
+          <strong>Section.</strong> Where staff guide the week&rsquo;s
+          hands-on activity. Bring your real numbers; sections are not
+          re-lectures.
+        </li>
+        <li>
+          <strong>Office hours.</strong> 1:1 product help. Bring your
+          dashboard, your cohort chart, your paywall, your store listing —
+          not abstract questions.
+        </li>
+        <li>
+          <strong>Capstone defense (week 10).</strong> Staff are the most
+          skeptical investors you&rsquo;ll pitch in this course. The defense
+          is the point: it&rsquo;s where the plan gets stress-tested before
+          you commit 30 days of your life to it.
+        </li>
       </ul>
+
+      <AnchorHeading as="h2" id="getting-help">Getting help between sessions</AnchorHeading>
+      <ul>
+        <li>Use the course communication channel (set up in week 1) for content questions and peer accountability.</li>
+        <li>Peer accountability groups are assigned in week 1 and swapped at week 6 when channel commitments lock.</li>
+        <li>If you&rsquo;re stuck on something concrete (a Stripe integration, a TestFlight reject, an SQL cohort query), post the actual error or screenshot, not a description of it.</li>
+      </ul>
+
+      <p>
+        Specific staff names, office hours, and the course communication channel
+        are confirmed before the term begins.
+      </p>
     </>
   );
 }
 
 export const staffSearchBody =
-  "Staff instructor TA office hours office-hours Discord 1:1 help peer accountability";
+  "Staff section office hours capstone defense peer accountability getting help";
