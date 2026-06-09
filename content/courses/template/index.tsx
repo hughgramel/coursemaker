@@ -2,7 +2,6 @@ import type { Course } from "@/types/course";
 import { config } from "./course.config";
 import { HomePage,         homeSearchBody }         from "./pages/home";
 import { SyllabusPage,     syllabusSearchBody }     from "./pages/syllabus";
-import { StaffPage,        staffSearchBody }        from "./pages/staff";
 import { TasksPage,        tasksSearchBody }        from "./pages/tasks";
 import { LecturesIndexPage, lecturesIndexSearchBody } from "./pages/lectures-index";
 import { SectionsIndexPage, sectionsIndexSearchBody } from "./pages/sections-index";
@@ -27,6 +26,5 @@ export const course: Course = {
     { segments: ["hw", "1"],              title: "HW 1",                searchBody: hw1SearchBody,           render: () => <Hw1 /> },
     { segments: ["readings"],             title: "Readings",            searchBody: readingsIndexSearchBody, render: () => <ReadingsIndexPage /> },
     { segments: ["readings", "wk01"],     title: "Week 1, Reading",     searchBody: wk01ReadingSearchBody,   render: () => <Wk01Reading /> },
-    { segments: ["staff"],                title: "Staff",               searchBody: staffSearchBody,         render: () => <StaffPage /> },
   ],
 };

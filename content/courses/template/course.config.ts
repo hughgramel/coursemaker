@@ -21,7 +21,6 @@ export const config: SiteConfig = {
         { label: "Sections",    href: "sections" },
         { label: "Assignments", href: "hw" },
         { label: "Readings",    href: "readings" },
-        { label: "Staff",       href: "staff" },
       ],
     },
   ],
