@@ -550,17 +550,84 @@ Every artifact this skill produces should follow these:
 
 ## Global prose rules (every subagent must follow)
 
-- **No em dashes (—).** Em dashes are the strongest AI tell in
-  long-form prose. Use periods, commas, parentheses, or colons. En
-  dashes for ranges (`weeks 3-5`) are fine; only the em dash is banned.
-  Applies in lecture pages, readings, slides, syllabus, project
-  handouts, and the calendar. Skim every authored file for em dash
-  characters before reporting back.
+These apply to lecture pages, readings, slides, syllabus, project
+handouts, and the calendar.
+
+### Voice and punctuation
+
+- **No em dashes (—).** Strongest AI tell in long-form prose. Use
+  periods, commas, parentheses, or colons. En dashes for ranges
+  (`weeks 3-5`) are fine; only the em dash is banned. Skim every
+  authored file for em dash characters before reporting back.
 - **No emoji.**
+- **No AI vocabulary.** Banned words: *delve, leverage, robust,
+  comprehensive, intricate, vibrant, multifaceted, nuanced, furthermore,
+  moreover, additionally, pivotal, landscape, tapestry, underscore,
+  foster, showcase, fundamental, significant.* Find a more specific
+  word.
+- **Active voice over passive.** "Bob proved the theorem", not "The
+  theorem was proved by Bob".
+- **No hedging.** Skip *perhaps, arguably, it might be said, some would
+  say.* If you are uncertain, name what you are uncertain about.
+- **No throat-clearing.** Cut *let's explore, we'll dive into, join me
+  as we discover, in conclusion, in summary.* Just say the thing.
+- **No restating the heading.** First sentence of a section advances
+  the argument; it does not paraphrase the heading.
+- **Lead with the point.** First sentence of each section is the
+  argument; the rest supports it. Don't bury the lede.
+- **Section beats.** Each section ends with one sentence that closes
+  it. Not a transition into the next section, a closure of this one.
 - **Sentence case headings.** "Composition order matters", not
   "Composition Order Matters".
 - **Voice: textbook-calm.** Declarative, authoritative, never
   apologetic. Match Marschner and Shirley or Bishop's ML book.
+
+### Links and citations
+
+- **Descriptive link text.** Not "click here" or "read more". The link
+  text says what the destination is.
+- **Don't double-link.** One link per target per paragraph.
+- **External links** in lectures and readings open in a new tab with
+  `rel="noopener noreferrer"`.
+- **Citations are inline and lightweight.** Author name plus year:
+  "Shannon (1949) shows that..." Bibliography at the end of the reading
+  carries the full reference.
+
+### Diagrams (use Mermaid for everything you can)
+
+- **`<Mermaid chart="...">`** is the default for any flowchart, sequence
+  diagram, state machine, ER diagram, mindmap, or gantt chart. It is
+  themed to the coursemaker palette automatically. Use it.
+- **Convention.** One diagram per section maximum. Diagrams illustrate;
+  they do not replace prose.
+- **Alt text required.** `<Mermaid chart={...} alt="..." />`.
+- **Non-Mermaid figures** (geometric drawings, neural network
+  diagrams, photos, screenshots): save under
+  `public/c/<slug>/figures/wkNN-<name>.svg` (or `.png`) and reference
+  with a plain `<img>`. Include alt.
+
+### Math
+
+- **Currently:** ASCII matrices and equations in `<pre>` blocks. Match
+  the formatting in `cse457-26sp/pages/readings/wk01-affine.tsx`. Do
+  not use `$inline math$` or `$$display$$` — there is no MathJax/KaTeX
+  on the reading route yet.
+
+### Length and rhythm
+
+- **Reading length:** 2,000–3,500 words. Each section: 200–400 words.
+  Each paragraph: 3–7 sentences.
+- **Bullet lists:** at most 7 items. If you need more, restructure into
+  sub-headings.
+
+### Honesty
+
+- **If a claim needs a source, cite the source.** If the source isn't
+  in `sources.json`, stop and report rather than fabricating.
+- **No "studies show" without a study.** No "many believe" without a
+  named adherent.
+- **Real names, real numbers.** Don't invent function names that look
+  plausible, don't invent statistics.
 
 ## Common failure modes
 

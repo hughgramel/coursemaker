@@ -612,6 +612,21 @@ body {
 /* Anchor links: hide on reading pages (they distract from prose) */
 .reading-prose .anchor-heading { display: none; }
 
+/* Mermaid figure: center, breathing room, max-width within reading measure */
+.mermaid-figure {
+  margin: 1.5rem auto;
+  text-align: center;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.mermaid-figure svg {
+  max-width: 100%;
+  height: auto;
+}
+.reading-prose .mermaid-figure {
+  margin: 1.75rem auto;
+}
+
 /* ============================================================
    Custom scrollbar for sidebar
    ============================================================ */

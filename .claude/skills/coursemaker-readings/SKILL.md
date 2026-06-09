@@ -123,8 +123,31 @@ export const wk01ReadingSearchBody =
 - **Sentence case headings.** "Composition order matters" not
   "Composition Order Matters".
 - **No emoji.**
+- **No em dashes.** AI tell. Use periods, commas, parentheses, colons.
+  En dashes for ranges (`weeks 3-5`) are fine.
+- **No AI vocabulary.** Banned: *delve, leverage, robust, comprehensive,
+  intricate, vibrant, multifaceted, nuanced, furthermore, moreover,
+  additionally, pivotal, landscape, tapestry, underscore, foster,
+  showcase, fundamental, significant.*
+- **Active voice.** "Shannon proved this", not "This was proved by
+  Shannon".
+- **Lead with the point.** First sentence of each section makes the
+  argument. Don't restate the heading.
+- **Each section ends with a beat.** One closing sentence.
+- **Descriptive link text.** Not "click here". Tell the reader what
+  they'll find at the link.
 - **Math in `<pre>` blocks.** ASCII matrices like the example. Do NOT
-  use `$inline math$` — there's no MathJax/KaTeX on this route.
+  use `$inline math$`; there's no MathJax/KaTeX on this route.
+
+### Diagrams
+
+- **`<Mermaid chart="..." alt="..." />`** is the default for flowcharts,
+  sequence diagrams, state machines, ER diagrams, and mindmaps. The
+  component is themed to the coursemaker palette automatically. One
+  diagram per section maximum.
+- **For geometric figures or screenshots**, save under
+  `public/c/<slug>/figures/wkNN-<name>.svg` (or `.png`) and reference
+  with a plain `<img>` plus alt text.
 - **Inline `<code>` for symbols** (`p`, `R(θ)`, `M_world`).
 - **`<strong>` for named concepts the first time they appear** — this
   is how the learner sees what's introduced this week.

@@ -73,10 +73,17 @@ paginate: true
 - **Headings:** sentence case, not title case. "Affine transformations" not
   "Affine Transformations".
 - **No emoji.** Inherit the calm UW typographic style.
-- **No em dashes (—) anywhere.** Em dashes are an AI tell; readers spot
-  them immediately. Use periods, commas, parentheses, or colons instead.
-  En dashes are fine for ranges (`weeks 3–5`). Applies in slide titles,
-  bullets, the title slide, take-aways, and quote attributions.
+- **No em dashes (—).** AI tell. Use periods, commas, parentheses, or
+  colons. En dashes are fine for ranges (`weeks 3-5`). Applies in slide
+  titles, bullets, the title slide, take-aways, and quote attributions.
+- **No AI vocabulary.** Banned: *delve, leverage, robust, comprehensive,
+  intricate, vibrant, multifaceted, nuanced.* Find a more specific
+  word.
+- **Lead with the point per slide.** First bullet is the claim; rest
+  support. Don't open a slide with "Let's now consider...".
+- **No throat-clearing in transitions.** Just go to the next slide.
+- **Diagrams:** Mermaid is fine in Marp slides — it renders in slide
+  rendering too. Use it for flowcharts and sequence diagrams.
 - **At most one image per slide.** Place under `public/c/<slug>/slides/img/`
   so the relative paths work after PDF render.
 - **Code blocks:** dark slate background (set by theme). Keep them under 12
