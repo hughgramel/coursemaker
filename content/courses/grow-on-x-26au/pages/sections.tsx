@@ -3,13 +3,13 @@ import { config } from "../course.config";
 
 const base = `/c/${config.slug}`;
 
-const sections = [
-  { wk: 1, title: "Audit five accounts in your niche",   blurb: "Reverse-engineer what works in your prospective niche before you write a single post." },
-  { wk: 2, title: "Hook lab",                             blurb: "Write twenty hooks against one source claim. Peer-rate each. Pick the three you would publish." },
-  { wk: 3, title: "Reply sprint",                         blurb: "Ten substantive replies to accounts 10-100x your size. Five genuine DMs. Track profile clicks the next day." },
-  { wk: 4, title: "Build your weekly system",             blurb: "Daily 60-minute routine, a weekly batching block, a monthly retrospective. Pick a template calendar." },
-  { wk: 5, title: "Read your analytics",                  blurb: "Pull 30 days of X analytics. Classify top 10 posts. Double down on two patterns, retire one." },
-  { wk: 6, title: "Capstone demo day",                    blurb: "Present your 90-day playbook to two peers. Get specific feedback on the highest-risk assumption." },
+const sections: { week: number; title: string; mission: string }[] = [
+  { week: 1, title: "Audit five accounts in your niche", mission: "Reverse-engineer what works before writing a single post." },
+  { week: 2, title: "Hook lab",                          mission: "Write twenty hooks against one source claim. Peer-rate, pick three." },
+  { week: 3, title: "Reply sprint",                      mission: "Ten substantive replies + five real DMs to accounts 10-100x your size." },
+  { week: 4, title: "Build your weekly system",          mission: "Daily 60-minute routine + weekly batching block + monthly retrospective." },
+  { week: 5, title: "Read your analytics",               mission: "Classify your top 10 posts. Double down on two patterns, retire one." },
+  { week: 6, title: "Capstone demo day",                 mission: "Present your 90-day playbook. Get specific feedback on the highest-risk assumption." },
 ];
 
 export function SectionsIndex() {
@@ -17,24 +17,33 @@ export function SectionsIndex() {
     <>
       <AnchorHeading as="h1" id="sections">Sections</AnchorHeading>
       <p>
-        Sections are hands-on, not re-lectures. Each one ends with an artifact you carry into the next
-        week&rsquo;s work: a niche audit, a hook bank, a reply log, a written weekly system, an analytics
-        classification, or your capstone presentation.
+        One hands-on section per week, applied to YOUR account. Sections are not
+        re-lectures, they&rsquo;re the feedback loop.
       </p>
-      <ul>
-        {sections.map(({ wk, title, blurb }) => (
-          <li key={`wk${wk}`}>
-            <a href={`${base}/sections/wk0${wk}`}>
-              <strong>Week {wk} — {title}</strong>
-            </a>
-            <br />
-            {blurb}
-          </li>
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Wk</th>
+            <th>Section</th>
+            <th>What you ship</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sections.map((s) => {
+            const wk = `wk${s.week.toString().padStart(2, "0")}`;
+            return (
+              <tr key={s.week}>
+                <td>{s.week}</td>
+                <td><a href={`${base}/sections/${wk}`}>{s.title}</a></td>
+                <td>{s.mission}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </>
   );
 }
 
 export const sectionsIndexSearchBody =
-  "Sections index all six worksheets audit accounts hook lab reply sprint weekly system analytics capstone demo day";
+  "Sections index audit accounts hook lab reply sprint weekly system analytics capstone demo day";

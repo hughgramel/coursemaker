@@ -15,6 +15,7 @@ export const config: SiteConfig = {
     {
       items: [
         { label: "Home", href: "" },
+        { label: "Tasks", href: "tasks" },
         { label: "Syllabus", href: "syllabus" },
         {
           label: "Lectures",

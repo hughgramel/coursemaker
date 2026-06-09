@@ -6,6 +6,7 @@ import { LecturesIndex, lecturesIndexSearchBody } from "./pages/lectures";
 import { SectionsIndex, sectionsIndexSearchBody } from "./pages/sections";
 import { HwIndex, hwIndexSearchBody } from "./pages/hw";
 import { ReadingsIndex, readingsIndexSearchBody } from "./pages/readings";
+import { TasksPage, tasksPageSearchBody } from "./pages/tasks";
 
 import { Wk01L1, wk01L1SearchBody } from "./pages/lectures/wk01-l1";
 import { Wk01L2, wk01L2SearchBody } from "./pages/lectures/wk01-l2";
@@ -44,6 +45,7 @@ export const course: Course = {
   config,
   pages: [
     { segments: [],                                  title: "Home",                                          searchBody: homeSearchBody,             render: () => <HomePage /> },
+    { segments: ["tasks"],                           title: "Tasks",                                         searchBody: tasksPageSearchBody,        render: () => <TasksPage /> },
     { segments: ["syllabus"],                        title: "Syllabus",                                      searchBody: syllabusSearchBody,         render: () => <SyllabusPage /> },
 
     { segments: ["lectures"],                        title: "Lectures",                                      searchBody: lecturesIndexSearchBody,    render: () => <LecturesIndex /> },
