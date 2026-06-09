@@ -7,8 +7,10 @@ import { AnchorHeading } from "./AnchorHeading";
  * → Bibliography) inside the existing .prose layout. No PDF pipeline; this
  * IS the reading.
  *
- * Authors use these as JSX wrappers and write everything else as standard
- * prose with <AnchorHeading>, <p>, <ul>, code blocks, etc.
+ * The outer <div className="reading-prose"> swaps the body to a serif at a
+ * narrower measure, drops all "card" chrome, and uses typographic conventions
+ * (Abstract. run-in, hanging "Exercise N." labels, hairline bibliography rule)
+ * instead of UI boxes. See `app/globals.css` for the rules.
  */
 
 export function ReadingPage({
@@ -23,22 +25,22 @@ export function ReadingPage({
   children: ReactNode;
 }) {
   return (
-    <>
+    <div className="reading-prose">
       <AnchorHeading as="h1" id={id}>
         {title}
       </AnchorHeading>
       {kicker && <p className="reading-kicker">{kicker}</p>}
       {children}
-    </>
+    </div>
   );
 }
 
-/** Highlighted "what this reading covers" framing block. */
+/** "Abstract."-style framing block. Italic, run-in label, no box. */
 export function ReadingFraming({ children }: { children: ReactNode }) {
   return <div className="reading-framing">{children}</div>;
 }
 
-/** Numbered exercise block. Won't break across a viewport. */
+/** Hanging "Exercise N." run-in label, italic body. No card. */
 export function Exercise({
   n,
   children,
@@ -47,14 +49,14 @@ export function Exercise({
   children: ReactNode;
 }) {
   return (
-    <div className="exercise not-prose">
-      <div className="exercise-label">Exercise {n}</div>
-      <div className="exercise-body prose">{children}</div>
+    <div className="exercise">
+      <span className="exercise-label">Exercise {n}</span>
+      <span className="exercise-body">{children}</span>
     </div>
   );
 }
 
-/** End-of-reading "Take-aways" — numbered emphasis list. */
+/** Plain italic ordered list. */
 export function Takeaways({ children }: { children: ReactNode }) {
   return (
     <>
@@ -64,17 +66,17 @@ export function Takeaways({ children }: { children: ReactNode }) {
   );
 }
 
-/** Optional bibliography — formal references at the end. */
+/** Hairline-rule bibliography. Hanging-indent references. */
 export function Bibliography({ children }: { children: ReactNode }) {
   return (
     <div className="bibliography">
-      <AnchorHeading as="h2" id="bibliography">Further reading</AnchorHeading>
+      <h2 id="bibliography">Further reading</h2>
       {children}
     </div>
   );
 }
 
-/** Inline aside / callout — for definitions, asides, gotchas. */
+/** Inline aside / definition. Hairline left rule, no fill. */
 export function Callout({
   variant = "note",
   title,
@@ -85,9 +87,9 @@ export function Callout({
   children: ReactNode;
 }) {
   return (
-    <div className={`callout callout-${variant} not-prose`}>
-      {title && <div className="callout-title">{title}</div>}
-      <div className="callout-body prose">{children}</div>
+    <div className={`callout callout-${variant}`}>
+      {title && <span className="callout-title">{title}</span>}
+      <span className="callout-body">{children}</span>
     </div>
   );
 }

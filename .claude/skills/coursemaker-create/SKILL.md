@@ -192,6 +192,114 @@ Sign off (yes / change X / start over)?
 
 **Wait for the user** before continuing. Their sign-off is the gate.
 
+## Step 2.5 — Research pass (you, with WebSearch + WebFetch)
+
+Before fan-out, build a vetted source library that every per-week
+subagent will draw from. This is the gate that turns "vibes research"
+into traceable research.
+
+### What counts as a primary source
+
+"Primary" is field-dependent. **The rule isn't "academic papers only" —
+it's "authored, dated, hosted by author or canonical venue, written by
+a practitioner with domain authority."**
+
+| Field | Canonical sources |
+|-------|-------------------|
+| ML / AI / theoretical CS | arXiv, NeurIPS/ICML/ICLR proceedings, distill.pub, Berkeley/Stanford/MIT course notes, Goodfellow/Bishop/Murphy textbooks |
+| Systems engineering | USENIX papers, Stripe/Vercel/Notion/Google engineering blogs, conference talk transcripts, RFC drafts |
+| Cryptography | Boneh & Shoup (free), Katz & Lindell, original CRYPTO/EUROCRYPT papers, IETF RFCs |
+| Programming languages | TC39 proposals, Rust RFCs, language designer essays (Pike, Hickey, Matsumoto), original POPL/ICFP papers |
+| Startups / entrepreneurship | paulgraham.com, founder essays (Patrick Collison, DHH, Sam Altman), YC essays, a16z/USV/Sequoia blogs, founders' books |
+| Design / UX | Don Norman, Tufte, Refactoring UI, Nielsen Norman Group, design system case studies, Bringhurst |
+| History | Primary documents (letters, treaties, archived photos), Stanford Encyclopedia of Philosophy for philosophy, peer-reviewed history journals |
+| Economics | NBER/SSRN working papers, original papers, key books, FRED data, primary central-bank speeches |
+| Music / art theory | Schenker, Schoenberg, Berklee notes, Open Music Theory, primary artist interviews |
+
+**Rejection rules:**
+- ❌ Wikipedia, Medium spam, Towards Data Science, generic Quora/Reddit threads
+- ❌ Anonymous content, undated content, content without an authored byline
+- ❌ Other LLMs' summaries of papers (find the paper itself)
+- ❌ Aggregator clickbait ("10 things every X must know")
+
+### How to run the pass
+
+1. **Collect concept ids.** Walk every week of the curriculum graph and
+   collect the union of all `introduces` arrays. That's the concept list.
+
+2. **For each concept, run 2-3 WebSearch queries** appropriate to the
+   field. Generic templates that work for most fields:
+   - `"<concept>" seminal paper`
+   - `"<concept>" course notes site:.edu`
+   - `"<concept>" essay <known author in field>`
+   - `"<concept>" handbook OR monograph OR textbook`
+
+3. **WebFetch the top 3-5 hits per concept** to confirm they actually
+   exist and to read the abstract / first paragraph. If a URL doesn't
+   resolve, drop it.
+
+4. **For each surviving source, record:**
+
+   ```json
+   {
+     "id": "shannon-1949",
+     "title": "Communication Theory of Secrecy Systems",
+     "author": "Claude E. Shannon",
+     "year": 1949,
+     "url": "https://...",
+     "url_verified": true,
+     "kind": "foundational-paper",
+     "host_kind": "author-homepage" | "journal" | "arxiv" | "university" | "company-engineering-blog" | "founder-essay" | "primary-document",
+     "summary": "One-paragraph summary of what's actually in it.",
+     "key_quote": "Optional. A short direct quote you'd cite.",
+     "informs_weeks": [1, 2],
+     "informs_concepts": ["perfect-secrecy", "entropy", "one-time-pad"]
+   }
+   ```
+
+5. **Save to** `tmp/coursemaker/<slug>-sources.json`. Aim for **3-6
+   sources per week** on average — enough that every concept has
+   coverage but not so many the subagent gets lost.
+
+6. **Show the user** a prose summary:
+
+   ```
+   ## Research pass — proposed source library
+
+   Across 10 weeks I've gathered 47 primary sources. Highlights by phase:
+
+   **Foundations** — Shannon's 1949 paper (perfect secrecy), Diffie & Hellman 1976 (key exchange), Kerckhoffs's principle (original 1883 letter).
+
+   **Core mechanics** — NIST AES standard, Bellare & Rogaway lecture notes for HMAC, Krawczyk's keyed-hash construction paper.
+
+   ... <continue by phase> ...
+
+   Sources I considered but rejected: Wikipedia (orientation only, not citation-worthy), several Medium posts (no author authority).
+
+   Sign off (yes / add X / drop Y / refresh)?
+   ```
+
+7. **Wait for the user.** They may want a specific essay added (e.g.
+   "include Paul Graham's *Hackers and Painters* essay") or a source
+   dropped. Edit the JSON and re-show.
+
+### Constraint on per-week subagents (carried into step 6)
+
+Each subagent's brief will include the slice of `sources.json` tagged
+with that week's concepts. Subagents:
+- Cite ONLY from the list. If a citation has `url_verified: false`,
+  do not use it.
+- Use the source `summary` + `key_quote` fields when writing the reading.
+- Include a `<Bibliography>` block at the end of the reading listing
+  every source ID they actually used, formatted as a real reference
+  (author, year, title, link).
+- If they need a source not in the list, they stop and request an
+  addendum from the master rather than hallucinating one.
+
+This research pass adds ~10-20 minutes to the full pipeline but is
+the single most effective lever for course quality. Skip only for
+quick demo courses (use `--no-research` if you implement that flag).
+
 ## Step 3 — Scaffold the course (you)
 
 ```bash
@@ -298,9 +406,19 @@ The reading is THIS COURSE'S textbook chapter for the week — original
 writing in TSX, rendered as a web page at /c/<slug>/readings/wkNN.
 NOT a Markdown file, NOT a PDF.
 
+SOURCES: cite ONLY from the JSON slice below. Do NOT WebSearch for new
+sources mid-flight — the master ran the research pass already, and new
+sources would skip the user-approval gate. Do NOT write content from
+parametric knowledge. If you genuinely need a source not in the list,
+STOP and report it back. Do not invent one.
+
+Sources for this week (paste the JSON slice when dispatching):
+[ ... slice of sources.json where any informs_weeks includes N ... ]
+
 Pedagogy: every lecture and reading follows /teach principles — one
 mission, prereqs that match the curriculum graph EXACTLY, inline
-explanations of WHY (not just WHAT), feedback loop at the end.
+explanations of WHY (not just WHAT), feedback loop at the end. The
+reading's <Bibliography> block lists every source ID you actually used.
 
 DO NOT edit `content/courses/<slug>/index.tsx` yourself — the master
 will consolidate that at the end. Just write your six files.

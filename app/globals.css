@@ -402,106 +402,215 @@ body {
 .mb-6 { margin-bottom: 2rem !important; }
 
 /* ============================================================
-   Reading primitives (used by components/ReadingPage.tsx)
+   Reading mode — typographic, not boxy.
+   Applied to .reading-prose. Body switches to serif, measure
+   narrows, all "cards" become hairline typography.
+
+   Reference: Marschner & Shirley, Bringhurst's Elements, Tufte's
+   reading layout. NO purple decorations in body, NO cards, NO chips.
    ============================================================ */
 
-/* Kicker paragraph immediately under the reading's H1. */
-.prose .reading-kicker {
-  margin-top: -0.25rem;
-  color: var(--color-muted);
-  font-size: 0.95em;
+.reading-prose {
+  font-family: var(--font-reading), "Source Serif 4", Charter, "Iowan Old Style", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  max-width: 38rem;
+  margin: 0 auto;
+  font-feature-settings: "liga" 1, "kern" 1, "onum" 1;
+}
+@media (max-width: 50rem) {
+  .reading-prose { font-size: 17px; max-width: 100%; }
 }
 
-/* Framing block: "what this reading covers" intro section. */
-.reading-framing {
-  border-left: 3px solid var(--color-primary);
-  background: var(--color-sidebar);
-  border-radius: 0 6px 6px 0;
-  padding: 0.5rem 1rem;
-  margin: 1.25rem 0;
+.reading-prose h1,
+.reading-prose h2,
+.reading-prose h3,
+.reading-prose h4 {
+  font-family: var(--font-sans);
+  color: var(--color-heading);
 }
-.reading-framing > p { margin: 0.5rem 0; }
-.reading-framing > p:first-child { margin-top: 0; }
-.reading-framing > p:last-child { margin-bottom: 0; }
-
-/* Exercise card. */
-.prose .exercise {
-  margin: 1rem 0;
-  background: #ffffff;
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  padding: 0.75rem 1rem;
+.reading-prose h1 {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 1.5rem 0 0.25rem;
 }
-.exercise-label {
-  font-size: 0.7rem;
+.reading-prose h2 {
+  font-weight: 500;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin: 2.5rem 0 0.5rem;
+  letter-spacing: -0.005em;
+}
+.reading-prose h3 {
   font-weight: 600;
-  letter-spacing: 0.06em;
+  font-size: 1.05rem;
+  margin: 1.75rem 0 0.25rem;
+  letter-spacing: -0.003em;
+}
+
+.reading-prose p { margin: 0.85em 0; }
+
+/* Body code reads like body — same serif size, monospace family. */
+.reading-prose code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* Block code: indented, thin left rule. No card. */
+.reading-prose pre {
+  background: transparent;
+  border: 0;
+  border-left: 2px solid var(--color-border-strong);
+  border-radius: 0;
+  padding: 0.5em 0 0.5em 1.25em;
+  font-size: 0.85em;
+  line-height: 1.55;
+  margin: 1.25em 0;
+  color: #2b292e;
+}
+
+/* Links: only color signal in the body. */
+.reading-prose a {
+  color: var(--color-primary-strong);
+  background-image: none;
+  text-decoration: underline;
+  text-decoration-color: rgba(87, 57, 206, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 120ms ease;
+}
+.reading-prose a:hover {
+  background-color: transparent;
+  text-decoration-color: var(--color-primary-strong);
+}
+
+.reading-prose strong { font-weight: 600; color: #0d0c10; }
+.reading-prose em { font-style: italic; }
+
+/* Kicker — small caps, muted. */
+.reading-prose .reading-kicker {
+  margin: 0.25rem 0 2.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-primary);
-  margin-bottom: 0.25rem;
+  color: var(--color-muted);
 }
-.exercise-body { font-size: 0.95em; }
-.exercise-body > :first-child { margin-top: 0; }
-.exercise-body > :last-child { margin-bottom: 0; }
 
-/* Takeaways: numbered list with bolder counters. */
-.prose ol.takeaways {
-  counter-reset: ta;
-  list-style: none;
-  padding-left: 0;
+/* Framing — first-paragraph treatment. No box.
+   The "Abstract." run-in does the work. */
+.reading-framing {
+  margin: 1.5rem 0 2rem;
 }
-.prose ol.takeaways > li {
-  counter-increment: ta;
-  position: relative;
-  padding-left: 2rem;
-  margin: 0.4rem 0;
-}
-.prose ol.takeaways > li::before {
-  content: counter(ta);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 1.5rem;
-  text-align: right;
-  font-variant-numeric: tabular-nums;
+.reading-framing > p { margin: 0.75em 0; font-style: italic; color: #2b292e; }
+.reading-framing > p:first-child::before {
+  content: "Abstract. ";
+  font-family: var(--font-sans);
+  font-style: normal;
   font-weight: 600;
-  color: var(--color-primary);
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-right: 0.4em;
+  vertical-align: 0.05em;
 }
+.reading-framing > p:first-child { margin-top: 0; }
+.reading-framing > p:last-child { margin-bottom: 0; font-style: normal; }
 
-/* Bibliography: smaller, hanging-indent. */
-.prose .bibliography {
-  margin-top: 2rem;
-  border-top: 1px solid var(--color-border);
+/* Exercise — hanging "Exercise N." run-in, italic body. No box. */
+.reading-prose .exercise {
+  margin: 1.1em 0 1.1em 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+.reading-prose .exercise-label {
+  display: inline;
+  font-family: var(--font-sans);
+  font-size: inherit;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-heading);
+  margin-right: 0.5em;
+}
+.reading-prose .exercise-label::after { content: "."; }
+.reading-prose .exercise-body { display: inline; font-size: inherit; }
+.reading-prose .exercise-body > p:first-child { display: inline; margin: 0; }
+.reading-prose .exercise-body { font-style: italic; }
+
+/* Takeaways — plain ordered list. */
+.reading-prose ol.takeaways {
+  counter-reset: none;
+  list-style: decimal;
+  padding-left: 1.5rem;
+  font-style: italic;
+}
+.reading-prose ol.takeaways > li {
+  counter-increment: none;
+  position: static;
+  padding-left: 0;
+  margin: 0.5rem 0;
+}
+.reading-prose ol.takeaways > li::before { content: none; }
+.reading-prose ol.takeaways > li::marker { color: var(--color-heading); font-weight: 600; }
+
+/* Bibliography — hairline above, hanging-indent, smaller. */
+.reading-prose .bibliography {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--color-border-strong);
   padding-top: 1rem;
 }
-.prose .bibliography h2 { font-size: 1rem; }
-.prose .bibliography p {
-  font-size: 0.875em;
-  line-height: 1.5;
-  padding-left: 1.5rem;
-  text-indent: -1.5rem;
+.reading-prose .bibliography h2 {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+.reading-prose .bibliography p {
+  font-size: 0.92em;
+  line-height: 1.55;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  color: #2b292e;
 }
 
-/* Callout (inline). */
-.prose .callout {
-  margin: 1rem 0;
-  padding: 0.6rem 1rem;
-  border-left: 3px solid var(--color-primary);
-  background: var(--color-sidebar);
-  border-radius: 0 6px 6px 0;
+/* Callout — hairline left rule, no fill. Used sparingly. */
+.reading-prose .callout {
+  margin: 1.1em 0;
+  padding: 0 0 0 1em;
+  background: transparent;
+  border: 0;
+  border-left: 2px solid var(--color-border-strong);
+  border-radius: 0;
 }
-.prose .callout-warn { border-left-color: var(--color-red-1); }
-.callout-title {
-  font-size: 0.7rem;
+.reading-prose .callout-warn { border-left-color: var(--color-red-1); }
+.reading-prose .callout-title {
+  display: inline;
+  font-family: var(--font-sans);
+  font-size: 0.7em;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-primary);
-  margin-bottom: 0.25rem;
+  color: var(--color-muted);
+  margin-right: 0.5em;
 }
-.callout-warn .callout-title { color: var(--color-red-1); }
-.callout-body > :first-child { margin-top: 0; }
-.callout-body > :last-child { margin-bottom: 0; }
+.reading-prose .callout-title::after { content: "."; }
+.reading-prose .callout-body > p:first-child { display: inline; margin: 0; }
+.reading-prose .callout-body > * + * { margin-top: 0.5em; }
+
+/* Anchor links: hide on reading pages (they distract from prose) */
+.reading-prose .anchor-heading { display: none; }
 
 /* ============================================================
    Custom scrollbar for sidebar
