@@ -1,14 +1,7 @@
 import Link from "next/link";
 import { courses } from "@/content/courses";
-import { CopyPromptButton } from "@/components/CopyPromptButton";
 
 const REPO_URL = "https://github.com/hughgramel/coursemaker";
-const SKILLS_URL = "https://skills.sh";
-
-const CLAUDE_PROMPT =
-  "Install the coursemaker skill from https://skills.sh and clone https://github.com/hughgramel/coursemaker. " +
-  "Open the cloned repo, then run /coursemaker-create to build me a college-level course on [TOPIC]. " +
-  "Use the existing courses under content/courses/ (especially b2c-10k-mrr-26au and grow-on-x-26au) as the reference output shape.";
 
 function GitHubIcon({ size = 22 }: { size?: number }) {
   return (
@@ -24,32 +17,10 @@ function GitHubIcon({ size = 22 }: { size?: number }) {
   );
 }
 
-function SkillsIcon() {
-  return (
-    <svg
-      viewBox="0 0 16 16"
-      width="18"
-      height="18"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M3 4h10M3 8h10M3 12h6"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
 const HIDDEN_FROM_GRID = new Set(["cse457-26sp", "template"]);
 
 export default function Home() {
   const visibleCourses = courses.filter((c) => !HIDDEN_FROM_GRID.has(c.config.slug));
-
-  const ctaBase =
-    "inline-flex items-center gap-2 h-10 px-4 rounded-lg border text-sm font-medium transition-colors";
 
   return (
     <div className="min-h-screen bg-[var(--color-sidebar)]">
@@ -80,44 +51,20 @@ export default function Home() {
       </header>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <h1 className="text-[var(--color-heading)] text-3xl sm:text-4xl font-light leading-tight mb-6 sm:mb-7">
-          Generate a college-level course on anything.
+        <h1 className="text-[var(--color-heading)] text-3xl sm:text-4xl font-light leading-tight mb-3">
+          Generate a course on anything.
         </h1>
-
-        <div className="mb-10 sm:mb-12">
-          <div className="text-sm text-[var(--color-muted)] mb-3">Create a Course at</div>
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href={REPO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${ctaBase} bg-white border-[var(--color-border)] text-[var(--color-heading)] hover:border-[var(--color-primary)]`}
-            >
-              <GitHubIcon size={18} />
-              <span>GitHub</span>
-            </a>
-            <span className="text-sm text-[var(--color-faint)]">or use</span>
-            <a
-              href={SKILLS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${ctaBase} bg-white border-[var(--color-border)] text-[var(--color-heading)] hover:border-[var(--color-primary)]`}
-            >
-              <SkillsIcon />
-              <span>skills.sh</span>
-            </a>
-            <span className="text-sm text-[var(--color-faint)]">or use</span>
-            <CopyPromptButton
-              prompt={CLAUDE_PROMPT}
-              label="Copy Claude prompt"
-              className={`${ctaBase} bg-[var(--color-primary)] border-[var(--color-primary)] text-white hover:bg-[var(--color-primary-strong)] hover:border-[var(--color-primary-strong)]`}
-            />
-          </div>
-          <p className="mt-3 text-xs text-[var(--color-muted)] max-w-2xl">
-            The Claude prompt installs the coursemaker skill from skills.sh,
-            clones this repo, and tells Claude to run <code className="px-1 py-0.5 rounded bg-white border border-[var(--color-border)] text-[11px]">/coursemaker-create</code> on a topic of your choice.
-          </p>
-        </div>
+        <p className="text-sm text-[var(--color-muted)] mb-10 sm:mb-12">
+          Create a Course at{" "}
+          <a
+            href={REPO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--color-primary)] hover:underline"
+          >
+            hughgramel/coursemaker
+          </a>
+        </p>
 
         <section>
           <h2 className="text-xs uppercase tracking-wider text-[var(--color-faint)] mb-3">
