@@ -388,8 +388,6 @@ const WEEK_HEADER_STYLE: CSSProperties = {
 
 const WEEK_BLOCK_STYLE: CSSProperties = {
   marginBottom: "2rem",
-  paddingLeft: "1rem",
-  borderLeft: "2px solid #ececec",
 };
 
 const GROUP_BODY_STYLE: CSSProperties = {

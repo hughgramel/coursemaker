@@ -8,7 +8,7 @@ const base = `/c/${config.slug}`;
 
 const weeks: CourseModule[] = [
   {
-    title: "Week 1 — Foundations",
+    title: "Week 1, Foundations",
     size: "h2-small",
     entries: [
       { date: "Mon", notes: [{ kind: "link", text: "Reading: Funnel, niche, bio", href: `${base}/readings/wk01` }] },
@@ -34,7 +34,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 2 — Core mechanics: writing",
+    title: "Week 2, Core mechanics: writing",
     size: "h2-small",
     entries: [
       { date: "Mon", notes: [{ kind: "link", text: "Reading: Hooks and formats", href: `${base}/readings/wk02` }] },
@@ -61,7 +61,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 3 — Core mechanics: distribution",
+    title: "Week 3, Core mechanics: distribution",
     size: "h2-small",
     entries: [
       { date: "Mon", notes: [{ kind: "link", text: "Reading: The algorithm and the reply game", href: `${base}/readings/wk03` }] },
@@ -86,7 +86,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 4 — Composition",
+    title: "Week 4, Composition",
     size: "h2-small",
     entries: [
       { date: "Mon", notes: [{ kind: "link", text: "Reading: The weekly system", href: `${base}/readings/wk04` }] },
@@ -114,7 +114,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 5 — Frontier: analytics",
+    title: "Week 5, Frontier: analytics",
     size: "h2-small",
     entries: [
       { date: "Mon", notes: [{ kind: "link", text: "Reading: Analytics and iteration", href: `${base}/readings/wk05` }] },
@@ -141,7 +141,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 6 — Synthesis",
+    title: "Week 6, Synthesis",
     size: "h2-small",
     entries: [
       { date: "Mon", notes: [{ kind: "link", text: "Reading: The 90-day playbook", href: `${base}/readings/wk06` }] },

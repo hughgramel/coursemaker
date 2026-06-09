@@ -12,8 +12,8 @@ export function Wk06Reading() {
   return (
     <ReadingPage
       id="wk06"
-      title="Week 6 — Picking your wedge channel and building an SEO engine"
-      kicker="B2C to $10k MRR — A 10-Week Growth Manual for Technical Founders · Autumn 2026 · Reading"
+      title="Week 6, Picking your wedge channel and building an SEO engine"
+      kicker="B2C to $10k MRR, A 10-Week Growth Manual for Technical Founders · Autumn 2026 · Reading"
     >
       <ReadingFraming>
         <p>
@@ -469,7 +469,7 @@ export function Wk06Reading() {
         <strong>The page types:</strong>
       </p>
       <ul>
-        <li>City pages: <code>/nomad-list/&lt;city&gt;</code> — one per city (two hundred-plus cities at peak)</li>
+        <li>City pages: <code>/nomad-list/&lt;city&gt;</code>, one per city (two hundred-plus cities at peak)</li>
         <li>Faceted subpages: <code>/nomad-list/&lt;city&gt;/cost-of-living</code>, <code>/nomad-list/&lt;city&gt;/internet-speed</code></li>
         <li>Comparison pages: <code>/compare/&lt;city-a&gt;-vs-&lt;city-b&gt;</code></li>
         <li>Filter pages: <code>/nomad-list/cheap</code>, <code>/nomad-list/warm</code>, <code>/nomad-list/safe</code></li>

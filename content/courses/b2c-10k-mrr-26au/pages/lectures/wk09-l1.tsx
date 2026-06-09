@@ -31,9 +31,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Analyze — List every automated message your product currently sends (transactional, marketing, or lifecycle). For each, state whether it is triggered by an event or scheduled on a calendar. Which ones would become more relevant if you switched the non-triggered ones to triggered?",
-    "Outcome: Apply — Using the five-message starter set from lecture, identify which of the five messages would have the highest expected impact on your D7 retention. Write the trigger condition in one sentence: 'Send when [user_event] and [time_condition].' If no event data exists yet, name the one instrumentation change needed.",
-    "Outcome: Analyze — OneSignal reports push notifications open at roughly 20% vs email under 2% for most B2C apps. Does that make push strictly better? Name two scenarios where email is the correct choice even given the open-rate gap, and explain the reasoning for each.",
+    "Outcome: Analyze, List every automated message your product currently sends (transactional, marketing, or lifecycle). For each, state whether it is triggered by an event or scheduled on a calendar. Which ones would become more relevant if you switched the non-triggered ones to triggered?",
+    "Outcome: Apply, Using the five-message starter set from lecture, identify which of the five messages would have the highest expected impact on your D7 retention. Write the trigger condition in one sentence: 'Send when [user_event] and [time_condition].' If no event data exists yet, name the one instrumentation change needed.",
+    "Outcome: Analyze, OneSignal reports push notifications open at roughly 20% vs email under 2% for most B2C apps. Does that make push strictly better? Name two scenarios where email is the correct choice even given the open-rate gap, and explain the reasoning for each.",
   ],
 };
 

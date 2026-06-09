@@ -2,7 +2,7 @@ import { ProjectPage } from "@/components/ProjectPage";
 import type { ProjectSpec } from "@/types/course";
 
 const spec: ProjectSpec = {
-  title: "Week 3 section — Reply sprint",
+  title: "Week 3 section, Reply sprint",
   tagline:
     "Borrow distribution from established accounts by putting real replies in the right places at the right time.",
   outDate: "Week 3",

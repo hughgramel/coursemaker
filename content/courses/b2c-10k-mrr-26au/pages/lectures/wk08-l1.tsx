@@ -17,7 +17,7 @@ const spec: LectureSpec = {
     {
       title: "Week 8 reading: App store mechanics, ASO, and the capstone scaffold",
       href: "/c/b2c-10k-mrr-26au/readings/wk08",
-      note: "Required before section — covers all three paths (Apple, Google, PWA) plus the Friday capstone scaffold",
+      note: "Required before section, covers all three paths (Apple, Google, PWA) plus the Friday capstone scaffold",
     },
     {
       title: "App Review Guidelines (Apple, 2026)",
@@ -36,9 +36,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Apply — Which path did you ship today: TestFlight, Play internal-testing, or PWA install prompt? Write one sentence explaining the choice, and name the single rejection risk you mitigated before submitting.",
-    "Outcome: Evaluate — Open the Apple Review Guidelines section 3 (Business) or the Google Play policy center. Find the one rule most likely to affect your monetization model. Write a one-sentence plan for staying inside it.",
-    "Outcome: Analyze — Read 20 reviews of two competitor apps on the same store. List five recurring complaints and five recurring compliments. Which complaint is one you could fix this week?",
+    "Outcome: Apply, Which path did you ship today: TestFlight, Play internal-testing, or PWA install prompt? Write one sentence explaining the choice, and name the single rejection risk you mitigated before submitting.",
+    "Outcome: Evaluate, Open the Apple Review Guidelines section 3 (Business) or the Google Play policy center. Find the one rule most likely to affect your monetization model. Write a one-sentence plan for staying inside it.",
+    "Outcome: Analyze, Read 20 reviews of two competitor apps on the same store. List five recurring complaints and five recurring compliments. Which complaint is one you could fix this week?",
   ],
 };
 

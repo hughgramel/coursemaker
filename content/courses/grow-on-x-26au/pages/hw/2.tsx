@@ -2,7 +2,7 @@ import { ProjectPage } from "@/components/ProjectPage";
 import type { ProjectSpec } from "@/types/course";
 
 const spec: ProjectSpec = {
-  title: "HW2 — Ship twenty posts in seven days",
+  title: "HW2, Ship twenty posts in seven days",
   tagline: "Volume builds the muscle. Variety builds the dataset Week 5 needs.",
   outDate: "Week 2",
   dueDate: "Week 3",

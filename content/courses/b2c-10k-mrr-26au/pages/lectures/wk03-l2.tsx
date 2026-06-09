@@ -31,9 +31,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Apply — Pick one paywall type (hard, soft, or metered) for your product. Write the two-sentence rationale. Then identify the exact screen where the paywall will appear and why that moment follows the aha-moment.",
-    "Outcome: Apply — Using the RevenueCat trial data (45.7% trial-to-paid for 17-32 day trials vs lower rates for shorter windows), decide whether your product warrants a trial. If yes, state the length. If no, state why a hard paywall is better.",
-    "Outcome: Evaluate — A user emails to request a refund after 8 days. Walk through how you respond, and explain whether your refund policy is a retention tool or a trust-building tool in this case.",
+    "Outcome: Apply, Pick one paywall type (hard, soft, or metered) for your product. Write the two-sentence rationale. Then identify the exact screen where the paywall will appear and why that moment follows the aha-moment.",
+    "Outcome: Apply, Using the RevenueCat trial data (45.7% trial-to-paid for 17-32 day trials vs lower rates for shorter windows), decide whether your product warrants a trial. If yes, state the length. If no, state why a hard paywall is better.",
+    "Outcome: Evaluate, A user emails to request a refund after 8 days. Walk through how you respond, and explain whether your refund policy is a retention tool or a trust-building tool in this case.",
   ],
 };
 

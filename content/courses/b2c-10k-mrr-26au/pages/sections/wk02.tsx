@@ -10,7 +10,7 @@ export function Wk02SectionPage() {
   return (
     <ReadingPage
       id="wk02-section"
-      title="Week 2 Section — Activation audit"
+      title="Week 2 Section, Activation audit"
       kicker="B2C to $10k MRR · Autumn 2026 · Section"
     >
       <ReadingFraming>

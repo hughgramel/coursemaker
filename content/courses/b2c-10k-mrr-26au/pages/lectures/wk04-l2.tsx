@@ -35,9 +35,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Apply — Run the cohort SQL from section on your database (or PostHog). Paste the D1/D7/D30 table into your founder journal. Which signup cohort has the best D30 number? What changed that week?",
-    "Outcome: Analyze — Write the power-user query for your product: what event or event count separates the top 5% from the rest? What did those users do in their first 72 hours that others did not?",
-    "Outcome: Evaluate — Look at your last 30 days of churn. Tag each churned customer as involuntary (card failure, expired card, bank decline) or voluntary (explicit cancel, no usage). What share is involuntary? Would adding dunning logic recover more MRR than shipping a new feature this week?",
+    "Outcome: Apply, Run the cohort SQL from section on your database (or PostHog). Paste the D1/D7/D30 table into your founder journal. Which signup cohort has the best D30 number? What changed that week?",
+    "Outcome: Analyze, Write the power-user query for your product: what event or event count separates the top 5% from the rest? What did those users do in their first 72 hours that others did not?",
+    "Outcome: Evaluate, Look at your last 30 days of churn. Tag each churned customer as involuntary (card failure, expired card, bank decline) or voluntary (explicit cancel, no usage). What share is involuntary? Would adding dunning logic recover more MRR than shipping a new feature this week?",
   ],
 };
 

@@ -7,7 +7,7 @@ export function StaffPage() {
       <p>
         This course is taught by practitioners with first-hand experience
         scaling at least one B2C product past $10k MRR. Staff bring their own
-        funnel, dashboard, and current MRR to share with the class on Day 1 —
+        funnel, dashboard, and current MRR to share with the class on Day 1 -
         the course practices what it teaches.
       </p>
 
@@ -20,7 +20,7 @@ export function StaffPage() {
         </li>
         <li>
           <strong>Office hours.</strong> 1:1 product help. Bring your
-          dashboard, your cohort chart, your paywall, your store listing —
+          dashboard, your cohort chart, your paywall, your store listing -
           not abstract questions.
         </li>
         <li>

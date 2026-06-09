@@ -2,7 +2,7 @@ import { ProjectPage } from "@/components/ProjectPage";
 import type { ProjectSpec } from "@/types/course";
 
 const spec: ProjectSpec = {
-  title: "Week 2 section — Hook lab",
+  title: "Week 2 section, Hook lab",
   tagline: "Write twenty hooks against a single source claim. Peer-rate each on specificity and curiosity. Pick the three you would publish.",
   outDate: "Week 2",
   overview: [

@@ -2,7 +2,7 @@ import { ProjectPage } from "@/components/ProjectPage";
 import type { ProjectSpec } from "@/types/course";
 
 const spec: ProjectSpec = {
-  title: "HW3 — Run your weekly system for two weeks",
+  title: "HW3, Run your weekly system for two weeks",
   tagline: "Operate the system you built in Section 4. Daily routine, weekly batching, at least one collaboration touch.",
   outDate: "Week 4",
   dueDate: "Week 5",

@@ -2,7 +2,7 @@ import { ProjectPage } from "@/components/ProjectPage";
 import type { ProjectSpec } from "@/types/course";
 
 const spec: ProjectSpec = {
-  title: "Week 5 section — Read your analytics",
+  title: "Week 5 section, Read your analytics",
   tagline:
     "Pull your last 30 days of X analytics. Classify your top 10 posts by hook pattern, format, and topic. Identify two patterns to double down on and one to retire.",
   outDate: "Week 5",

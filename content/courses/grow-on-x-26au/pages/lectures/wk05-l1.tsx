@@ -14,7 +14,7 @@ const spec: LectureSpec = {
   slidesHref: "/c/grow-on-x-26au/slides/wk05-l1.pdf",
   readings: [
     {
-      title: "Week 5 reading — Analytics, experiments, and iteration",
+      title: "Week 5 reading, Analytics, experiments, and iteration",
       href: "/c/grow-on-x-26au/readings/wk05",
     },
     {

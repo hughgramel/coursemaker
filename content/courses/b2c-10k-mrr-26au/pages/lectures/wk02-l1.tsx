@@ -14,7 +14,7 @@ const spec: LectureSpec = {
   slidesHref: "/c/b2c-10k-mrr-26au/slides/wk02-l1.pdf",
   readings: [
     {
-      title: "Week 2 reading: Activation — the first 60 seconds",
+      title: "Week 2 reading: Activation, the first 60 seconds",
       href: "/c/b2c-10k-mrr-26au/readings/wk02",
       note: "Required before section",
     },
@@ -30,9 +30,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Apply — Write your product's activation event in one sentence a new user would recognize. What data do you already have that confirms it?",
-    "Outcome: Analyze — Lenny Rachitsky distinguishes a 'good' activation metric (causal) from a correlative one. Name one metric in your current analytics that is correlative but not causal, and explain why.",
-    "Outcome: Create — Your current activation rate is X%. Name the one onboarding step you would change first, and describe how you would measure whether that change worked.",
+    "Outcome: Apply, Write your product's activation event in one sentence a new user would recognize. What data do you already have that confirms it?",
+    "Outcome: Analyze, Lenny Rachitsky distinguishes a 'good' activation metric (causal) from a correlative one. Name one metric in your current analytics that is correlative but not causal, and explain why.",
+    "Outcome: Create, Your current activation rate is X%. Name the one onboarding step you would change first, and describe how you would measure whether that change worked.",
   ],
 };
 

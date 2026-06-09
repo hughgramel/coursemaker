@@ -41,9 +41,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Evaluate — Score your product against 5 candidate channels using the channel-fit worksheet from section. Write one sentence defending your top pick, and one sentence naming the biggest risk with that pick.",
-    "Outcome: Apply — Find two indie founders who have succeeded on the channel you scored highest. What did they ship in their first 30 days on that channel? How does their product compare to yours in audience fit?",
-    "Outcome: Analyze — Weinberg and Mares argue that channel-product fit matters as much as product-market fit. Describe one case from your own experience (or one you have read about) where a technically good product failed because of channel mismatch.",
+    "Outcome: Evaluate, Score your product against 5 candidate channels using the channel-fit worksheet from section. Write one sentence defending your top pick, and one sentence naming the biggest risk with that pick.",
+    "Outcome: Apply, Find two indie founders who have succeeded on the channel you scored highest. What did they ship in their first 30 days on that channel? How does their product compare to yours in audience fit?",
+    "Outcome: Analyze, Weinberg and Mares argue that channel-product fit matters as much as product-market fit. Describe one case from your own experience (or one you have read about) where a technically good product failed because of channel mismatch.",
   ],
 };
 

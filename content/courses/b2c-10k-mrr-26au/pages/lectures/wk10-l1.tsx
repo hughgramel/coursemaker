@@ -36,9 +36,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Analyze — Apply the diagnostic quadrant to your own product. Write one sentence for each quadrant (leak, ceiling, price, channel): does the evidence point there or not? Which quadrant has the most evidence?",
-    "Outcome: Evaluate — Using the self-audit checklist from lecture, what is the single most uncomfortable dashboard number you have been avoiding? Write it down and explain why it is uncomfortable.",
-    "Outcome: Create — Draft the first 60 seconds of your capstone defense. The framing is: funnel numbers, activation rate, MRR, and the quadrant your diagnosis lands in. Practice it out loud.",
+    "Outcome: Analyze, Apply the diagnostic quadrant to your own product. Write one sentence for each quadrant (leak, ceiling, price, channel): does the evidence point there or not? Which quadrant has the most evidence?",
+    "Outcome: Evaluate, Using the self-audit checklist from lecture, what is the single most uncomfortable dashboard number you have been avoiding? Write it down and explain why it is uncomfortable.",
+    "Outcome: Create, Draft the first 60 seconds of your capstone defense. The framing is: funnel numbers, activation rate, MRR, and the quadrant your diagnosis lands in. Practice it out loud.",
   ],
 };
 

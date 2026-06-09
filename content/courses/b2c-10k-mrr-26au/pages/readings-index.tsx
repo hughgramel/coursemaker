@@ -21,7 +21,7 @@ export function ReadingsIndexPage() {
     <>
       <AnchorHeading as="h1" id="readings">Readings</AnchorHeading>
       <p>
-        The weekly readings ARE the textbook — original writing, vetted from
+        The weekly readings ARE the textbook, original writing, vetted from
         primary sources, with full bibliography per reading. Start each week
         here.
       </p>

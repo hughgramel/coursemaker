@@ -12,7 +12,7 @@ export function Wk10Reading() {
   return (
     <ReadingPage
       id="wk10"
-      title="Week 10 — Synthesis: diagnosing stalled MRR and writing the path to $10k"
+      title="Week 10, Synthesis: diagnosing stalled MRR and writing the path to $10k"
       kicker="B2C to $10k MRR · Autumn 2026 · Reading"
     >
       <ReadingFraming>

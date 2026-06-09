@@ -24,7 +24,7 @@ export function HwIndexPage() {
       <AnchorHeading as="h1" id="assignments">Assignments</AnchorHeading>
       <p>
         Four homeworks + one capstone. Every assignment is applied to YOUR
-        product — there is no toy data, no fake target, no reference solution.
+        product, there is no toy data, no fake target, no reference solution.
         Total: 70% of the grade.
       </p>
       <table>

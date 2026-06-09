@@ -36,9 +36,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Analyze — Your product gets 400 unique visitors per week. You want to test a new pricing page and need to detect a 10% improvement in conversion rate (currently 5%). Using the sample-size heuristic from the reading, roughly how many weeks do you need to run this test? Show your arithmetic.",
-    "Outcome: Analyze — Explain in one sentence why peeking at an A/B test mid-run inflates your false-positive rate. What is the fix?",
-    "Outcome: Apply — Name one thing in your product you want to test this week. Run the sample-size math. If you do not have enough traffic, describe the painted-door alternative you would run instead.",
+    "Outcome: Analyze, Your product gets 400 unique visitors per week. You want to test a new pricing page and need to detect a 10% improvement in conversion rate (currently 5%). Using the sample-size heuristic from the reading, roughly how many weeks do you need to run this test? Show your arithmetic.",
+    "Outcome: Analyze, Explain in one sentence why peeking at an A/B test mid-run inflates your false-positive rate. What is the fix?",
+    "Outcome: Apply, Name one thing in your product you want to test this week. Run the sample-size math. If you do not have enough traffic, describe the painted-door alternative you would run instead.",
   ],
 };
 

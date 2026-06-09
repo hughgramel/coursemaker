@@ -36,9 +36,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Analyze — Take your current app title. Count the characters. Does it include a keyword with measurable search volume? Use the AppFollow playbook structure (brand name + pipe/colon + primary keyword) to draft an alternative. Write one sentence explaining which keyword you chose and why.",
-    "Outcome: Apply — Replace your first three screenshots with versions that follow the benefit framing rule: caption describes the outcome the user gets, not the feature name. Post the new screenshots publicly and record one piece of feedback.",
-    "Outcome: Evaluate — Should you run Apple Search Ads this week? Use the trysonar framework: check your current organic CPI, find three keywords with search popularity 20-55, estimate cost at $0.50-2.00 CPI. Write a one-sentence go/no-go decision with your reasoning.",
+    "Outcome: Analyze, Take your current app title. Count the characters. Does it include a keyword with measurable search volume? Use the AppFollow playbook structure (brand name + pipe/colon + primary keyword) to draft an alternative. Write one sentence explaining which keyword you chose and why.",
+    "Outcome: Apply, Replace your first three screenshots with versions that follow the benefit framing rule: caption describes the outcome the user gets, not the feature name. Post the new screenshots publicly and record one piece of feedback.",
+    "Outcome: Evaluate, Should you run Apple Search Ads this week? Use the trysonar framework: check your current organic CPI, find three keywords with search popularity 20-55, estimate cost at $0.50-2.00 CPI. Write a one-sentence go/no-go decision with your reasoning.",
   ],
 };
 

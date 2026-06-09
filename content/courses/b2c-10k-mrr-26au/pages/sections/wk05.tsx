@@ -2,7 +2,7 @@ import { ProjectPage } from "@/components/ProjectPage";
 import type { ProjectSpec } from "@/types/course";
 
 const spec: ProjectSpec = {
-  title: "Week 5 section — Design one A/B test",
+  title: "Week 5 section, Design one A/B test",
   tagline:
     "Pick one thing to test, run the sample-size math on paper, then either ship the test or write a 'why I&rsquo;m not testing this' memo.",
   outDate: "Week 5",

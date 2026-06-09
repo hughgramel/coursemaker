@@ -14,7 +14,7 @@ export function Wk08Reading() {
     <ReadingPage
       id="wk08"
       title="Week 8: app store mechanics, ASO, and the capstone scaffold"
-      kicker="B2C to $10k MRR — A 10-Week Growth Manual · Autumn 2026 · Reading"
+      kicker="B2C to $10k MRR, A 10-Week Growth Manual · Autumn 2026 · Reading"
     >
       <ReadingFraming>
         <p>
@@ -48,7 +48,7 @@ export function Wk08Reading() {
         <li>Submit to the App Store or Play, navigate review, and recover from a rejection if it comes.</li>
         <li>Explain the TestFlight and Play internal-testing flows for a one-person team.</li>
         <li>Apply three ASO principles to your title, subtitle, and keywords with evidence.</li>
-        <li>Decide whether to be on the app stores at all — a PWA-first product is a legitimate answer.</li>
+        <li>Decide whether to be on the app stores at all, a PWA-first product is a legitimate answer.</li>
       </ul>
       <p>
         The Bloom outcomes this week are: <strong>Apply</strong> (ship the
@@ -137,7 +137,7 @@ export function Wk08Reading() {
       <AnchorHeading as="h2" id="daily-rules">4. Daily rules</AnchorHeading>
       <Callout title="Course-wide anti-traps">
         <p>The build block does not open until the morning growth move and the customer hour are done. No exceptions.</p>
-        <p>Build-block scope is one sentence. If you cannot write it in one sentence, the scope is too large — split it.</p>
+        <p>Build-block scope is one sentence. If you cannot write it in one sentence, the scope is too large, split it.</p>
         <p>No new features that are not on this week&rsquo;s milestone list.</p>
         <p>Friday review is non-negotiable. Skipping it means the week did not count.</p>
         <p>If the week&rsquo;s growth move feels uncomfortable, that is evidence it is the right one.</p>
@@ -167,7 +167,7 @@ export function Wk08Reading() {
         <li>
           <strong>Performance (section 2):</strong> the rejection that hits solo
           founders most. Section 2.1 requires that your app be complete before
-          submission — no placeholder content, no features that crash, no
+          submission, no placeholder content, no features that crash, no
           &ldquo;coming soon&rdquo; screens. Section 2.3 requires that your
           metadata (screenshots, description) accurately represent the app.
         </li>
@@ -177,8 +177,8 @@ export function Wk08Reading() {
           in-app purchase system. You cannot link out to a cheaper web
           subscription or include a button that says &ldquo;subscribe on our
           website.&rdquo; The 2021 court settlement added a narrow exception
-          for &ldquo;reader apps&rdquo; — apps that let users access content
-          purchased elsewhere — but most solo B2C products do not qualify.
+          for &ldquo;reader apps&rdquo;, apps that let users access content
+          purchased elsewhere, but most solo B2C products do not qualify.
         </li>
         <li>
           <strong>Design (section 4):</strong> section 4.2 prohibits apps with
@@ -250,7 +250,7 @@ export function Wk08Reading() {
         to App Store Connect, add yourself as an internal tester, and confirm
         the build installs cleanly on a physical device. Then add one or two
         external testers from your user base. The external tester link can be
-        shared publicly — it is a URL that takes any iOS user to a TestFlight
+        shared publicly, it is a URL that takes any iOS user to a TestFlight
         install page. Use this for your week 8 public output: post the TestFlight
         link on your chosen channel and log any feedback from the first ten
         installs.
@@ -267,7 +267,7 @@ export function Wk08Reading() {
       <p>
         A <strong>PWA install prompt</strong> lets users add your web app to
         their home screen directly from the browser, bypassing both stores. This
-        is not a lesser option — for web-first products, it eliminates the 30%
+        is not a lesser option, for web-first products, it eliminates the 30%
         store commission, removes the review delay from your release cycle, and
         lets you iterate on pricing and paywalls without an approval gate.
       </p>
@@ -303,7 +303,7 @@ installButton.addEventListener('click', async () => {
         this event. iOS users must use Safari&rsquo;s share menu and
         &ldquo;Add to Home Screen&rdquo; manually. Implement a separate iOS
         onboarding banner that explains this flow for Safari users. Test on a
-        real iOS device — the flow is less smooth than Android, but it works.
+        real iOS device, the flow is less smooth than Android, but it works.
       </p>
       <p>
         The honest trade-off: without store presence, you rely entirely on
@@ -329,7 +329,7 @@ installButton.addEventListener('click', async () => {
         (RevenueCat ASO guide, Kriebernegg, 2022). The practical implication:
         the 30 characters of your app name are the most valuable ASO real
         estate you own. The pattern that works is <code>BrandName: Primary Keyword</code>{" "}
-        — for example, &ldquo;Streaks: Habit Tracker&rdquo; or &ldquo;Copilot:
+       , for example, &ldquo;Streaks: Habit Tracker&rdquo; or &ldquo;Copilot:
         Budget &amp; Finance.&rdquo; The colon or pipe separates brand identity
         from keyword signal.
       </p>
@@ -338,13 +338,13 @@ installButton.addEventListener('click', async () => {
         field. Use it for a secondary keyword that does not appear in the title.
         The keywords field (100 characters, comma-separated) holds additional
         terms the algorithm indexes but users never see. Do not repeat any word
-        already in the title or subtitle — the algorithm ignores duplicates, and
+        already in the title or subtitle, the algorithm ignores duplicates, and
         you waste character budget (AppFollow ASO Title Playbook, 2026).
       </p>
       <p>
         On Google Play, there is no separate keywords field. The short
         description (80 characters) and the full description are both indexed.
-        Weave your primary and secondary keywords into prose naturally — the
+        Weave your primary and secondary keywords into prose naturally, the
         Play algorithm penalizes keyword stuffing that reads as unnatural.
       </p>
       <p>
@@ -425,7 +425,7 @@ installButton.addEventListener('click', async () => {
           consideration. Fill it in with a concrete story about who uses the app
           and what changed for them. Tony Dinh (BlackMagic, Wins, XWord) has
           written about this pattern: ship the new API fast, write the story,
-          submit the form (RevenueCat ASO guide, 2022 — citing Dinh&rsquo;s
+          submit the form (RevenueCat ASO guide, 2022, citing Dinh&rsquo;s
           public blog posts).
         </li>
       </ul>
@@ -442,7 +442,7 @@ installButton.addEventListener('click', async () => {
         App Store search results for keywords you bid on. Seventy percent of
         App Store visitors use search to find apps (TrySonar, 2026). ASA gives
         you direct access to that traffic. The question for a solo founder is
-        not whether ASA works — it does — but whether your paywall converts
+        not whether ASA works, it does, but whether your paywall converts
         well enough to make the economics positive.
       </p>
       <p>
@@ -528,7 +528,7 @@ After (title rewrite: "Voca: Language Vocabulary"):
       <p>
         The capstone scaffold is a structured 60-minute session you run this
         Friday to aim the final two weeks of the course at a specific, measurable
-        growth problem. The output is not a finished plan — it is a document with
+        growth problem. The output is not a finished plan, it is a document with
         enough specificity that you can execute against it in weeks 9 and 10
         without re-scoping from scratch.
       </p>
@@ -544,7 +544,7 @@ After (title rewrite: "Voca: Language Vocabulary"):
           aha-moment), retention (returned at D7 or D30), revenue (paid
           conversion or upgrade), referral (net new users from existing users).
           Write the conversion rate between each adjacent pair of stages. No
-          estimates — use your actual analytics. If you do not have numbers for
+          estimates, use your actual analytics. If you do not have numbers for
           a stage, write &ldquo;unknown&rdquo; and plan to instrument it next
           week.
         </li>
@@ -553,7 +553,7 @@ After (title rewrite: "Voca: Language Vocabulary"):
           funnel. Find the stage where the biggest volume is leaking. The leak
           is the ratio of users entering a stage divided by users who reach the
           next stage. If 100 users activate but only 8 pay, the
-          activation-to-revenue conversion is 8% — that is likely the biggest
+          activation-to-revenue conversion is 8%, that is likely the biggest
           leak. Name it in one sentence: &ldquo;My biggest funnel problem is
           [stage], where I lose [X]% of users.&rdquo; This is your problem
           quadrant candidate. Use the concepts from your weeks 1-7 toolkit:
@@ -568,7 +568,7 @@ After (title rewrite: "Voca: Language Vocabulary"):
           number at the leaky stage. Each intervention needs: a verb + noun
           description (what you will do), a predicted direction of effect (which
           metric you expect to move and which way), and an effort estimate in
-          hours. Do not list interventions for other stages — stay focused on the
+          hours. Do not list interventions for other stages, stay focused on the
           problem you named in prompt 2.
         </li>
         <li>
@@ -585,7 +585,7 @@ After (title rewrite: "Voca: Language Vocabulary"):
           <strong>Rollback criteria draft (10 min).</strong> For each
           intervention, write the condition under which you would stop and
           revert. A rollback criterion is not &ldquo;if it doesn&rsquo;t
-          work&rdquo; — that is too vague. A rollback criterion is a specific
+          work&rdquo;, that is too vague. A rollback criterion is a specific
           number or event: &ldquo;If D7 retention drops below X% in the first
           week of running this, I will revert.&rdquo; Or: &ldquo;If trial
           starts fall by more than 15% versus the prior week, I will revert.&rdquo;
@@ -604,7 +604,7 @@ After (title rewrite: "Voca: Language Vocabulary"):
       <p>
         One timing note: the capstone scaffold is not a performance. It is a
         thinking tool. If your funnel diagram reveals that all your stages are
-        healthy, the problem is acquisition volume, not conversion rate — that
+        healthy, the problem is acquisition volume, not conversion rate, that
         is a valid finding, and your interventions should address channel
         scaling rather than funnel optimization.
       </p>
@@ -686,7 +686,7 @@ After (title rewrite: "Voca: Language Vocabulary"):
           Apple Search Ads for indie budgets.
         </li>
         <li>
-          <strong>HW 4 (Retention engine) — due this week.</strong> Separate
+          <strong>HW 4 (Retention engine), due this week.</strong> Separate
           from the store submission milestone. Confirm deadlines in the syllabus.
         </li>
         <li>
@@ -705,7 +705,7 @@ After (title rewrite: "Voca: Language Vocabulary"):
         </li>
         <li>
           Google Play internal testing is available within minutes with no review
-          required — use it for the week 8 milestone. Personal accounts created
+          required, use it for the week 8 milestone. Personal accounts created
           after November 2023 need 12 closed testers before production access.
         </li>
         <li>

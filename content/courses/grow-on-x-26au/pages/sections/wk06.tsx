@@ -2,7 +2,7 @@ import { ProjectPage } from "@/components/ProjectPage";
 import type { ProjectSpec } from "@/types/course";
 
 const spec: ProjectSpec = {
-  title: "Week 6 section — Capstone demo day",
+  title: "Week 6 section, Capstone demo day",
   tagline:
     "Present your 90-day playbook to two peers. Get feedback on your weekly system, your milestone plan, and your first 30 days of posts.",
   outDate: "Week 6",

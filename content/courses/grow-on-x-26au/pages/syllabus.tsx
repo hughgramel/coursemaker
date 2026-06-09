@@ -33,11 +33,11 @@ const spec: SyllabusSpec = {
   grading: {
     breakdown: [
       { item: "Weekly readings and section participation", weight: "10%" },
-      { item: "HW1 — Niche and bio rewrite",                  weight: "10%" },
-      { item: "HW2 — Twenty posts in seven days",              weight: "15%" },
-      { item: "HW3 — Run your system for two weeks",           weight: "15%" },
-      { item: "HW4 — Thirty-day growth experiment",            weight: "15%" },
-      { item: "Capstone — 90-day playbook",                    weight: "30%" },
+      { item: "HW1, Niche and bio rewrite",                  weight: "10%" },
+      { item: "HW2, Twenty posts in seven days",              weight: "15%" },
+      { item: "HW3, Run your system for two weeks",           weight: "15%" },
+      { item: "HW4, Thirty-day growth experiment",            weight: "15%" },
+      { item: "Capstone, 90-day playbook",                    weight: "30%" },
       { item: "Peer-review participation",                     weight: "5%" },
     ],
     latePolicy: "Late submissions lose 10% per day, up to three days. After three days the work earns no credit, but you should still submit it because every assignment scaffolds the next.",

@@ -36,9 +36,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Apply — Install a feature flag for one feature currently in your product. Set it to 10% rollout. Write the rollback criterion: what number in your analytics would trigger you to set the flag to 0%?",
-    "Outcome: Create — Write a 1-page rollback runbook for your most recent release. It must answer: who makes the decision, which command or button reverts the deploy, and how you confirm the rollback succeeded. Time yourself: can you execute it in under 5 minutes?",
-    "Outcome: Apply — Describe your CI/CD pipeline in three sentences. Where is the first automated gate (lint, tests, build)? What happens when that gate fails?",
+    "Outcome: Apply, Install a feature flag for one feature currently in your product. Set it to 10% rollout. Write the rollback criterion: what number in your analytics would trigger you to set the flag to 0%?",
+    "Outcome: Create, Write a 1-page rollback runbook for your most recent release. It must answer: who makes the decision, which command or button reverts the deploy, and how you confirm the rollback succeeded. Time yourself: can you execute it in under 5 minutes?",
+    "Outcome: Apply, Describe your CI/CD pipeline in three sentences. Where is the first automated gate (lint, tests, build)? What happens when that gate fails?",
   ],
 };
 

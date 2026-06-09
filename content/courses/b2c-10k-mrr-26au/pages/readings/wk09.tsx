@@ -12,7 +12,7 @@ export function Wk09Reading() {
   return (
     <ReadingPage
       id="wk09"
-      title="Week 9 — Lifecycle messaging and referral loops"
+      title="Week 9, Lifecycle messaging and referral loops"
       kicker="B2C to $10k MRR &middot; Autumn 2026 &middot; Reading"
     >
       <ReadingFraming>

@@ -22,7 +22,7 @@ export function SectionsIndexPage() {
       <AnchorHeading as="h1" id="sections">Sections</AnchorHeading>
       <p>
         One hands-on section per week, applied to YOUR product. Sections are
-        not re-lectures — they&rsquo;re the feedback loop.
+        not re-lectures, they&rsquo;re the feedback loop.
       </p>
       <table>
         <thead>

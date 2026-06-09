@@ -14,15 +14,15 @@ const spec: LectureSpec = {
   slidesHref: "/c/grow-on-x-26au/slides/wk04-l1.pdf",
   readings: [
     {
-      title: "Week 4 reading — Building a sustainable weekly system",
+      title: "Week 4 reading, Building a sustainable weekly system",
       href: "/c/grow-on-x-26au/readings/wk04",
     },
     {
-      title: "Chenell Basilio — How Justin Welsh built a $1.7M solo business in 3.5 years (Growth in Reverse, 2023)",
+      title: "Chenell Basilio, How Justin Welsh built a $1.7M solo business in 3.5 years (Growth in Reverse, 2023)",
       href: "https://growthinreverse.com/justin-welsh/",
     },
     {
-      title: "Tiago Forte — Building a Second Brain: the definitive introductory guide (2023)",
+      title: "Tiago Forte, Building a Second Brain: the definitive introductory guide (2023)",
       href: "https://fortelabs.com/blog/basboverview/",
     },
   ],

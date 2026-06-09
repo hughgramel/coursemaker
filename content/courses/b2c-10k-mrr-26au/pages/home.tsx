@@ -35,7 +35,7 @@ function weekEntries(
 
 const weeks: CourseModule[] = [
   {
-    title: "Week 1 — Foundations: the B2C funnel",
+    title: "Week 1, Foundations: the B2C funnel",
     size: "h2-small",
     entries: [
       { date: "Mission", notes: [{ kind: "text", text: "Make your funnel honest." }] },
@@ -56,7 +56,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 2 — Foundations: activation",
+    title: "Week 2, Foundations: activation",
     size: "h2-small",
     entries: [
       { date: "Mission", notes: [{ kind: "text", text: "Cut your time-to-first-value in half." }] },
@@ -77,7 +77,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 3 — Core: pricing + paywall",
+    title: "Week 3, Core: pricing + paywall",
     size: "h2-small",
     entries: [
       { date: "Mission", notes: [{ kind: "text", text: "Pick a price that someone will pay this week." }] },
@@ -98,7 +98,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 4 — Core: retention",
+    title: "Week 4, Core: retention",
     size: "h2-small",
     entries: [
       { date: "Mission", notes: [{ kind: "text", text: "Make your retention curve smile." }] },
@@ -119,7 +119,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 5 — Core: experimentation + release",
+    title: "Week 5, Core: experimentation + release",
     size: "h2-small",
     entries: [
       { date: "Mission", notes: [{ kind: "text", text: "Build the loop that lets you ship 10× without breaking 10×." }] },
@@ -140,7 +140,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 6 — Composition: wedge channel + SEO",
+    title: "Week 6, Composition: wedge channel + SEO",
     size: "h2-small",
     entries: [
       { date: "Mission", notes: [{ kind: "text", text: "Commit to ONE growth channel for the rest of the course." }] },
@@ -162,7 +162,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 7 — Composition: social, virality, paid",
+    title: "Week 7, Composition: social, virality, paid",
     size: "h2-small",
     entries: [
       { date: "Mission", notes: [{ kind: "text", text: "Bake one growth loop into the product itself." }] },
@@ -183,7 +183,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 8 — Frontier: app stores + ASO",
+    title: "Week 8, Frontier: app stores + ASO",
     size: "h2-small",
     entries: [
       { date: "Mission", notes: [{ kind: "text", text: "Ship to a store (or commit to PWA) with a real release pipeline." }] },
@@ -205,7 +205,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 9 — Frontier: lifecycle + referral",
+    title: "Week 9, Frontier: lifecycle + referral",
     size: "h2-small",
     entries: [
       { date: "Mission", notes: [{ kind: "text", text: "Wire the messages that bring people back without you doing the work." }] },
@@ -227,7 +227,7 @@ const weeks: CourseModule[] = [
     ],
   },
   {
-    title: "Week 10 — Synthesis: diagnosis + path to $10k",
+    title: "Week 10, Synthesis: diagnosis + path to $10k",
     size: "h2-small",
     entries: [
       { date: "Mission", notes: [{ kind: "text", text: "Defend the single highest-leverage move for your next 30 days." }] },
@@ -274,7 +274,7 @@ export function HomePage() {
       <p>
         <strong>The daily rhythm.</strong> Every weekday is four fixed slots: a{" "}
         <em>morning growth move</em> (~30 min, includes your daily public output),
-        a <em>customer hour</em> (~60 min — talk to a user, read tickets, watch a
+        a <em>customer hour</em> (~60 min, talk to a user, read tickets, watch a
         session replay), a <em>build block</em> (~3-4 h) that does <strong>NOT</strong>{" "}
         open until the first two slots are done, and an end-of-day{" "}
         <em>measure + reflect</em> (~15 min) where you log your numbers. Plus a
@@ -283,7 +283,7 @@ export function HomePage() {
       </p>
       <p>
         <strong>The public-output mandate.</strong> Every weekday you ship one
-        piece of public output — tweet, LinkedIn post, Reddit comment, IH update,
+        piece of public output, tweet, LinkedIn post, Reddit comment, IH update,
         Discord post, TikTok, YT short, blog draft. Weeks 1-5: experiment across
         platforms. Week 6: pick ONE channel via the channel-fit worksheet, commit
         through week 10 + capstone. Target: 50+ outputs by end of course.
@@ -297,7 +297,7 @@ export function HomePage() {
 
       <AnchorHeading as="h2" id="calendar">Calendar</AnchorHeading>
       <p>
-        Tentative schedule. Weekly readings are the textbook — written from
+        Tentative schedule. Weekly readings are the textbook, written from
         primary sources and published at the start of each week. Labels:{" "}
         <Label variant="purple">assignment out</Label>{" "}
         <Label variant="red">assignment due</Label>{" "}

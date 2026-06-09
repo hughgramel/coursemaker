@@ -14,15 +14,15 @@ const spec: LectureSpec = {
   slidesHref: "/c/grow-on-x-26au/slides/wk02-l1.pdf",
   readings: [
     {
-      title: "Week 2 reading — Hooks and formats",
+      title: "Week 2 reading, Hooks and formats",
       href: "/c/grow-on-x-26au/readings/wk02",
     },
     {
-      title: "Required: Dickie Bush and Nicolas Cole — 6 Proven Single-Sentence Openers to Hook Your Reader’s Attention",
+      title: "Required: Dickie Bush and Nicolas Cole, 6 Proven Single-Sentence Openers to Hook Your Reader’s Attention",
       href: "https://www.ship30for30.com/post/6-proven-single-sentence-openers-to-hook-your-reader-s-attention",
     },
     {
-      title: "Optional: Ship 30 for 30 — Viral Writing 101 with Shaan Puri (YouTube, ~55 min)",
+      title: "Optional: Ship 30 for 30, Viral Writing 101 with Shaan Puri (YouTube, ~55 min)",
       href: "https://www.youtube.com/watch?v=fN1kLxB1JIc",
     },
   ],

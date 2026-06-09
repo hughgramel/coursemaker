@@ -14,19 +14,19 @@ const spec: LectureSpec = {
   slidesHref: "/c/grow-on-x-26au/slides/wk02-l2.pdf",
   readings: [
     {
-      title: "Week 2 reading — Hooks and formats",
+      title: "Week 2 reading, Hooks and formats",
       href: "/c/grow-on-x-26au/readings/wk02",
     },
     {
-      title: "Required: Dickie Bush and Nicolas Cole — How to Write a Twitter Thread: The Complete Guide",
+      title: "Required: Dickie Bush and Nicolas Cole, How to Write a Twitter Thread: The Complete Guide",
       href: "https://www.ship30for30.com/post/how-to-write-a-twitter-thread",
     },
     {
-      title: "Required: Dickie Bush and Nicolas Cole — Lean Writing: Tweet to Thread to Atomic Essay",
+      title: "Required: Dickie Bush and Nicolas Cole, Lean Writing: Tweet to Thread to Atomic Essay",
       href: "https://www.ship30for30.com/post/lean-writing-on-twitter-how-to-turn-a-tweet-into-a-thread-into-an-atomic-essay",
     },
     {
-      title: "Optional: Ship 30 for 30 — Writing Twitter Threads 101 with Mack, Bush, and Cole (YouTube, ~60 min)",
+      title: "Optional: Ship 30 for 30, Writing Twitter Threads 101 with Mack, Bush, and Cole (YouTube, ~60 min)",
       href: "https://www.youtube.com/watch?v=0d-0evLKYL4",
     },
   ],

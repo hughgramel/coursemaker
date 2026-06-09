@@ -31,9 +31,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Create — Sketch your referral mechanism in one paragraph: what is the incentive (if any), what does the referrer share, what does the referred user see before signing up? Then name the one number you will track to know whether the mechanism is working.",
-    "Outcome: Analyze — The Dropbox two-sided incentive (GrowSurf, Petrova 2026) worked because the reward was directly tied to the core value proposition: storage. Does your product have an equivalent? If you offered referral credits, would they feel meaningful or hollow? Write a one-sentence test to tell the difference.",
-    "Outcome: Create — Duolingo's Friend Streak shares a result (the joint streak count), not a product invitation. Identify one result in your product that a user would plausibly share even without an incentive. Describe how you would make that result shareable in two engineering steps.",
+    "Outcome: Create, Sketch your referral mechanism in one paragraph: what is the incentive (if any), what does the referrer share, what does the referred user see before signing up? Then name the one number you will track to know whether the mechanism is working.",
+    "Outcome: Analyze, The Dropbox two-sided incentive (GrowSurf, Petrova 2026) worked because the reward was directly tied to the core value proposition: storage. Does your product have an equivalent? If you offered referral credits, would they feel meaningful or hollow? Write a one-sentence test to tell the difference.",
+    "Outcome: Create, Duolingo's Friend Streak shares a result (the joint streak count), not a product invitation. Identify one result in your product that a user would plausibly share even without an incentive. Describe how you would make that result shareable in two engineering steps.",
   ],
 };
 

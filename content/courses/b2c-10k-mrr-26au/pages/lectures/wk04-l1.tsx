@@ -30,9 +30,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Analyze — Pull your D1, D7, and D30 retention numbers. Write one sentence naming the curve shape (smiling, flat, or decaying) and one hypothesis for why the curve has that shape.",
-    "Outcome: Apply — Calculate your net revenue retention for the last rolling 30 days. Is it above or below 100%? What would need to change about your expansion or churn to move it across that line?",
-    "Outcome: Evaluate — Nir Eyal's Hook Model identifies four steps: trigger, action, variable reward, investment. Map your product onto each step. Where does the loop break down for users who churn before day 7?",
+    "Outcome: Analyze, Pull your D1, D7, and D30 retention numbers. Write one sentence naming the curve shape (smiling, flat, or decaying) and one hypothesis for why the curve has that shape.",
+    "Outcome: Apply, Calculate your net revenue retention for the last rolling 30 days. Is it above or below 100%? What would need to change about your expansion or churn to move it across that line?",
+    "Outcome: Evaluate, Nir Eyal's Hook Model identifies four steps: trigger, action, variable reward, investment. Map your product onto each step. Where does the loop break down for users who churn before day 7?",
   ],
 };
 

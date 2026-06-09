@@ -23,7 +23,7 @@ export function Wk03SectionPage() {
           <strong>Prerequisites assumed.</strong> You have read the Week 3
           reading, attended both lectures, and have at least a working theory
           of your pricing model. You do not need a live Stripe integration yet
-          — that is the build-block milestone for Tuesday.
+         , that is the build-block milestone for Tuesday.
         </p>
       </ReadingFraming>
 
@@ -64,7 +64,7 @@ export function Wk03SectionPage() {
       <Callout title="One-page rule">
         <p>
           The brief must fit one page (or one screen). If you cannot, you have
-          not made decisions yet — you have listed options. Collapse to decisions
+          not made decisions yet, you have listed options. Collapse to decisions
           and rewrite.
         </p>
       </Callout>

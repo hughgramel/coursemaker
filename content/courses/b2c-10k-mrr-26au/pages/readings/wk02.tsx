@@ -12,7 +12,7 @@ export function Wk02Reading() {
   return (
     <ReadingPage
       id="wk02-activation"
-      title="Week 2 — Activation: the first 60 seconds that decide whether anyone comes back"
+      title="Week 2, Activation: the first 60 seconds that decide whether anyone comes back"
       kicker="B2C to $10k MRR · Autumn 2026 · Reading"
     >
       <ReadingFraming>

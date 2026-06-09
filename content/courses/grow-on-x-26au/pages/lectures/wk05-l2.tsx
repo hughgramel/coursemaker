@@ -8,13 +8,13 @@ const spec: LectureSpec = {
   topics: [
     "Designing a clean comparison: same core idea, two hooks, all other variables held equal",
     "Sample sizes for a solo creator: why 50-100 impressions per variant is enough to make a directional call",
-    "The weekly retrospective: keep, kill, double down — the three-category review ritual",
+    "The weekly retrospective: keep, kill, double down, the three-category review ritual",
     "Avoiding p-hacking your own posting: why checking results every two hours produces false patterns",
   ],
   slidesHref: "/c/grow-on-x-26au/slides/wk05-l2.pdf",
   readings: [
     {
-      title: "Week 5 reading — Analytics, experiments, and iteration",
+      title: "Week 5 reading, Analytics, experiments, and iteration",
       href: "/c/grow-on-x-26au/readings/wk05",
     },
     {

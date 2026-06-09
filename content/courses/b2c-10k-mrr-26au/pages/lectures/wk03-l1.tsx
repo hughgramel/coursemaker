@@ -31,9 +31,9 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Evaluate — Tony Dinh charges a one-time fee for DevUtils and a subscription for Black Magic. State his exact rule for when each model applies, then apply that rule to your own product. Do you agree with the rule?",
-    "Outcome: Apply — Write down your product’s price anchor: the number you will put in the paywall. Explain in one sentence why that specific number, not half of it and not double.",
-    "Outcome: Evaluate — RevenueCat reports hard paywall apps convert at 12.11% vs freemium at 2.18% at day 35. List two scenarios where freemium would still be the right choice despite this gap.",
+    "Outcome: Evaluate, Tony Dinh charges a one-time fee for DevUtils and a subscription for Black Magic. State his exact rule for when each model applies, then apply that rule to your own product. Do you agree with the rule?",
+    "Outcome: Apply, Write down your product’s price anchor: the number you will put in the paywall. Explain in one sentence why that specific number, not half of it and not double.",
+    "Outcome: Evaluate, RevenueCat reports hard paywall apps convert at 12.11% vs freemium at 2.18% at day 35. List two scenarios where freemium would still be the right choice despite this gap.",
   ],
 };
 

@@ -14,11 +14,11 @@ const spec: LectureSpec = {
   slidesHref: "/c/grow-on-x-26au/slides/wk04-l2.pdf",
   readings: [
     {
-      title: "Week 4 reading — Building a sustainable weekly system",
+      title: "Week 4 reading, Building a sustainable weekly system",
       href: "/c/grow-on-x-26au/readings/wk04",
     },
     {
-      title: "Chenell Basilio — The growth lever of top creators that no one talks about (Growth in Reverse, 2024)",
+      title: "Chenell Basilio, The growth lever of top creators that no one talks about (Growth in Reverse, 2024)",
       href: "https://growthinreverse.com/connections/",
     },
   ],
