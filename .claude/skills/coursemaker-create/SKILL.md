@@ -581,29 +581,36 @@ The other three follow the same shape:
 - **Readings index**: Wk / Reading title / Mission
 - **Assignments index**: # / Title / Out / Due / Weight
 
-### 5c. The Tasks page (CANONICAL — saved pattern)
+### 5c. The Tasks manager page (CANONICAL: saved pattern)
 
-The course gets a `pages/tasks.tsx` that lists EVERY task across all 10
-weeks, nested by week, sub-grouped by Reading / Slides / Section /
-Milestones / Assignments. Each task is a checkbox; checked tasks
-strike-through and go to 45% opacity. State persists in localStorage
-under key `<slug>:tasks`. Page is a "use client" component.
+The course gets a `pages/tasks.tsx` (a `"use client"` component) that
+lists EVERY task across all weeks, nested by week, sub-grouped by
+Reading / Slides / Section / Milestones / Assignments. State persists
+in localStorage under key `<slug>:tasks`. The page is the learner's
+single checklist for the entire course.
 
 Required sub-groupings, in this order, per week:
 
-1. **Reading** — one task: "Read the Week N reading: <theme>" linking to `/readings/wkNN`
-2. **Slides** — two tasks: "Review L1 slides: <title>" + "Review L2 slides: <title>", each linking to the lecture page + a sibling PDF link
-3. **Section** — one task: "Attend section: <section title>" linking to `/sections/wkNN`
-4. **Milestones** — one task per milestone from the week's curriculum row
-5. **Assignments** — one task per `out` / `due` entry on this week
+1. **Reading**, one task: `Read Week N: <theme>` linking to `/readings/wkNN`.
+2. **Slides**, two tasks: `Review Lecture 1: <title>` and `Review Lecture 2: <title>`. Each task includes a primary link to the lecture page and a sibling `· PDF` link to the slide PDF.
+3. **Section**, one task: `Complete section: <section title>` linking to `/sections/wkNN`.
+4. **Milestones**, one task per milestone from the week's curriculum row.
+5. **Assignments**, one task per `out` / `due` entry on this week. Label format: `Start <code>: <what>` for out, `Submit <code> deliverables` for due.
 
-Plus a top-of-page **OverallProgress** showing `X / Y tasks (Z%)` with a
-filled progress bar, and a **Reset all** button (confirm() guard).
+Visual requirements (these are saved; do not deviate without explicit user direction):
 
-The Tasks page is also added as a flat nav entry (see step 5d). See the
-reference implementation in
-`content/courses/b2c-10k-mrr-26au/pages/tasks.tsx` — copy its structure
-into new courses; only the per-week data array changes.
+- **Circular checkboxes**, NOT native square inputs. Render as an inline 18px SVG circle that fills with the primary color and shows a white check on toggle. Implement as a `<button role="checkbox">` so it stays accessible.
+- **Bold, small, uppercase sub-headers** (Reading / Slides / Section / Milestones / Assignments). Use font-size `0.6875rem`, font-weight `700`, `letter-spacing: 0.08em`, `text-transform: uppercase`, muted color. NOT large headings.
+- **Week headings** are `h2` style, font-weight `800`, font-size around `1.0625rem`, with a small progress badge `X / Y` next to the title.
+- **NO left border, NO side shadow** on week sections. Flat layout only.
+- **Checkbox is top-aligned with the first line of text** (`align-items: flex-start` on the row, with the checkbox `marginTop: 0.18rem`). Text reflows under the same indent.
+- **Checked rows go to 45% opacity + line-through**.
+- **Top-of-page OverallProgress**: a single line `X of Y complete (Z%)` (bold) plus a subtle `reset all` text link (underlined, primary color, no button chrome). Below it, a thin `6px` progress bar with rounded ends.
+- **No em dashes** in any task label, week heading, or page copy. Use colons for `Week N: theme`, commas inside prose.
+
+Use the reference implementations as canonical: `content/courses/b2c-10k-mrr-26au/pages/tasks.tsx` (10-week course) and `content/courses/grow-on-x-26au/pages/tasks.tsx` (6-week course). The TasksProvider / CircleCheckbox / GROUP_HEADER_STYLE / WEEK_HEADER_STYLE / OverallProgress components are stable; copy them into new courses, only the `weeks` data array changes.
+
+The Tasks page is added as a flat nav entry (see step 5d).
 
 ### 5d. Update course.config.ts — FLAT sidebar, no dropdowns
 
@@ -937,9 +944,25 @@ handouts, and the calendar.
 - **Case-studying the user's own product by name.** If the user
   references a specific product as inspiration (e.g. langobee), DO NOT
   use it as a named case study in lectures, readings, slides, or
-  sections. Case studies must come from the vetted source library — the
+  sections. Case studies must come from the vetted source library; the
   user's product is not a citable primary source for a course they're
   about to teach.
+- **Em dashes anywhere in generated content.** No `—` in lectures,
+  readings, slides, sections, assignments, syllabus, home, tasks, or
+  index pages. Use a colon for titled patterns (`Week 1: Foundations`),
+  a comma for prose pauses, a period for a full break. Prove it with
+  `grep -r "—" content/courses/<slug>/` returning zero hits before you
+  declare done.
+- **Fake grading weights in the syllabus.** Don't write "20%", "10% per
+  HW", "30% capstone" unless the user gave you those numbers. List the
+  graded components by name only; lead with "Exact weights are confirmed
+  before the term begins; the structure below is fixed." See step 5a.
+- **Search bar in the header.** The header bar is gone; `MainLayout` no
+  longer renders one. Don't reintroduce it. `searchBody` exports on
+  pages stay (they keep page text indexable for any future use) but no
+  visible search UI ships.
+- **Side shadows / left borders on Tasks week cards.** The Tasks page
+  layout is flat — no `borderLeft`, no `box-shadow`. See step 5c.
 
 ## Global UI invariants (shared across every course)
 

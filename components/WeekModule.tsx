@@ -18,10 +18,10 @@ function renderNote(note: ModuleNote, key: number): React.ReactNode {
   }
   if (note.kind === "row") {
     return (
-      <span key={key}>
+      <span key={key} className="module-row">
         {note.items.map((sub, i) => (
           <span key={i}>
-            {i > 0 && (sub.kind === "label" || note.items[i - 1].kind === "label" ? " " : ", ")}
+            {i > 0 && " · "}
             {renderNote(sub, i)}
           </span>
         ))}
@@ -45,9 +45,13 @@ export function WeekModule({ module: m }: { module: CourseModule }) {
         <dl>
           {m.entries.flatMap((entry, i) => [
             <dt key={`dt-${i}`}>{entry.date}</dt>,
-            ...entry.notes.map((note, j) => (
-              <dd key={`dd-${i}-${j}`}>{renderNote(note, j)}</dd>
-            )),
+            <dd key={`dd-${i}`}>
+              {entry.notes.map((note, j) => (
+                <span key={j} className="module-note">
+                  {renderNote(note, j)}
+                </span>
+              ))}
+            </dd>,
           ])}
         </dl>
       </div>
