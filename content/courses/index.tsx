@@ -7,11 +7,14 @@ import type { Course } from "@/types/course";
 import { course as cse457_26sp } from "./cse457-26sp";
 import { course as b2c10kMrr26au } from "./b2c-10k-mrr-26au";
 import { course as growOnX26au } from "./grow-on-x-26au";
+import { course as template } from "./template";
 
 
 // COURSEMAKER:REGISTRY_START — do not delete this marker.
 export const courses: Course[] = [
-  cse457_26sp,  b2c10kMrr26au,  growOnX26au,
+  cse457_26sp,
+  b2c10kMrr26au,
+  growOnX26au,  template,
 ];
 // COURSEMAKER:REGISTRY_END — do not delete this marker.
 

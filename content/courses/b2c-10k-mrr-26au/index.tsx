@@ -3,7 +3,6 @@ import { config } from "./course.config";
 
 import { HomePage, homeSearchBody } from "./pages/home";
 import { SyllabusPage, syllabusSearchBody } from "./pages/syllabus";
-import { StaffPage, staffSearchBody } from "./pages/staff";
 import { LecturesIndexPage, lecturesIndexSearchBody } from "./pages/lectures-index";
 import { SectionsIndexPage, sectionsIndexSearchBody } from "./pages/sections-index";
 import { ReadingsIndexPage, readingsIndexSearchBody } from "./pages/readings-index";
@@ -67,7 +66,6 @@ export const course: Course = {
   pages: [
     { segments: [], title: "Home", searchBody: homeSearchBody, render: () => <HomePage /> },
     { segments: ["syllabus"], title: "Syllabus", searchBody: syllabusSearchBody, render: () => <SyllabusPage /> },
-    { segments: ["staff"], title: "Staff", searchBody: staffSearchBody, render: () => <StaffPage /> },
 
     { segments: ["lectures"],   title: "Lectures",    searchBody: lecturesIndexSearchBody, render: () => <LecturesIndexPage /> },
     { segments: ["sections"],   title: "Sections",    searchBody: sectionsIndexSearchBody, render: () => <SectionsIndexPage /> },

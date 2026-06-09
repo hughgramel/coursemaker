@@ -394,12 +394,13 @@ pnpm new-course --slug <slug> --title "<title>" \
 
 Then immediately edit `content/courses/<slug>/course.config.ts` to:
 - Set `hero` to `{ src: "/c/<slug>/hero.svg", alt: "<one-line concept>" }`.
-- Set up ONE navGroup with: Home, Syllabus, Lectures (with all 20 lecture
-  children), Sections (with all 10 section children), Assignments (with
-  all 5 hw children), Readings (with all 10 reading children), Tasks,
-  Staff. Do NOT add a second navGroup of "external resources" links —
-  the user can add their own marketing/community links later if they
-  want; the skill should not invent any.
+- Set up ONE navGroup with: Home, Tasks, Syllabus, Lectures, Sections,
+  Assignments, Readings. **No `children` arrays** — the sidebar is flat
+  (see step 5d). **No Staff page, no Staff nav item.** Until a real
+  course operator names real instructors / TAs / office hours, the
+  course has no "Staff" entity to point at; an empty Staff page is fake
+  data. Do NOT add a second navGroup of "external resources" links
+  either; the user can add their own community links later.
 - **Every nav parent with children MUST have its own registered page**
   (i.e. `LecturesIndexPage`, `SectionsIndexPage`, `ReadingsIndexPage`,
   `HwIndexPage`). A parent NavItem whose `href` 404s is the most common
@@ -422,7 +423,7 @@ If the topic is abstract, tell the subagent to use a metaphorical visual
 (a brain made of thought-bubble waves, a Möbius-strip-as-a-question-mark)
 rather than something literal.
 
-## Step 5 — Write the syllabus, the four index pages, the tasks page, the staff page (you)
+## Step 5 — Write the syllabus, the four index pages, the tasks page (you)
 
 You author ALL non-week pages. Subagents only own per-week artifacts.
 
@@ -624,27 +625,21 @@ Required flat nav order:
 ```ts
 navGroups: [{ items: [
   { label: "Home",        href: "" },
+  { label: "Tasks",       href: "tasks" },      // → TasksPage
   { label: "Syllabus",    href: "syllabus" },
   { label: "Lectures",    href: "lectures" },   // → LecturesIndexPage
   { label: "Sections",    href: "sections" },   // → SectionsIndexPage
   { label: "Assignments", href: "hw" },         // → HwIndexPage
   { label: "Readings",    href: "readings" },   // → ReadingsIndexPage
-  { label: "Tasks",       href: "tasks" },      // → TasksPage
-  { label: "Staff",       href: "staff" },      // → StaffPage
 ]}],
 ```
 
-Do NOT add a second "External resources" navGroup of marketing links
-(Stripe Atlas, Indie Hackers, Lenny's Newsletter, etc.). The user adds
-their own community/marketing links later if they want; the skill
-should not invent any.
-
-### 5e. The Staff page
-
-Generic prose only — no real names, no emails, no office hours. Describe
-the ROLE staff plays (section guidance, office-hour scope, capstone
-defense panel) and that "specific staff names are confirmed before the
-term begins." The reference course's `pages/staff.tsx` is canonical.
+Do NOT add a Staff nav item. Until the user fills in real instructors,
+TAs, emails, and office hours, an empty Staff page is fake data. Do NOT
+add a second "External resources" navGroup of marketing links (Stripe
+Atlas, Indie Hackers, Lenny's Newsletter, etc.) either — the user adds
+their own community links later if they want; the skill should not
+invent any.
 
 ## Step 6 — Fan out one subagent per week (parallel)
 

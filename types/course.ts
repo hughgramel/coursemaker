@@ -37,6 +37,8 @@ export interface SiteConfig {
   fullTitle: string;
   /** Term shown under the H1 (e.g. "Spring 2026"). */
   term: string;
+  /** Length of the course in weeks. Shown on the home card as "N-week course". */
+  weeks?: number;
   /** Used in og:description and meta. */
   description: string;
   /** Canonical URL of the original (optional, used in metadata). */

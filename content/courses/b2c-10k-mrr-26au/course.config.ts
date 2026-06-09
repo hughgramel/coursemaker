@@ -5,6 +5,7 @@ export const config: SiteConfig = {
   title: "B2C → $10k MRR",
   fullTitle: "B2C to $10k MRR: A 10-Week Growth Manual for Technical Founders",
   term: "Autumn 2026",
+  weeks: 10,
   description:
     "A 10-week growth manual for technical founders shipping a B2C product. Each week is a concrete task; case studies of real journeys to $10k MRR (Nomad List, Typing Mind, Tony Dinh's apps, Marc Lou's portfolio) get applied to your own product.",
   hero: {
@@ -15,13 +16,12 @@ export const config: SiteConfig = {
     {
       items: [
         { label: "Home",        href: "" },
+        { label: "Tasks",       href: "tasks" },
         { label: "Syllabus",    href: "syllabus" },
         { label: "Lectures",    href: "lectures" },
         { label: "Sections",    href: "sections" },
         { label: "Assignments", href: "hw" },
         { label: "Readings",    href: "readings" },
-        { label: "Tasks",       href: "tasks" },
-        { label: "Staff",       href: "staff" },
       ],
     },
   ],

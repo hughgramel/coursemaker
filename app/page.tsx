@@ -17,22 +17,25 @@ function GitHubIcon() {
   );
 }
 
+const HIDDEN_FROM_GRID = new Set(["cse457-26sp", "template"]);
+
 export default function Home() {
-  const visibleCourses = courses.filter((c) => c.config.slug !== "cse457-26sp");
+  const visibleCourses = courses.filter((c) => !HIDDEN_FROM_GRID.has(c.config.slug));
 
   return (
     <div className="min-h-screen bg-[var(--color-sidebar)]">
       <header className="border-b border-[var(--color-border)] bg-white">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
           <div className="text-xl font-medium text-[var(--color-heading)]">coursemaker</div>
-          <nav className="flex items-center gap-6 text-sm">
+          <nav className="flex items-center gap-4 sm:gap-6 text-sm">
             <a
               href={REPO_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--color-primary)] hover:underline"
             >
-              Create a new course
+              <span className="hidden sm:inline">Create a new course</span>
+              <span className="sm:hidden">New course</span>
             </a>
             <a
               href={REPO_URL}
@@ -47,52 +50,44 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 py-12">
-        <h1 className="text-[var(--color-heading)] text-4xl font-light leading-tight mb-3">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <h1 className="text-[var(--color-heading)] text-3xl sm:text-4xl font-light leading-tight mb-8 sm:mb-10">
           A creatable template for course websites.
         </h1>
-        <p className="text-[var(--color-body)] text-lg max-w-2xl mb-10">
-          Inspired by the{" "}
-          <a
-            className="text-[var(--color-primary)] hover:underline"
-            href="https://courses.cs.washington.edu/courses/cse457/26sp/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            UW CSE 457
-          </a>{" "}
-          site (Just the Docs theme). Built data-first so you can scaffold a new
-          course, drop in some pages, and ship.
-        </p>
 
         <section>
           <h2 className="text-xs uppercase tracking-wider text-[var(--color-faint)] mb-3">
             Courses ({visibleCourses.length})
           </h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
             {visibleCourses.map((c) => (
               <li key={c.config.slug}>
                 <Link
                   href={`/c/${c.config.slug}`}
-                  className="aspect-square flex flex-col justify-between bg-white border border-[var(--color-border)] rounded-lg p-6 hover:border-[var(--color-primary)] hover:shadow-sm transition-all"
+                  className="h-full block bg-white border border-[var(--color-border)] rounded-lg p-5 hover:border-[var(--color-primary)] hover:shadow-sm transition-all"
                 >
-                  <div>
-                    <div className="text-xs uppercase tracking-wider text-[var(--color-faint)] mb-2">
-                      {c.config.term}
-                    </div>
-                    <div className="text-xl font-medium text-[var(--color-heading)] leading-snug">
-                      {c.config.fullTitle}
-                    </div>
+                  <div className="text-xs uppercase tracking-wider text-[var(--color-faint)] mb-1.5">
+                    {c.config.term}
+                  </div>
+                  <div className="text-base font-medium text-[var(--color-heading)] leading-snug mb-2">
+                    {c.config.fullTitle}
                   </div>
                   <div className="text-sm text-[var(--color-muted)]">
-                    {c.pages.length} page{c.pages.length === 1 ? "" : "s"} ·{" "}
-                    {c.config.slug}
+                    {c.config.weeks ? `${c.config.weeks}-week course` : `${c.pages.length} pages`}
                   </div>
                 </Link>
               </li>
             ))}
           </ul>
         </section>
+
+        <p className="mt-10 text-sm text-[var(--color-muted)]">
+          See the{" "}
+          <Link href="/c/template" className="text-[var(--color-primary)] hover:underline">
+            sample course
+          </Link>{" "}
+          for a fully populated example of every page type.
+        </p>
       </main>
     </div>
   );
