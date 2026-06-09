@@ -1,0 +1,198 @@
+/* coursemaker-reading.css
+ * Print stylesheet for per-week reading PDFs.
+ * Used by scripts/build-readings.mjs via md-to-pdf (Puppeteer).
+ * Single-column, body-prose, designed to read like a short book chapter.
+ * Matches the coursemaker palette (Just the Docs / CSE 457).
+ */
+
+@page {
+  size: Letter;
+  margin: 0.85in 1in 1in 1in;
+}
+
+:root {
+  --primary: #7253ed;
+  --primary-strong: #5739ce;
+  --heading: #27262b;
+  --body: #2b292e;
+  --muted: #5c5962;
+  --faint: #959396;
+  --sidebar: #f5f6fa;
+  --border: #eeebee;
+  --red: #d93c3c;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  background: #ffffff;
+  color: var(--body);
+  font-family: "Charter", "Iowan Old Style", "Source Serif Pro", Georgia, serif;
+  font-size: 11.5pt;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Cover block — the first paragraph after the H1 is treated as a kicker.
+   We use h1 + a "kicker" class via comment markup. */
+h1 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--heading);
+  font-weight: 300;
+  font-size: 28pt;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.2em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3em;
+}
+
+h1 + p {
+  font-family: system-ui, sans-serif;
+  font-size: 11pt;
+  color: var(--muted);
+  margin-top: 0;
+}
+
+h2 {
+  font-family: system-ui, sans-serif;
+  color: var(--heading);
+  font-weight: 500;
+  font-size: 16pt;
+  margin: 1.6em 0 0.3em;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  font-family: system-ui, sans-serif;
+  color: var(--heading);
+  font-weight: 500;
+  font-size: 13pt;
+  margin: 1.3em 0 0.25em;
+}
+
+h4 {
+  font-family: system-ui, sans-serif;
+  color: var(--heading);
+  font-weight: 600;
+  font-size: 10pt;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.2em 0 0.15em;
+}
+
+p {
+  margin: 0.65em 0;
+  hyphens: auto;
+  text-align: justify;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(114, 83, 237, 0.3);
+}
+
+strong { color: var(--heading); font-weight: 600; }
+
+em { font-style: italic; }
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  background: var(--sidebar);
+  padding: 0.05em 0.4em;
+  border-radius: 3px;
+  font-size: 0.88em;
+  color: var(--heading);
+}
+
+pre {
+  background: var(--sidebar);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.7em 0.9em;
+  overflow-x: auto;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 9.5pt;
+  line-height: 1.45;
+  page-break-inside: avoid;
+}
+pre code { background: transparent; padding: 0; }
+
+blockquote {
+  margin: 1em 0;
+  padding: 0.3em 1em;
+  border-left: 3px solid var(--primary);
+  background: var(--sidebar);
+  color: var(--muted);
+  font-style: italic;
+  border-radius: 0 4px 4px 0;
+  page-break-inside: avoid;
+}
+
+ul, ol { padding-left: 1.3em; margin: 0.5em 0; }
+li { margin: 0.15em 0; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 1.5em 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.95em;
+  page-break-inside: avoid;
+}
+th, td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.4em 0.6em;
+  text-align: left;
+  font-family: system-ui, sans-serif;
+}
+th { background: var(--sidebar); color: var(--heading); font-weight: 600; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+/* Callouts — produced by markdown with a leading bold word.
+   Use the .callout class in HTML or wrap with > **NOTE** ... in MD. */
+.callout {
+  border-left: 3px solid var(--primary);
+  background: var(--sidebar);
+  padding: 0.6em 0.9em;
+  margin: 1em 0;
+  border-radius: 0 6px 6px 0;
+  page-break-inside: avoid;
+}
+.callout-warn { border-left-color: var(--red); }
+
+/* Page break helpers — use <div class="page-break"></div> in markdown. */
+.page-break { page-break-after: always; height: 0; }
+
+/* Exercises section: keep questions together with prompt. */
+.exercise { page-break-inside: avoid; margin: 0.8em 0; }
+
+/* Bibliography: smaller, hanging-indent style. */
+.bibliography { font-size: 10pt; line-height: 1.4; }
+.bibliography p {
+  margin: 0.4em 0; padding-left: 1.5em; text-indent: -1.5em;
+  text-align: left; hyphens: none;
+}
+
+/* Header / footer hand-injected by md-to-pdf */
+.pdf-header, .pdf-footer {
+  font-family: system-ui, sans-serif;
+  color: var(--faint);
+  font-size: 9pt;
+}
+
+/* Avoid orphan headings */
+h1, h2, h3, h4 { page-break-after: avoid; }

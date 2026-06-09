@@ -116,26 +116,6 @@ export interface ResourceItem {
   note?: string;
 }
 
-/** Calendar table row (table-format calendar a la CSE 446). */
-export interface ScheduleRow {
-  /** e.g. "M 3/30" */
-  date: string;
-  /** Lecture / topic title. */
-  topic: string;
-  /** Reading citations / chapters. Each item may include a link. */
-  reading?: Array<string | { text: string; href: string }>;
-  /** Slides, notebooks, datasets, demos. */
-  resources?: Array<{ text: string; href: string }>;
-  /** Optional badge: "Cancelled", "Midterm", "No class". */
-  badge?: { text: string; variant?: LabelVariant };
-}
-
-/** Optional unit divider in the calendar table. */
-export interface ScheduleUnit {
-  title: string;
-  rows: ScheduleRow[];
-}
-
 /** Project / homework handout shape. */
 export interface ProjectSpec {
   title: string;

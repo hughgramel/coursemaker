@@ -15,10 +15,10 @@
  *   --full-title   REQUIRED. Full course name.
  *   --term         REQUIRED. Term label, e.g. "Autumn 2026".
  *   --description  Optional. Defaults to a generic blurb.
- *   --hero         Optional. Animated hero name: splines | timeline | dna | equation | code | wave.
- *                  See .claude/skills/animated-course-hero/SKILL.md for picking advice.
- *   --hero-color   Optional. Hex/CSS color for the animated hero (e.g. "#d93c3c").
- *   --hero-image   Optional. Static image path or URL (used if --hero is not set).
+ *   --weeks        Optional. Number of instructional weeks (6-12, default 10).
+ *                  Currently informational only — the generated home page is
+ *                  empty by default; coursemaker-create populates it.
+ *   --hero-image   Optional. Path or URL of the course hero (SVG preferred).
  *   --force        Overwrite the directory if it already exists.
  *
  * Designed to be called non-interactively by Claude Code or CI.
@@ -80,11 +80,9 @@ async function main() {
   const term = args.term;
   const description = args.description || `A course website for ${fullTitle} (${term}).`;
   const heroImage = args["hero-image"] || null;
-  const heroName = args.hero || null;
-  const heroColor = args["hero-color"] || null;
-  const VALID_HEROES = ["splines", "timeline", "dna", "equation", "code", "wave"];
-  if (heroName && !VALID_HEROES.includes(heroName)) {
-    fail(`invalid --hero "${heroName}". Pick one of: ${VALID_HEROES.join(", ")}.`);
+  const weeks = args.weeks ? Number(args.weeks) : 10;
+  if (Number.isNaN(weeks) || weeks < 6 || weeks > 12) {
+    fail(`invalid --weeks "${args.weeks}". Must be an integer between 6 and 12.`);
   }
 
   const courseDir = join(COURSES_DIR, slug);
@@ -102,9 +100,8 @@ export const config: SiteConfig = {
   fullTitle: ${JSON.stringify(fullTitle)},
   term: ${JSON.stringify(term)},
   description: ${JSON.stringify(description)},
-  ${heroImage ? `heroImage: ${JSON.stringify(heroImage)},` : `heroImage: null,`}
-  ${heroName
-    ? `hero: { kind: "animated", name: ${JSON.stringify(heroName)}${heroColor ? `, color: ${JSON.stringify(heroColor)}` : ""} },`
+  ${heroImage
+    ? `hero: { src: ${JSON.stringify(heroImage)}, alt: ${JSON.stringify(fullTitle)} },`
     : `hero: null,`}
   navGroups: [
     {
@@ -122,7 +119,7 @@ export const config: SiteConfig = {
 
   const homeTsx = `import { AnchorHeading } from "@/components/AnchorHeading";
 import { WeekModule } from "@/components/WeekModule";
-import { Hero } from "@/components/heroes/Hero";
+import { Hero } from "@/components/Hero";
 import type { CourseModule } from "@/types/course";
 import { config } from "../course.config";
 
@@ -141,7 +138,7 @@ export function HomePage() {
   return (
     <>
       <div className="not-prose">
-        <Hero spec={config.hero} legacyImage={config.heroImage} />
+        <Hero hero={config.hero} legacyImage={config.heroImage} />
       </div>
       <AnchorHeading as="h1" id="${slug}" className="mb-2">
         ${esc(fullTitle)}
@@ -229,7 +226,7 @@ export const course: Course = {
     await writeFile(REGISTRY_FILE, updated, "utf8");
   }
 
-  console.log(`\n✓ Created course "${slug}".`);
+  console.log(`\n✓ Created course "${slug}" (${weeks} weeks).`);
   console.log(`  • ${courseDir}`);
   console.log(`  • registered in ${REGISTRY_FILE}`);
   console.log(`\nNext:`);

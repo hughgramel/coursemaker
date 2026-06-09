@@ -1,6 +1,6 @@
 import type { SyllabusSpec } from "@/types/course";
 import { AnchorHeading } from "./AnchorHeading";
-import { StaffGrid } from "./StaffGrid";
+import { StaffList } from "./StaffList";
 
 /**
  * SyllabusPage — renders the canonical UW-style syllabus from a SyllabusSpec.
@@ -24,7 +24,7 @@ export function SyllabusPage({ spec }: { spec: SyllabusSpec }) {
       </ul>
 
       <AnchorHeading as="h2" id="staff">Staff &amp; Office Hours</AnchorHeading>
-      <StaffGrid staff={spec.staff} />
+      <StaffList staff={spec.staff} />
 
       {(spec.prerequisites?.length || spec.gettingHelp?.length) && (
         <>
