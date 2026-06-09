@@ -1,172 +1,155 @@
 import { AnchorHeading } from "@/components/AnchorHeading";
 import { WeekModule } from "@/components/WeekModule";
 import { Hero } from "@/components/Hero";
-import type { CourseModule } from "@/types/course";
+import type { CourseModule, ModuleNote } from "@/types/course";
 import { config } from "../course.config";
 
 const base = `/c/${config.slug}`;
 
-const weeks: CourseModule[] = [
+interface WeekSpec {
+  n: number;
+  phase: string;
+  reading: { title: string; href: string };
+  lectures: { title: string; href: string; slides: string }[];
+  section: { title: string; href: string };
+  assignments: ModuleNote[];
+}
+
+const spec: WeekSpec[] = [
   {
-    title: "Week 1, Foundations",
-    size: "h2-small",
-    entries: [
-      { date: "Mon", notes: [{ kind: "link", text: "Reading: Funnel, niche, bio", href: `${base}/readings/wk01` }] },
-      { date: "Tue", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: The follower funnel", href: `${base}/lectures/wk01-l1` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk01-l1.pdf` },
-        ]},
-      ]},
-      { date: "Thu", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: Niche, voice, and bio", href: `${base}/lectures/wk01-l2` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk01-l2.pdf` },
-        ]},
-      ]},
-      { date: "Fri", notes: [{ kind: "link", text: "Section: Audit five accounts", href: `${base}/sections/wk01` }] },
-      { date: "Sun", notes: [
-        { kind: "row", items: [
-          { kind: "label", text: "HW1 out", variant: "purple" },
-          { kind: "link", text: "Niche and bio rewrite", href: `${base}/hw/1` },
-        ]},
+    n: 1,
+    phase: "Foundations",
+    reading:  { title: "Funnel, niche, bio", href: `${base}/readings/wk01` },
+    lectures: [
+      { title: "L1, The follower funnel",      href: `${base}/lectures/wk01-l1`, slides: `${base}/slides/wk01-l1.pdf` },
+      { title: "L2, Niche, voice, and bio",    href: `${base}/lectures/wk01-l2`, slides: `${base}/slides/wk01-l2.pdf` },
+    ],
+    section: { title: "Audit five accounts in your niche", href: `${base}/sections/wk01` },
+    assignments: [
+      { kind: "row", items: [
+        { kind: "label", text: "HW1 out", variant: "purple" },
+        { kind: "link",  text: "Niche and bio rewrite",                 href: `${base}/hw/1` },
       ]},
     ],
   },
   {
-    title: "Week 2, Core mechanics: writing",
-    size: "h2-small",
-    entries: [
-      { date: "Mon", notes: [{ kind: "link", text: "Reading: Hooks and formats", href: `${base}/readings/wk02` }] },
-      { date: "Tue", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: Anatomy of a hook", href: `${base}/lectures/wk02-l1` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk02-l1.pdf` },
-        ]},
+    n: 2,
+    phase: "Core mechanics: writing",
+    reading:  { title: "Hooks and formats", href: `${base}/readings/wk02` },
+    lectures: [
+      { title: "L1, Anatomy of a hook",   href: `${base}/lectures/wk02-l1`, slides: `${base}/slides/wk02-l1.pdf` },
+      { title: "L2, Post formats",        href: `${base}/lectures/wk02-l2`, slides: `${base}/slides/wk02-l2.pdf` },
+    ],
+    section: { title: "Hook lab", href: `${base}/sections/wk02` },
+    assignments: [
+      { kind: "row", items: [
+        { kind: "label", text: "HW1 due", variant: "red" },
+        { kind: "link",  text: "Niche and bio rewrite",                  href: `${base}/hw/1` },
       ]},
-      { date: "Thu", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: Post formats", href: `${base}/lectures/wk02-l2` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk02-l2.pdf` },
-        ]},
-      ]},
-      { date: "Fri", notes: [{ kind: "link", text: "Section: Hook lab", href: `${base}/sections/wk02` }] },
-      { date: "Sun", notes: [
-        { kind: "row", items: [
-          { kind: "label", text: "HW1 due", variant: "red" },
-          { kind: "label", text: "HW2 out", variant: "purple" },
-          { kind: "link", text: "Twenty posts in seven days", href: `${base}/hw/2` },
-        ]},
+      { kind: "row", items: [
+        { kind: "label", text: "HW2 out", variant: "purple" },
+        { kind: "link",  text: "Twenty posts in seven days",             href: `${base}/hw/2` },
       ]},
     ],
   },
   {
-    title: "Week 3, Core mechanics: distribution",
-    size: "h2-small",
-    entries: [
-      { date: "Mon", notes: [{ kind: "link", text: "Reading: The algorithm and the reply game", href: `${base}/readings/wk03` }] },
-      { date: "Tue", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: How posts spread on X", href: `${base}/lectures/wk03-l1` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk03-l1.pdf` },
-        ]},
-      ]},
-      { date: "Thu", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: The reply game", href: `${base}/lectures/wk03-l2` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk03-l2.pdf` },
-        ]},
-      ]},
-      { date: "Fri", notes: [{ kind: "link", text: "Section: Reply sprint", href: `${base}/sections/wk03` }] },
-      { date: "Sun", notes: [
-        { kind: "row", items: [
-          { kind: "label", text: "HW2 due", variant: "red" },
-        ]},
+    n: 3,
+    phase: "Core mechanics: distribution",
+    reading:  { title: "The algorithm and the reply game", href: `${base}/readings/wk03` },
+    lectures: [
+      { title: "L1, How posts spread on X", href: `${base}/lectures/wk03-l1`, slides: `${base}/slides/wk03-l1.pdf` },
+      { title: "L2, The reply game",        href: `${base}/lectures/wk03-l2`, slides: `${base}/slides/wk03-l2.pdf` },
+    ],
+    section: { title: "Reply sprint", href: `${base}/sections/wk03` },
+    assignments: [
+      { kind: "row", items: [
+        { kind: "label", text: "HW2 due", variant: "red" },
+        { kind: "link",  text: "Twenty posts in seven days",             href: `${base}/hw/2` },
       ]},
     ],
   },
   {
-    title: "Week 4, Composition",
-    size: "h2-small",
-    entries: [
-      { date: "Mon", notes: [{ kind: "link", text: "Reading: The weekly system", href: `${base}/readings/wk04` }] },
-      { date: "Tue", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: Calendars and batching", href: `${base}/lectures/wk04-l1` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk04-l1.pdf` },
-        ]},
+    n: 4,
+    phase: "Composition",
+    reading:  { title: "The weekly system", href: `${base}/readings/wk04` },
+    lectures: [
+      { title: "L1, Calendars and batching",       href: `${base}/lectures/wk04-l1`, slides: `${base}/slides/wk04-l1.pdf` },
+      { title: "L2, Collaboration and network",    href: `${base}/lectures/wk04-l2`, slides: `${base}/slides/wk04-l2.pdf` },
+    ],
+    section: { title: "Build your weekly system", href: `${base}/sections/wk04` },
+    assignments: [
+      { kind: "row", items: [
+        { kind: "label", text: "HW3 out", variant: "purple" },
+        { kind: "link",  text: "Run your system for two weeks",          href: `${base}/hw/3` },
       ]},
-      { date: "Thu", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: Collaboration and network", href: `${base}/lectures/wk04-l2` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk04-l2.pdf` },
-        ]},
-      ]},
-      { date: "Fri", notes: [{ kind: "link", text: "Section: Build your weekly system", href: `${base}/sections/wk04` }] },
-      { date: "Sun", notes: [
-        { kind: "row", items: [
-          { kind: "label", text: "HW3 out", variant: "purple" },
-          { kind: "link", text: "Run your system for two weeks", href: `${base}/hw/3` },
-          { kind: "label", text: "Capstone out", variant: "purple" },
-          { kind: "link", text: "90-day playbook", href: `${base}/hw/capstone` },
-        ]},
+      { kind: "row", items: [
+        { kind: "label", text: "Capstone out", variant: "purple" },
+        { kind: "link",  text: "90-day playbook",                        href: `${base}/hw/capstone` },
       ]},
     ],
   },
   {
-    title: "Week 5, Frontier: analytics",
-    size: "h2-small",
-    entries: [
-      { date: "Mon", notes: [{ kind: "link", text: "Reading: Analytics and iteration", href: `${base}/readings/wk05` }] },
-      { date: "Tue", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: What to measure", href: `${base}/lectures/wk05-l1` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk05-l1.pdf` },
-        ]},
+    n: 5,
+    phase: "Frontier: analytics",
+    reading:  { title: "Analytics and iteration", href: `${base}/readings/wk05` },
+    lectures: [
+      { title: "L1, What to measure",         href: `${base}/lectures/wk05-l1`, slides: `${base}/slides/wk05-l1.pdf` },
+      { title: "L2, Testing and iterating",   href: `${base}/lectures/wk05-l2`, slides: `${base}/slides/wk05-l2.pdf` },
+    ],
+    section: { title: "Read your analytics", href: `${base}/sections/wk05` },
+    assignments: [
+      { kind: "row", items: [
+        { kind: "label", text: "HW3 due", variant: "red" },
+        { kind: "link",  text: "Run your system for two weeks",          href: `${base}/hw/3` },
       ]},
-      { date: "Thu", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: Testing and iterating", href: `${base}/lectures/wk05-l2` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk05-l2.pdf` },
-        ]},
-      ]},
-      { date: "Fri", notes: [{ kind: "link", text: "Section: Read your analytics", href: `${base}/sections/wk05` }] },
-      { date: "Sun", notes: [
-        { kind: "row", items: [
-          { kind: "label", text: "HW3 due", variant: "red" },
-          { kind: "label", text: "HW4 out", variant: "purple" },
-          { kind: "link", text: "Thirty-day growth experiment", href: `${base}/hw/4` },
-        ]},
+      { kind: "row", items: [
+        { kind: "label", text: "HW4 out", variant: "purple" },
+        { kind: "link",  text: "Thirty-day growth experiment",           href: `${base}/hw/4` },
       ]},
     ],
   },
   {
-    title: "Week 6, Synthesis",
-    size: "h2-small",
-    entries: [
-      { date: "Mon", notes: [{ kind: "link", text: "Reading: The 90-day playbook", href: `${base}/readings/wk06` }] },
-      { date: "Tue", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: The 10k roadmap", href: `${base}/lectures/wk06-l1` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk06-l1.pdf` },
-        ]},
+    n: 6,
+    phase: "Synthesis",
+    reading:  { title: "The 90-day playbook", href: `${base}/readings/wk06` },
+    lectures: [
+      { title: "L1, The 10k roadmap",                   href: `${base}/lectures/wk06-l1`, slides: `${base}/slides/wk06-l1.pdf` },
+      { title: "L2, Life after 10k",                    href: `${base}/lectures/wk06-l2`, slides: `${base}/slides/wk06-l2.pdf` },
+    ],
+    section: { title: "Capstone demo day", href: `${base}/sections/wk06` },
+    assignments: [
+      { kind: "row", items: [
+        { kind: "label", text: "HW4 due", variant: "red" },
+        { kind: "link",  text: "Thirty-day growth experiment",           href: `${base}/hw/4` },
       ]},
-      { date: "Thu", notes: [
-        { kind: "row", items: [
-          { kind: "link", text: "Lecture: Life after 10k", href: `${base}/lectures/wk06-l2` },
-          { kind: "link", text: "Slides (PDF)", href: `${base}/slides/wk06-l2.pdf` },
-        ]},
-      ]},
-      { date: "Fri", notes: [{ kind: "link", text: "Section: Capstone demo day", href: `${base}/sections/wk06` }] },
-      { date: "Sun", notes: [
-        { kind: "row", items: [
-          { kind: "label", text: "HW4 due", variant: "red" },
-          { kind: "label", text: "Capstone due", variant: "red" },
-        ]},
+      { kind: "row", items: [
+        { kind: "label", text: "Capstone due", variant: "red" },
+        { kind: "link",  text: "90-day playbook",                        href: `${base}/hw/capstone` },
       ]},
     ],
   },
 ];
+
+function lectureNote(l: WeekSpec["lectures"][number]): ModuleNote {
+  return {
+    kind: "row",
+    items: [
+      { kind: "link", text: l.title,       href: l.href },
+      { kind: "link", text: "Slides (PDF)", href: l.slides },
+    ],
+  };
+}
+
+const weeks: CourseModule[] = spec.map((w) => ({
+  title: `Week ${w.n}, ${w.phase}`,
+  size: "h2-small",
+  entries: [
+    { date: "Reading",     notes: [{ kind: "link", text: w.reading.title, href: w.reading.href }] },
+    { date: "Lectures",    notes: w.lectures.map(lectureNote) },
+    { date: "Section",     notes: [{ kind: "link", text: w.section.title, href: w.section.href }] },
+    { date: "Assignments", notes: w.assignments },
+  ],
+}));
 
 export function HomePage() {
   return (
@@ -186,9 +169,11 @@ export function HomePage() {
 
       <AnchorHeading as="h2" id="calendar">Calendar</AnchorHeading>
       <p className="fs-6 fw-300">
-        Self-paced. Two lectures per week, one section, one reading. Day-of-week labels are suggested cadence.
+        Six weeks, self-paced. Each week ships a reading, two lectures with slides, one section, and one assignment touchpoint.
       </p>
-      {weeks.map((w) => <WeekModule key={w.title} module={w} />)}
+      <div className="course-weeks">
+        {weeks.map((w) => <WeekModule key={w.title} module={w} />)}
+      </div>
     </>
   );
 }
