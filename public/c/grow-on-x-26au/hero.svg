@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" fill="none">
+
+  <!-- Curved edges from origin node outward -->
+  <!-- Origin to first-ring nodes -->
+  <path d="M 120 200 C 200 200 240 160 310 145" stroke="#7253ed" stroke-width="1.5" stroke-opacity="0.5" fill="none"/>
+  <path d="M 120 200 C 200 200 240 200 310 200" stroke="#7253ed" stroke-width="1.5" stroke-opacity="0.5" fill="none"/>
+  <path d="M 120 200 C 200 200 240 240 310 255" stroke="#7253ed" stroke-width="1.5" stroke-opacity="0.5" fill="none"/>
+
+  <!-- First-ring to second-ring -->
+  <path d="M 310 145 C 370 130 410 110 480 100" stroke="#2869e6" stroke-width="1.2" stroke-opacity="0.45" fill="none"/>
+  <path d="M 310 145 C 370 140 410 145 480 148" stroke="#2869e6" stroke-width="1.2" stroke-opacity="0.45" fill="none"/>
+  <path d="M 310 200 C 370 195 410 190 480 185" stroke="#2869e6" stroke-width="1.2" stroke-opacity="0.45" fill="none"/>
+  <path d="M 310 200 C 370 210 410 220 480 225" stroke="#2869e6" stroke-width="1.2" stroke-opacity="0.45" fill="none"/>
+  <path d="M 310 255 C 370 260 410 265 480 270" stroke="#2869e6" stroke-width="1.2" stroke-opacity="0.45" fill="none"/>
+  <path d="M 310 255 C 370 270 410 285 480 300" stroke="#2869e6" stroke-width="1.2" stroke-opacity="0.45" fill="none"/>
+
+  <!-- Second-ring to third-ring -->
+  <path d="M 480 100 C 545 90 580 78 650 72" stroke="#7253ed" stroke-width="1" stroke-opacity="0.35" fill="none"/>
+  <path d="M 480 100 C 545 100 580 108 650 112" stroke="#7253ed" stroke-width="1" stroke-opacity="0.35" fill="none"/>
+  <path d="M 480 148 C 545 145 580 140 650 138" stroke="#7253ed" stroke-width="1" stroke-opacity="0.35" fill="none"/>
+  <path d="M 480 148 C 545 155 580 162 650 168" stroke="#7253ed" stroke-width="1" stroke-opacity="0.35" fill="none"/>
+  <path d="M 480 185 C 545 182 580 180 650 178" stroke="#7253ed" stroke-width="1" stroke-opacity="0.35" fill="none"/>
+  <path d="M 480 225 C 545 228 580 232 650 236" stroke="#7253ed" stroke-width="1" stroke-opacity="0.35" fill="none"/>
+  <path d="M 480 270 C 545 272 580 276 650 280" stroke="#7253ed" stroke-width="1" stroke-opacity="0.35" fill="none"/>
+  <path d="M 480 300 C 545 308 580 316 650 322" stroke="#7253ed" stroke-width="1" stroke-opacity="0.35" fill="none"/>
+
+  <!-- Third-ring to fourth-ring (outer fringe) -->
+  <path d="M 650 72 C 710 65 750 58 820 55" stroke="#2869e6" stroke-width="0.9" stroke-opacity="0.28" fill="none"/>
+  <path d="M 650 72 C 710 72 750 80 820 85" stroke="#2869e6" stroke-width="0.9" stroke-opacity="0.28" fill="none"/>
+  <path d="M 650 112 C 710 110 750 112 820 115" stroke="#2869e6" stroke-width="0.9" stroke-opacity="0.28" fill="none"/>
+  <path d="M 650 138 C 710 136 750 135 820 132" stroke="#2869e6" stroke-width="0.9" stroke-opacity="0.28" fill="none"/>
+  <path d="M 650 138 C 710 142 750 148 820 152" stroke="#2869e6" stroke-width="0.9" stroke-opacity="0.28" fill="none"/>
+  <path d="M 650 168 C 710 170 750 172 820 175" stroke="#2869e6" stroke-width="0.9" stroke-opacity="0.28" fill="none"/>
+  <path d="M 650 178 C 710 180 750 185 820 190" stroke="#2869e6" stroke-width="0.9" stroke-opacity="0.28" fill="none"/>
+  <path d="M 650 236 C 710 240 750 245 820 248" stroke="#2869e6" stroke-width="0.9" stroke-opacity="0.28" fill="none"/>
+  <path d="M 650 280 C 710 284 750 288 820 292" stroke="#2869e6" stroke-width="0.9" stroke-opacity="0.28" fill="none"/>
+  <path d="M 650 322 C 710 326 750 330 820 335" stroke="#2869e6" stroke-width="0.9" stroke-opacity="0.28" fill="none"/>
+
+  <!-- Outer fringe to far nodes -->
+  <path d="M 820 55 C 880 52 920 50 980 48" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.2" fill="none"/>
+  <path d="M 820 85 C 880 85 920 88 980 90" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.2" fill="none"/>
+  <path d="M 820 115 C 880 116 920 118 980 120" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.2" fill="none"/>
+  <path d="M 820 132 C 880 132 920 133 980 134" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.2" fill="none"/>
+  <path d="M 820 152 C 880 155 920 158 980 162" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.2" fill="none"/>
+  <path d="M 820 175 C 880 178 920 182 980 186" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.2" fill="none"/>
+  <path d="M 820 190 C 880 194 920 200 980 206" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.2" fill="none"/>
+  <path d="M 820 248 C 880 252 920 256 980 260" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.2" fill="none"/>
+  <path d="M 820 292 C 880 296 920 302 980 308" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.2" fill="none"/>
+  <path d="M 820 335 C 880 338 920 342 980 346" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.2" fill="none"/>
+
+  <!-- A few cross-connections within rings to suggest graph density -->
+  <path d="M 480 100 C 480 130 480 155 480 185" stroke="#2869e6" stroke-width="0.7" stroke-opacity="0.18" fill="none"/>
+  <path d="M 650 112 C 645 130 645 150 650 168" stroke="#7253ed" stroke-width="0.7" stroke-opacity="0.18" fill="none"/>
+  <path d="M 820 115 C 818 130 818 145 820 152" stroke="#2869e6" stroke-width="0.7" stroke-opacity="0.18" fill="none"/>
+  <path d="M 310 145 C 308 168 308 180 310 200" stroke="#7253ed" stroke-width="0.7" stroke-opacity="0.22" fill="none"/>
+
+  <!-- Origin node (small, left anchor) -->
+  <circle cx="120" cy="200" r="7" fill="#7253ed"/>
+  <circle cx="120" cy="200" r="11" fill="none" stroke="#7253ed" stroke-width="1.2" stroke-opacity="0.35"/>
+
+  <!-- First ring nodes -->
+  <circle cx="310" cy="145" r="8" fill="#7253ed"/>
+  <circle cx="310" cy="200" r="8" fill="#7253ed"/>
+  <circle cx="310" cy="255" r="8" fill="#7253ed"/>
+
+  <!-- Second ring nodes -->
+  <circle cx="480" cy="100" r="7" fill="#2869e6"/>
+  <circle cx="480" cy="148" r="7" fill="#2869e6"/>
+  <circle cx="480" cy="185" r="7" fill="#2869e6"/>
+  <circle cx="480" cy="225" r="7" fill="#2869e6"/>
+  <circle cx="480" cy="270" r="7" fill="#2869e6"/>
+  <circle cx="480" cy="300" r="7" fill="#2869e6"/>
+
+  <!-- Third ring nodes -->
+  <circle cx="650" cy="72" r="5.5" fill="#7253ed" fill-opacity="0.85"/>
+  <circle cx="650" cy="112" r="5.5" fill="#7253ed" fill-opacity="0.85"/>
+  <circle cx="650" cy="138" r="5.5" fill="#7253ed" fill-opacity="0.85"/>
+  <circle cx="650" cy="168" r="5.5" fill="#7253ed" fill-opacity="0.85"/>
+  <circle cx="650" cy="178" r="5.5" fill="#7253ed" fill-opacity="0.85"/>
+  <circle cx="650" cy="236" r="5.5" fill="#7253ed" fill-opacity="0.85"/>
+  <circle cx="650" cy="280" r="5.5" fill="#7253ed" fill-opacity="0.85"/>
+  <circle cx="650" cy="322" r="5.5" fill="#7253ed" fill-opacity="0.85"/>
+
+  <!-- Fourth ring nodes -->
+  <circle cx="820" cy="55" r="4.5" fill="#2869e6" fill-opacity="0.7"/>
+  <circle cx="820" cy="85" r="4.5" fill="#2869e6" fill-opacity="0.7"/>
+  <circle cx="820" cy="115" r="4.5" fill="#2869e6" fill-opacity="0.7"/>
+  <circle cx="820" cy="132" r="4.5" fill="#2869e6" fill-opacity="0.7"/>
+  <circle cx="820" cy="152" r="4.5" fill="#2869e6" fill-opacity="0.7"/>
+  <circle cx="820" cy="175" r="4.5" fill="#2869e6" fill-opacity="0.7"/>
+  <circle cx="820" cy="190" r="4.5" fill="#2869e6" fill-opacity="0.7"/>
+  <circle cx="820" cy="248" r="4.5" fill="#2869e6" fill-opacity="0.7"/>
+  <circle cx="820" cy="292" r="4.5" fill="#2869e6" fill-opacity="0.7"/>
+  <circle cx="820" cy="335" r="4.5" fill="#2869e6" fill-opacity="0.7"/>
+
+  <!-- Far nodes (rightmost fringe) -->
+  <circle cx="980" cy="48" r="3.5" fill="#7253ed" fill-opacity="0.5"/>
+  <circle cx="980" cy="90" r="3.5" fill="#7253ed" fill-opacity="0.5"/>
+  <circle cx="980" cy="120" r="3.5" fill="#7253ed" fill-opacity="0.5"/>
+  <circle cx="980" cy="134" r="3.5" fill="#7253ed" fill-opacity="0.5"/>
+  <circle cx="980" cy="162" r="3.5" fill="#7253ed" fill-opacity="0.5"/>
+  <circle cx="980" cy="186" r="3.5" fill="#7253ed" fill-opacity="0.5"/>
+  <circle cx="980" cy="206" r="3.5" fill="#7253ed" fill-opacity="0.5"/>
+  <circle cx="980" cy="260" r="3.5" fill="#7253ed" fill-opacity="0.5"/>
+  <circle cx="980" cy="308" r="3.5" fill="#7253ed" fill-opacity="0.5"/>
+  <circle cx="980" cy="346" r="3.5" fill="#7253ed" fill-opacity="0.5"/>
+
+  <!-- Single red accent highlight node (second ring, prominent position) -->
+  <circle cx="480" cy="185" r="9" fill="#d93c3c"/>
+  <circle cx="480" cy="185" r="13" fill="none" stroke="#d93c3c" stroke-width="1" stroke-opacity="0.3"/>
+
+</svg>
