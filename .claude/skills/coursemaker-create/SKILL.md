@@ -505,18 +505,26 @@ If a Marp render failed, re-run for that deck only:
 pnpm slides <slug> wkNN
 ```
 
-## Step 11 — Commit (do NOT push)
+## Step 11 — Commit and push
 
 ```bash
 git add content/courses/<slug>/ public/c/<slug>/
-git -c commit.gpgsign=false commit -m "feat(courses): add <slug> — <fullTitle>"
+git -c commit.gpgsign=false commit -m "$(cat <<EOF
+feat(courses): add <slug> — <fullTitle>
+
+<one-paragraph summary of the course: weeks, audience, focus>
+EOF
+)"
+git push origin main
 ```
 
 The `content/` tree holds the source of truth; `public/c/<slug>/`
 holds the slide PDFs and hero.svg. Readings are TSX under `content/`
 and need no separate artifact.
 
-Pushing is the user's call.
+If the push fails (no remote, no network, branch protection), report
+the commit SHA back to the user and let them push manually. Do not
+delete the commit.
 
 ## Pedagogy reminders (the /teach overlay)
 
@@ -561,11 +569,14 @@ Every artifact this skill produces should follow these:
 
 Tell the user:
 - Number of weeks, lectures, sections, assignments, readings, slide decks
-- URL to view: `pnpm dev` → `http://localhost:3000/c/<slug>`
+- URL to view locally: `pnpm dev` → `http://localhost:3000/c/<slug>`
+- GitHub commit URL (parse from `git remote get-url origin` + the SHA
+  you just pushed)
 - Where the slide PDFs live: `public/c/<slug>/slides/`
 - Where the readings live: rendered at `/c/<slug>/readings/wkNN`, source
   at `content/courses/<slug>/pages/readings/`
 - What still needs human input (real instructor names, real office hours,
   real Ed/Gradescope links)
 - That the curriculum-graph JSON is in `tmp/coursemaker/<slug>-curriculum.json`
-  so they can re-run with edits later.
+  and the sources library is in `tmp/coursemaker/<slug>-sources.json` so
+  they can edit and re-run later.
