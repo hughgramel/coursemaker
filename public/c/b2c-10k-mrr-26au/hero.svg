@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <!-- Background -->
+  <rect width="1200" height="400" fill="#f7f4ee"/>
+
+  <!-- Grid lines (very light) -->
+  <!-- Horizontal grid lines -->
+  <line x1="120" y1="80"  x2="1080" y2="80"  stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="120" y1="140" x2="1080" y2="140" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="120" y1="200" x2="1080" y2="200" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="120" y1="260" x2="1080" y2="260" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="120" y1="310" x2="1080" y2="310" stroke="#d8d3c8" stroke-width="0.5"/>
+
+  <!-- Vertical grid lines (10 week divisions) -->
+  <line x1="216" y1="80" x2="216" y2="320" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="312" y1="80" x2="312" y2="320" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="408" y1="80" x2="408" y2="320" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="504" y1="80" x2="504" y2="320" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="600" y1="80" x2="600" y2="320" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="696" y1="80" x2="696" y2="320" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="792" y1="80" x2="792" y2="320" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="888" y1="80" x2="888" y2="320" stroke="#d8d3c8" stroke-width="0.5"/>
+  <line x1="984" y1="80" x2="984" y2="320" stroke="#d8d3c8" stroke-width="0.5"/>
+
+  <!-- Axes -->
+  <line x1="120" y1="320" x2="1080" y2="320" stroke="#b8b3a8" stroke-width="1"/>
+  <line x1="120" y1="80"  x2="120"  y2="320" stroke="#b8b3a8" stroke-width="1"/>
+
+  <!-- Tick marks on x-axis (10 weeks) -->
+  <line x1="216" y1="318" x2="216" y2="324" stroke="#b8b3a8" stroke-width="1"/>
+  <line x1="312" y1="318" x2="312" y2="324" stroke="#b8b3a8" stroke-width="1"/>
+  <line x1="408" y1="318" x2="408" y2="324" stroke="#b8b3a8" stroke-width="1"/>
+  <line x1="504" y1="318" x2="504" y2="324" stroke="#b8b3a8" stroke-width="1"/>
+  <line x1="600" y1="318" x2="600" y2="324" stroke="#b8b3a8" stroke-width="1"/>
+  <line x1="696" y1="318" x2="696" y2="324" stroke="#b8b3a8" stroke-width="1"/>
+  <line x1="792" y1="318" x2="792" y2="324" stroke="#b8b3a8" stroke-width="1"/>
+  <line x1="888" y1="318" x2="888" y2="324" stroke="#b8b3a8" stroke-width="1"/>
+  <line x1="984" y1="318" x2="984" y2="324" stroke="#b8b3a8" stroke-width="1"/>
+  <line x1="1080" y1="318" x2="1080" y2="324" stroke="#b8b3a8" stroke-width="1"/>
+
+  <!-- $10k MRR dashed target line -->
+  <line x1="120" y1="88" x2="1080" y2="88" stroke="#7253ed" stroke-width="1" stroke-dasharray="6,5" opacity="0.5"/>
+  <text x="1086" y="92" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#7253ed" opacity="0.75">$10,000 MRR</text>
+
+  <!-- Compounding curve fill (area under curve) -->
+  <!-- Exponential curve: x goes 120→1080, y computed as 320 - 232*(e^(t*2.3)-1)/(e^2.3-1) where t goes 0→1 -->
+  <!-- Points computed at t=0,0.1,...,1.0 mapping to x=120,216,...,1080 -->
+  <!-- y = 320 - 232*(exp(2.3*t)-1)/8.974 -->
+  <!-- t=0:   y=320-232*0/8.974=320 -->
+  <!-- t=0.1: y=320-232*(e^0.23-1)/8.974=320-232*0.2586/8.974=320-6.69=313.3 -->
+  <!-- t=0.2: y=320-232*(e^0.46-1)/8.974=320-232*0.5841/8.974=320-15.1=304.9 -->
+  <!-- t=0.3: y=320-232*(e^0.69-1)/8.974=320-232*0.9937/8.974=320-25.7=294.3 -->
+  <!-- t=0.4: y=320-232*(e^0.92-1)/8.974=320-232*1.5096/8.974=320-39.0=281.0 -->
+  <!-- t=0.5: y=320-232*(e^1.15-1)/8.974=320-232*2.1598/8.974=320-55.8=264.2 -->
+  <!-- t=0.6: y=320-232*(e^1.38-1)/8.974=320-232*2.9745/8.974=320-76.8=243.2 -->
+  <!-- t=0.7: y=320-232*(e^1.61-1)/8.974=320-232*4.0045/8.974=320-103.5=216.5 -->
+  <!-- t=0.8: y=320-232*(e^1.84-1)/8.974=320-232*5.2963/8.974=320-136.9=183.1 -->
+  <!-- t=0.9: y=320-232*(e^2.07-1)/8.974=320-232*6.9271/8.974=320-179.1=140.9 -->
+  <!-- t=1.0: y=320-232*(e^2.3-1)/8.974=320-232=88 -->
+  <path d="M120,320 C216,313 312,305 408,294 C504,281 600,264 696,243 C792,217 888,183 984,141 C1032,120 1056,104 1080,88 L1080,320 Z"
+        fill="#7253ed" opacity="0.08"/>
+
+  <!-- Compounding curve stroke -->
+  <path d="M120,320 C216,313 312,305 408,294 C504,281 600,264 696,243 C792,217 888,183 984,141 C1032,120 1056,104 1080,88"
+        fill="none" stroke="#7253ed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Small dots at each week point on the curve -->
+  <circle cx="216" cy="313" r="3" fill="#f7f4ee" stroke="#7253ed" stroke-width="1.5"/>
+  <circle cx="312" cy="305" r="3" fill="#f7f4ee" stroke="#7253ed" stroke-width="1.5"/>
+  <circle cx="408" cy="294" r="3" fill="#f7f4ee" stroke="#7253ed" stroke-width="1.5"/>
+  <circle cx="504" cy="281" r="3" fill="#f7f4ee" stroke="#7253ed" stroke-width="1.5"/>
+  <circle cx="600" cy="264" r="3" fill="#f7f4ee" stroke="#7253ed" stroke-width="1.5"/>
+  <circle cx="696" cy="243" r="3" fill="#f7f4ee" stroke="#7253ed" stroke-width="1.5"/>
+  <circle cx="792" cy="217" r="3" fill="#f7f4ee" stroke="#7253ed" stroke-width="1.5"/>
+  <circle cx="888" cy="183" r="3" fill="#f7f4ee" stroke="#7253ed" stroke-width="1.5"/>
+  <circle cx="984" cy="141" r="3" fill="#f7f4ee" stroke="#7253ed" stroke-width="1.5"/>
+  <circle cx="1080" cy="88"  r="4" fill="#7253ed" stroke="#7253ed" stroke-width="1.5"/>
+</svg>
