@@ -169,7 +169,9 @@ export function HomePage() {
 
       <AnchorHeading as="h2" id="calendar">Calendar</AnchorHeading>
       <p className="fs-6 fw-300">
-        Six weeks, self-paced. Each week ships a reading, two lectures with slides, one section, and one assignment touchpoint.
+        Six weeks, self-paced. Work the rows of each week top to bottom:
+        reading first (it sets up the lectures), then both lectures, then
+        the hands-on section, then the assignment touchpoint.
       </p>
       <div className="course-weeks">
         {weeks.map((w) => <WeekModule key={w.title} module={w} />)}
