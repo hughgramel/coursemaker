@@ -106,6 +106,11 @@ and show it to the user for sign-off before fanning out.
       "n": 1,
       "phase": "Foundations",
       "theme": "Information-theoretic security and classical ciphers",
+      "outcomes": [
+        { "verb": "Apply",      "statement": "Break a Vigenère ciphertext using frequency analysis" },
+        { "verb": "Explain",    "statement": "State what perfect secrecy guarantees and what it costs" },
+        { "verb": "Analyze",    "statement": "Distinguish a working threat model from a wishful one" }
+      ],
       "lectures": [
         { "title": "What 'secure' means", "topics": ["Threat models", "Perfect secrecy", "Shannon's theorem"] },
         { "title": "Caesar to Vigenère",  "topics": ["Substitution ciphers", "Frequency analysis", "Why Vigenère breaks"] }
@@ -119,6 +124,10 @@ and show it to the user for sign-off before fanning out.
       "n": 2,
       "phase": "Foundations",
       "theme": "Probability + the one-time pad",
+      "outcomes": [
+        { "verb": "Apply",   "statement": "Encrypt and decrypt with a one-time pad" },
+        { "verb": "Analyze", "statement": "Show why reusing a one-time pad breaks security" }
+      ],
       "lectures": [...],
       "section":    "...",
       "depends_on": ["threat-model", "perfect-secrecy"],
@@ -136,33 +145,46 @@ and show it to the user for sign-off before fanning out.
 }
 ```
 
-### Rules (the master enforces these — these are non-negotiable)
+### Rules (the master enforces these, non-negotiable)
 
 1. **Phase shape.** Every curriculum has these five phases. Distribute the
    weeks proportionally; for 10 weeks the default is **2 / 3 / 2 / 2 / 1**:
-   - Foundations — vocabulary + mental models. Smallest building blocks.
-   - Core mechanics — 2-3 essential techniques the rest depends on.
-   - Composition — how the core pieces combine into real systems.
-   - Frontier — modern variants, edge cases, where the field is now.
-   - Synthesis — capstone demo + review (always exactly 1 week).
+   - Foundations: vocabulary and mental models. Smallest building blocks.
+   - Core mechanics: 2-3 essential techniques the rest depends on.
+   - Composition: how the core pieces combine into real systems.
+   - Frontier: modern variants, edge cases, where the field is now.
+   - Synthesis: capstone demo and review (always exactly 1 week).
 2. **Concept ids.** Every concept introduced or depended on is a
-   kebab-case string. Be consistent — "rsa-keygen" not "RSA keygen".
-3. **Coherence check** (you run this mentally, then in code):
-   - Every id in any week's `depends_on` must appear in some earlier
-     week's `introduces`. No forward references.
+   kebab-case string. Be consistent. Use "rsa-keygen" not "RSA keygen".
+3. **Backward-design outcomes.** Every week declares 2-4 `outcomes`.
+   Each outcome is an object with `verb` (a Bloom-revised taxonomy verb)
+   and `statement` (one concrete capability the learner gains that
+   week). The verbs you may use, by Bloom level:
+   - **Remember:** define, list, recall, name, state, identify
+   - **Understand:** explain, describe, summarize, classify, interpret, paraphrase
+   - **Apply:** apply, calculate, demonstrate, implement, solve, use, compute
+   - **Analyze:** analyze, compare, contrast, differentiate, examine, distinguish
+   - **Evaluate:** appraise, argue, assess, critique, judge, justify, recommend
+   - **Create:** create, design, construct, develop, formulate, compose
+4. **Coherence check** (run mentally, then in code):
+   - Every id in any week's `depends_on` appears in some earlier week's
+     `introduces`. No forward references.
    - No concept is introduced twice.
-   - The final synthesis week's `depends_on` should be the **union** of
-     the most important concepts from the rest — that's what makes it a
-     synthesis.
-4. **Lectures per week.** Default 2. If the topic is too thin to fill 2,
+   - Every week has at least one outcome at the Apply level or above
+     (don't ship a week that only asks the learner to remember or
+     understand; they need to do something).
+   - The Synthesis week has at least one outcome at the Create level.
+   - The Synthesis week's `depends_on` is the union of the most
+     important concepts from the rest. That is what makes it a synthesis.
+5. **Lectures per week.** Default 2. If the topic is too thin to fill 2,
    make the second lecture a guided worked example (still a real
    lecture, not a section).
-5. **One section per week.** Hands-on, NOT a re-lecture. It's the
+6. **One section per week.** Hands-on, not a re-lecture. It is the
    feedback loop.
-6. **Assignment cadence.** 4-6 assignments across the quarter, sized so
+7. **Assignment cadence.** 4-6 assignments across the quarter, sized so
    each is "out for 2 weeks, due in week 3 of being out." The capstone
    is separate.
-7. **Themes evolve.** Adjacent weeks within a phase should feel like
+8. **Themes evolve.** Adjacent weeks within a phase should feel like
    they're building toward the phase's purpose, not jumping randomly.
 
 ### Show it to the user
@@ -198,90 +220,153 @@ Before fan-out, build a vetted source library that every per-week
 subagent will draw from. This is the gate that turns "vibes research"
 into traceable research.
 
-### What counts as a primary source
+The audience for these courses is **learners, not researchers**. So
+prioritize sources that teach: YouTube lectures from real instructors,
+practitioner essays, engineering blogs, well-known online tutorials,
+authored explainers. Academic papers are a fallback, not the default.
 
-"Primary" is field-dependent. **The rule isn't "academic papers only" —
-it's "authored, dated, hosted by author or canonical venue, written by
-a practitioner with domain authority."**
+### What counts as a good source
 
-| Field | Canonical sources |
-|-------|-------------------|
-| ML / AI / theoretical CS | arXiv, NeurIPS/ICML/ICLR proceedings, distill.pub, Berkeley/Stanford/MIT course notes, Goodfellow/Bishop/Murphy textbooks |
-| Systems engineering | USENIX papers, Stripe/Vercel/Notion/Google engineering blogs, conference talk transcripts, RFC drafts |
-| Cryptography | Boneh & Shoup (free), Katz & Lindell, original CRYPTO/EUROCRYPT papers, IETF RFCs |
-| Programming languages | TC39 proposals, Rust RFCs, language designer essays (Pike, Hickey, Matsumoto), original POPL/ICFP papers |
-| Startups / entrepreneurship | paulgraham.com, founder essays (Patrick Collison, DHH, Sam Altman), YC essays, a16z/USV/Sequoia blogs, founders' books |
-| Design / UX | Don Norman, Tufte, Refactoring UI, Nielsen Norman Group, design system case studies, Bringhurst |
-| History | Primary documents (letters, treaties, archived photos), Stanford Encyclopedia of Philosophy for philosophy, peer-reviewed history journals |
-| Economics | NBER/SSRN working papers, original papers, key books, FRED data, primary central-bank speeches |
-| Music / art theory | Schenker, Schoenberg, Berklee notes, Open Music Theory, primary artist interviews |
+A good source is **authored, dated, hosted by the author or a canonical
+venue, and written or recorded by a practitioner with domain
+authority.** The format does not matter. A YouTube lecture by an MIT
+professor is exactly as legitimate as a textbook chapter.
 
-**Rejection rules:**
-- ❌ Wikipedia, Medium spam, Towards Data Science, generic Quora/Reddit threads
-- ❌ Anonymous content, undated content, content without an authored byline
-- ❌ Other LLMs' summaries of papers (find the paper itself)
-- ❌ Aggregator clickbait ("10 things every X must know")
+Prioritize in this order:
+
+1. **YouTube lectures and playlists** from real instructors. The single
+   highest-leverage source for foundations. By field:
+   - **Math:** 3Blue1Brown, Numberphile, MIT OCW math channels, Khan Academy
+   - **Physics:** Veritasium, MinutePhysics, MIT 8.01/8.02 lectures, Sixty Symbols
+   - **CS / programming:** MIT 6.006, Stanford CS courses, freeCodeCamp,
+     Computerphile, Two Minute Papers, Fireship
+   - **ML / AI:** Andrej Karpathy's neural-nets-zero-to-hero, Stanford CS231n,
+     Berkeley CS294, DeepMind YouTube, Yannic Kilcher
+   - **Biology / chemistry:** Crash Course, Kurzgesagt for primers,
+     MIT OCW life-science lectures, iBiology
+   - **History:** Crash Course World History, OverSimplified for primers,
+     authored Yale and Stanford lecture series on YouTube
+   - **Economics:** Marginal Revolution University, Khan Academy,
+     Mankiw lectures
+   - **Design:** Refactoring UI talks, Don Norman talks, Figma config
+     talks, real designer YouTube channels
+   - **Music:** Adam Neely, 12tone, Rick Beato, Berklee Online lectures
+   - **Engineering practice:** real conference talks from QCon,
+     Strange Loop, GOTO, USENIX
+   - **Startups:** YC Startup School lectures, How to Start a Startup,
+     My First Million-style founder interviews, founder talks
+2. **Curated YouTube collections via [Class Central](https://classcentral.com/).**
+   For any topic, search `classcentral.com/subject/<topic>` to surface
+   the top-rated YouTube university courses with stars and reviews.
+3. **Practitioner essays and online articles.** Field-appropriate
+   authority blogs:
+   - Startups: paulgraham.com, founders' essays (Patrick Collison, DHH,
+     Sam Altman), YC essays, a16z/USV/Sequoia blogs
+   - Engineering: Stripe Press, Vercel, Notion, Google, Cloudflare blogs;
+     personal blogs (Julia Evans, Dan Luu, Drew DeVault, Joel Spolsky)
+   - Design: Don Norman articles, Tufte essays, Refactoring UI, Nielsen
+     Norman Group, real design-system case studies
+   - ML practice: Lilian Weng's blog, Sebastian Raschka, Karpathy posts
+   - PL: language designer essays (Pike, Hickey, Matsumoto, Steele)
+4. **Free online textbook chapters.** When the field has a canonical
+   one and it's freely accessible:
+   - Boneh and Shoup (crypto), the Bitcoin paper (BTC), Goodfellow
+     et al. (deep learning), Bishop (PRML), Marschner and Shirley
+     (graphics), the Rust Book, SICP, Murphy ML
+5. **Authored explainers and interactive content.**
+   - distill.pub, The Pudding, Bartosz Ciechanowski's interactive
+     posts, Red Blob Games tutorials, Worrydream essays
+6. **Original primary documents** for history, philosophy, classics.
+   Archives, letters, treaties, the actual text. Not summaries.
+7. **Academic papers** only when the topic genuinely requires the
+   primary literature (modern ML research, theoretical CS,
+   peer-reviewed history, scientific findings with no popular writeup).
+   Treat them as a fallback, not the default.
+
+**Reject:**
+- Wikipedia (orientation only, not citation-worthy)
+- Medium spam, Towards Data Science, "10 things every X must know"
+- Anonymous content, undated content, no author byline
+- Other LLMs' summaries of anything (find the original)
+- Aggregator clickbait
+- YouTube videos under 5,000 views with unclear authorship
 
 ### How to run the pass
 
 1. **Collect concept ids.** Walk every week of the curriculum graph and
-   collect the union of all `introduces` arrays. That's the concept list.
+   collect the union of all `introduces` arrays plus the `outcomes`
+   statements. That is the discovery target.
 
-2. **For each concept, run 2-3 WebSearch queries** appropriate to the
-   field. Generic templates that work for most fields:
-   - `"<concept>" seminal paper`
-   - `"<concept>" course notes site:.edu`
-   - `"<concept>" essay <known author in field>`
-   - `"<concept>" handbook OR monograph OR textbook`
+2. **Per concept, run 2-3 WebSearch queries** in this order:
 
-3. **WebFetch the top 3-5 hits per concept** to confirm they actually
-   exist and to read the abstract / first paragraph. If a URL doesn't
-   resolve, drop it.
+   ```
+   "<concept>" tutorial site:youtube.com
+   "<concept>" lecture site:youtube.com
+   "<concept>" explained <known authority in field>
+   site:classcentral.com "<concept>"
+   "<concept>" <field>blog essay
+   ```
+
+   Only fall back to `"<concept>" textbook` or `"<concept>" paper` if
+   the first batch returns nothing teachable.
+
+3. **WebFetch the top 3-5 hits per concept** to confirm they resolve
+   and to read the page/description. If a URL is dead, drop it. For
+   YouTube videos: confirm the channel is real, the video is at least
+   8 minutes (longer-form, not a short), and the title matches the
+   concept.
 
 4. **For each surviving source, record:**
 
    ```json
    {
-     "id": "shannon-1949",
-     "title": "Communication Theory of Secrecy Systems",
-     "author": "Claude E. Shannon",
-     "year": 1949,
-     "url": "https://...",
+     "id": "3b1b-essence-linear-algebra",
+     "title": "Essence of linear algebra (chapter 1)",
+     "author": "Grant Sanderson (3Blue1Brown)",
+     "year": 2016,
+     "url": "https://youtube.com/watch?v=...",
      "url_verified": true,
-     "kind": "foundational-paper",
-     "host_kind": "author-homepage" | "journal" | "arxiv" | "university" | "company-engineering-blog" | "founder-essay" | "primary-document",
-     "summary": "One-paragraph summary of what's actually in it.",
-     "key_quote": "Optional. A short direct quote you'd cite.",
+     "kind": "youtube-lecture",
+     "host_kind": "authored-channel" | "university-channel" | "engineering-blog" | "founder-essay" | "free-textbook" | "interactive-explainer" | "primary-document",
+     "summary": "One-paragraph plain-text summary of what the source teaches.",
+     "duration_or_length": "10:58 video" | "12-page essay",
      "informs_weeks": [1, 2],
-     "informs_concepts": ["perfect-secrecy", "entropy", "one-time-pad"]
+     "informs_concepts": ["vector", "linear-combination"],
+     "informs_outcomes": ["Apply: compute a linear combination"]
    }
    ```
 
 5. **Save to** `tmp/coursemaker/<slug>-sources.json`. Aim for **3-6
-   sources per week** on average — enough that every concept has
-   coverage but not so many the subagent gets lost.
+   sources per week**, with at least one YouTube lecture per week. If a
+   week has no good YouTube coverage, flag it before continuing.
 
-6. **Show the user** a prose summary:
+6. **Show the user** a prose summary, leading with the videos:
 
    ```
-   ## Research pass — proposed source library
+   ## Research pass: proposed source library
 
-   Across 10 weeks I've gathered 47 primary sources. Highlights by phase:
+   Across 10 weeks I gathered 47 sources. Of those, 22 are YouTube
+   lectures from real instructors, 14 are practitioner essays or
+   engineering posts, 8 are free textbook chapters, and 3 are
+   archival primary documents.
 
-   **Foundations** — Shannon's 1949 paper (perfect secrecy), Diffie & Hellman 1976 (key exchange), Kerckhoffs's principle (original 1883 letter).
+   Foundations (weeks 1-2): 3Blue1Brown's "Essence of Linear Algebra"
+   chapters 1-3, Karpathy's neural-nets-zero-to-hero lecture 1,
+   the Bitcoin paper (for the threat-model framing), Stripe Press
+   "Working in Public" excerpts.
 
-   **Core mechanics** — NIST AES standard, Bellare & Rogaway lecture notes for HMAC, Krawczyk's keyed-hash construction paper.
+   Core mechanics (weeks 3-5): ... continue by phase ...
 
-   ... <continue by phase> ...
-
-   Sources I considered but rejected: Wikipedia (orientation only, not citation-worthy), several Medium posts (no author authority).
+   Sources I considered but rejected: 14 Medium tutorials (no author
+   authority), 3 short YouTube videos (under 5 minutes), 2 Wikipedia
+   pages (orientation only, never citation-worthy).
 
    Sign off (yes / add X / drop Y / refresh)?
    ```
 
-7. **Wait for the user.** They may want a specific essay added (e.g.
-   "include Paul Graham's *Hackers and Painters* essay") or a source
-   dropped. Edit the JSON and re-show.
+7. **Wait for the user.** They may want a specific YouTube channel
+   added or a video swapped for a better lecture by the same
+   instructor. Edit the JSON and re-show.
 
 ### Constraint on per-week subagents (carried into step 6)
 
@@ -383,6 +468,11 @@ Your week's row (verbatim from the curriculum):
 
   Theme: <theme>
   Phase: <phase>
+  Outcomes (each lecture, section, reading, or exercise must deliver
+  at least one of these; the Bloom verb names the cognitive level):
+    <verb1>: <statement1>
+    <verb2>: <statement2>
+    <verb3>: <statement3>
   Lectures: <l1 title + topics>, <l2 title + topics>
   Section: <section description>
   Depends on (concepts already taught): <list>
