@@ -103,11 +103,19 @@ export const config: SiteConfig = {
   ${heroImage
     ? `hero: { src: ${JSON.stringify(heroImage)}, alt: ${JSON.stringify(fullTitle)} },`
     : `hero: null,`}
+  // Flat sidebar. NO children/dropdowns. Each parent links to a real
+  // landing page. coursemaker-create generates the index pages in step 5b.
   navGroups: [
     {
       items: [
-        { label: "Home", href: "" },
-        { label: "Syllabus", href: "syllabus" },
+        { label: "Home",        href: "" },
+        { label: "Syllabus",    href: "syllabus" },
+        { label: "Lectures",    href: "lectures" },
+        { label: "Sections",    href: "sections" },
+        { label: "Assignments", href: "hw" },
+        { label: "Readings",    href: "readings" },
+        { label: "Tasks",       href: "tasks" },
+        { label: "Staff",       href: "staff" },
       ],
     },
   ],

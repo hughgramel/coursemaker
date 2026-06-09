@@ -426,56 +426,99 @@ rather than something literal.
 
 You author ALL non-week pages. Subagents only own per-week artifacts.
 
-### 5a. Syllabus
+### 5a. Syllabus (CANONICAL: high-level roadmap, not a contract)
 
-Replace `content/courses/<slug>/pages/syllabus.tsx` with a `SyllabusPage`
-using the `SyllabusSpec` type. There is **no required textbook** — the
-resources block lists the course's own readings only:
+Write `content/courses/<slug>/pages/syllabus.tsx` as **custom JSX** (do
+NOT use the `SyllabusPage`/`SyllabusSpec` component — it has rigid
+fields like a "Grading" weight column that force you to invent fake
+percentages, and a "Staff & Office Hours" section that pressures you to
+seed fake names). The syllabus is a **high-level roadmap and orientation**,
+not a binding contract.
+
+The syllabus answers four questions:
+1. What is this course really about? (the subject matter, in plain prose)
+2. What are the non-negotiable fundamentals the course steers you toward?
+3. What's the roadmap by phase?
+4. What do you need to bring, how does the work flow, and what are the policies?
+
+It does NOT answer: "what's the exact grade weight for HW2", "who is
+my instructor's email", "what room are we in Tuesday at 3pm". Those are
+the user's call before the term begins.
+
+Required section order:
+
+1. **`<h1>` Syllabus** + a one-paragraph overview of where you arrive and where you leave.
+2. **`<h2>` What this course is about** — 1-2 paragraphs of plain prose. The subject matter and the course's bias / point of view.
+3. **`<h2>` The N fundamentals** — 3-5 numbered, **bold-led** non-negotiables. Each is a principle the course is steering the learner toward every day. Example: "Honest measurement before optimization", "Customer hour before build block", "Daily public output", "One channel commitment", "Milestones + weekly review every Friday".
+4. **`<h2>` The roadmap** — one short paragraph per phase (Foundations / Core mechanics / Composition / Frontier / Synthesis, or whatever phase names the curriculum graph uses). Each paragraph says what the phase tackles and what the learner has by end of it.
+5. **`<h2>` Prerequisites** — `<ul>` of what the learner brings.
+6. **`<h2>` How the work flows** — the daily rhythm (4 slots) + planning slots + course check-ins, in prose. Brief.
+7. **`<h2>` How you are evaluated** — `<ul>` listing the graded components by NAME ONLY. No percentages. Lead with: "Exact weights are confirmed before the term begins; the structure below is fixed." Each list item: bold component name + one-sentence purpose.
+8. **`<h2>` Policies** — `<h3>` Late work, `<h3>` AI use. Both real prose. No regrade policy unless the user asks.
+9. **`<h2>` Reading list** — "There is no required external textbook. The weekly readings on this site ARE the textbook." Then a list of 3-6 books worth owning if the learner goes deeper, with links.
+
+Hard rules:
+- **NO** `staff: []` / `gettingHelp:` / `logistics: { meeting, format, location }` field invention. Don't seed fake instructor names, emails, office hours, meeting times, rooms, Discord URLs, Ed URLs, Gradescope URLs, or Canvas URLs.
+- **NO** grading percentages. If you don't know the weight, don't write one. The graded components list is structure only.
+- **NO** em dashes anywhere on the page (see "Common failure modes").
+- **NO** anchor link icons next to headings (the `AnchorHeading` component renders just the heading with an `id`; no `<a>` is rendered).
+
+Skeleton:
 
 ```tsx
-import { SyllabusPage } from "@/components/SyllabusPage";
-import type { SyllabusSpec } from "@/types/course";
+import { AnchorHeading } from "@/components/AnchorHeading";
 
-const spec: SyllabusSpec = {
-  overview: ["…", "…"],
-  // logistics: no `location`, no specific meeting times. Describe the SHAPE
-  // (cadence, format) — never a real room or hour. No "TBD" strings either;
-  // omit fields you don't know rather than seeding placeholder fakery.
-  logistics: {
-    meeting: "Two lectures per week + one hands-on section. Weekly reading published at the start of each week.",
-    format: "Hybrid: lectures recorded; sections preferred live.",
-  },
-  staff: [],   // Empty. Do NOT seed "TBD" instructors / TAs / emails / office hours.
-               // The Staff page (built separately) describes the ROLE staff plays
-               // without naming anyone. The user fills real names before the term.
-  prerequisites: [...],
-  gettingHelp: [
-    "Bring your real numbers to section.",
-    "Office hours are for 1:1 help — bring your dashboard, not abstract questions.",
-    "Between sessions, use the course communication channel (announced in week 1).",
-    // Do NOT name a specific platform (Discord / Ed Discussion / Slack / etc).
-    // The user picks the platform when they actually run the course.
-  ],
-  grading: {
-    breakdown: [
-      { item: "Weekly readings + section",       weight: "10%" },
-      { item: "Assignments (HW1-HW4)",            weight: "40%" },
-      { item: "Capstone project",                  weight: "40%" },
-      { item: "Participation",                     weight: "10%" },
-    ],
-    latePolicy: "Late submissions lose 10% per day, up to 3 days.",
-    aiPolicy: "Acceptable for conceptual study; disclose use on every submission.",
-  },
-  resources: {
-    required: [{
-      title: "Weekly readings published in /readings/",
-      note: "There is no required external textbook. The weekly readings ARE the textbook."
-    }],
-    optional: [/* only list things the user wants */],
-  },
-};
+export function SyllabusPage() {
+  return (
+    <>
+      <AnchorHeading as="h1" id="syllabus">Syllabus</AnchorHeading>
+      <p>One-paragraph elevator pitch: arrive with X, leave with Y.</p>
 
-export function SyllabusContent() { return <SyllabusPage spec={spec} />; }
+      <AnchorHeading as="h2" id="what-this-course-is-about">What this course is about</AnchorHeading>
+      <p>...subject-matter summary, course bias...</p>
+
+      <AnchorHeading as="h2" id="fundamentals">The N fundamentals</AnchorHeading>
+      <p>Non-negotiable across all weeks.</p>
+      <ol>
+        <li><strong>Principle 1.</strong> 1-2 sentences.</li>
+        <li><strong>Principle 2.</strong> ...</li>
+      </ol>
+
+      <AnchorHeading as="h2" id="roadmap">The roadmap</AnchorHeading>
+      <h3>Foundations (weeks 1-2)</h3>
+      <p>...</p>
+      <h3>Core mechanics (weeks 3-5)</h3>
+      <p>...</p>
+      {/* etc */}
+
+      <AnchorHeading as="h2" id="prerequisites">Prerequisites</AnchorHeading>
+      <ul>...</ul>
+
+      <AnchorHeading as="h2" id="how-the-work-flows">How the work flows</AnchorHeading>
+      <p>Four daily slots, planning slots, course check-ins. Brief.</p>
+
+      <AnchorHeading as="h2" id="how-you-are-evaluated">How you are evaluated</AnchorHeading>
+      <p>Six graded components. Exact weights confirmed before the term begins.</p>
+      <ul>
+        <li><strong>Weekly milestones.</strong> ...</li>
+        <li><strong>HW1 Title.</strong> ...</li>
+        {/* etc, no percentages */}
+      </ul>
+
+      <AnchorHeading as="h2" id="policies">Policies</AnchorHeading>
+      <h3>Late work</h3><p>...</p>
+      <h3>AI use</h3><p>...</p>
+
+      <AnchorHeading as="h2" id="reading-list">Reading list</AnchorHeading>
+      <p>There is no required external textbook. The weekly readings on this site ARE the textbook.</p>
+      <ul>
+        <li><a href="...">Book Title</a> by Author. One-line note.</li>
+      </ul>
+    </>
+  );
+}
+
+export const syllabusSearchBody = "Syllabus ...";
 ```
 
 ### 5b. The four index pages (CANONICAL — saved style)
@@ -897,6 +940,36 @@ handouts, and the calendar.
   sections. Case studies must come from the vetted source library — the
   user's product is not a citable primary source for a course they're
   about to teach.
+
+## Global UI invariants (shared across every course)
+
+The following are set at the global CSS / component layer and apply to
+EVERY course. You don't configure them per-course, but you should know
+they exist so you don't accidentally undo them or duplicate them.
+
+- **Heading permalink icons are off.** `AnchorHeading` renders the
+  heading tag with an `id` for URL-fragment deep links, but it does NOT
+  render an inline chain-link anchor icon. Section titles like
+  "Overview" sit flush against the content margin. Do NOT import or
+  render `LinkIcon` next to headings.
+- **List bullets are explicit.** `.prose ul` declares
+  `list-style-type: disc`, `.prose ol` declares `decimal`, nested ul
+  goes `circle` then `square`. These are written with explicit
+  `list-style-type` (not the shorthand `list-style`) because the CSS
+  minifier strips `disc outside` down to just `outside`, killing the
+  marker. If you add new list styling per course, follow the same
+  pattern — use `list-style-type`, never the shorthand.
+- **Sidebar is FLAT.** No `children` arrays, no dropdowns. Every nav
+  parent links to a real registered index page. This is enforced in
+  step 5d but it's worth restating: a `children` array in `navGroups`
+  is a bug.
+- **No search bar.** The codebase has no rendered SearchBar component.
+  The unused `components/SearchBar.tsx` was deleted; don't reintroduce
+  it. If a course needs site search, that's a separate platform
+  decision, not a per-course choice.
+- **No em dashes in prose.** Already in the prose rules above, but
+  applies to course.config.ts nav labels and page titles too — use
+  commas or colons.
 
 ## When you're done
 
