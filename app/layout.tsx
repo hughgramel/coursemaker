@@ -11,9 +11,9 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "coursemaker — course-page template & design library",
+  title: "coursemaker: generate a course on anything",
   description:
-    "A creatable template and comprehensive design library inspired by the Just the Docs theme used for UW CSE 457.",
+    "Generate a complete, college-level course on anything. Coursemaker scaffolds the syllabus, weekly readings, lectures, slides, sections, and assignments end to end.",
 };
 
 export const viewport: Viewport = {
