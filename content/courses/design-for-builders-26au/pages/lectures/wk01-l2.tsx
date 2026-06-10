@@ -28,8 +28,8 @@ const spec: LectureSpec = {
   ],
   followups: [
     "Set up a four-page Figma file with the structure from lecture: a cover page, a flows page, a components page, and an archive page. On the cover page, add a frame with your file title, last-updated date, and your name. Why is a cover page useful before you publish a library?",
-    "Publish your component file as a team library (or a local library if you are on the free plan). Open a second file and enable the library. Insert one of your published components. Now make a change to the original component and push the update. What does the &ldquo;review updates&rdquo; dialog show in the consuming file?",
-    "The Figma best-practices guide recommends naming components with a &ldquo;/&rdquo; separator to create groups (e.g. &ldquo;Button/Primary/Default&rdquo;). Apply this naming pattern to at least six components in your starter kit. How does this grouping appear in the assets panel?",
+    "Publish your component file as a team library (or a local library if you are on the free plan). Open a second file and enable the library. Insert one of your published components. Now make a change to the original component and push the update. What does the “review updates” dialog show in the consuming file?",
+    "The Figma best-practices guide recommends naming components with a “/” separator to create groups (e.g. “Button/Primary/Default”). Apply this naming pattern to at least six components in your starter kit. How does this grouping appear in the assets panel?",
     "Install Iconify and find icons for five common UI actions: close, search, settings, user profile, and external link. Note the icon set you chose and its license. Why does license matter for icons you ship in a product?",
     "Time yourself completing a simple layout task (three cards in a row, evenly spaced) using only the keyboard shortcuts from the lecture. Then do the same task using the mouse. How much faster was the keyboard-driven approach after one practice run?",
   ],

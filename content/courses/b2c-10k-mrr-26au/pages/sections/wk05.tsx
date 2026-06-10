@@ -4,7 +4,7 @@ import type { ProjectSpec } from "@/types/course";
 const spec: ProjectSpec = {
   title: "Week 5 section, Design one A/B test",
   tagline:
-    "Pick one thing to test, run the sample-size math on paper, then either ship the test or write a 'why I&rsquo;m not testing this' memo.",
+    "Pick one thing to test, run the sample-size math on paper, then either ship the test or write a 'why I’m not testing this' memo.",
   outDate: "Week 5",
   overview: [
     "A/B testing is not about having a lot of traffic. It is about having enough traffic to detect the change you care about, with the confidence level you require, before you run out of time. This section asks you to do that math on paper for one real hypothesis from your own product.",
@@ -20,7 +20,7 @@ const spec: ProjectSpec = {
   ],
   background: [
     "The sample-size formula in long form: you need enough users in each variant to detect the change you care about (the minimum detectable effect, or MDE) at a false-positive rate of 5% and a false-negative rate of 20%. A rough closed-form approximation is n per variant = 16 × variance / MDE², where variance = baseline × (1 - baseline) for binary metrics like conversion rate. For example: if your activation rate is 20% (0.2) and you want to detect a 4 percentage-point improvement (MDE = 0.04), then n = 16 × (0.2 × 0.8) / (0.04²) = 16 × 0.16 / 0.0016 = 1,600 users per variant, or 3,200 total.",
-    "The peeking problem: if you look at results before you have your target sample size and stop when p &lt; 0.05, your actual false-positive rate is much higher than 5%. The fix is simple: decide your end date before you start, and do not call the test early unless you have a pre-registered stopping rule. Most solo founders should run tests for a minimum of one week (to cover day-of-week effects) and a maximum of four weeks.",
+    "The peeking problem: if you look at results before you have your target sample size and stop when p < 0.05, your actual false-positive rate is much higher than 5%. The fix is simple: decide your end date before you start, and do not call the test early unless you have a pre-registered stopping rule. Most solo founders should run tests for a minimum of one week (to cover day-of-week effects) and a maximum of four weeks.",
     "Painted-door tests are the low-traffic alternative. A painted-door test shows users a button, page, or option that does not yet exist and measures click-through rate as a proxy for demand. It is not an A/B test: it has no control group and proves nothing about causal effect. But it is faster and cheaper than a full build, and it is honest with users if you follow up the click with a 'coming soon' message or a waitlist.",
   ],
   instructions: [
@@ -46,10 +46,10 @@ const spec: ProjectSpec = {
     },
     {
       title: "Ship the test (if traffic threshold met)",
-      body: "Set up the test using a feature flag in PostHog, Statsig, or your own config table. Define and write down before you touch code: the control (what users see today), the variant (the single change), the primary metric (one number), the minimum run time (at least 7 days, enough to cover a full week cycle), and the decision rule (you will call variant the winner only if p &lt; 0.05 AND the effect is at least MDE in size at the end of the run period). Do not read results before the run period ends.",
+      body: "Set up the test using a feature flag in PostHog, Statsig, or your own config table. Define and write down before you touch code: the control (what users see today), the variant (the single change), the primary metric (one number), the minimum run time (at least 7 days, enough to cover a full week cycle), and the decision rule (you will call variant the winner only if p < 0.05 AND the effect is at least MDE in size at the end of the run period). Do not read results before the run period ends.",
     },
     {
-      title: "Write the 'why I&rsquo;m not testing this' memo (if traffic threshold not met)",
+      title: "Write the 'why I’m not testing this' memo (if traffic threshold not met)",
       body: "The memo must include: the hypothesis, the sample-size arithmetic showing the required run time, a statement of why that run time is impractical, a description of the alternative evidence you will gather instead (painted-door test with a specific click metric, qualitative interviews with a specific question, or a decision to ship the change without a test), and the evidence threshold that would convince you to reverse the change if it was wrong. 500 words minimum. This memo is a legitimate deliverable. Writing it out protects you from the expensive mistake of running an underpowered test and believing the result.",
     },
     {

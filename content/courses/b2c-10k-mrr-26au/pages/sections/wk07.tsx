@@ -4,7 +4,7 @@ export function Wk07SectionPage() {
   return (
     <>
       <AnchorHeading as="h1" id="write-one-viral-asset">Section: Write one viral asset</AnchorHeading>
-      <p className="fs-6 fw-300">Week 7 &middot; Hands-on worksheet</p>
+      <p className="fs-6 fw-300">Week 7 · Hands-on worksheet</p>
 
       <p>
         By the end of this section you will have designed, built, and shipped
@@ -32,17 +32,17 @@ export function Wk07SectionPage() {
       <ol>
         <li>
           <strong>Share card.</strong> A designed image (OG-card-sized, 1200x630
-          or 800x800) showing a user&rsquo;s result, milestone, or stat. The
-          user taps &ldquo;Share&rdquo; and the card goes to Twitter/X,
+          or 800x800) showing a user’s result, milestone, or stat. The
+          user taps “Share” and the card goes to Twitter/X,
           LinkedIn, or Instagram Stories. Classic example: Spotify Wrapped,
           Duolingo streak card, Strava route map. Works for any product that
           produces a measurable output.
         </li>
         <li>
           <strong>Public profile or stat page.</strong> A publicly accessible
-          URL that shows one user&rsquo;s activity, rank, or portfolio. The
+          URL that shows one user’s activity, rank, or portfolio. The
           user shares the URL. Works for any product with user-generated content
-          or a leaderboard. Example: Nomad List&rsquo;s public user profiles,
+          or a leaderboard. Example: Nomad List’s public user profiles,
           GitHub contribution graph.
         </li>
         <li>
@@ -80,9 +80,9 @@ export function Wk07SectionPage() {
         <li>
           <strong>Define the trigger moment.</strong> Write the exact in-product
           moment when the asset appears or the share button becomes visible.
-          Format: &ldquo;The share button appears when [user does X].&rdquo; Be
-          specific. &ldquo;When they finish something&rdquo; is not specific
-          enough. &ldquo;When they complete their 7th consecutive day&rdquo; is.
+          Format: “The share button appears when [user does X].” Be
+          specific. “When they finish something” is not specific
+          enough. “When they complete their 7th consecutive day” is.
         </li>
         <li>
           <strong>Write the share text.</strong> Draft the default text that
@@ -95,12 +95,12 @@ export function Wk07SectionPage() {
         <li>
           <strong>Sketch the visual.</strong> For share cards and public pages:
           draw a rough wireframe on paper (one minute). The card should have
-          at most three elements: a headline stat or milestone, the user&rsquo;s
+          at most three elements: a headline stat or milestone, the user’s
           name or handle, and your product name or logo. Clutter kills shares.
         </li>
         <li>
-          <strong>Define success.</strong> Write: &ldquo;This asset is working
-          if [N]% of users who see the trigger share it within [timeframe].&rdquo;
+          <strong>Define success.</strong> Write: “This asset is working
+          if [N]% of users who see the trigger share it within [timeframe].”
           For a new asset with no baseline, a target of 5-15% is reasonable.
           Write your target now, before you build.
         </li>
@@ -113,7 +113,7 @@ export function Wk07SectionPage() {
           <strong>Build the minimum viable version.</strong> Do not redesign
           your product to support the asset. The rule: if you cannot ship it
           in 90 minutes, you have scoped it too large. Cut until it ships.
-          For share cards, a server-side OG image endpoint (Vercel&rsquo;s{" "}
+          For share cards, a server-side OG image endpoint (Vercel’s{" "}
           <code>@vercel/og</code>, or a plain canvas-to-PNG) is usually the
           right tool. For public pages, a read-only route with no login
           requirement.
@@ -137,7 +137,7 @@ export function Wk07SectionPage() {
   referrer_user_id: referrerId,  // if you pass it in the URL
 });`}</pre>
           Even a rough referral parameter in the URL (
-          <code>?ref=share&amp;uid=XYZ</code>) lets you estimate how many
+          <code>?ref=share&uid=XYZ</code>) lets you estimate how many
           signups each share generates.
         </li>
         <li>
@@ -164,7 +164,7 @@ export function Wk07SectionPage() {
           <strong>Pull or estimate shares sent per active user.</strong> If you
           have prior share data, use it. If not, write a conservative estimate:
           what share rate have you seen on similar products, or what does your
-          gut say? Write the number and label it &ldquo;estimated.&rdquo;
+          gut say? Write the number and label it “estimated.”
         </li>
         <li>
           <strong>Estimate conversion rate on shares.</strong> For most B2C
@@ -174,7 +174,7 @@ export function Wk07SectionPage() {
         </li>
         <li>
           <strong>Compute K.</strong> Multiply. Write the result. Interpret it
-          using Andrew Chen&rsquo;s benchmarks: K above 1.0 is exponential
+          using Andrew Chen’s benchmarks: K above 1.0 is exponential
           (rare), 0.75 is 4x amplification, 0.5 is 2x, 0.1 is modest. Most
           early products have K between 0.05 and 0.3.
         </li>

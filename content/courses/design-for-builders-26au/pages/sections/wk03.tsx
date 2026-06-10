@@ -42,11 +42,11 @@ const spec: ProjectSpec = {
     },
     {
       title: "Measure line-height and measure",
-      body: "Inspect the body text element. Record: font-size, line-height (in px or as a ratio), and the rendered column width. To find the column width in characters, paste a paragraph into a character counter and divide by line count, or use the CSS ch unit as a guide. Compare your measurements to Butterick&rsquo;s recommended line-height range (120-145% of point size) and the 45-75ch measure rule.",
+      body: "Inspect the body text element. Record: font-size, line-height (in px or as a ratio), and the rendered column width. To find the column width in characters, paste a paragraph into a character counter and divide by line count, or use the CSS ch unit as a guide. Compare your measurements to Butterick’s recommended line-height range (120-145% of point size) and the 45-75ch measure rule.",
     },
     {
       title: "Identify the top three problems",
-      body: "Based on your measurements, name the top three typography problems on this page. Use the vocabulary from the reading. Examples: &ldquo;No consistent scale: font sizes are 14, 18, 22, 28, 36 with no detectable ratio.&rdquo; Or: &ldquo;Line-height is 1.2 on body text at 16px, which is below Butterick&rsquo;s 120% minimum.&rdquo; Or: &ldquo;Measure is approximately 95ch, nearly 30% wider than the 75ch maximum.&rdquo;",
+      body: "Based on your measurements, name the top three typography problems on this page. Use the vocabulary from the reading. Examples: “No consistent scale: font sizes are 14, 18, 22, 28, 36 with no detectable ratio.” Or: “Line-height is 1.2 on body text at 16px, which is below Butterick’s 120% minimum.” Or: “Measure is approximately 95ch, nearly 30% wider than the 75ch maximum.”",
     },
     {
       title: "Propose and implement one fix",
@@ -74,7 +74,7 @@ const spec: ProjectSpec = {
     {
       dimension: "Problem identification: specific and vocabulary-grounded",
       points: 35,
-      notes: "Three problems named using reading terms (scale, line-height, measure, voice). Generic statements like &ldquo;the font looks bad&rdquo; earn no credit.",
+      notes: "Three problems named using reading terms (scale, line-height, measure, voice). Generic statements like “the font looks bad” earn no credit.",
     },
     {
       dimension: "Implemented fix: before-and-after present, explanation clear",
@@ -88,7 +88,7 @@ const spec: ProjectSpec = {
     },
   ],
   hints: [
-    "The fastest way to find font-size and line-height: open DevTools, click the element, open the Computed panel, and search for &ldquo;font-size&rdquo; and &ldquo;line-height&rdquo;. They appear as pixel values even if the source CSS uses rem or em.",
+    "The fastest way to find font-size and line-height: open DevTools, click the element, open the Computed panel, and search for “font-size” and “line-height”. They appear as pixel values even if the source CSS uses rem or em.",
     "To estimate measure without counting characters manually: find a 300px wide column in your page. A 16px body font in a typical sans-serif fits roughly 60 characters per line at that width. The exact ch value depends on the specific typeface.",
     "If the existing type scale looks arbitrary, try fitting it to the nearest modular scale ratio. The free tool at typescale.com lets you enter sizes and compare them to standard ratios. Naming the nearest scale, even if the original was not intentional, still counts as analysis.",
     "The most common body text problem in builder products: line-height is the browser default (1.2), and the column is too wide. Both of these are one CSS line to fix. High impact, low effort.",

@@ -28,10 +28,10 @@ const spec: LectureSpec = {
   ],
   followups: [
     "Open the App Store and search for any productivity app. Look at the first three screenshots in the listing. For each one, identify: the feature message in the text overlay, the device frame choice, and whether the screenshot would still communicate its message if the device frame were removed. Which of the three is most legible at thumbnail size, and why?",
-    "Create a 1200&times;630px frame in Figma. Your product name, a one-sentence value proposition, and a single supporting visual must all fit in the safe zone (keeping 80px from each edge). Build a version with a solid background and a version with a dark gradient behind white text. Which communicates faster?",
-    "The App Launchpad guide (2026) describes text overlays as &ldquo;the real message&rdquo; in App Store screenshots, with the device frame as supporting evidence. Find a screenshot set that reverses this: the visual is the message and the text is supporting. Does the reversal work? Why or why not?",
+    "Create a 1200×630px frame in Figma. Your product name, a one-sentence value proposition, and a single supporting visual must all fit in the safe zone (keeping 80px from each edge). Build a version with a solid background and a version with a dark gradient behind white text. Which communicates faster?",
+    "The App Launchpad guide (2026) describes text overlays as “the real message” in App Store screenshots, with the device frame as supporting evidence. Find a screenshot set that reverses this: the visual is the message and the text is supporting. Does the reversal work? Why or why not?",
     "Your product has an OG image. A user shares the URL on X (Twitter), on LinkedIn, and in iMessage. Each platform crops the image differently. Design one OG image that survives a 16:9 crop (X), a 1.91:1 crop (LinkedIn), and a square crop (iMessage preview). What is the minimum safe zone that works for all three?",
-    "Richardson&rsquo;s guide distinguishes between an App Store icon (the app mark) and the first screenshot (the marketing message). Why should these be designed as a pair, not independently? Find an App Store listing where the icon and first screenshot feel disconnected, and name specifically what breaks.",
+    "Richardson’s guide distinguishes between an App Store icon (the app mark) and the first screenshot (the marketing message). Why should these be designed as a pair, not independently? Find an App Store listing where the icon and first screenshot feel disconnected, and name specifically what breaks.",
   ],
 };
 

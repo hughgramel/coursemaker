@@ -2,7 +2,7 @@ import { ProjectPage } from "@/components/ProjectPage";
 import type { ProjectSpec } from "@/types/course";
 
 const spec: ProjectSpec = {
-  title: "Week 4 section: build your product&rsquo;s full palette",
+  title: "Week 4 section: build your product’s full palette",
   tagline:
     "Create a complete light- and dark-mode color system as Figma variables, then apply it to every component in your starter kit.",
   outDate: "Week 4",
@@ -12,24 +12,24 @@ const spec: ProjectSpec = {
     "The test at the end of section is simple: flip between light and dark mode. If everything looks intentional, your semantic layer is working. If something looks broken or inverted, your primitive values need to be reconsidered for that mode.",
   ],
   goals: [
-    "Build a 9-step neutral ramp and a 9-step accent ramp in a Figma variable collection named &ldquo;Primitives&rdquo;",
-    "Create a semantic variable collection named &ldquo;Semantic&rdquo; that references the primitive values by function (e.g. surface-base, text-primary, accent-default)",
+    "Build a 9-step neutral ramp and a 9-step accent ramp in a Figma variable collection named “Primitives”",
+    "Create a semantic variable collection named “Semantic” that references the primitive values by function (e.g. surface-base, text-primary, accent-default)",
     "Add a dark-mode mode to the Semantic collection and assign appropriate primitive values for each semantic token",
     "Verify that at least one text-on-background pair in your starter kit passes WCAG AA (4.5:1) using the Figma Contrast plugin or the WebAIM checker",
     "Apply semantic tokens to all fills and strokes in your starter kit so no component holds a hardcoded hex value",
   ],
   background: [
-    "Lecture 1 covered the two-ramp structure (neutral and accent), why OKLCH or carefully tuned HSL produces more perceptually even ramps than automatic generators, and why pure black and pure white read as harsh in most UI contexts. Lecture 2 covered WCAG contrast ratios, the primitive-to-semantic token pipeline, and how Figma&rsquo;s variable modes power one-click dark mode.",
+    "Lecture 1 covered the two-ramp structure (neutral and accent), why OKLCH or carefully tuned HSL produces more perceptually even ramps than automatic generators, and why pure black and pure white read as harsh in most UI contexts. Lecture 2 covered WCAG contrast ratios, the primitive-to-semantic token pipeline, and how Figma’s variable modes power one-click dark mode.",
     "Miao (Figma Engineering Blog, 2022) describes the five dimensions Figma used to name their own semantic tokens: type, UI element, color role, prominence, and interaction state. You do not need that level of granularity today. A lean set of six to ten semantic tokens covers most product surfaces: surface-base, surface-elevated, text-primary, text-secondary, accent-default, accent-subtle, border-default, and danger-default.",
   ],
   instructions: [
     {
       title: "Build your primitive ramps",
-      body: "In Figma, create a local variable collection named &ldquo;Primitives&rdquo; with a single mode (light). Add two groups: Neutral and Accent. Build each as a 9-step ramp: steps 100, 200, 300, 400, 500, 600, 700, 800, and 900. Name variables as Neutral/100, Neutral/200, and so on. For neutral, start from a slightly warm or cool gray rather than a pure gray. For accent, choose your brand color as the 500 base and build outward. Use OKLCH or HSL with manual lightness adjustment at each step. Do not use a generator without inspecting each stop for perceptual evenness.",
+      body: "In Figma, create a local variable collection named “Primitives” with a single mode (light). Add two groups: Neutral and Accent. Build each as a 9-step ramp: steps 100, 200, 300, 400, 500, 600, 700, 800, and 900. Name variables as Neutral/100, Neutral/200, and so on. For neutral, start from a slightly warm or cool gray rather than a pure gray. For accent, choose your brand color as the 500 base and build outward. Use OKLCH or HSL with manual lightness adjustment at each step. Do not use a generator without inspecting each stop for perceptual evenness.",
     },
     {
       title: "Build your semantic layer",
-      body: "Create a second variable collection named &ldquo;Semantic&rdquo; with two modes: Light and Dark. In Light mode, assign semantic names to primitive values. Minimum set: surface-base (Neutral/50 or a very light neutral), surface-elevated (white or Neutral/100), text-primary (Neutral/900), text-secondary (Neutral/600), accent-default (Accent/500), accent-subtle (Accent/100), border-default (Neutral/200), danger-default (a red at roughly step 600). Each semantic token references a primitive value, not a hardcoded hex.",
+      body: "Create a second variable collection named “Semantic” with two modes: Light and Dark. In Light mode, assign semantic names to primitive values. Minimum set: surface-base (Neutral/50 or a very light neutral), surface-elevated (white or Neutral/100), text-primary (Neutral/900), text-secondary (Neutral/600), accent-default (Accent/500), accent-subtle (Accent/100), border-default (Neutral/200), danger-default (a red at roughly step 600). Each semantic token references a primitive value, not a hardcoded hex.",
     },
     {
       title: "Add dark mode values",
@@ -41,7 +41,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Apply tokens to your starter kit",
-      body: "Open your Week 1 starter kit file. Select each component and replace every hardcoded fill and stroke with a semantic variable. In the Figma inspector, click the fill swatch, switch from solid color to library variable, and choose the appropriate semantic token. When every component references a semantic token, create a frame and apply the Semantic collection&rsquo;s Dark mode to it. The frame should switch to dark mode completely. If any component does not change, it still holds a hardcoded value.",
+      body: "Open your Week 1 starter kit file. Select each component and replace every hardcoded fill and stroke with a semantic variable. In the Figma inspector, click the fill swatch, switch from solid color to library variable, and choose the appropriate semantic token. When every component references a semantic token, create a frame and apply the Semantic collection’s Dark mode to it. The frame should switch to dark mode completely. If any component does not change, it still holds a hardcoded value.",
     },
     {
       title: "Demo for a section partner",

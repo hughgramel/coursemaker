@@ -52,7 +52,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Written commitment (5 min)",
-      body: "Write one sentence on paper or in your notes: the single thing you will practice before your first real interview, and the specific way you will practice it. Not &ldquo;get better at DP&rdquo; but &ldquo;solve two DP mediums per week for the next three weeks narrating aloud.&rdquo; Share your sentence with your partner before leaving section.",
+      body: "Write one sentence on paper or in your notes: the single thing you will practice before your first real interview, and the specific way you will practice it. Not “get better at DP” but “solve two DP mediums per week for the next three weeks narrating aloud.” Share your sentence with your partner before leaving section.",
     },
   ],
   deliverables: [
@@ -78,13 +78,13 @@ const spec: ProjectSpec = {
       dimension: "Mock loop critique: recording reviewed, one highest-leverage fix named",
       points: 20,
       notes:
-        "The critique must name a specific moment in a specific round. &ldquo;I need to communicate better&rdquo; is not a fix. &ldquo;In round 2 I stopped narrating after minute 15 and the interviewer had no idea what I was doing&rdquo; is a fix.",
+        "The critique must name a specific moment in a specific round. “I need to communicate better” is not a fix. “In round 2 I stopped narrating after minute 15 and the interviewer had no idea what I was doing” is a fix.",
     },
     {
       dimension: "Interviewer feedback: structured notes for two rounds conducted",
       points: 20,
       notes:
-        "Notes must reference the four rubric dimensions (problem-solving, communication, code quality, edge cases for coding; or components, data flow, tradeoffs, probing for design; or structure, timing, takeaway for behavioral). &ldquo;Good job&rdquo; is not feedback.",
+        "Notes must reference the four rubric dimensions (problem-solving, communication, code quality, edge cases for coding; or components, data flow, tradeoffs, probing for design; or structure, timing, takeaway for behavioral). “Good job” is not feedback.",
     },
     {
       dimension: "Written commitment: specific and actionable",
@@ -97,9 +97,9 @@ const spec: ProjectSpec = {
     "The most common marathon failure is stopping after Round 2 to discuss how it went. Do not do this. The accumulated pressure of Rounds 3 and 4 is exactly what you are trying to experience. Save all discussion for the debrief.",
     "If you are the interviewer and the candidate is completely stuck for more than 7 minutes with no progress, give one hint: restate the problem in a different way or suggest a data structure. Real interviewers do this. Silence for 10 minutes tells you nothing useful.",
     "For the design round, the candidate should speak for at least 35 of the 45 minutes. Silence in a design interview signals that you do not have enough material. If the candidate runs dry at minute 20, the interviewer should ask a probing question to keep the conversation moving.",
-    "For the behavioral round, the interviewer should stop the candidate the moment a story runs past 3 minutes and say: &ldquo;Let&rsquo;s say that&rsquo;s time. What was the result?&rdquo; This is exactly what happens in a real behavioral interview and candidates need to practice the constraint.",
+    "For the behavioral round, the interviewer should stop the candidate the moment a story runs past 3 minutes and say: “Let’s say that’s time. What was the result?” This is exactly what happens in a real behavioral interview and candidates need to practice the constraint.",
     "The debrief is not a consolation session. The goal is honest diagnosis, not reassurance. The most useful feedback you can give a partner is the one thing they did that they probably did not notice themselves.",
-    "Your written commitment is a contract with yourself. If you write &ldquo;practice communicating while coding,&rdquo; that is too vague to execute. Write the specific problem set, the specific frequency, and whether you will record yourself. The more specific the commitment, the more likely you keep it.",
+    "Your written commitment is a contract with yourself. If you write “practice communicating while coding,” that is too vague to execute. Write the specific problem set, the specific frequency, and whether you will record yourself. The more specific the commitment, the more likely you keep it.",
   ],
   late: "Capstone components submitted after the section start time receive a 10-point deduction. Components submitted more than 48 hours after section receive a 25-point deduction. Interviewer notes from the marathon cannot be completed after section.",
 };

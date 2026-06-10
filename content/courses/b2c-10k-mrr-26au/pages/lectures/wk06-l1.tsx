@@ -6,9 +6,9 @@ const spec: LectureSpec = {
   date: "Week 6 Lecture 1",
   week: 6,
   topics: [
-    "The 19 traction channels (Weinberg &amp; Mares) and why most do not apply to a solo founder",
+    "The 19 traction channels (Weinberg & Mares) and why most do not apply to a solo founder",
     "Channel-product fit: why the same product succeeds on one channel and fails on another",
-    "The &lsquo;one channel obsession&rsquo; rule for weeks 6-9",
+    "The ‘one channel obsession’ rule for weeks 6-9",
     "Case study: Pieter Levels on SEO, Marc Lou on Twitter/X, Tony Dinh on Product Hunt",
     "The Bullseye Framework: outer ring, middle ring, inner ring",
   ],
@@ -20,12 +20,12 @@ const spec: LectureSpec = {
       note: "Required before section",
     },
     {
-      title: "Traction: How Any Startup Can Achieve Explosive Customer Growth (Weinberg &amp; Mares, 2015)",
+      title: "Traction: How Any Startup Can Achieve Explosive Customer Growth (Weinberg & Mares, 2015)",
       href: "https://www.amazon.com/Traction-Startup-Achieve-Explosive-Customer/dp/1591848369",
       note: "The 19-channel taxonomy and the Bullseye Framework; read chapters 1-3 and the chapter covering your chosen channel",
     },
     {
-      title: "Drive Growth by Picking the Right Lane (Hockenmaier &amp; Rachitsky, First Round Review, 2019)",
+      title: "Drive Growth by Picking the Right Lane (Hockenmaier & Rachitsky, First Round Review, 2019)",
       href: "https://review.firstround.com/drive-growth-by-picking-the-right-lane-a-customer-acquisition-playbook-for-consumer-startups/",
       note: "Three growth lanes for consumer companies; case studies from Thumbtack, Airbnb, and Booking.com",
     },

@@ -20,7 +20,7 @@ const spec: LectureSpec = {
       note: "Required before section",
     },
     {
-      title: "Drive Growth by Picking the Right Lane (Hockenmaier &amp; Rachitsky, First Round Review, 2019)",
+      title: "Drive Growth by Picking the Right Lane (Hockenmaier & Rachitsky, First Round Review, 2019)",
       href: "https://review.firstround.com/drive-growth-by-picking-the-right-lane-a-customer-acquisition-playbook-for-consumer-startups/",
       note: "Three growth lanes for consumer companies; paid as one of them, with validation timelines",
     },

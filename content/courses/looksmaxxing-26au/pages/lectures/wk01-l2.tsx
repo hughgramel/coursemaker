@@ -25,7 +25,7 @@ const spec: LectureSpec = {
       note: "Official AAO position: zero peer-reviewed studies support mewing for structural change",
     },
     {
-      title: "There&rsquo;s no good evidence against bonesmashing (looksmax.org, 2022)",
+      title: "There’s no good evidence against bonesmashing (looksmax.org, 2022)",
       href: "https://looksmax.org/threads/theres-no-good-evidence-against-bonesmashing.1051845/",
       note: "Primary document used as a critique exercise; read as an example of reversed burden of proof",
     },

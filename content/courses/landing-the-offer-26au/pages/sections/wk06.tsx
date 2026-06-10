@@ -4,7 +4,7 @@ import type { ProjectSpec } from "@/types/course";
 const spec: ProjectSpec = {
   title: "Week 6 section: system design lab",
   tagline:
-    "Sketch a URL shortener or rate limiter from scratch in 60 minutes, then critique a peer&rsquo;s design against the senior-engineer rubric.",
+    "Sketch a URL shortener or rate limiter from scratch in 60 minutes, then critique a peer’s design against the senior-engineer rubric.",
   outDate: "Week 6",
   dueDate: "Week 6 (bring nothing, produce everything in section)",
   overview: [
@@ -79,7 +79,7 @@ const spec: ProjectSpec = {
   ],
   deliverables: [
     "One completed sketch (on paper or a shared whiteboard) with requirements, capacity estimates, API signatures, data model, and component diagram",
-    "Written notes from one peer critique received: at least the five rubric points and the &ldquo;highest-leverage gap&rdquo; note",
+    "Written notes from one peer critique received: at least the five rubric points and the “highest-leverage gap” note",
     "One documented revision: something you changed in your design based on peer feedback, and one sentence explaining why",
   ],
   rubric: [
@@ -111,16 +111,16 @@ const spec: ProjectSpec = {
       dimension: "Tradeoff: one sharding or caching tradeoff stated explicitly",
       points: 20,
       notes:
-        "The tradeoff names what is gained and what is lost. A sharding key choice, cache invalidation policy, or consistency level all qualify. &ldquo;I chose Redis because it is fast&rdquo; does not qualify.",
+        "The tradeoff names what is gained and what is lost. A sharding key choice, cache invalidation policy, or consistency level all qualify. “I chose Redis because it is fast” does not qualify.",
     },
   ],
   hints: [
     "Start with requirements. Every minute you spend on requirements saves two minutes of backtracking after you draw the wrong box.",
     "The capacity estimate does not have to be exact. It has to be reasonable and it has to connect to your design. If you estimate 1 TB of storage per year, your diagram should show something that stores 1 TB.",
-    "Name your cache technology. &ldquo;A cache&rdquo; is less credible than &ldquo;Redis&rdquo; or &ldquo;Memcached.&rdquo; The name signals that you have used these tools.",
-    "For the URL shortener, the most common gap is the redirect lookup path. Trace it explicitly: client &rarr; DNS &rarr; load balancer &rarr; app server &rarr; cache hit/miss &rarr; database &rarr; 301 redirect.",
+    "Name your cache technology. “A cache” is less credible than “Redis” or “Memcached.” The name signals that you have used these tools.",
+    "For the URL shortener, the most common gap is the redirect lookup path. Trace it explicitly: client → DNS → load balancer → app server → cache hit/miss → database → 301 redirect.",
     "For the rate limiter, the most common gap is what happens when the app server is stateless but the rate limit is per-user across servers. That is the problem Redis solves here.",
-    "During peer critique, the most useful feedback is specific and negative in the constructive sense: &ldquo;your capacity estimate does not connect to your cache size decision&rdquo; is useful. &ldquo;Looks good&rdquo; is not.",
+    "During peer critique, the most useful feedback is specific and negative in the constructive sense: “your capacity estimate does not connect to your cache size decision” is useful. “Looks good” is not.",
   ],
   late: "Section work cannot be made up. Attendance and completion are required for full credit.",
 };

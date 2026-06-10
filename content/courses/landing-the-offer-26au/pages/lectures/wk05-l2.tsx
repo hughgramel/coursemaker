@@ -27,12 +27,12 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Tay (2023) writes: &ldquo;Try to avoid staying quiet for long periods of time, as it&rsquo;s important to keep the interviewer in your loop.&rdquo; What specific phrase would you say aloud when you realize your first approach is wrong and need to rethink?",
+    "Tay (2023) writes: “Try to avoid staying quiet for long periods of time, as it’s important to keep the interviewer in your loop.” What specific phrase would you say aloud when you realize your first approach is wrong and need to rethink?",
     "List the edge cases you would check before coding a function that takes a sorted array of integers and returns the index of a target value. Be specific: what inputs would stress each edge?",
     "Mihailescu (2020) argues that most interview failures come from having no process when stuck, not from lacking knowledge. Describe your own three-step recovery process for when you are 30 minutes in and your approach is not working.",
-    "Write three clarifying questions you would ask for this problem: &ldquo;Given a list of integers, return the two that sum to a target.&rdquo; For each question, explain what you would do differently depending on the answer.",
+    "Write three clarifying questions you would ask for this problem: “Given a list of integers, return the two that sum to a target.” For each question, explain what you would do differently depending on the answer.",
     "Your interviewer says nothing for two minutes while you code. What are three reasons silence from an interviewer is not automatically a bad sign? How do you use that silence productively?",
-    "Section this week is Pattern sprint 3: two DP mediums plus a recorded narrated solve with peer feedback. The narration practice is the direct application of today&rsquo;s lecture.",
+    "Section this week is Pattern sprint 3: two DP mediums plus a recorded narrated solve with peer feedback. The narration practice is the direct application of today’s lecture.",
   ],
 };
 

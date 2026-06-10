@@ -20,8 +20,8 @@ const spec: ProjectSpec = {
   ],
   background: [
     "N-day retention asks: of the users who signed up in week W, what percentage returned on exactly day N? Unbounded retention asks: of those users, what percentage returned on day N or any day after? For most B2C products at this stage, N-day retention is cleaner: it shows discrete peaks and valleys that correspond to real usage patterns (weekly habits show up at D7, monthly billing cycles at D30).",
-    "The SQL pattern below groups users by the calendar week of their signup, then counts how many returned at each interval. &ldquo;Returned&rdquo; means you saw a usage event (a row in your events table) from that user on day N, where day 0 is signup day. The key step is the DATE_DIFF join: for each (user, signup_date) pair, find all usage events and compute the difference in days.",
-    "PostHog users can skip the SQL entirely. In your PostHog project, navigate to Retention (left sidebar), set the start event to your activation event (e.g., &ldquo;signed_up&rdquo; or &ldquo;completed_onboarding&rdquo;), set the return event to your north-star usage event (e.g., &ldquo;session_started&rdquo; or &ldquo;task_created&rdquo;), and set the interval to &ldquo;Day.&rdquo; PostHog draws the cohort table for you. Screenshot it and paste the numbers into the template below.",
+    "The SQL pattern below groups users by the calendar week of their signup, then counts how many returned at each interval. “Returned” means you saw a usage event (a row in your events table) from that user on day N, where day 0 is signup day. The key step is the DATE_DIFF join: for each (user, signup_date) pair, find all usage events and compute the difference in days.",
+    "PostHog users can skip the SQL entirely. In your PostHog project, navigate to Retention (left sidebar), set the start event to your activation event (e.g., “signed_up” or “completed_onboarding”), set the return event to your north-star usage event (e.g., “session_started” or “task_created”), and set the interval to “Day.” PostHog draws the cohort table for you. Screenshot it and paste the numbers into the template below.",
   ],
   instructions: [
     {
@@ -32,8 +32,8 @@ const spec: ProjectSpec = {
       title: "SQL path: run the cohort query",
       body: "Adapt the query below for your schema. The query assumes a table named events with columns user_id, event_name, and created_at. Replace those column names with your actual schema. Run the query, copy the output, and fill in the cohort table template in step 4.",
       steps: [
-        "Identify your activation event name (the event that marks &ldquo;user signed up and completed something meaningful&rdquo;).",
-        "Identify your retention event name (the event that means &ldquo;user came back and used the product&rdquo;).",
+        "Identify your activation event name (the event that marks “user signed up and completed something meaningful”).",
+        "Identify your retention event name (the event that means “user came back and used the product”).",
         "Replace ACTIVATION_EVENT and RETENTION_EVENT in the query below.",
         "Run the query against your database and copy the results.",
       ],
@@ -52,7 +52,7 @@ const spec: ProjectSpec = {
       steps: [
         "List your four most recent complete signup weeks (W-4, W-3, W-2, W-1, where W-1 is last week).",
         "For each week, write the D1, D7, and D30 retention percentages.",
-        "If D30 data is not yet available for the most recent cohort, write &ldquo;too early&rdquo; and use the most recent available cohort for the shape analysis.",
+        "If D30 data is not yet available for the most recent cohort, write “too early” and use the most recent available cohort for the shape analysis.",
       ],
     },
     {
@@ -61,15 +61,15 @@ const spec: ProjectSpec = {
     },
     {
       title: "Identify your best cohort and form a hypothesis",
-      body: "Compare D30 across all the cohort weeks you filled in. Which signup week has the highest D30 retention? Write one hypothesis (one sentence, starting with &ldquo;I think D30 is higher for this cohort because...&rdquo;) about what changed during that week: a product change, a channel change, a pricing change, or a seasonal effect.",
+      body: "Compare D30 across all the cohort weeks you filled in. Which signup week has the highest D30 retention? Write one hypothesis (one sentence, starting with “I think D30 is higher for this cohort because...”) about what changed during that week: a product change, a channel change, a pricing change, or a seasonal effect.",
     },
     {
       title: "Write your power-user query (or PostHog insight)",
-      body: "Your power users are the top 5% by usage in the past 30 days. Define usage in terms of an event count (e.g., &ldquo;users with more than 20 sessions in 30 days&rdquo;) or a specific action (e.g., &ldquo;users who invited at least one other user&rdquo;). Write the SQL or describe the PostHog filter you would use. You do not need to run it now, but you should be able to describe it precisely enough that someone else could write the query from your description.",
+      body: "Your power users are the top 5% by usage in the past 30 days. Define usage in terms of an event count (e.g., “users with more than 20 sessions in 30 days”) or a specific action (e.g., “users who invited at least one other user”). Write the SQL or describe the PostHog filter you would use. You do not need to run it now, but you should be able to describe it precisely enough that someone else could write the query from your description.",
     },
     {
       title: "Share with a partner and get one piece of feedback",
-      body: "Show your completed cohort table and curve-shape name to the person sitting next to you. Give each other two minutes of feedback: one observation about the data that surprised you, and one question about the methodology (how did they define &ldquo;returned&rdquo;, what counts as their activation event, etc.). Revise your curve-shape sentence if the conversation changed your interpretation.",
+      body: "Show your completed cohort table and curve-shape name to the person sitting next to you. Give each other two minutes of feedback: one observation about the data that surprised you, and one question about the methodology (how did they define “returned”, what counts as their activation event, etc.). Revise your curve-shape sentence if the conversation changed your interpretation.",
     },
   ],
   deliverables: [
@@ -90,7 +90,7 @@ const spec: ProjectSpec = {
       dimension: "Cohort table completeness",
       points: 20,
       notes:
-        "At least three cohort weeks filled in with percentages (not just &ldquo;good&rdquo; or &ldquo;bad&rdquo;); cells marked &ldquo;too early&rdquo; only for incomplete cohorts",
+        "At least three cohort weeks filled in with percentages (not just “good” or “bad”); cells marked “too early” only for incomplete cohorts",
     },
     {
       dimension: "Curve-shape diagnosis",
@@ -102,21 +102,21 @@ const spec: ProjectSpec = {
       dimension: "Best-cohort hypothesis",
       points: 15,
       notes:
-        "Hypothesis is falsifiable: a specific event or change named, not a vague &ldquo;maybe the product got better&rdquo;",
+        "Hypothesis is falsifiable: a specific event or change named, not a vague “maybe the product got better”",
     },
     {
       dimension: "Power-user definition",
       points: 15,
       notes:
-        "Event name and threshold are specific enough that someone else could run the query; not just &ldquo;active users&rdquo;",
+        "Event name and threshold are specific enough that someone else could run the query; not just “active users”",
     },
   ],
   hints: [
     "The hardest part of the SQL query is the self-join. If you get stuck, simplify: first write a query that returns every (user_id, signup_date, event_date) pair, then add the DATE_DIFF column, then filter and group. Breaking it into steps makes it debuggable.",
-    "If your activation event and your first usage event are the same row in the database, D1 retention will always look artificially high. Check whether &ldquo;signed up&rdquo; and &ldquo;first used the product&rdquo; are separate events in your schema. If they are the same event, use a different return event for the retention query.",
-    "PostHog&rsquo;s retention table uses the same user across rows. If a user signed up in week 1 and returned in week 3, they appear in the week-1 row, not the week-3 row. This is correct behavior. Do not mistake it for a bug.",
+    "If your activation event and your first usage event are the same row in the database, D1 retention will always look artificially high. Check whether “signed up” and “first used the product” are separate events in your schema. If they are the same event, use a different return event for the retention query.",
+    "PostHog’s retention table uses the same user across rows. If a user signed up in week 1 and returned in week 3, they appear in the week-1 row, not the week-3 row. This is correct behavior. Do not mistake it for a bug.",
     "A decaying curve is not a death sentence. It tells you where to look next: week-5 will cover acquisition and channel-product fit. A decaying curve plus a channel that brings in the wrong user is more fixable than a decaying curve plus no channel at all.",
-    "When in doubt about which event to use as the return event, pick the one that most closely corresponds to your north-star metric from week 1. If your north-star is &ldquo;tasks completed,&rdquo; use task_completed as the return event. Consistency between your north-star and your retention definition makes the data easier to act on.",
+    "When in doubt about which event to use as the return event, pick the one that most closely corresponds to your north-star metric from week 1. If your north-star is “tasks completed,” use task_completed as the return event. Consistency between your north-star and your retention definition makes the data easier to act on.",
   ],
 };
 

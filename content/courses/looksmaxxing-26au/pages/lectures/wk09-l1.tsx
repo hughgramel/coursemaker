@@ -21,7 +21,7 @@ const spec: LectureSpec = {
     },
     {
       title:
-        "Tight chest, rounded shoulders? Here&rsquo;s what&rsquo;s actually causing it (Dr. Aaron Horschig DPT, Squat University, 2024)",
+        "Tight chest, rounded shoulders? Here’s what’s actually causing it (Dr. Aaron Horschig DPT, Squat University, 2024)",
       href: "https://www.youtube.com/watch?v=RoiWkNKDEBU",
       note: "Upper-cross syndrome mechanics and the corrective routine",
     },

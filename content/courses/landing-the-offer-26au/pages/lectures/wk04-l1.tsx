@@ -28,11 +28,11 @@ const spec: LectureSpec = {
   ],
   followups: [
     "Write a recursive function to compute the sum of all values in a binary tree. Identify the base case, the recursive case, and sketch the call stack for a three-node tree (root with two leaves).",
-    "NeetCode&rsquo;s roadmap places Trees after Stack in its learning sequence. Why does understanding the call stack make tree recursion easier to reason about? Give a concrete example.",
+    "NeetCode’s roadmap places Trees after Stack in its learning sequence. Why does understanding the call stack make tree recursion easier to reason about? Give a concrete example.",
     "Compare an iterative in-order traversal (using an explicit stack) with a recursive one. When would you prefer the iterative version in an interview setting?",
     "Coding Interview University notes that a recursive approach requires O(h) space for the call stack, where h is the tree height. For a balanced binary tree of n nodes, what is h? For a degenerate (linked-list-shaped) tree, what is h?",
     "A function calls itself without a valid base case. Walk through what happens on the call stack. At what point does the program fail, and what error will you see?",
-    "Pick one LeetCode problem from the Trees section of NeetCode&rsquo;s roadmap. Before writing any code, write out the recursive case in one sentence and the base case(s) in one sentence each.",
+    "Pick one LeetCode problem from the Trees section of NeetCode’s roadmap. Before writing any code, write out the recursive case in one sentence and the base case(s) in one sentence each.",
   ],
 };
 

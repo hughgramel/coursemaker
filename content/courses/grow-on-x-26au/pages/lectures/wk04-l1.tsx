@@ -28,9 +28,9 @@ const spec: LectureSpec = {
   ],
   followups: [
     "Welsh batches his Saturday newsletter into 10-20 short posts staggered over 4-6 weeks. What does that staggering buy him that posting all derived posts in the same week would not?",
-    "Forte (2023) writes &ldquo;Your brain is for having ideas, not storing them.&rdquo; How does that principle apply to a content calendar specifically? What are you offloading, and to where?",
+    "Forte (2023) writes “Your brain is for having ideas, not storing them.” How does that principle apply to a content calendar specifically? What are you offloading, and to where?",
     "Pick one piece of content you posted or consumed recently. Classify it as evergreen, timely, or personal. What would you have to change to move it into a different bucket?",
-    "Describe a post you&rsquo;ve seen that was clearly engagement-bait. What signal told you it was bait? Would the account&rsquo;s regular followers benefit from more posts like that one?",
+    "Describe a post you’ve seen that was clearly engagement-bait. What signal told you it was bait? Would the account’s regular followers benefit from more posts like that one?",
     "Paul Graham writes that a single meeting can blow a whole afternoon by breaking it into pieces too small to do anything hard in. How does that apply to writing one post per day versus batching an entire week on Sunday?",
   ],
 };

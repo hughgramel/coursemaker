@@ -27,7 +27,7 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "You want to test whether a &ldquo;number hook&rdquo; outperforms a &ldquo;claim hook&rdquo; for a post about email open rates. Write both hooks. Identify every variable you held constant and every variable you did not.",
+    "You want to test whether a “number hook” outperforms a “claim hook” for a post about email open rates. Write both hooks. Identify every variable you held constant and every variable you did not.",
     "Ries (2009) says actionable metrics show cause and effect. For a solo creator with 800 followers, write one metric that is actionable and explain what action it would drive.",
     "Basilio (2023) describes Dickie Bush treating every single tweet as an idea-validation test before expanding to a thread. What is the minimum signal that would tell you an idea has passed that test?",
     "Explain p-hacking in plain language for someone who has never taken a statistics course. Give one example of how a creator could accidentally p-hack their own posting schedule.",

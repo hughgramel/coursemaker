@@ -33,11 +33,11 @@ const spec: ProjectSpec = {
     },
     {
       title: "Tag the side doors",
-      body: "For each company, answer: do you know someone who works or has worked there (referral)? Does the company sponsor or heavily use an open-source project you could contribute to (open-source)? Does the company have a well-known internship program you missed or could still enter (prior-intern)? Is there a public artifact (blog post, demo, tool) that a hiring manager at that company would find useful enough to share (public-artifact)? Tag each company with the best path. If the answer is &ldquo;none&rdquo; for every option, flag the row: cold portal applications to companies where you have no foothold are low-yield.",
+      body: "For each company, answer: do you know someone who works or has worked there (referral)? Does the company sponsor or heavily use an open-source project you could contribute to (open-source)? Does the company have a well-known internship program you missed or could still enter (prior-intern)? Is there a public artifact (blog post, demo, tool) that a hiring manager at that company would find useful enough to share (public-artifact)? Tag each company with the best path. If the answer is “none” for every option, flag the row: cold portal applications to companies where you have no foothold are low-yield.",
     },
     {
       title: "Write the next action",
-      body: "For your top 10 companies, write one concrete next action in the final column. Examples: &ldquo;Email [name] this week to ask about open roles,&rdquo; &ldquo;Find the open-source project this company maintains and read the contribution guide,&rdquo; or &ldquo;Check application open date on their careers page.&rdquo; The action should be completable in under an hour. Vague entries like &ldquo;look into this company more&rdquo; do not count.",
+      body: "For your top 10 companies, write one concrete next action in the final column. Examples: “Email [name] this week to ask about open roles,” “Find the open-source project this company maintains and read the contribution guide,” or “Check application open date on their careers page.” The action should be completable in under an hour. Vague entries like “look into this company more” do not count.",
     },
     {
       title: "Peer review",
@@ -50,7 +50,7 @@ const spec: ProjectSpec = {
   ],
   deliverables: [
     "A spreadsheet with at least 30 companies, each tagged with tier (reach / match / safety) and at least one side-door path",
-    "A written &ldquo;why this tier&rdquo; note for each of your top 10 companies (1-2 sentences each)",
+    "A written “why this tier” note for each of your top 10 companies (1-2 sentences each)",
     "Next-action entries for all top-10 companies, each specific enough to complete in under an hour",
     "A snapshot or export of the list at section end, plus two written peer-review comments you gave your partner",
   ],
@@ -65,7 +65,7 @@ const spec: ProjectSpec = {
       dimension: "Quality of tier reasoning",
       points: 25,
       notes:
-        "Top-10 &ldquo;why this tier&rdquo; notes name specific evidence (skills, projects, contacts), not just enthusiasm",
+        "Top-10 “why this tier” notes name specific evidence (skills, projects, contacts), not just enthusiasm",
     },
     {
       dimension: "Specificity of next actions",
@@ -82,7 +82,7 @@ const spec: ProjectSpec = {
   ],
   hints: [
     "Do not anchor the list to companies you have already heard of. Some of the best entry-level SWE hiring is at companies with 50-500 engineers that are not household names. Ask classmates and your TAs for names you have not considered.",
-    "A &ldquo;none&rdquo; side-door tag is not a reason to drop a company, but it is a reason to ask: what would it take to create a side door? Sometimes the answer is &ldquo;nothing reasonable,&rdquo; but sometimes it is &ldquo;one open-source commit.&rdquo;",
+    "A “none” side-door tag is not a reason to drop a company, but it is a reason to ask: what would it take to create a side door? Sometimes the answer is “nothing reasonable,” but sometimes it is “one open-source commit.”",
     "The reach tier is not where you put companies you have heard are hard to get into. It is where you put companies where your current profile is genuinely below their typical hire. A company that is selective but whose typical hire looks like you is a match.",
     "If you find yourself with fewer than 8 safety companies, the most common reason is that the list is too narrowly focused on brand-name employers. A company that will give you an offer and let you do good work is a safety company worth taking seriously.",
     "The list is a living document. You will drop companies, add companies, and re-tier companies as you learn more. Do not try to get it perfect today. Get it started.",

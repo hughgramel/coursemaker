@@ -32,10 +32,10 @@ const spec: LectureSpec = {
   ],
   followups: [
     "Kelly (2008) argues that 1,000 true fans each paying $100 per year generates $100k annually. Li Jin (2020) updates this to 100 fans at $1,000 each. Which model fits your niche better? What would it take to move a follower from free to paying $100? From $100 to $1,000?",
-    "Clouse (2023) warns that financial pressure drains the audience&rsquo;s trust battery. Describe a concrete scenario where a creator at 10k followers crosses from &ldquo;monetizing from abundance&rdquo; to &ldquo;monetizing from desperation.&rdquo; What is the reader&rsquo;s signal?",
-    "Newton (2025) kept Platformer&rsquo;s subscriber price flat for five years while building deep loyalty. What does that strategy cost in year one? What does it pay in year five?",
+    "Clouse (2023) warns that financial pressure drains the audience’s trust battery. Describe a concrete scenario where a creator at 10k followers crosses from “monetizing from abundance” to “monetizing from desperation.” What is the reader’s signal?",
+    "Newton (2025) kept Platformer’s subscriber price flat for five years while building deep loyalty. What does that strategy cost in year one? What does it pay in year five?",
     "A creator at 12,000 X followers has an email list of 400 subscribers. Which audience do they actually own? What would a plan to triple the email list in 90 days look like without abandoning X?",
-    "The lecture introduces two strategies for avoiding burnout: batching content and defining a &ldquo;minimum viable week.&rdquo; Design your own minimum viable week: the fewest posts per week that keeps your account active and growing. Justify the number.",
+    "The lecture introduces two strategies for avoiding burnout: batching content and defining a “minimum viable week.” Design your own minimum viable week: the fewest posts per week that keeps your account active and growing. Justify the number.",
   ],
 };
 

@@ -10,7 +10,7 @@ const spec: LectureSpec = {
     "Equity vesting schedules: 4-year cliff, front-loaded grants, and how to compute year-1 expected value",
     "Signing bonuses: why they are easier to give than base and how to use them in a negotiation",
     "Competing offers: how to raise the BATNA conversation without poisoning the relationship",
-    "The &ldquo;best offer&rdquo; pushback: what it actually means and the response that keeps the door open",
+    "The “best offer” pushback: what it actually means and the response that keeps the door open",
     "Exploding offers: how to ask for time without burning the relationship",
   ],
   slidesHref: "/c/landing-the-offer-26au/slides/wk09-l2.pdf",
@@ -39,10 +39,10 @@ const spec: LectureSpec = {
   followups: [
     "McKenzie (2012) argues that negotiating as a consistent policy is more valuable than deciding case by case whether a specific offer is worth negotiating. What is the psychological and financial argument for treating negotiation as a policy rather than a choice?",
     "A company offers you $145,000 base, a $20,000 signing bonus, and 100 RSUs vesting over four years with a one-year cliff. The current stock price is $40 per share. Compute your expected year-1 total compensation. What assumptions are you making about bonus and stock price?",
-    "Qureshi (2016) says that &ldquo;the company is praying with bated breath that you will sign.&rdquo; From the company&rsquo;s side, what does a failed hire actually cost them? How should that cost inform your confidence level during a negotiation?",
-    "A recruiter says: &ldquo;This is our best offer, we do not have any more room.&rdquo; Write out a two-sentence response that acknowledges the recruiter, keeps you positive, and moves the conversation forward without accepting or rejecting the offer.",
-    "You have an offer from Company A expiring Friday and you expect an offer from Company B early next week. Using Qureshi&rsquo;s Part 2 framework, draft the email you would send to Company A asking for more time. What do you say to Company B to accelerate their process?",
-    "Levels.fyi data suggests that the level you enter at matters more than your starting compensation for long-term earnings, because each promotion starts from the prior level&rsquo;s ceiling. How would you push for a higher level (e.g., L4 instead of L3) during the offer stage?",
+    "Qureshi (2016) says that “the company is praying with bated breath that you will sign.” From the company’s side, what does a failed hire actually cost them? How should that cost inform your confidence level during a negotiation?",
+    "A recruiter says: “This is our best offer, we do not have any more room.” Write out a two-sentence response that acknowledges the recruiter, keeps you positive, and moves the conversation forward without accepting or rejecting the offer.",
+    "You have an offer from Company A expiring Friday and you expect an offer from Company B early next week. Using Qureshi’s Part 2 framework, draft the email you would send to Company A asking for more time. What do you say to Company B to accelerate their process?",
+    "Levels.fyi data suggests that the level you enter at matters more than your starting compensation for long-term earnings, because each promotion starts from the prior level’s ceiling. How would you push for a higher level (e.g., L4 instead of L3) during the offer stage?",
   ],
 };
 

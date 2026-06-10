@@ -6,7 +6,7 @@ export function Wk05SectionPage() {
       <AnchorHeading as="h1" id="wk05-section-title">
         Week 5 section: your program and nutrition plan
       </AnchorHeading>
-      <p className="fs-6 fw-300">Week 5 &middot; Hands-on worksheet</p>
+      <p className="fs-6 fw-300">Week 5 · Hands-on worksheet</p>
 
       <p>
         This session has two outputs: a written four-day training program and a
@@ -88,7 +88,7 @@ instead of bench, trap-bar deadlift instead of squat)`}</pre>
         </li>
         <li>
           <strong>Maintenance calories.</strong> Use the Mifflin-St Jeor equation
-          or the simpler multiplier method: body weight in kg &times; 33 for a
+          or the simpler multiplier method: body weight in kg × 33 for a
           lightly active male (3-4 hours exercise per week). Write the number.
         </li>
         <li>
@@ -133,7 +133,7 @@ instead of bench, trap-bar deadlift instead of squat)`}</pre>
         <li>
           <strong>Program: compound lifts present?</strong> Does each session
           include at least one compound lift? Are the exercises named specifically
-          (not just &ldquo;leg day&rdquo;)?
+          (not just “leg day”)?
         </li>
         <li>
           <strong>Program: rep ranges labeled?</strong> Is each exercise labeled
@@ -143,7 +143,7 @@ instead of bench, trap-bar deadlift instead of squat)`}</pre>
         <li>
           <strong>Program: progressive overload rule written?</strong> Is there a
           specific, written rule for when and how to add weight? Is it realistic
-          (not &ldquo;add weight every session&rdquo; without a completion criterion)?
+          (not “add weight every session” without a completion criterion)?
         </li>
         <li>
           <strong>Nutrition: arithmetic shown?</strong> Are the body-weight,
@@ -157,7 +157,7 @@ instead of bench, trap-bar deadlift instead of squat)`}</pre>
         </li>
         <li>
           <strong>Approach justified?</strong> Is the choice of recomposition,
-          cut, or bulk justified in one sentence that matches the person&rsquo;s
+          cut, or bulk justified in one sentence that matches the person’s
           situation? (A beginner choosing a steep cut is a red flag. A lean,
           experienced lifter choosing a recomp is fine.)
         </li>
@@ -176,16 +176,16 @@ instead of bench, trap-bar deadlift instead of squat)`}</pre>
         </li>
         <li>
           Completed peer review checklist: six items scored with one-sentence
-          comments. Your partner&rsquo;s name is on the sheet you return to them.
+          comments. Your partner’s name is on the sheet you return to them.
         </li>
         <li>
-          One revision: after reading your partner&rsquo;s comments, change at least
+          One revision: after reading your partner’s comments, change at least
           one thing in your plan. Write the change and why you made it at the
           bottom of your document.
         </li>
       </ul>
       <p>
-        This section&rsquo;s output is the starting point for HW 3 (Strength
+        This section’s output is the starting point for HW 3 (Strength
         program and nutrition plan), which is due in week 8.
       </p>
     </>

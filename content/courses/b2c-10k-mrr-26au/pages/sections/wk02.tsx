@@ -30,7 +30,7 @@ export function Wk02SectionPage() {
 
       <AnchorHeading as="h2" id="before-section">Before section (do this alone)</AnchorHeading>
       <p>
-        Complete these three steps before arriving. If you haven&rsquo;t, you
+        Complete these three steps before arriving. If you haven’t, you
         cannot be a useful observer for your partner.
       </p>
       <ol>
@@ -59,8 +59,8 @@ export function Wk02SectionPage() {
       <ol>
         <li>Exchange product URLs or app store links now.</li>
         <li>
-          Decide who goes first. The first person is the &ldquo;founder&rdquo;;
-          the second is the &ldquo;new user.&rdquo;
+          Decide who goes first. The first person is the “founder”;
+          the second is the “new user.”
         </li>
         <li>
           The new user opens the product fresh, in incognito or on their
@@ -71,14 +71,14 @@ export function Wk02SectionPage() {
 
       <AnchorHeading as="h2" id="screen-share-round">Screen-share round (20 minutes per person)</AnchorHeading>
       <p>
-        Each person gets 20 minutes as &ldquo;new user.&rdquo; The founder
+        Each person gets 20 minutes as “new user.” The founder
         watches silently. Do not explain, defend, or hint. Your job is to
         observe.
       </p>
       <ol>
         <li>
-          <strong>New user:</strong> go to the product&rsquo;s landing page or
-          app store listing. Start from zero. Say out loud what you&rsquo;re
+          <strong>New user:</strong> go to the product’s landing page or
+          app store listing. Start from zero. Say out loud what you’re
           reading, what you expect each button to do, and what confuses you.
           Think aloud the whole time.
         </li>
@@ -88,7 +88,7 @@ export function Wk02SectionPage() {
           it happens. Do not speak.
         </li>
         <li>
-          <strong>New user:</strong> stop when you either reach the product&rsquo;s
+          <strong>New user:</strong> stop when you either reach the product’s
           core feature or decide you would have quit. Say which it was and why.
         </li>
         <li>
@@ -106,18 +106,18 @@ export function Wk02SectionPage() {
       <ol>
         <li>
           Name the single biggest drop-off step your partner observed. One
-          sentence: &ldquo;The biggest drop-off is [step name] because
-          [observed behavior].&rdquo;
+          sentence: “The biggest drop-off is [step name] because
+          [observed behavior].”
         </li>
         <li>
           State whether it is friction (extra required action), a value gap
-          (user doesn&rsquo;t see the payoff yet), or a trust gap (user isn&rsquo;t
-          sure it&rsquo;s safe or worth their data).
+          (user doesn’t see the payoff yet), or a trust gap (user isn’t
+          sure it’s safe or worth their data).
         </li>
         <li>
           Name the one change that would reduce it. Scope it to one sentence.
-          &ldquo;Remove the email-confirmation gate before first use&rdquo; is
-          one sentence. &ldquo;Redesign the whole onboarding&rdquo; is not.
+          “Remove the email-confirmation gate before first use” is
+          one sentence. “Redesign the whole onboarding” is not.
         </li>
       </ol>
 
@@ -135,7 +135,7 @@ export function Wk02SectionPage() {
           step).
         </li>
         <li>
-          <strong>The baseline:</strong> today&rsquo;s number.
+          <strong>The baseline:</strong> today’s number.
         </li>
         <li>
           <strong>The check-in:</strong> post your before/after as your Friday
@@ -148,7 +148,7 @@ export function Wk02SectionPage() {
           Every founder ships at least one activation experiment before Friday
           EOD. A copy change counts. A removed form field counts. A rewritten
           empty-state message counts. Zero experiments shipped means the
-          section didn&rsquo;t happen.
+          section didn’t happen.
         </p>
       </Callout>
 
@@ -157,8 +157,8 @@ export function Wk02SectionPage() {
         If time allows after both rounds, each pair picks one category-leader
         product (Duolingo, Calm, Notion, Linear) and walks through its
         onboarding together. For each screen, identify: what friction did they
-        eliminate? What demo data did they pre-populate? What &ldquo;aha
-        moment&rdquo; are they driving toward?
+        eliminate? What demo data did they pre-populate? What “aha
+        moment” are they driving toward?
       </p>
       <p>
         Take two teardown notes to bring to lecture this week.

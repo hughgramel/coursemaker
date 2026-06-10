@@ -6,7 +6,7 @@ export function Wk09SectionPage() {
       <AnchorHeading as="h1" id="film-review-fix">
         Section: Film, review, fix
       </AnchorHeading>
-      <p className="fs-6 fw-300">Week 9 &middot; Hands-on worksheet</p>
+      <p className="fs-6 fw-300">Week 9 · Hands-on worksheet</p>
 
       <p>
         This section closes the loop on two weeks of posture and photography
@@ -42,7 +42,7 @@ export function Wk09SectionPage() {
         <li>
           <strong>Baseline posture.</strong> Before filming, stand however you
           normally stand when you are not thinking about it. Do not try to
-          &ldquo;fix&rdquo; yourself yet. That is the whole point: you want
+          “fix” yourself yet. That is the whole point: you want
           the film to show your actual default, not a performance.
         </li>
       </ol>
@@ -188,18 +188,18 @@ export function Wk09SectionPage() {
 
       <ol start={10}>
         <li>
-          <strong>Choose two &ldquo;N&rdquo; marks from your checklists.</strong>{" "}
+          <strong>Choose two “N” marks from your checklists.</strong>{" "}
           Pick the two that appeared in both your self-review and your
-          partner&rsquo;s review. If there is no overlap, defer to your
-          partner&rsquo;s observation.
+          partner’s review. If there is no overlap, defer to your
+          partner’s observation.
         </li>
         <li>
           <strong>Write each action item in this format:</strong>{" "}
-          &ldquo;I will [specific exercise or cue] every [frequency] to address
-          [specific check point].&rdquo; For example: &ldquo;I will do 10 chin
-          tucks every morning to address forward head position.&rdquo; or
-          &ldquo;I will do the doorway pec stretch for 30 seconds on each side
-          after I sit down at my desk, to address rounded shoulders.&rdquo;
+          “I will [specific exercise or cue] every [frequency] to address
+          [specific check point].” For example: “I will do 10 chin
+          tucks every morning to address forward head position.” or
+          “I will do the doorway pec stretch for 30 seconds on each side
+          after I sit down at my desk, to address rounded shoulders.”
         </li>
         <li>
           <strong>Add both items to your habit stack.</strong> From week 2,

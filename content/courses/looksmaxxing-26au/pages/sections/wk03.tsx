@@ -10,7 +10,7 @@ export function Wk03SectionPage() {
     <ReadingPage
       id="wk03-section"
       title="Week 3 section: Bathroom shelf audit"
-      kicker="Looksmaxxing &middot; Autumn 2026 &middot; Hands-on worksheet"
+      kicker="Looksmaxxing · Autumn 2026 · Hands-on worksheet"
     >
       <ReadingFraming>
         <p>
@@ -39,7 +39,7 @@ export function Wk03SectionPage() {
           <strong>Product name and category.</strong> Choose one: cleanser /
           moisturizer / sunscreen / retinoid / acne treatment / toner /
           exfoliant / serum / other. If it does not fit any of the first five,
-          it goes in &ldquo;other.&rdquo;
+          it goes in “other.”
         </li>
         <li>
           <strong>Key active ingredients.</strong> List the first three
@@ -53,8 +53,8 @@ export function Wk03SectionPage() {
         <li>
           <strong>Mechanism or evidence.</strong> Can you name a mechanism from
           the Week 3 lecture or reading that explains why this product would
-          work? Write it in one sentence. If you cannot, write &ldquo;no mechanism
-          known.&rdquo; This is not a grade; it is information.
+          work? Write it in one sentence. If you cannot, write “no mechanism
+          known.” This is not a grade; it is information.
         </li>
         <li>
           <strong>Keep / drop / replace?</strong> Based on the above, decide
@@ -99,9 +99,9 @@ export function Wk03SectionPage() {
         <li>
           <strong>Write the justification.</strong> For each product in your
           final routine, write one sentence that names a mechanism. Example:
-          &ldquo;SPF 50 broad-spectrum sunscreen blocks both UVA and UVB, reducing
-          cumulative photoaging and lowering long-term skin cancer risk.&rdquo;
-          That is a justification. &ldquo;It moisturizes&rdquo; is not.
+          “SPF 50 broad-spectrum sunscreen blocks both UVA and UVB, reducing
+          cumulative photoaging and lowering long-term skin cancer risk.”
+          That is a justification. “It moisturizes” is not.
         </li>
         <li>
           <strong>Flag the gaps.</strong> If your routine is missing a category
@@ -114,7 +114,7 @@ export function Wk03SectionPage() {
       <p>
         Each pair looks up two sunscreens: one mineral (zinc oxide or titanium
         dioxide as the only active) and one chemical (any organic UV filter).
-        Use the product&rsquo;s official page or a retailer listing. Fill in the
+        Use the product’s official page or a retailer listing. Fill in the
         comparison table below for each.
       </p>
       <ol>
@@ -175,7 +175,7 @@ export function Wk03SectionPage() {
       <ul>
         <li>
           Your completed shelf audit table: one row per product with category,
-          key actives, claimed purpose, mechanism or &ldquo;no mechanism known,&rdquo;
+          key actives, claimed purpose, mechanism or “no mechanism known,”
           and keep/drop/replace decision.
         </li>
         <li>

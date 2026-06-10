@@ -4,7 +4,7 @@ export function Wk01SectionPage() {
   return (
     <>
       <AnchorHeading as="h1" id="wire-your-funnel">Section: Wire your funnel</AnchorHeading>
-      <p className="fs-6 fw-300">Week 1 &middot; Hands-on worksheet</p>
+      <p className="fs-6 fw-300">Week 1 · Hands-on worksheet</p>
 
       <p>
         By the end of this section you will have PostHog (or a lightweight
@@ -26,12 +26,12 @@ export function Wk01SectionPage() {
         <li>
           <strong>Create a free PostHog Cloud account</strong> at{" "}
           <a href="https://app.posthog.com/signup">app.posthog.com/signup</a>.
-          Select &ldquo;Cloud (US)&rdquo; unless you have a data-residency
+          Select “Cloud (US)” unless you have a data-residency
           requirement.
         </li>
         <li>
           <strong>Copy your project API key.</strong> It lives under{" "}
-          <em>Settings &rarr; Project &rarr; Project API key</em>. It looks like{" "}
+          <em>Settings → Project → Project API key</em>. It looks like{" "}
           <code>phc_XXXX</code>.
         </li>
         <li>
@@ -46,7 +46,7 @@ export function Wk01SectionPage() {
             <li>
               Python (Flask / FastAPI / Django):{" "}
               <code>pip install posthog</code>, then{" "}
-              <code>posthog.api_key = &apos;phc_XXXX&apos;</code> in your app
+              <code>posthog.api_key = ’phc_XXXX’</code> in your app
               factory.
             </li>
             <li>
@@ -63,7 +63,7 @@ export function Wk01SectionPage() {
           <strong>Send a test event.</strong> In your browser console (or a
           one-off script), call:
           <pre>{`posthog.capture('test_event', { source: 'section_worksheet' });`}</pre>
-          Wait 30 seconds, then check <em>Activity &rarr; Live events</em> in
+          Wait 30 seconds, then check <em>Activity → Live events</em> in
           PostHog. You should see the event appear. If you do not, check your
           API key and host URL.
         </li>
@@ -80,17 +80,17 @@ export function Wk01SectionPage() {
       <ol start={6}>
         <li>
           <strong>Write your activation event definition in one sentence.</strong>{" "}
-          Format: &ldquo;A user has activated when they have [specific action]
-          within [timeframe] of signing up.&rdquo; Examples:
+          Format: “A user has activated when they have [specific action]
+          within [timeframe] of signing up.” Examples:
           <ul>
             <li>
-              &ldquo;A user has activated when they have created their first
-              project within 24 hours of signing up.&rdquo;
+              “A user has activated when they have created their first
+              project within 24 hours of signing up.”
             </li>
             <li>
-              &ldquo;A user has activated when they have completed one full
+              “A user has activated when they have completed one full
               session (played audio for at least 60 seconds) within 48 hours of
-              install.&rdquo;
+              install.”
             </li>
           </ul>
           Write yours in your founder journal before moving on.
@@ -104,8 +104,8 @@ export function Wk01SectionPage() {
   time_since_signup_hours: hoursElapsed,     // if calculable
 });`}</pre>
           Give the event a name specific to your product. Do not use a generic
-          name like &ldquo;activated&rdquo;; use &ldquo;first_project_created&rdquo;,
-          &ldquo;first_session_completed&rdquo;, &ldquo;first_payment_linked&rdquo;,
+          name like “activated”; use “first_project_created”,
+          “first_session_completed”, “first_payment_linked”,
           or similar.
         </li>
         <li>
@@ -127,8 +127,8 @@ export function Wk01SectionPage() {
 
       <ol start={10}>
         <li>
-          <strong>Open PostHog &rarr; Funnels.</strong> Click &ldquo;New
-          funnel&rdquo;. Add these steps in order:
+          <strong>Open PostHog → Funnels.</strong> Click “New
+          funnel”. Add these steps in order:
           <ol type="a">
             <li>
               <strong>Step 1: Acquisition.</strong> Event:{" "}
@@ -148,17 +148,17 @@ export function Wk01SectionPage() {
               add this step as a placeholder with zero completions.
             </li>
           </ol>
-          Set the date range to &ldquo;Last 30 days&rdquo;.
+          Set the date range to “Last 30 days”.
         </li>
         <li>
-          <strong>Save the funnel as &ldquo;Core funnel.&rdquo;</strong> Pin it
+          <strong>Save the funnel as “Core funnel.”</strong> Pin it
           to your PostHog dashboard.
         </li>
         <li>
           <strong>Add an MRR trend chart.</strong> If you use Stripe, install
           the PostHog Stripe connector under{" "}
-          <em>Settings &rarr; Integrations</em>. If you prefer SQL, add a
-          simple query in PostHog&apos;s SQL editor:
+          <em>Settings → Integrations</em>. If you prefer SQL, add a
+          simple query in PostHog’s SQL editor:
           <pre>{`SELECT
   date_trunc('month', created) AS month,
   sum(amount) / 100.0           AS mrr_dollars
@@ -167,8 +167,8 @@ WHERE status = 'succeeded'
   AND created >= now() - interval '3 months'
 GROUP BY 1
 ORDER BY 1;`}</pre>
-          If you have no paid users, skip the MRR chart and write &ldquo;MRR:
-          $0 as of [today&apos;s date]&rdquo; directly in your founder journal.
+          If you have no paid users, skip the MRR chart and write “MRR:
+          $0 as of [today’s date]” directly in your founder journal.
         </li>
         <li>
           <strong>Screenshot your dashboard.</strong> It should show, on one
@@ -189,8 +189,8 @@ ORDER BY 1;`}</pre>
         </li>
         <li>
           <strong>Write your MRR snapshot.</strong> Using the dashboard you
-          built, write in your founder journal: &ldquo;MRR as of [today]: $X.
-          This reflects [N] paying customers at an average of $[Y]/month.&rdquo;
+          built, write in your founder journal: “MRR as of [today]: $X.
+          This reflects [N] paying customers at an average of $[Y]/month.”
           If MRR is $0, write that exactly. Leaving it blank is not allowed.
         </li>
         <li>
@@ -245,7 +245,7 @@ ORDER BY 1;`}</pre>
         </li>
         <li>
           <strong>Milestone 3:</strong> A single-screen dashboard showing
-          acquisition &rarr; activation &rarr; paid (even if paid is $0).
+          acquisition → activation → paid (even if paid is $0).
         </li>
         <li>
           <strong>Milestone 4:</strong> First MRR number written in your

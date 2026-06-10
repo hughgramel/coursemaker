@@ -21,7 +21,7 @@ const spec: LectureSpec = {
     },
     {
       title:
-        "Best camera angle for great portraits and flattering images (Rachel Gulotta &amp; Daniel Inskeep, Mango Street, 2020)",
+        "Best camera angle for great portraits and flattering images (Rachel Gulotta & Daniel Inskeep, Mango Street, 2020)",
       href: "https://www.youtube.com/watch?v=v9BYZVPMOk8",
       note: "Camera height, three-quarter turn, and natural light placement",
     },

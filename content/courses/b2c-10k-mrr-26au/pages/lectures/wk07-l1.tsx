@@ -24,7 +24,7 @@ const spec: LectureSpec = {
       note: "The mathematical foundation of K-factor and why modern virality lives in retention loops",
     },
     {
-      title: "Growth Loops are the New Funnels (Balfour &amp; Winters, Reforge, 2019)",
+      title: "Growth Loops are the New Funnels (Balfour & Winters, Reforge, 2019)",
       href: "https://www.reforge.com/blog/growth-loops",
       note: "Why loops compound and funnels do not; four acquisition loop types",
     },

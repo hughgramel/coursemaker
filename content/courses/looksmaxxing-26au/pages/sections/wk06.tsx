@@ -6,7 +6,7 @@ export function Wk06SectionPage() {
       <AnchorHeading as="h1" id="oral-hygiene-cycle">
         Section: 24-hour oral hygiene cycle
       </AnchorHeading>
-      <p className="fs-6 fw-300">Week 6 &middot; Hands-on worksheet</p>
+      <p className="fs-6 fw-300">Week 6 · Hands-on worksheet</p>
 
       <p>
         This section has one goal: build a complete oral hygiene schedule that
@@ -66,9 +66,9 @@ export function Wk06SectionPage() {
       </div>
 
       <p>
-        For each row, write a one-sentence biological target (e.g., &ldquo;disrupts
-        the supragingival plaque biofilm before it mineralizes into calculus&rdquo;).
-        Vague answers like &ldquo;cleans teeth&rdquo; do not count.
+        For each row, write a one-sentence biological target (e.g., “disrupts
+        the supragingival plaque biofilm before it mineralizes into calculus”).
+        Vague answers like “cleans teeth” do not count.
       </p>
 
       <ol>
@@ -79,7 +79,7 @@ export function Wk06SectionPage() {
         </li>
         <li>
           <strong>Interdental cleaning:</strong> the Cochrane review found
-          &ldquo;low-to-very-low certainty evidence.&rdquo; Does that mean you
+          “low-to-very-low certainty evidence.” Does that mean you
           should skip flossing? Write a two-sentence answer that explains what
           low certainty means in Cochrane terminology and how you weigh it.
         </li>
@@ -148,7 +148,7 @@ export function Wk06SectionPage() {
         </li>
         <li>
           Where in the cycle do you place interdental cleaning, and why at that
-          point rather than another? Reference the Cochrane review&rsquo;s finding
+          point rather than another? Reference the Cochrane review’s finding
           that interdental brushes may outperform floss for some outcomes.
         </li>
         <li>
@@ -163,7 +163,7 @@ export function Wk06SectionPage() {
       </AnchorHeading>
 
       <p>
-        Use Dr. Joyce Kahng&rsquo;s framework from lecture 2 to answer the
+        Use Dr. Joyce Kahng’s framework from lecture 2 to answer the
         following questions honestly. The goal is not to sell yourself a whitening
         product; the goal is to identify whether whitening is appropriate given
         your current staining profile.
@@ -201,19 +201,19 @@ export function Wk06SectionPage() {
 
       <ol>
         <li>
-          <strong>Claim A:</strong> &ldquo;Mewing for 12 months will move your
-          maxilla forward and give you a more defined midface.&rdquo; Use the AAO
+          <strong>Claim A:</strong> “Mewing for 12 months will move your
+          maxilla forward and give you a more defined midface.” Use the AAO
           position statement (2023) in your answer.
         </li>
         <li>
-          <strong>Claim B:</strong> &ldquo;Chewing a hard mastic gum for 20 minutes
-          a day will give you a visible jawline improvement within three months.&rdquo;
+          <strong>Claim B:</strong> “Chewing a hard mastic gum for 20 minutes
+          a day will give you a visible jawline improvement within three months.”
           Address masseter hypertrophy, asymmetry risk, and the size of the
           cosmetic effect.
         </li>
         <li>
-          <strong>Claim C:</strong> &ldquo;Losing 10 kg of body fat will improve
-          your jawline definition.&rdquo; Draw on the body-recomposition concept
+          <strong>Claim C:</strong> “Losing 10 kg of body fat will improve
+          your jawline definition.” Draw on the body-recomposition concept
           introduced in week 5. Is this claim supported? What are its limits?
         </li>
       </ol>
@@ -230,10 +230,10 @@ export function Wk06SectionPage() {
       </p>
 
       <ol>
-        <li>Review your partner&rsquo;s schedule. Identify the weakest-supported step.</li>
+        <li>Review your partner’s schedule. Identify the weakest-supported step.</li>
         <li>
-          Ask: &ldquo;What source supports this, and what does it actually
-          say?&rdquo; Do not accept &ldquo;I read it somewhere.&rdquo;
+          Ask: “What source supports this, and what does it actually
+          say?” Do not accept “I read it somewhere.”
         </li>
         <li>After the defense, revise your own schedule if needed.</li>
       </ol>

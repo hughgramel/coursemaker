@@ -22,7 +22,7 @@ const spec: LectureSpec = {
     {
       title: "Nomad List Founder (Pieter Levels, 2024)",
       href: "https://levels.io/nomad-list-founder",
-      note: "Levels&rsquo; own account of how Nomad List grew to $20-40k/month via organic search and product design",
+      note: "Levels’ own account of how Nomad List grew to $20-40k/month via organic search and product design",
     },
     {
       title: "MAKE: The Indie Maker Handbook (Pieter Levels, 2019)",
@@ -48,7 +48,7 @@ const spec: LectureSpec = {
   followups: [
     "Outcome: Create, Design a topic cluster for your product: 1 lighthouse article title (targeting a high-intent query) and 8 supporting page titles. Write the URL template you would use if you were building a programmatic SEO system.",
     "Outcome: Apply, Verify Google Search Console for your domain and submit your sitemap. Screenshot the GSC dashboard showing your current impressions and average position. If you have zero data, write what you expect the first query impressions to be and why.",
-    "Outcome: Analyze, Pull your GSC data (or estimate from week 5 traffic). Write the search-console funnel: impressions &rarr; clicks &rarr; activation. Where is the biggest drop? Name one change you could make to the next piece of content to improve the weakest step.",
+    "Outcome: Analyze, Pull your GSC data (or estimate from week 5 traffic). Write the search-console funnel: impressions → clicks → activation. Where is the biggest drop? Name one change you could make to the next piece of content to improve the weakest step.",
   ],
 };
 

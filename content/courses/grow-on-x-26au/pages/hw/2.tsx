@@ -19,7 +19,7 @@ const spec: ProjectSpec = {
     "Produce a tracking sheet that records format, opener pattern, and four engagement metrics per post",
   ],
   background: [
-    "Three bodies of work underpin this assignment. First, Nicholas Cole&rsquo;s Rate of Revelation (Cole 2021): the reader decides whether to keep reading in the first line, and the fastest way to calibrate your first lines is to publish many of them and observe which earn a second click. Second, the six opener patterns catalogued by Dickie Bush and Nicholas Cole in their Ship 30 for 30 essay series (Bush and Cole 2020): strong declarative, thought-provoking question, controversial opinion, moment in time, vulnerable statement, and weird or unique insight. Each pattern activates a different reader reflex, and the tracking sheet in this assignment lets you compare their performance directly. Third, the single-post anatomy described by Tom Welsh (Welsh 2022): one idea per post, a concrete claim in the first line, no filler sentences, and an ending that either answers the claim or raises a harder question. Long-form posts follow the same discipline at greater length, and Metricool&rsquo;s 2024 X study found that posts above roughly 1,000 characters outperform threads in raw reach, making them a format worth testing alongside shorter formats.",
+    "Three bodies of work underpin this assignment. First, Nicholas Cole’s Rate of Revelation (Cole 2021): the reader decides whether to keep reading in the first line, and the fastest way to calibrate your first lines is to publish many of them and observe which earn a second click. Second, the six opener patterns catalogued by Dickie Bush and Nicholas Cole in their Ship 30 for 30 essay series (Bush and Cole 2020): strong declarative, thought-provoking question, controversial opinion, moment in time, vulnerable statement, and weird or unique insight. Each pattern activates a different reader reflex, and the tracking sheet in this assignment lets you compare their performance directly. Third, the single-post anatomy described by Tom Welsh (Welsh 2022): one idea per post, a concrete claim in the first line, no filler sentences, and an ending that either answers the claim or raises a harder question. Long-form posts follow the same discipline at greater length, and Metricool’s 2024 X study found that posts above roughly 1,000 characters outperform threads in raw reach, making them a format worth testing alongside shorter formats.",
   ],
   instructions: [
     {
@@ -36,10 +36,10 @@ const spec: ProjectSpec = {
       title: "Schedule twenty posts across the seven days",
       body: "Mix formats deliberately. Do not publish twenty single posts; do not publish twenty threads. Spread the load so you have data across all four formats by the time Week 5 arrives.",
       steps: [
-        "12 single posts (one idea each, under 280 characters, following Welsh&rsquo;s anatomy: concrete claim in line one, no filler, a payoff in the final line)",
+        "12 single posts (one idea each, under 280 characters, following Welsh’s anatomy: concrete claim in line one, no filler, a payoff in the final line)",
         "3 threads (each 5-9 posts, structured per Bush and Cole: lead-in tweet, numbered body posts, TL;DR post, CTA post)",
         "3 quote posts (find a post by someone else in your niche, quote it with 1-3 sentences of your own take; the take must add information, not just agree)",
-        "2 long-form posts (use X&rsquo;s 25,000-character capacity; from Metricool&rsquo;s 2024 X study, long-form outperforms threads in reach; aim for 800-1,500 characters minimum and treat each paragraph as its own payoff unit)",
+        "2 long-form posts (use X’s 25,000-character capacity; from Metricool’s 2024 X study, long-form outperforms threads in reach; aim for 800-1,500 characters minimum and treat each paragraph as its own payoff unit)",
       ],
     },
     {
@@ -95,13 +95,13 @@ const spec: ProjectSpec = {
       dimension: "Reflection shows real reading of own data",
       points: 10,
       notes:
-        "Specific observations tied to actual numbers from the sheet. Vague claims (&ldquo;I learned a lot&rdquo;, &ldquo;it was challenging&rdquo;) earn at most 5 points.",
+        "Specific observations tied to actual numbers from the sheet. Vague claims (“I learned a lot”, “it was challenging”) earn at most 5 points.",
     },
   ],
   hints: [
     "Generate 40+ ideas first, then choose the 20 you would actually publish. A wide idea pool is the only way to hit the format mix without forcing a post you do not believe in.",
     "Quote posts are not lazy. Quoting a thoughtful take by someone with a larger following than yours and adding two sentences of your own is one of the cheapest ways to test an opener pattern with a built-in audience.",
-    "Long-form posts reach further on X than they used to. Metricool&rsquo;s 2024 X study found long-form outperforms threads in raw reach. Write at least one long-form post early in the week so you have 24-hour data before the window closes.",
+    "Long-form posts reach further on X than they used to. Metricool’s 2024 X study found long-form outperforms threads in raw reach. Write at least one long-form post early in the week so you have 24-hour data before the window closes.",
     "If you blank mid-week, take three ideas from your tracking sheet that got zero engagement and rewrite them with a different opener pattern. Same idea, new first line. This is not cheating; it is what Cole (2021) calls calibration.",
     "Do not edit a post after publishing to chase better numbers. Edit before you publish, then let it run. Your tracking sheet captures the result of the decision you made, not the decision you wished you had made.",
     "Threads count as one post in the mix. If you write a thread on day one and it performs poorly, resist the urge to fill the rest of the week with single posts only. The format data matters to Week 5 even if the thread flopped.",

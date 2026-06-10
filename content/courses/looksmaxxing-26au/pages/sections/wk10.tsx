@@ -4,7 +4,7 @@ export function Wk10Section() {
   return (
     <div>
       <h1>Section 10: Demo day and twelve-week plan</h1>
-      <p className="fs-6 fw-300">Week 10 &middot; Hands-on worksheet</p>
+      <p className="fs-6 fw-300">Week 10 · Hands-on worksheet</p>
 
       <p>
         This is the final section of the course. You will present your
@@ -47,7 +47,7 @@ export function Wk10Section() {
           <strong>Name one thing that stalled and why.</strong> Every plan
           breaks somewhere. Name where yours broke. A plausible honest
           explanation (schedule, injury, barrier impaired, forgot) is more
-          useful than &ldquo;I could have done better.&rdquo;
+          useful than “I could have done better.”
         </li>
         <li>
           <strong>Peer feedback.</strong> The listener gives one observation
@@ -70,15 +70,15 @@ export function Wk10Section() {
           <strong>Walk through each pillar.</strong> For each of the eight rows
           in your plan (skin, hair, body, dental, style, posture, sleep, mental
           health), state the one habit you are committing to and the specific
-          behavior: when it happens, how often, and what &ldquo;done&rdquo;
+          behavior: when it happens, how often, and what “done”
           looks like for the week.
         </li>
         <li>
           <strong>Name the anchor habit for each pillar.</strong> Per the Fogg
           (2021) framework, every new behavior needs a prompt. For each pillar,
-          identify the existing routine it attaches to. &ldquo;After I brush
-          my teeth at night, I apply tretinoin&rdquo; is an anchor.
-          &ldquo;I will do it at some point in the evening&rdquo; is not.
+          identify the existing routine it attaches to. “After I brush
+          my teeth at night, I apply tretinoin” is an anchor.
+          “I will do it at some point in the evening” is not.
         </li>
         <li>
           <strong>State your quarterly review date.</strong> This is a
@@ -112,8 +112,8 @@ export function Wk10Section() {
         <li>
           <strong>What single change over ten weeks had the highest
           return for the time it cost?</strong> Name the pillar and be specific.
-          &ldquo;Sunscreen&rdquo; is specific enough. &ldquo;Taking care of
-          myself&rdquo; is not.
+          “Sunscreen” is specific enough. “Taking care of
+          myself” is not.
         </li>
         <li>
           <strong>What surprised you about your own tracking data?</strong>

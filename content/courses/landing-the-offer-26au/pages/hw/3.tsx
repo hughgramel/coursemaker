@@ -15,7 +15,7 @@ const spec: ProjectSpec = {
     "Demonstrate edge-case enumeration by naming cases before coding, not after.",
     "Critique your own communication against observable evidence in the recording.",
     "Evaluate your performance against a structured four-criteria rubric.",
-    "Identify your personal hint pattern: do you wait too long, jump ahead, or miss the interviewer&rsquo;s signal entirely?",
+    "Identify your personal hint pattern: do you wait too long, jump ahead, or miss the interviewer’s signal entirely?",
     "Build comfort with being recorded so the camera stops being a source of performance anxiety.",
   ],
   instructions: [
@@ -35,7 +35,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Narrate the entire session",
-      body: "From the moment you start thinking until you write the last line, speak. Name every data structure you consider and say why you are choosing or rejecting it. Read your code aloud as you type it. When you hit a bug, describe what you expected versus what you see. Silence longer than ten seconds is a red flag; use filler narration (&ldquo;I&rsquo;m thinking through the loop invariant here&rdquo;) rather than going quiet.",
+      body: "From the moment you start thinking until you write the last line, speak. Name every data structure you consider and say why you are choosing or rejecting it. Read your code aloud as you type it. When you hit a bug, describe what you expected versus what you see. Silence longer than ten seconds is a red flag; use filler narration (“I’m thinking through the loop invariant here”) rather than going quiet.",
     },
     {
       title: "Record the session",
@@ -43,12 +43,12 @@ const spec: ProjectSpec = {
     },
     {
       title: "Score yourself against the four-criteria rubric",
-      body: "After the session, watch the full recording once without pausing. On the second pass, pause and score each of the four criteria on a 1&ndash;4 scale: problem-solving (did you reach a working solution?), code quality (readable names, correct logic, no dead code), communication (did you narrate continuously and answer questions promptly?), and optimality (did you discuss time and space complexity and reach a reasonable solution?). The Cl&eacute;ment Mihailescu grading rubric (https://www.youtube.com/watch?v=rEJzOhC5ZtQ) and the Tech Interview Handbook coding best practices (https://www.techinterviewhandbook.org/coding-interview-techniques/) are useful references for calibrating each score.",
+      body: "After the session, watch the full recording once without pausing. On the second pass, pause and score each of the four criteria on a 1-4 scale: problem-solving (did you reach a working solution?), code quality (readable names, correct logic, no dead code), communication (did you narrate continuously and answer questions promptly?), and optimality (did you discuss time and space complexity and reach a reasonable solution?). The Clément Mihailescu grading rubric (https://www.youtube.com/watch?v=rEJzOhC5ZtQ) and the Tech Interview Handbook coding best practices (https://www.techinterviewhandbook.org/coding-interview-techniques/) are useful references for calibrating each score.",
       steps: [
-        "Problem-solving (1&ndash;4): did you reach a correct, working solution within time?",
-        "Code quality (1&ndash;4): clean variable names, no unexplained dead code, correct edge-case handling in the implementation.",
-        "Communication (1&ndash;4): narration was continuous, clarifying questions were asked upfront, no long silences.",
-        "Optimality (1&ndash;4): you discussed time and space complexity and moved toward a better solution when the brute force was identified.",
+        "Problem-solving (1-4): did you reach a correct, working solution within time?",
+        "Code quality (1-4): clean variable names, no unexplained dead code, correct edge-case handling in the implementation.",
+        "Communication (1-4): narration was continuous, clarifying questions were asked upfront, no long silences.",
+        "Optimality (1-4): you discussed time and space complexity and moved toward a better solution when the brute force was identified.",
       ],
     },
     {
@@ -69,7 +69,7 @@ const spec: ProjectSpec = {
     { dimension: "Polish", points: 10, notes: "Submission is complete, links work, the peer rubric is filled out by the interviewer, and the retrospective meets the word count." },
   ],
   hints: [
-    "The Cl&eacute;ment Mihailescu grading rubric (https://www.youtube.com/watch?v=rEJzOhC5ZtQ) is a practical calibration tool. Watch it before you score yourself so you know what a 4 looks like.",
+    "The Clément Mihailescu grading rubric (https://www.youtube.com/watch?v=rEJzOhC5ZtQ) is a practical calibration tool. Watch it before you score yourself so you know what a 4 looks like.",
     "The Tech Interview Handbook coding best practices section (https://www.techinterviewhandbook.org/coding-interview-techniques/) maps directly to the code quality criterion. Read it before the session.",
     "Do not redo the recording if you did not finish the problem. A clean, well-narrated incomplete solution is a better artifact than a silent, re-recorded correct one.",
     "If you use Pramp, download your recording immediately after the session. Pramp retention windows are short.",

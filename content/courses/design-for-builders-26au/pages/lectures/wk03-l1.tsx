@@ -29,7 +29,7 @@ const spec: LectureSpec = {
   followups: [
     "Find two typefaces on Google Fonts: one with a large x-height and one with a small x-height. Set both at 16px body size in Figma. Which one reads larger? Measure the cap height in pixels and compare.",
     "Hoffmann (2022) names six variables for typographic hierarchy: proximity/space, weight, size, combined size and weight, color, and visual punctuation. Find a real product homepage and identify which three variables it uses most. Which one is missing?",
-    "Describe the &ldquo;voice&rdquo; of a humanist sans-serif versus a geometric sans-serif in your own words. Name one product brand that fits each and justify the match using at least one anatomical term from the lecture.",
+    "Describe the “voice” of a humanist sans-serif versus a geometric sans-serif in your own words. Name one product brand that fits each and justify the match using at least one anatomical term from the lecture.",
     "Segall (2024) walks through choosing a typeface by first identifying brand voice, then searching Google Fonts by classification. Apply that sequence to your own product. What three adjectives describe your brand voice? Which two Google Font categories are most consistent with those adjectives?",
     "A typeface has high stroke contrast (thick verticals, thin horizontals) and a pronounced diagonal stress axis. Is it more likely to be a humanist serif, a transitional serif, or a geometric sans? Explain why the stress axis gives you that information.",
   ],

@@ -15,7 +15,7 @@ const spec: ProjectSpec = {
     "Convert a memoized top-down solution to a bottom-up tabulation and state the space complexity of each",
     "Enumerate at least three edge cases for a DP problem before starting to code",
     "Narrate a 20-minute problem-solving session aloud, keeping the interviewer informed at each decision point",
-    "Give structured feedback on a peer&rsquo;s recorded solve using the communication rubric from Lecture 2",
+    "Give structured feedback on a peer’s recorded solve using the communication rubric from Lecture 2",
     "Receive feedback and identify the single highest-leverage improvement for your own communication",
   ],
   instructions: [
@@ -50,7 +50,7 @@ const spec: ProjectSpec = {
         "Think-aloud continuity: were there silences longer than 30 seconds? What happened just before each silence?",
         "Edge-case coverage: which edge cases were named, and which were missed? Were any cases checked redundantly?",
         "Recovery behavior: when the candidate got stuck (and most do), what did they do? Did the strategy work?",
-        "Each dimension gets one specific &ldquo;strength&rdquo; observation and one specific &ldquo;change&rdquo; suggestion.",
+        "Each dimension gets one specific “strength” observation and one specific “change” suggestion.",
       ],
     },
     {

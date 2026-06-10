@@ -23,10 +23,10 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Basilio (2024) describes Sahil Bloom&rsquo;s WhatsApp group of creators with 15-40k followers who amplify each other&rsquo;s work. What distinguishes that from an engagement pod? What would make it cross the line?",
-    "The &ldquo;friendly-cluster effect&rdquo; says that being seen in the replies of accounts your audience already follows increases your discoverability. Pick three accounts your target audience likely follows. Write one reply to each that adds value without being promotional.",
-    "A quote-post chain gives each participant shared reach: your followers see the chain, and so do the original poster&rsquo;s followers. Describe a topic in your niche where a collaborative thread would work well. Who would you invite, and in what order?",
-    "Basilio (2024) notes &ldquo;the creators who win are not the ones building in silence by themselves.&rdquo; Yet many creators in technical or academic niches fear that networking looks performative. How would you join a real reciprocal network without compromising the signal of your content?",
+    "Basilio (2024) describes Sahil Bloom’s WhatsApp group of creators with 15-40k followers who amplify each other’s work. What distinguishes that from an engagement pod? What would make it cross the line?",
+    "The “friendly-cluster effect” says that being seen in the replies of accounts your audience already follows increases your discoverability. Pick three accounts your target audience likely follows. Write one reply to each that adds value without being promotional.",
+    "A quote-post chain gives each participant shared reach: your followers see the chain, and so do the original poster’s followers. Describe a topic in your niche where a collaborative thread would work well. Who would you invite, and in what order?",
+    "Basilio (2024) notes “the creators who win are not the ones building in silence by themselves.” Yet many creators in technical or academic niches fear that networking looks performative. How would you join a real reciprocal network without compromising the signal of your content?",
     "There are moments when staying quiet is the right move: when a controversy is outside your niche, when you lack the context to add value, when engaging could mislead your audience. Name one recent public X discussion where participating would have hurt more than helped for a creator in your niche.",
   ],
 };

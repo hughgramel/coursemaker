@@ -37,10 +37,10 @@ const spec: ProjectSpec = {
       title: "Finalize the brand sheet (Week 8)",
       body: "Pull your HW4 brand sheet forward and finish it. The brand sheet is the contract the rest of the package must honor. Every color in every other artifact must trace back to the palette here. Every weight and size must trace back to the type scale here.",
       steps: [
-        "Logo lockup: wordmark or mark-plus-wordmark, in primary, on white, and on the brand&rsquo;s darkest background. All three must pass WCAG AA at the sizes they will actually appear.",
+        "Logo lockup: wordmark or mark-plus-wordmark, in primary, on white, and on the brand’s darkest background. All three must pass WCAG AA at the sizes they will actually appear.",
         "Color palette: primary, secondary, surface, and semantic colors (success, warning, destructive). Each swatch labeled with its token name, its OKLCH or HSL source value, and its hex for developer reference.",
         "Type scale: body, body-sm, label, heading-sm, heading-md, heading-lg, and display. Each entry shows the font family, weight, size in rem, line-height, and letter-spacing. One typeface, used everywhere.",
-        "Voice sample: two to three sentences in your product&rsquo;s voice. This is the copy standard the landing page headline must match.",
+        "Voice sample: two to three sentences in your product’s voice. This is the copy standard the landing page headline must match.",
       ],
     },
     {
@@ -57,7 +57,7 @@ const spec: ProjectSpec = {
       title: "Design the five app screens (Week 9)",
       body: "Design five connected screens for your product at 390 wide (iPhone 16 canvas). Every screen uses the brand palette and type scale from the brand sheet. Every interactive element uses a component from your starter kit, updated to match the final brand.",
       steps: [
-        "Home screen: primary navigation, the user&rsquo;s most important at-a-glance information, and the path to the primary task. One primary action visible without scrolling.",
+        "Home screen: primary navigation, the user’s most important at-a-glance information, and the path to the primary task. One primary action visible without scrolling.",
         "Primary task screen: the screen where the user does the thing your product exists to do. This is the most important screen in the package. Hierarchy must be correct here first.",
         "Success state: the screen or overlay the user sees after completing the primary task. This is where you can use color expressively because the message is unambiguous.",
         "Empty state: the home or primary task screen before the user has any data. Every field, list, and dashboard has an empty state. Designing it here means your product never shows a blank white rectangle.",
@@ -71,7 +71,7 @@ const spec: ProjectSpec = {
         "Screenshot 1 must state the core value proposition in eight words or fewer. This is the screenshot a user sees first.",
         "Screenshots 2 through 5 each cover one feature. Write the headline first, then choose the app screen that supports it. Never choose the screen first.",
         "Use the brand background color as the screenshot background. Do not use gradients or textures that were not on the brand sheet.",
-        "Export at 2x minimum. Add an artboard named &ldquo;Screenshots at thumbnail&rdquo; where all five are placed at 10% scale so you can see how they read in search.",
+        "Export at 2x minimum. Add an artboard named “Screenshots at thumbnail” where all five are placed at 10% scale so you can see how they read in search.",
       ],
     },
     {
@@ -121,12 +121,12 @@ const spec: ProjectSpec = {
     { dimension: "Demo day presentation", points: 15, notes: "Three-minute limit respected. Product, design system, and artifacts addressed. At least one design decision named with vocabulary from the course on each of the five app screens." },
   ],
   hints: [
-    "Build a master Figma page called &ldquo;Navigation&rdquo; at the front of the file with one annotated frame linking to each artifact section. The person grading your file should not have to hunt.",
+    "Build a master Figma page called “Navigation” at the front of the file with one annotated frame linking to each artifact section. The person grading your file should not have to hunt.",
     "Use Figma sections (not just frames) to group each artifact. Sections collapse in the layers panel, which makes a file with 30-plus frames navigable.",
     "Test the favicon in a real browser tab before demo day. Add it to a local HTML file with a link tag and open it. The thumbnail test in Figma is useful but not the same as 16 pixels in Chrome.",
     "Test the App Store screenshots by exporting at 10% and viewing the exported PNG at 100% zoom. If you need to zoom in to read the headline, the headline is too small or too light.",
-    "The empty state is not a blank screen with a gray rectangle. It is a screen that answers the question &ldquo;what do I do next?&rdquo; with a clear visual and a primary action.",
-    "Record yourself doing the three-minute demo once before demo day. Play it back. You will notice at least two places where you said &ldquo;and then&rdquo; three times in a row, which means you are narrating rather than presenting. Cut those passages.",
+    "The empty state is not a blank screen with a gray rectangle. It is a screen that answers the question “what do I do next?” with a clear visual and a primary action.",
+    "Record yourself doing the three-minute demo once before demo day. Play it back. You will notice at least two places where you said “and then” three times in a row, which means you are narrating rather than presenting. Cut those passages.",
     "Name tokens before you build screens, not after. Tokens named after the fact are almost always named after their visual value (--blue-dark) rather than their role (--color-text-on-brand). The file is harder to hand off as a result.",
     "The same component that appears on the landing page must be the same Figma component that appears in the app. If you have two versions of the same button, you have two brand systems fighting each other. Pick one and detach the other.",
     "Restraint applies to the token file too. Every token in tokens.css should appear in at least two places in the Figma file. A token that appears once is a hard-coded value with extra steps.",

@@ -72,7 +72,7 @@ const spec: ProjectSpec = {
       dimension: "Debrief quality: specific, honest, action-oriented",
       points: 30,
       notes:
-        "Each debrief answers all four questions. &ldquo;I ran out of time&rdquo; is not an acceptable answer to question 3 without identifying the specific step",
+        "Each debrief answers all four questions. “I ran out of time” is not an acceptable answer to question 3 without identifying the specific step",
     },
     {
       dimension: "Group debrief: three consensus sentences produced",

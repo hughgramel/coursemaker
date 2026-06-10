@@ -8,7 +8,7 @@ const spec: LectureSpec = {
   topics: [
     "Why commenting matters more than posting at zero followers: borrowed distribution explained",
     "Picking targets: accounts 10x-100x your size, same niche, active comment sections",
-    "Manual outreach: Paul Graham&rsquo;s &ldquo;do things that don&rsquo;t scale&rdquo; applied to creator growth",
+    "Manual outreach: Paul Graham’s “do things that don’t scale” applied to creator growth",
     "Reply patterns that generate profile clicks: specific, additive, not sycophantic",
     "DMs and follow-firsts: how to reach out without making it weird",
   ],
@@ -19,15 +19,15 @@ const spec: LectureSpec = {
       href: "/c/grow-on-x-26au/readings/wk03",
     },
     {
-      title: "Paul Graham: Do Things that Don&rsquo;t Scale (2013)",
+      title: "Paul Graham: Do Things that Don’t Scale (2013)",
       href: "https://paulgraham.com/ds.html",
     },
   ],
   followups: [
     "Graham (2013) says the most common unscalable thing founders do at the start is recruit users manually. Translate that to creator growth: what is the exact creator equivalent of manual user recruitment?",
-    "Write two replies to the same hypothetical post: one that is sycophantic (&ldquo;great point!&rdquo;), one that adds genuine value. Identify what makes the second one likely to generate a profile click.",
+    "Write two replies to the same hypothetical post: one that is sycophantic (“great point!”), one that adds genuine value. Identify what makes the second one likely to generate a profile click.",
     "A creator in your niche has 25,000 followers and posts regularly. Write a DM you would actually send them. Then rewrite it after removing any line that could be read as asking for something.",
-    "At zero followers, every post you publish reaches near-zero people cold. Replying to a 20,000-follower account&rsquo;s post exposes your name to that account&rsquo;s audience. Estimate the reach difference in orders of magnitude.",
+    "At zero followers, every post you publish reaches near-zero people cold. Replying to a 20,000-follower account’s post exposes your name to that account’s audience. Estimate the reach difference in orders of magnitude.",
     "The reading describes the reply-to-follow funnel. Identify the step in that funnel where you have the most control right now. What would you optimize first?",
   ],
 };

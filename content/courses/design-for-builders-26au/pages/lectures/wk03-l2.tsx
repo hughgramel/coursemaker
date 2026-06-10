@@ -18,11 +18,11 @@ const spec: LectureSpec = {
       href: "/c/design-for-builders-26au/readings/wk03",
     },
     {
-      title: "Butterick&rsquo;s Practical Typography: line spacing",
+      title: "Butterick’s Practical Typography: line spacing",
       href: "https://practicaltypography.com/line-spacing.html",
     },
     {
-      title: "Refactoring UI: line-height is proportional (Wathan &amp; Schoger 2019)",
+      title: "Refactoring UI: line-height is proportional (Wathan & Schoger 2019)",
       href: "https://refactoringui.com/previews/line-height-is-proportional",
     },
     {
@@ -32,10 +32,10 @@ const spec: LectureSpec = {
   ],
   followups: [
     "Build a five-step type scale in Figma using a 1.25 ratio (Major Third) starting at 16px. What are the five sizes? Now build a second scale using 1.333 (Perfect Fourth) from the same base. At which step do the two scales diverge enough to make a visible difference in a real UI?",
-    "Butterick (2019) says optimal line-height is 120-145% of point size. Wathan &amp; Schoger (2019) add that narrow layouts can use tighter leading and wide layouts need more. Set a paragraph at 16px with three different line-heights: 1.2, 1.5, and 1.75. Which one reads best at 60ch measure? At 35ch?",
-    "The measure rule says 45-75 characters per line. In CSS, &ldquo;1ch&rdquo; equals the width of the &ldquo;0&rdquo; character. Set a text block to &ldquo;max-width: 65ch&rdquo; in a browser. Does the actual character count per line match 65? If not, why might it vary?",
+    "Butterick (2019) says optimal line-height is 120-145% of point size. Wathan & Schoger (2019) add that narrow layouts can use tighter leading and wide layouts need more. Set a paragraph at 16px with three different line-heights: 1.2, 1.5, and 1.75. Which one reads best at 60ch measure? At 35ch?",
+    "The measure rule says 45-75 characters per line. In CSS, “1ch” equals the width of the “0” character. Set a text block to “max-width: 65ch” in a browser. Does the actual character count per line match 65? If not, why might it vary?",
     "Choose two typefaces for a product you work on. One should be the body face, one the display face. Using the terms from this week, write 3-4 sentences justifying the pairing: what contrast strategy did you use (serif/sans, geometric/humanist, high-contrast/low-contrast), and what shared characteristic keeps them from clashing?",
-    "Wathan &amp; Schoger (2019) show that small text needs more leading than large text. Explain why, using the concept of x-height from Lecture 1. A headline at 48px and body text at 14px: which needs a higher line-height ratio? Show the numbers.",
+    "Wathan & Schoger (2019) show that small text needs more leading than large text. Explain why, using the concept of x-height from Lecture 1. A headline at 48px and body text at 14px: which needs a higher line-height ratio? Show the numbers.",
   ],
 };
 

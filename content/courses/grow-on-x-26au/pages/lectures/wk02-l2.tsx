@@ -7,7 +7,7 @@ const spec: LectureSpec = {
   week: 2,
   topics: [
     "The single post: tight argument, one idea, payoff in under 280 characters",
-    "The thread: when sequence earns the click on &ldquo;show more&rdquo;",
+    "The thread: when sequence earns the click on “show more”",
     "Quote posts and replies as first-class formats with their own reach mechanics",
     "Images, screenshots, and the one-graph rule: one visual, one point",
   ],
@@ -34,7 +34,7 @@ const spec: LectureSpec = {
     "Look at your last five posts. Which format did you use each time? Was the format the right fit for the idea, or did the idea outgrow (or underuse) the format you chose?",
     "Bush and Cole (2022) say to test an idea as a single tweet before expanding it into a thread. What engagement signal would tell you the idea has earned the expansion?",
     "Describe a topic where a thread is the wrong format and a single post is the right one. What property of the idea makes the single post sufficient?",
-    "A quote post can amplify, critique, or add context to another account&rsquo;s post. Give one example of each use that would fit your niche without seeming opportunistic.",
+    "A quote post can amplify, critique, or add context to another account’s post. Give one example of each use that would fit your niche without seeming opportunistic.",
     "The one-graph rule says one visual communicates one point. Find a post that violates this rule. What would you cut to bring it into compliance?",
   ],
 };

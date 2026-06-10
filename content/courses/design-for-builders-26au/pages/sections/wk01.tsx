@@ -7,7 +7,7 @@ const spec: ProjectSpec = {
     "Reverse-engineer a real public design using auto-layout and components before you design anything original.",
   outDate: "Week 1",
   overview: [
-    "The fastest way to learn Figma&rsquo;s layout system is to copy something that already works. This section asks you to pick a public landing-page section, study it closely, and rebuild it in Figma using auto-layout and at least one component. You are not redesigning or improving it. You are matching it as closely as you can.",
+    "The fastest way to learn Figma’s layout system is to copy something that already works. This section asks you to pick a public landing-page section, study it closely, and rebuild it in Figma using auto-layout and at least one component. You are not redesigning or improving it. You are matching it as closely as you can.",
     "Pixel-matching is an underrated learning technique. When you try to reproduce a specific outcome rather than create something original, you are forced to confront every decision the original designer made. Why is that gap 24px and not 16px? Why does the card hug its content vertically but fill the container horizontally? These are the questions that build genuine Figma fluency.",
     "You will bring your file to section for a short peer review. Each pair will compare how they structured their auto-layout frames, discuss what was hard, and identify one thing they would do differently now.",
   ],
@@ -25,7 +25,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Set up your file",
-      body: "Create a new Figma file named &ldquo;WK01 Section &mdash; [Your name]&rdquo;. Use the four-page structure from Lecture 2: cover, flows, components, archive. Your rebuild goes on the &ldquo;flows&rdquo; page. Paste your reference screenshot on the canvas outside the frame so you can compare as you work. Set your top-level frame to the same width as the source (1440px for most desktop sites, 390px for mobile-first designs).",
+      body: "Create a new Figma file named “WK01 Section ,  [Your name]”. Use the four-page structure from Lecture 2: cover, flows, components, archive. Your rebuild goes on the “flows” page. Paste your reference screenshot on the canvas outside the frame so you can compare as you work. Set your top-level frame to the same width as the source (1440px for most desktop sites, 390px for mobile-first designs).",
     },
     {
       title: "Trace the layout structure",
@@ -37,7 +37,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Extract a component",
-      body: "Identify the most-repeated element in your section (a feature card, a pricing column, a testimonial block). Build one instance until it matches the reference, then press Cmd+Alt+K (Mac) or Ctrl+Alt+K (Windows) to create a component from it. Duplicate the main component to create the other instances. Any change to the main component should propagate to all instances. Name the component using the slash convention from Lecture 2 (e.g. &ldquo;FeatureCard/Default&rdquo;).",
+      body: "Identify the most-repeated element in your section (a feature card, a pricing column, a testimonial block). Build one instance until it matches the reference, then press Cmd+Alt+K (Mac) or Ctrl+Alt+K (Windows) to create a component from it. Duplicate the main component to create the other instances. Any change to the main component should propagate to all instances. Name the component using the slash convention from Lecture 2 (e.g. “FeatureCard/Default”).",
     },
     {
       title: "Check resizing behavior",
@@ -49,7 +49,7 @@ const spec: ProjectSpec = {
     },
   ],
   deliverables: [
-    "A Figma file shared via &ldquo;anyone with the link can view&rdquo; with the four-page structure in place",
+    "A Figma file shared via “anyone with the link can view” with the four-page structure in place",
     "A rebuild of the chosen landing-page section using auto-layout, with no absolute positioning except for intentional overlapping elements",
     "At least one named component following the slash naming convention",
     "A reference screenshot of the source section on the canvas next to your rebuild",
@@ -84,7 +84,7 @@ const spec: ProjectSpec = {
       dimension: "Section participation",
       points: 10,
       notes:
-        "Brings file to section, gives one concrete observation on a peer&rsquo;s auto-layout structure during review.",
+        "Brings file to section, gives one concrete observation on a peer’s auto-layout structure during review.",
     },
   ],
   hints: [

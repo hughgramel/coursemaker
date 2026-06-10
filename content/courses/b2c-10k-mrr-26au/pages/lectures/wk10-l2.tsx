@@ -36,7 +36,7 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Outcome: Analyze, Map your current growth motion onto Lenny&rsquo;s Racecar framework. Which of the five components (kickstart, engine, lubricant, turbo boost, accelerant) is your strongest? Which is entirely absent?",
+    "Outcome: Analyze, Map your current growth motion onto Lenny’s Racecar framework. Which of the five components (kickstart, engine, lubricant, turbo boost, accelerant) is your strongest? Which is entirely absent?",
     "Outcome: Evaluate, Write the one sentence that describes the graduate-to-compound move available to your specific product right now: a lifecycle sequence you could build, a programmatic SEO cluster you could seed, or a brand moment you could own. What is the 30-day version of that move?",
     "Outcome: Create, Complete your path-to-$10k-MRR plan card: current MRR, the single intervention, the metric you will move, the target, and the rollback criterion. This is the document you defend Friday.",
   ],

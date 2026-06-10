@@ -13,7 +13,7 @@ const spec: ProjectSpec = {
     "HW 2 (twenty posts) is due this week. Bring your post log and this section worksheet to class.",
   ],
   goals: [
-    "Execute a real &ldquo;engagement velocity&rdquo; experiment by replying inside the first hour of a post&rsquo;s life",
+    "Execute a real “engagement velocity” experiment by replying inside the first hour of a post’s life",
     "Distinguish reply patterns that generate profile clicks from those that generate nothing",
     "Write a DM that offers value before asking for anything",
     "Track profile-click data and connect it to specific reply quality",
@@ -30,7 +30,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Write one substantive reply per account",
-      body: "When each target posts, reply within 60 minutes. The reply must do one of the following: add a specific data point or example the original post did not include; respectfully complicate one of the claims; answer a question the original post implicitly asked. Length: 2-4 sentences is enough. Do not write &ldquo;great point&rdquo; or any variant. Record the post URL and the exact text of your reply.",
+      body: "When each target posts, reply within 60 minutes. The reply must do one of the following: add a specific data point or example the original post did not include; respectfully complicate one of the claims; answer a question the original post implicitly asked. Length: 2-4 sentences is enough. Do not write “great point” or any variant. Record the post URL and the exact text of your reply.",
       steps: [
         "Specific addition: cite a number, name, or example the original post omitted",
         "Complication: name one condition under which the claim does not hold",
@@ -44,7 +44,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Track profile clicks the next day",
-      body: "24 hours after each reply, open X Analytics (analytics.twitter.com) and record your profile-click count for that day. Compare it to your baseline from the previous week&rsquo;s average. Note which replies, if any, you can trace to a spike.",
+      body: "24 hours after each reply, open X Analytics (analytics.twitter.com) and record your profile-click count for that day. Compare it to your baseline from the previous week’s average. Note which replies, if any, you can trace to a spike.",
     },
     {
       title: "Write a short debrief",

@@ -32,7 +32,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Observe the reply pattern",
-      body: "Scroll through the account&rsquo;s recent replies (the &ldquo;Replies&rdquo; tab). Does this account reply to comments on its own posts? Does it reply to others in the niche? Replies are often where the shadow audience becomes visible. Note whether the account treats replies as a growth channel or ignores them.",
+      body: "Scroll through the account’s recent replies (the “Replies” tab). Does this account reply to comments on its own posts? Does it reply to others in the niche? Replies are often where the shadow audience becomes visible. Note whether the account treats replies as a growth channel or ignores them.",
     },
     {
       title: "Estimate posting cadence",
@@ -40,7 +40,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Synthesize your findings",
-      body: "Write a short summary (150-250 words) covering: the two practices you will copy, the two you will avoid, and one thing that surprised you. End with a one-sentence niche statement for your own account in the form: &ldquo;I help [specific person] do [specific thing] by [specific method].&rdquo;",
+      body: "Write a short summary (150-250 words) covering: the two practices you will copy, the two you will avoid, and one thing that surprised you. End with a one-sentence niche statement for your own account in the form: “I help [specific person] do [specific thing] by [specific method].”",
     },
   ],
   deliverables: [
@@ -72,7 +72,7 @@ const spec: ProjectSpec = {
     },
   ],
   hints: [
-    "Use the &ldquo;Replies&rdquo; tab, not just the main feed. A creator who replies actively to their audience is doing something different from one who only broadcasts.",
+    "Use the “Replies” tab, not just the main feed. A creator who replies actively to their audience is doing something different from one who only broadcasts.",
     "Do not pick accounts purely by follower count. A highly engaged account at 8,000 followers is often more instructive than a coasting account at 200,000.",
     "If you cannot decide on a niche yet, pick a topic you are considering and audit that. The audit will either confirm or change your direction.",
     "The one-sentence niche statement will become the raw material for HW 1. Write it even if it feels wrong. You can revise it after section feedback.",

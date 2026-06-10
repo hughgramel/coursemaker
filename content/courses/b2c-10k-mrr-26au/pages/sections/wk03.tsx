@@ -10,7 +10,7 @@ export function Wk03SectionPage() {
     <ReadingPage
       id="wk03-section"
       title="Week 3 section: Pricing experiment"
-      kicker="B2C to $10k MRR &middot; Autumn 2026 &middot; Section"
+      kicker="B2C to $10k MRR · Autumn 2026 · Section"
     >
       <ReadingFraming>
         <p>
@@ -36,9 +36,9 @@ export function Wk03SectionPage() {
         <li>
           <strong>Model.</strong> Circle one: free / freemium / one-time / monthly
           subscription / annual subscription / hybrid. In one sentence, state the
-          rule that drove your choice (Tony Dinh&rsquo;s rule: &ldquo;if there are
-          no recurring costs to maintain the software, I don&rsquo;t charge recurring
-          costs&rdquo; is a valid model; so is the opposite).
+          rule that drove your choice (Tony Dinh’s rule: “if there are
+          no recurring costs to maintain the software, I don’t charge recurring
+          costs” is a valid model; so is the opposite).
         </li>
         <li>
           <strong>Anchor.</strong> State the exact price and the anchor you are
@@ -75,7 +75,7 @@ export function Wk03SectionPage() {
         write exactly three things: one thing you would not change, one thing
         you would change and why, and one question you would ask the founder
         before you changed anything. Post your critique in the shared doc next
-        to the author&rsquo;s brief.
+        to the author’s brief.
       </p>
       <ol>
         <li>
@@ -84,8 +84,8 @@ export function Wk03SectionPage() {
         </li>
         <li>
           <strong>Question the model (5 minutes).</strong> Does the model choice
-          follow from the stated rule? If the founder says &ldquo;subscription
-          because everyone does subscriptions,&rdquo; that is not a rule. Push for
+          follow from the stated rule? If the founder says “subscription
+          because everyone does subscriptions,” that is not a rule. Push for
           a falsifiable criterion.
         </li>
         <li>
@@ -109,20 +109,20 @@ export function Wk03SectionPage() {
       </p>
       <ol>
         <li>
-          <strong>Specific.</strong> &ldquo;I will change my price from $12/month
-          to $9/month&rdquo; is specific. &ldquo;I will think more about pricing&rdquo;
+          <strong>Specific.</strong> “I will change my price from $12/month
+          to $9/month” is specific. “I will think more about pricing”
           is not a commit.
         </li>
         <li>
           <strong>Shipped by Friday.</strong> The change must be live in your
-          product by Friday&rsquo;s review. If it cannot ship in four days, it
+          product by Friday’s review. If it cannot ship in four days, it
           is too big. Break it down.
         </li>
         <li>
           <strong>Measurable.</strong> State the one number you will look at on
           Friday to know whether the change worked. Acceptable: trial start
           rate, trial-to-paid rate, MRR delta, number of checkout page visits.
-          Not acceptable: &ldquo;feedback&rdquo; or &ldquo;feel.&rdquo;
+          Not acceptable: “feedback” or “feel.”
         </li>
       </ol>
       <p>
@@ -133,7 +133,7 @@ export function Wk03SectionPage() {
       <AnchorHeading as="h2" id="deliverables">Deliverables</AnchorHeading>
       <ul>
         <li>Your one-page pricing brief, posted in the shared doc before you leave.</li>
-        <li>Two written peer critiques, posted next to the author&rsquo;s brief.</li>
+        <li>Two written peer critiques, posted next to the author’s brief.</li>
         <li>One commit (specific change + Friday metric), recorded in the shared doc.</li>
       </ul>
     </ReadingPage>

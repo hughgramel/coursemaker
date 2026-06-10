@@ -14,7 +14,7 @@ const spec: ProjectSpec = {
     "Identify the Gestalt grouping mechanism (proximity, similarity, closure, or figure-ground) in at least one element per screenshot.",
     "Explain why your eye moves in the order it does through one screenshot, using visual hierarchy vocabulary.",
     "Receive a critique and revise one verbal description based on peer or instructor feedback.",
-    "Give one specific critique of a classmate&rsquo;s interface that uses the vocabulary from lecture.",
+    "Give one specific critique of a classmate’s interface that uses the vocabulary from lecture.",
   ],
   instructions: [
     {
@@ -44,7 +44,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Pair analysis (15 min)",
-      body: "With a partner, swap one screenshot each. Annotate your partner&rsquo;s screenshot using the same four questions above, then compare annotations. Look for disagreements: places where you called something a proximity group and they called it a similarity group, or where you thought the hierarchy was intentional and they thought it was accidental. Disagreements are the most interesting data.",
+      body: "With a partner, swap one screenshot each. Annotate your partner’s screenshot using the same four questions above, then compare annotations. Look for disagreements: places where you called something a proximity group and they called it a similarity group, or where you thought the hierarchy was intentional and they thought it was accidental. Disagreements are the most interesting data.",
     },
     {
       title: "Debrief (5 min)",
@@ -54,7 +54,7 @@ const spec: ProjectSpec = {
   deliverables: [
     "Three annotated screenshots with written answers to the four analysis questions.",
     "One revised annotation incorporating feedback from the pair or group critique.",
-    "One written critique of a classmate&rsquo;s screenshot using CRAP and Gestalt vocabulary.",
+    "One written critique of a classmate’s screenshot using CRAP and Gestalt vocabulary.",
   ],
   rubric: [
     { dimension: "Screenshots prepared and annotated before section", points: 20, notes: "All three questions answered for each screenshot. Partial credit if annotations are present but thin." },
@@ -67,8 +67,8 @@ const spec: ProjectSpec = {
     "If you struggle to name the eye-entry point, cover the screen and reveal it slowly from the top-left corner. The first element that demands your attention is the entry point.",
     "Alignment is harder to see on complex screens. Temporarily ignore color and content: does the layout still hold? If spacing feels inconsistent, you are likely looking at an alignment problem.",
     "When you disagree with a classmate about which Gestalt principle is operating, you are often both right. Proximity and similarity can reinforce each other or work against each other on the same element.",
-    "The &ldquo;confusing&rdquo; screenshot is usually the most instructive. Choose it for the volunteer critique if you can. The reason it is confusing is almost always a CRAP violation.",
-    "Refactoring UI (Wathan &amp; Schoger, 2018) shows that most amateur UI problems come down to lack of hierarchy, not lack of talent. When a layout feels off, look for contrast or proximity violations before looking for anything else.",
+    "The “confusing” screenshot is usually the most instructive. Choose it for the volunteer critique if you can. The reason it is confusing is almost always a CRAP violation.",
+    "Refactoring UI (Wathan & Schoger, 2018) shows that most amateur UI problems come down to lack of hierarchy, not lack of talent. When a layout feels off, look for contrast or proximity violations before looking for anything else.",
   ],
 };
 

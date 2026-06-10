@@ -21,7 +21,7 @@ const spec: ProjectSpec = {
   instructions: [
     {
       title: "Export your analytics (before section)",
-      body: "Go to analytics.twitter.com. Set the date range to the last 30 days. Screenshot or export the summary tab (total impressions, profile visits, new followers). Then open the &ldquo;Tweets&rdquo; tab and sort by impressions. Screenshot or copy the top 10 posts with their impression counts, link clicks, and engagement rates. Bring this data to section.",
+      body: "Go to analytics.twitter.com. Set the date range to the last 30 days. Screenshot or export the summary tab (total impressions, profile visits, new followers). Then open the “Tweets” tab and sort by impressions. Screenshot or copy the top 10 posts with their impression counts, link clicks, and engagement rates. Bring this data to section.",
     },
     {
       title: "Calculate your two rates (10 min)",
@@ -38,7 +38,7 @@ const spec: ProjectSpec = {
       steps: [
         "Hook pattern: C (claim), CT (contrast), N (number), S (story-open), Q (question). If the post has no clear hook, write NH (no hook).",
         "Format: single, thread, image, quote, poll.",
-        "Topic: one or two words describing the subject matter (e.g., &ldquo;writing speed&rdquo;, &ldquo;morning routine&rdquo;, &ldquo;pricing advice&rdquo;).",
+        "Topic: one or two words describing the subject matter (e.g., “writing speed”, “morning routine”, “pricing advice”).",
         "Optional: note the day of the week the post went out.",
       ],
     },
@@ -50,7 +50,7 @@ const spec: ProjectSpec = {
         "Which format appears in 4 or more of the top 10?",
         "Is there a topic cluster? Do 3 or more posts share a topic label?",
         "Is there any pattern in the day of the week?",
-        "Write down the two patterns you see most clearly. These are your &ldquo;double down&rdquo; patterns.",
+        "Write down the two patterns you see most clearly. These are your “double down” patterns.",
       ],
     },
     {
@@ -100,10 +100,10 @@ const spec: ProjectSpec = {
     },
   ],
   hints: [
-    "If analytics.twitter.com shows &ldquo;not enough data,&rdquo; use the native post analytics (tap the bar chart icon below each post). Copy the impression counts manually for your last 30 posts and rank them yourself.",
+    "If analytics.twitter.com shows “not enough data,” use the native post analytics (tap the bar chart icon below each post). Copy the impression counts manually for your last 30 posts and rank them yourself.",
     "A post can appear in the top 10 by impressions but have a very low engagement rate. Note this. High impressions plus low engagement often means the algorithm surfaced it without the content earning the attention.",
     "If your profile-visit-to-follow rate is below 2%, the section worksheet is most useful as a prompt to rewrite your bio before section ends. Bring a draft bio revision.",
-    "The retire decision is the most valuable part of this exercise. It is easy to say &ldquo;I will post more.&rdquo; It is harder to commit to stopping something. Pick one pattern and actually stop it for two weeks.",
+    "The retire decision is the most valuable part of this exercise. It is easy to say “I will post more.” It is harder to commit to stopping something. Pick one pattern and actually stop it for two weeks.",
     "HW4 (30-day growth experiment) asks you to run a systematic A/B test starting this week. Your double-down patterns from today are the starting hypotheses for that experiment.",
   ],
   late: "Bring printed or digital data to section. Late submission of the written plan is accepted up to 48 hours after section with a 10-point deduction.",

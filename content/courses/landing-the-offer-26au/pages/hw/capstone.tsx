@@ -8,7 +8,7 @@ const spec: ProjectSpec = {
   dueDate: "Week 10",
   overview: [
     "The capstone integrates the formal funnel AND the side-door track into a single three-week sprint. Weeks 1 through 9 built the individual skills: the ATS-clean resume, the behavioral story bank, the DSA repertoire, the system design vocabulary, the referral strategy, and the unconventional-move toolkit. The goal of the capstone is to leave the course not with abstract knowledge but with three live conversations already in motion, one recorded mock loop you have watched and scored, and one unconventional move that has been shipped to a real human at a target company.",
-    "Concretely, the deliverables are: 15 high-quality applications each tied to a specific role and tailored to the posting, 5 referral requests using the Week 8 referral-strategy patterns, ONE unconventional move chosen from (an open-source PR submitted to a relevant project, OR a cold-email outreach to three target companies naming a specific problem you would solve, OR a public artifact aimed at a target company and distributed where that company&rsquo;s engineers can find it), ONE recorded full mock loop covering coding plus design plus behavioral run back-to-back, and a written personal hiring playbook. The sprint runs three weeks; the playbook and recording are due at Week 10 section.",
+    "Concretely, the deliverables are: 15 high-quality applications each tied to a specific role and tailored to the posting, 5 referral requests using the Week 8 referral-strategy patterns, ONE unconventional move chosen from (an open-source PR submitted to a relevant project, OR a cold-email outreach to three target companies naming a specific problem you would solve, OR a public artifact aimed at a target company and distributed where that company’s engineers can find it), ONE recorded full mock loop covering coding plus design plus behavioral run back-to-back, and a written personal hiring playbook. The sprint runs three weeks; the playbook and recording are due at Week 10 section.",
   ],
   goals: [
     "Create a one-week application sprint plan with a target list, application cadence, referral asks, and a daily 30-minute pipeline review.",
@@ -39,7 +39,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Send 5 referral requests",
-      body: "A referral request is not a cold LinkedIn message asking someone to &ldquo;put in a good word.&rdquo; It is a specific, well-researched ask that makes the ask easy to say yes to. Use the Week 8 patterns.",
+      body: "A referral request is not a cold LinkedIn message asking someone to “put in a good word.” It is a specific, well-researched ask that makes the ask easy to say yes to. Use the Week 8 patterns.",
       steps: [
         "For each of the 5 contacts: write a two-sentence context-setter (how you know them or why you are reaching out), one sentence on the specific role, and one sentence on why you are a strong fit for that team specifically.",
         "Attach your tailored resume for the role. Keep the message under 150 words.",
@@ -72,7 +72,7 @@ const spec: ProjectSpec = {
       body: "Watching yourself is uncomfortable. That discomfort is the point. Watch the full recording once, then write the self-critique document.",
       steps: [
         "Score each round on three dimensions: communication clarity (did you explain your reasoning out loud?), technical accuracy (did you arrive at a correct or near-correct solution?), and composure (did you recover when you got stuck?).",
-        "Identify your top-3 leverage points: the three specific behaviors that, if changed, would have the largest positive effect on how an interviewer perceives you. Be specific. &ldquo;I need to talk more&rdquo; is not a leverage point. &ldquo;I wrote code for 8 minutes without saying anything in the first coding round&rdquo; is.",
+        "Identify your top-3 leverage points: the three specific behaviors that, if changed, would have the largest positive effect on how an interviewer perceives you. Be specific. “I need to talk more” is not a leverage point. “I wrote code for 8 minutes without saying anything in the first coding round” is.",
         "For each leverage point, write one concrete practice drill you will run before your next real interview.",
       ],
     },

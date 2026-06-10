@@ -10,7 +10,7 @@ export function Wk09SectionPage() {
     <ReadingPage
       id="wk09-section"
       title="Week 9 section: Wire one lifecycle email"
-      kicker="B2C to $10k MRR &middot; Autumn 2026 &middot; Section"
+      kicker="B2C to $10k MRR · Autumn 2026 · Section"
     >
       <ReadingFraming>
         <p>
@@ -86,10 +86,10 @@ export function Wk09SectionPage() {
           this looks like{" "}
           <code>resend.emails.send(&#123; to, subject, react: WelcomeEmail(&#123;name&#125;) &#125;)</code>.
           Using OneSignal for push, it is{" "}
-          <code>createNotification(&#123; include_external_user_ids: [userId], contents: &#123;en: &ldquo;...&rdquo;&#125; &#125;)</code>.
+          <code>createNotification(&#123; include_external_user_ids: [userId], contents: &#123;en: “...”&#125; &#125;)</code>.
           Using Customer.io, it is a track event call:{" "}
           <code>cio.identify(userId, &#123; email &#125;)</code> followed by{" "}
-          <code>cio.track(userId, &#123; name: &ldquo;signed_up&rdquo; &#125;)</code>.
+          <code>cio.track(userId, &#123; name: “signed_up” &#125;)</code>.
         </li>
         <li>
           <strong>Test in a sandbox.</strong> Send the message to yourself.
@@ -106,7 +106,7 @@ export function Wk09SectionPage() {
         <li>
           <strong>Confirm in production.</strong> Sign up with a real email
           address that you did not use in testing. Verify the message arrives,
-          on time, with no errors. Check your lifecycle tool&rsquo;s event log
+          on time, with no errors. Check your lifecycle tool’s event log
           to confirm the trigger fired.
         </li>
       </ol>
@@ -120,7 +120,7 @@ export function Wk09SectionPage() {
       <ol>
         <li>
           <strong>Subject line.</strong> For email: 6-10 words, specific, no
-          &ldquo;Your account&rdquo; or &ldquo;Welcome to [Product]&rdquo;
+          “Your account” or “Welcome to [Product]”
           generic openers. The subject line is the only thing the user reads
           before deciding to open. OneSignal benchmarks (Langholz, 2021)
           show push open rates at roughly 20%; email under 2% on average.
@@ -133,8 +133,8 @@ export function Wk09SectionPage() {
         </li>
         <li>
           <strong>CTA.</strong> One button or link. The text should be the
-          action, not a noun: &ldquo;Finish your setup&rdquo; beats
-          &ldquo;Setup&rdquo;.
+          action, not a noun: “Finish your setup” beats
+          “Setup”.
         </li>
         <li>
           <strong>Unsubscribe / opt-out.</strong> Transactional messages
@@ -159,7 +159,7 @@ export function Wk09SectionPage() {
         </li>
         <li>
           <strong>Send count and open rate.</strong> After your first 24-48
-          hours, pull the open rate from your tool&rsquo;s dashboard. For
+          hours, pull the open rate from your tool’s dashboard. For
           push, 15-25% is a healthy starting benchmark (OneSignal, Langholz
           2021). For email, 20-35% open rate is achievable for lifecycle
           messages to opted-in users.
@@ -171,11 +171,11 @@ export function Wk09SectionPage() {
           destination is wrong.
         </li>
         <li>
-          <strong>Uplift estimate.</strong> Write one paragraph: &ldquo;My
+          <strong>Uplift estimate.</strong> Write one paragraph: “My
           current [D7 retention / D1 retention / monthly churn] is [X%].
           Based on [N] sends with a [Y%] click rate, and assuming clicked
           users retain at [Z%] vs [W%] for non-clicked users, I expect this
-          message to move [metric] by approximately [delta].&rdquo; You do
+          message to move [metric] by approximately [delta].” You do
           not need real cohort data yet; use the click rate as a proxy for
           re-engagement intent and be honest about the assumption.
         </li>
@@ -186,13 +186,13 @@ export function Wk09SectionPage() {
         Pair with the person next to you. Each person has two minutes to show:
       </p>
       <ol>
-        <li>The message, live in their tool&rsquo;s dashboard (or in their inbox if just sent).</li>
+        <li>The message, live in their tool’s dashboard (or in their inbox if just sent).</li>
         <li>The trigger condition in one sentence.</li>
         <li>The baseline metric and uplift estimate paragraph.</li>
       </ol>
       <p>
-        The reviewer asks one question only: &ldquo;What would make you
-        confident this is working by Friday?&rdquo; The presenter answers in
+        The reviewer asks one question only: “What would make you
+        confident this is working by Friday?” The presenter answers in
         one sentence. That answer goes in the growth log.
       </p>
 

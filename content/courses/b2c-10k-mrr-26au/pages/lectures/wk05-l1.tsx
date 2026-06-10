@@ -20,17 +20,17 @@ const spec: LectureSpec = {
       note: "Required before section. Includes the mid-course pivot/persevere check.",
     },
     {
-      title: "A software engineer&rsquo;s guide to A/B testing (Lior Neu-ner, PostHog, 2023)",
+      title: "A software engineer’s guide to A/B testing (Lior Neu-ner, PostHog, 2023)",
       href: "https://posthog.com/product-engineers/ab-testing-guide-for-engineers",
       note: "Five-component framework: goals, hypothesis, minimal changes, sample sizes, duration",
     },
     {
-      title: "10 things we&rsquo;ve learned about A/B testing for startups (Ian Vanagas, PostHog, 2023)",
+      title: "10 things we’ve learned about A/B testing for startups (Ian Vanagas, PostHog, 2023)",
       href: "https://posthog.com/newsletter/what-we've-learned-about-ab-testing",
       note: "The peeking problem, sequential testing, and why most experiments fail",
     },
     {
-      title: "Trustworthy Online Controlled Experiments (Kohavi, Tang &amp; Xu, 2020)",
+      title: "Trustworthy Online Controlled Experiments (Kohavi, Tang & Xu, 2020)",
       href: "https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59",
       note: "The canonical academic-practitioner reference for A/B rigor (optional deeper reading)",
     },

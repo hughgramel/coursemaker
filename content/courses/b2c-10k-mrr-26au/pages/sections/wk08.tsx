@@ -10,7 +10,7 @@ export function Wk08SectionPage() {
     <ReadingPage
       id="wk08-section"
       title="Week 8 section: Ship to the stores"
-      kicker="B2C to $10k MRR &middot; Autumn 2026 &middot; Section"
+      kicker="B2C to $10k MRR · Autumn 2026 · Section"
     >
       <ReadingFraming>
         <p>
@@ -19,7 +19,7 @@ export function Wk08SectionPage() {
           internal-testing build live with at least one tester, or a PWA install
           prompt live on your production URL. Pick your path before the session
           starts. The milestone is non-negotiable: this is the week you leave
-          the simulator and put your product in a real user&rsquo;s hands via a
+          the simulator and put your product in a real user’s hands via a
           store or a browser prompt.
         </p>
         <p>
@@ -57,14 +57,14 @@ export function Wk08SectionPage() {
         </li>
         <li>
           <strong>Archive and upload in Xcode.</strong> Open your project. Set
-          the scheme to &ldquo;Any iOS Device&rdquo; (not a simulator). Choose
-          Product &rsaquo; Archive. When the archive completes, click
-          &ldquo;Distribute App&rdquo; and choose &ldquo;TestFlight &amp; App
-          Store.&rdquo; Upload to App Store Connect.
+          the scheme to “Any iOS Device” (not a simulator). Choose
+          Product › Archive. When the archive completes, click
+          “Distribute App” and choose “TestFlight & App
+          Store.” Upload to App Store Connect.
         </li>
         <li>
           <strong>Add an internal tester.</strong> In App Store Connect, navigate
-          to your app &rsaquo; TestFlight &rsaquo; Internal Testing. Add yourself
+          to your app › TestFlight › Internal Testing. Add yourself
           or a teammate by Apple ID. The build should appear in the TestFlight
           app on their device within 30 minutes.
         </li>
@@ -74,7 +74,7 @@ export function Wk08SectionPage() {
           add email addresses, and submit the build for TestFlight review. The
           Apple review guidelines section on TestFlight (under section 2,
           Performance) applies: your app must be functionally complete and must
-          not use the &ldquo;beta&rdquo; label to avoid standard review.
+          not use the “beta” label to avoid standard review.
         </li>
         <li>
           <strong>Send the TestFlight link.</strong> Copy the public link from
@@ -91,7 +91,7 @@ export function Wk08SectionPage() {
 
       <AnchorHeading as="h2" id="path-b-google">Path B: Play internal-testing (Google)</AnchorHeading>
       <p>
-        Google Play&rsquo;s internal testing track makes your build available
+        Google Play’s internal testing track makes your build available
         to up to 100 testers within minutes, with no review required. This is
         the fastest path to a real device for Android-first products.
       </p>
@@ -105,7 +105,7 @@ export function Wk08SectionPage() {
         </li>
         <li>
           <strong>Generate a signed release APK or AAB.</strong> In Android
-          Studio, choose Build &rsaquo; Generate Signed Bundle / APK. Use a
+          Studio, choose Build › Generate Signed Bundle / APK. Use a
           release keystore. An Android App Bundle (.aab) is preferred over APK
           for Play distribution.
         </li>
@@ -117,13 +117,13 @@ export function Wk08SectionPage() {
         </li>
         <li>
           <strong>Upload to the internal testing track.</strong> In Play
-          Console, go to Testing &rsaquo; Internal testing &rsaquo; Create new
+          Console, go to Testing › Internal testing › Create new
           release. Upload your .aab. Add a release name and notes. Save and
           roll out.
         </li>
         <li>
           <strong>Invite testers by email or link.</strong> Under Internal
-          testing &rsaquo; Testers, create a list and add email addresses
+          testing › Testers, create a list and add email addresses
           linked to Google accounts. Or generate an opt-in URL and send it.
           Testers will see the build in the Play Store within minutes.
         </li>
@@ -148,17 +148,17 @@ export function Wk08SectionPage() {
         distribution path if your product is web-first, if you
         want to avoid the 30% store commission on subscriptions, or if your
         audience is primarily desktop users. The trade-off: discoverability via
-        search is your responsibility, not the store&rsquo;s.
+        search is your responsibility, not the store’s.
       </p>
       <ol>
         <li>
           <strong>Confirm installability criteria.</strong> Your app must be
           served over HTTPS, have a valid web app manifest
           (<code>manifest.json</code>) with <code>name</code>,
-          <code>icons</code> (at least 192&times;192 and 512&times;512 PNG),
+          <code>icons</code> (at least 192×192 and 512×512 PNG),
           <code>start_url</code>, and <code>display: standalone</code> or
           <code>minimal-ui</code>. It must also have a registered service
-          worker. Open Chrome DevTools &rsaquo; Application &rsaquo; Manifest
+          worker. Open Chrome DevTools › Application › Manifest
           to verify. Lighthouse will flag any missing criteria.
         </li>
         <li>
@@ -191,22 +191,22 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });`}</pre>
         </li>
         <li>
-          <strong>Track the outcome.</strong> Log <code>outcome === &apos;accepted&apos;</code>{" "}
+          <strong>Track the outcome.</strong> Log <code>outcome === ’accepted’</code>{" "}
           as a conversion event. This is your install metric equivalent to
           TestFlight installs. Record it in your daily reflect slot.
         </li>
         <li>
           <strong>Test on Android Chrome and iOS Safari (add to home screen).</strong>{" "}
           The <code>BeforeInstallPromptEvent</code> API is Chrome-only. On iOS
-          Safari, the user must use the share menu &rsaquo; &ldquo;Add to Home
-          Screen&rdquo; manually. Add an iOS-specific prompt banner explaining
+          Safari, the user must use the share menu › “Add to Home
+          Screen” manually. Add an iOS-specific prompt banner explaining
           this flow for Safari users.
         </li>
       </ol>
       <p>
         <strong>Common failure point:</strong> The service worker is registered
-        but throws on first activation. Use Chrome DevTools &rsaquo;
-        Application &rsaquo; Service Workers to inspect status. A broken
+        but throws on first activation. Use Chrome DevTools ›
+        Application › Service Workers to inspect status. A broken
         service worker prevents the browser from firing
         <code>BeforeInstallPromptEvent</code>.
       </p>
@@ -229,13 +229,13 @@ window.addEventListener('beforeinstallprompt', (e) => {
           promise of the app in one image and caption. Benefit language, not
           feature labels. If you cannot ship the new screenshots today, write
           the captions and have a classmate confirm they pass the
-          &ldquo;stranger in five seconds&rdquo; test.
+          “stranger in five seconds” test.
         </li>
         <li>
           <strong>Start your capstone scaffold.</strong> On paper or in a
           doc, draw your current AARRR funnel with real numbers. Thursday
           is the formal scaffold session, but sketching it today will make
-          Thursday faster. The reading&rsquo;s capstone section has the five
+          Thursday faster. The reading’s capstone section has the five
           prompts.
         </li>
       </ol>

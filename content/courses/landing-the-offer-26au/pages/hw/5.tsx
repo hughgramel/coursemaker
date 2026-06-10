@@ -33,12 +33,12 @@ const spec: ProjectSpec = {
       steps: [
         "List at least twenty candidate story sources in one or two sentences each.",
         "Mark any that involve a measurable outcome you can state in numbers (users, latency, dollars, percentage).",
-        "Mark any that involve conflict, disagreement, or a decision you made against someone&rsquo;s advice.",
+        "Mark any that involve conflict, disagreement, or a decision you made against someone’s advice.",
       ],
     },
     {
       title: "Select the twelve stories that span the principle space",
-      body: "Review your candidate list against the principle list from step 1. Pick the twelve stories that together cover as many principles as possible, with at least one story per principle if you can manage it. Favor stories where you personally drove the outcome, not stories where the team succeeded and you participated. Conflict stories and failure stories are often underrepresented in early-career banks but score very well on principles like &ldquo;Have Backbone&rdquo; or &ldquo;Learn and Be Curious.&rdquo; Include at least two.",
+      body: "Review your candidate list against the principle list from step 1. Pick the twelve stories that together cover as many principles as possible, with at least one story per principle if you can manage it. Favor stories where you personally drove the outcome, not stories where the team succeeded and you participated. Conflict stories and failure stories are often underrepresented in early-career banks but score very well on principles like “Have Backbone” or “Learn and Be Curious.” Include at least two.",
       steps: [
         "Write your twelve selected stories by title only (not full STAR yet).",
         "Next to each, list the principle or principles it is intended to cover.",
@@ -47,11 +47,11 @@ const spec: ProjectSpec = {
     },
     {
       title: "Write each story in STAR form",
-      body: "Write all twelve stories. Each story must follow the STAR format exactly: Situation in two sentences, Task in one sentence, Action in three to five sentences with the focus on your personal contribution (not the team&rsquo;s), Result in one to two sentences with numbers wherever possible. The Action section is where most candidates fail: they say &ldquo;we built&rdquo; and &ldquo;our team decided.&rdquo; Interviewers are calibrating YOU against the hiring bar, not your team. Every sentence in Action must start with &ldquo;I&rdquo; or describe a specific choice you made.",
+      body: "Write all twelve stories. Each story must follow the STAR format exactly: Situation in two sentences, Task in one sentence, Action in three to five sentences with the focus on your personal contribution (not the team’s), Result in one to two sentences with numbers wherever possible. The Action section is where most candidates fail: they say “we built” and “our team decided.” Interviewers are calibrating YOU against the hiring bar, not your team. Every sentence in Action must start with “I” or describe a specific choice you made.",
       steps: [
         "Situation: set the context. Two sentences. What was the environment and what was the problem?",
         "Task: one sentence. What were you specifically responsible for delivering?",
-        "Action: three to five sentences. What did YOU do, step by step? Cut anything that starts with &ldquo;we.&rdquo;",
+        "Action: three to five sentences. What did YOU do, step by step? Cut anything that starts with “we.”",
         "Result: one to two sentences. What happened? State a number if you have one.",
       ],
     },
@@ -65,8 +65,8 @@ const spec: ProjectSpec = {
       ],
     },
     {
-      title: "Tag each story with 1&ndash;3 principles",
-      body: "Return to your coverage map. Tag each final story with the one to three principles it hits most strongly. Note that the same underlying experience can be framed to land on different principles depending on which element of the story you emphasize in the opening sentence. A story about a project that almost missed a deadline can land on &ldquo;Deliver Results,&rdquo; &ldquo;Bias for Action,&rdquo; or &ldquo;Earn Trust&rdquo; depending on what you choose to foreground. Write a one-sentence framing note for each alternate read.",
+      title: "Tag each story with 1-3 principles",
+      body: "Return to your coverage map. Tag each final story with the one to three principles it hits most strongly. Note that the same underlying experience can be framed to land on different principles depending on which element of the story you emphasize in the opening sentence. A story about a project that almost missed a deadline can land on “Deliver Results,” “Bias for Action,” or “Earn Trust” depending on what you choose to foreground. Write a one-sentence framing note for each alternate read.",
     },
     {
       title: "Write one stretch story for your weakest principle",
@@ -79,20 +79,20 @@ const spec: ProjectSpec = {
     "A recording of your three best stories told aloud (audio file or voice memo). Each must come in under three minutes.",
   ],
   rubric: [
-    { dimension: "Coverage of principles", points: 25, notes: "Every principle from your target company&rsquo;s framework is covered by at least one story. Gaps are acknowledged and explained." },
+    { dimension: "Coverage of principles", points: 25, notes: "Every principle from your target company’s framework is covered by at least one story. Gaps are acknowledged and explained." },
     { dimension: "STAR structure rigor", points: 20, notes: "All four sections present and in order. Situation is two sentences or fewer. Result includes a number." },
-    { dimension: "Action specificity", points: 20, notes: "Every sentence in the Action section describes something YOU did. No &ldquo;we&rdquo; sentences without an immediate follow-up naming your specific contribution." },
+    { dimension: "Action specificity", points: 20, notes: "Every sentence in the Action section describes something YOU did. No “we” sentences without an immediate follow-up naming your specific contribution." },
     { dimension: "Recording quality", points: 15, notes: "Three stories recorded, each under three minutes, audible, and told without reading from the page." },
     { dimension: "Stretch story", points: 10, notes: "The stretch story targets the weakest principle and holds up under STAR scrutiny." },
     { dimension: "Polish", points: 10, notes: "Stories are free of filler phrases. Numbers are specific. Formatting is consistent." },
   ],
   hints: [
-    "Read Amazon&rsquo;s Leadership Principles at https://www.amazon.jobs/content/en/our-workplace/leadership-principles before you write a single story. The definitions are more nuanced than the names suggest.",
-    "Read Gergely Orosz&rsquo;s &ldquo;Confessions from a Big Tech Hiring Manager&rdquo; for a candid account of what debrief meetings actually look like and what makes a story forgettable vs. memorable.",
-    "Joel Spolsky&rsquo;s Guerrilla Guide to Interviewing covers the signal interviewers are looking for when they ask behavioral questions. It is short and worth reading in full.",
-    "The &ldquo;team did&rdquo; trap is the single most common failure mode. Interviewers are calibrating you individually against a hiring bar. If your team of six built the feature, tell the story of your slice of the work, not the team&rsquo;s story with you mentioned.",
-    "One story can cover multiple principles. Frame the opening sentence toward the principle you are targeting. &ldquo;I had to deliver a feature with half the engineers we had planned for&rdquo; opens toward Deliver Results. &ldquo;I disagreed with the tech lead&rsquo;s approach and had to decide whether to escalate&rdquo; opens toward Have Backbone.",
-    "Failure stories score better than people expect. &ldquo;Tell me about a time you failed&rdquo; is not a trap. Interviewers want to see that you have a growth mindset and can reflect accurately on what went wrong.",
+    "Read Amazon’s Leadership Principles at https://www.amazon.jobs/content/en/our-workplace/leadership-principles before you write a single story. The definitions are more nuanced than the names suggest.",
+    "Read Gergely Orosz’s “Confessions from a Big Tech Hiring Manager” for a candid account of what debrief meetings actually look like and what makes a story forgettable vs. memorable.",
+    "Joel Spolsky’s Guerrilla Guide to Interviewing covers the signal interviewers are looking for when they ask behavioral questions. It is short and worth reading in full.",
+    "The “team did” trap is the single most common failure mode. Interviewers are calibrating you individually against a hiring bar. If your team of six built the feature, tell the story of your slice of the work, not the team’s story with you mentioned.",
+    "One story can cover multiple principles. Frame the opening sentence toward the principle you are targeting. “I had to deliver a feature with half the engineers we had planned for” opens toward Deliver Results. “I disagreed with the tech lead’s approach and had to decide whether to escalate” opens toward Have Backbone.",
+    "Failure stories score better than people expect. “Tell me about a time you failed” is not a trap. Interviewers want to see that you have a growth mindset and can reflect accurately on what went wrong.",
   ],
   late: "Late submissions lose 10% per day up to three days. After three days, no credit. Submit anyway, because HW6 asks you to rehearse from this bank.",
 };

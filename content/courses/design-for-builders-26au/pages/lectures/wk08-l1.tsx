@@ -33,9 +33,9 @@ const spec: LectureSpec = {
   ],
   followups: [
     "Chris Do (The Futur, 2022) says a logo must work as a silhouette. Take any logo you like. Open Figma, paste the SVG, and fill every layer with a solid black. Does the shape still read clearly? If not, what detail is doing work that the silhouette cannot hold?",
-    "Describe three products where a wordmark is the right choice and one where a standalone mark works better. For the mark exception, name the specific reason: does the brand have enough visual equity, enough context, or does the product&rsquo;s name resist readable letterforms at small size?",
+    "Describe three products where a wordmark is the right choice and one where a standalone mark works better. For the mark exception, name the specific reason: does the brand have enough visual equity, enough context, or does the product’s name resist readable letterforms at small size?",
     "At 16x16px a favicon can render at most about four or five letterforms before the type becomes illegible. Pick a five-word product name. Design three favicon candidates: one initial, one abstract mark, one letterform. Which reads best at 16x16? Why?",
-    "Mayfield (2022) starts every logo project with concept sketching before opening any software. Sketch five rough wordmark concepts for your product using only a pen. Do not worry about letterform quality. What did sketching reveal about the product name&rsquo;s visual potential that you did not know before you started?",
+    "Mayfield (2022) starts every logo project with concept sketching before opening any software. Sketch five rough wordmark concepts for your product using only a pen. Do not worry about letterform quality. What did sketching reveal about the product name’s visual potential that you did not know before you started?",
     "Find a logo that uses a combo mark (wordmark plus a separate mark). Export the mark alone at 32x32px. Does it work without the wordmark, or does it depend on the wordmark for context? What does that tell you about how much visual equity the mark has built independently?",
   ],
 };

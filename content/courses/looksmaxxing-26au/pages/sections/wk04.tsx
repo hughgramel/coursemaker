@@ -4,12 +4,12 @@ export function Wk04Section() {
   return (
     <div>
       <h1>Section 4: The reference-photo cut consultation</h1>
-      <p className="fs-6 fw-300">Week 4 &middot; Hands-on worksheet</p>
+      <p className="fs-6 fw-300">Week 4 · Hands-on worksheet</p>
 
       <p>
         Barbers are skilled technicians, not mind readers. The gap between
-        &ldquo;the usual&rdquo; and &ldquo;the cut that actually fits your face
-        and hairline&rdquo; is almost always a communication gap. This section
+        “the usual” and “the cut that actually fits your face
+        and hairline” is almost always a communication gap. This section
         closes it. You will identify your face shape, audit your current growth
         pattern, select two reference photos with intention, and practice the
         vocabulary you need to give a barber a brief they can execute.
@@ -45,9 +45,9 @@ export function Wk04Section() {
           visual weight.
         </li>
         <li>
-          Write one sentence: &ldquo;My face is [shape]. The cut goal is to
+          Write one sentence: “My face is [shape]. The cut goal is to
           [add length / add width / reduce bulk at the sides / balance the
-          forehead] to create the illusion of an oval face.&rdquo;
+          forehead] to create the illusion of an oval face.”
         </li>
       </ol>
 
@@ -128,21 +128,21 @@ export function Wk04Section() {
       </p>
       <ol>
         <li>
-          Sentence 1 (goal): &ldquo;I am trying to [add length / reduce width /
-          balance my forehead] because my face is [shape].&rdquo;
+          Sentence 1 (goal): “I am trying to [add length / reduce width /
+          balance my forehead] because my face is [shape].”
         </li>
         <li>
-          Sentence 2 (lengths): &ldquo;I want to keep [X inches] on top and
-          take the sides to [a low fade / a taper / a two-guard trim].&rdquo;
+          Sentence 2 (lengths): “I want to keep [X inches] on top and
+          take the sides to [a low fade / a taper / a two-guard trim].”
         </li>
         <li>
-          Sentence 3 (reference): &ldquo;This photo is my primary reference. The
-          texture and length on top are what I am going for.&rdquo;
+          Sentence 3 (reference): “This photo is my primary reference. The
+          texture and length on top are what I am going for.”
         </li>
         <li>
-          Sentence 4 (constraints): &ldquo;My hair grows [in which direction /
+          Sentence 4 (constraints): “My hair grows [in which direction /
           has a cowlick at X / is beginning to recede at the temples], so I
-          know that may change what is possible.&rdquo; If there are no
+          know that may change what is possible.” If there are no
           constraints, skip this sentence.
         </li>
         <li>

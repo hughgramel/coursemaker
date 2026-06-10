@@ -22,7 +22,7 @@ const spec: LectureSpec = {
     },
     {
       title:
-        "Why Your Teeth Won&rsquo;t Whiten (Dr. Joyce Kahng DDS, 2022)",
+        "Why Your Teeth Won’t Whiten (Dr. Joyce Kahng DDS, 2022)",
       href: "https://www.youtube.com/watch?v=3nJOG_7pro0",
       note: "Clinical decision framework: intrinsic vs extrinsic staining, OTC vs professional options",
     },

@@ -30,7 +30,7 @@ const spec: LectureSpec = {
       note: "Why retention is the only honest PMF signal, and how to diagnose stalled growth from first principles",
     },
     {
-      title: "Thinking beyond frameworks (Casey Winters, Lenny&rsquo;s Podcast, 2023)",
+      title: "Thinking beyond frameworks (Casey Winters, Lenny’s Podcast, 2023)",
       href: "https://www.youtube.com/watch?v=QMFvz8utx-Q",
       note: "Channel-product fit failures and the tension between retention and acquisition",
     },

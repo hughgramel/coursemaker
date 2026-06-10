@@ -28,9 +28,9 @@ const spec: LectureSpec = {
   ],
   followups: [
     "Create a frame sized to a 1440px desktop viewport. Inside it, place three child frames with auto-layout using horizontal flow, a 24px gap, and equal padding on all sides. Set each child to Fill container width. What happens when you resize the parent?",
-    "In your file, make a button component with two variants: primary and secondary. Add a boolean property called &ldquo;disabled&rdquo;. How does Figma represent these in the variants panel? How is this similar to a React component with props?",
+    "In your file, make a button component with two variants: primary and secondary. Add a boolean property called “disabled”. How does Figma represent these in the variants panel? How is this similar to a React component with props?",
     "Frost (2016) describes atoms, molecules, and organisms as a mental model for component hierarchies. Identify one atom, one molecule, and one organism in a product you use every day. Do those levels map cleanly to Figma components, nested components, and frames?",
-    "Create a color style named &ldquo;brand/primary&rdquo; and a color variable in a collection named &ldquo;Color/Brand&rdquo; with the same hex value. Apply both to a rectangle. What is the visible difference in Figma&rsquo;s inspector panel? When would you choose a variable over a style?",
+    "Create a color style named “brand/primary” and a color variable in a collection named “Color/Brand” with the same hex value. Apply both to a rectangle. What is the visible difference in Figma’s inspector panel? When would you choose a variable over a style?",
     "Simon (DesignCourse, 2022) builds a card component from scratch using auto-layout and variants. After watching that tutorial, rebuild the same card in your own file without following along. What did you have to look up? What came naturally from your mental model of CSS flexbox?",
   ],
 };

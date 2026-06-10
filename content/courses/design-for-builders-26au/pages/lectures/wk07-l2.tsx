@@ -27,11 +27,11 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Figma&rsquo;s interactive button tutorial (2023) covers default, hover, pressed, disabled, and focused states. Build that button, then add a sixth variant: loading (spinner replaces label, button stays full-width). How does auto-layout behavior need to change to keep the button from collapsing when the label disappears?",
+    "Figma’s interactive button tutorial (2023) covers default, hover, pressed, disabled, and focused states. Build that button, then add a sixth variant: loading (spinner replaces label, button stays full-width). How does auto-layout behavior need to change to keep the button from collapsing when the label disappears?",
     "Frost (2016) distinguishes molecules (a few atoms working together) from organisms (complex sections from molecules). Take your card component and identify each part as atom or molecule. Then describe one context where the card itself becomes an atom inside a larger organism.",
-    "Figma&rsquo;s component best-practices guide (2023) recommends naming components using &ldquo;/&rdquo; separators to create groups. Design a naming scheme for a button library that covers size (sm, md, lg), hierarchy (primary, secondary, ghost), and state (default, hover, disabled). Write out the full name strings for at least six variants before you build them. Does the naming scheme reveal any gaps?",
+    "Figma’s component best-practices guide (2023) recommends naming components using “/” separators to create groups. Design a naming scheme for a button library that covers size (sm, md, lg), hierarchy (primary, secondary, ghost), and state (default, hover, disabled). Write out the full name strings for at least six variants before you build them. Does the naming scheme reveal any gaps?",
     "Pick a form in an app you use. Count how many distinct input types it uses (text, password, email, select, checkbox, radio, toggle). Now count how many interaction states each type has in the original design. How many are missing? Build the missing states for two of the inputs using your existing color tokens.",
-    "Modals interrupt the user&rsquo;s current context. List three situations in a product where a modal is the right choice and three where a drawer, an inline expansion, or a new page would serve the user better. What is the decision rule that separates &ldquo;modal&rdquo; from &ldquo;not modal&rdquo;?",
+    "Modals interrupt the user’s current context. List three situations in a product where a modal is the right choice and three where a drawer, an inline expansion, or a new page would serve the user better. What is the decision rule that separates “modal” from “not modal”?",
   ],
 };
 

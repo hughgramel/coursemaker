@@ -21,9 +21,9 @@ const spec: ProjectSpec = {
   instructions: [
     {
       title: "Pull 30 problems from the NeetCode 150 roadmap covering all five groups (6 each)",
-      body: "Use the NeetCode 150 roadmap (https://neetcode.io/roadmap) as your source. Select problems explicitly from the five sections: Arrays &amp; Hashing, Two Pointers/Sliding Window, Trees, Graphs (BFS/DFS), and 1-D Dynamic Programming. Do not pull all six from the easy tier within a section; medium-difficulty problems are the target. Log your selections before you start solving.",
+      body: "Use the NeetCode 150 roadmap (https://neetcode.io/roadmap) as your source. Select problems explicitly from the five sections: Arrays & Hashing, Two Pointers/Sliding Window, Trees, Graphs (BFS/DFS), and 1-D Dynamic Programming. Do not pull all six from the easy tier within a section; medium-difficulty problems are the target. Log your selections before you start solving.",
       steps: [
-        "6 hash map problems (Arrays &amp; Hashing section of the NeetCode 150)",
+        "6 hash map problems (Arrays & Hashing section of the NeetCode 150)",
         "6 two-pointer or sliding window problems (Two Pointers and Sliding Window sections)",
         "6 binary tree problems (Trees section: traversal, path sum, lowest common ancestor, etc.)",
         "6 BFS/DFS problems (Graphs section: connected components, shortest path, islands, etc.)",
@@ -69,7 +69,7 @@ const spec: ProjectSpec = {
     {
       dimension: "Complexity stated per problem",
       points: 20,
-      notes: "Both time and space complexity written in your own words, not copied from a solution. Vague entries (&ldquo;O(n) I think&rdquo;) earn partial credit only.",
+      notes: "Both time and space complexity written in your own words, not copied from a solution. Vague entries (“O(n) I think”) earn partial credit only.",
     },
     {
       dimension: "Retrospective quality",

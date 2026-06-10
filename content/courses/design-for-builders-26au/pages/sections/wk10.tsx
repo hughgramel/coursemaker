@@ -4,7 +4,7 @@ import type { ProjectSpec } from "@/types/course";
 const spec: ProjectSpec = {
   title: "Week 10 section: mutual critique of launch packages",
   tagline:
-    "Review every classmate&rsquo;s launch package in structured pairs, using the full vocabulary of the course.",
+    "Review every classmate’s launch package in structured pairs, using the full vocabulary of the course.",
   outDate: "Week 10",
   dueDate: "Week 10 (bring your complete launch package to section)",
   overview: [
@@ -16,7 +16,7 @@ const spec: ProjectSpec = {
     "Present your complete launch package clearly in seven minutes, covering every deliverable",
     "Use course vocabulary to justify at least three design decisions when challenged",
     "Give two structured critiques that cite specific principles, not general impressions",
-    "Identify the single weakest element in each classmate&rsquo;s package and name the exact fix",
+    "Identify the single weakest element in each classmate’s package and name the exact fix",
     "Revise at least two elements in your own package based on peer feedback, and document what changed and why",
   ],
   instructions: [
@@ -28,7 +28,7 @@ const spec: ProjectSpec = {
         "Landing page design: full-page Figma file including hero, social proof band, feature section, and CTA, on an 8-point grid",
         "Five app screens: sign-in, empty state, primary task, success state, and error state, sharing one component library",
         "App Store assets: six screenshots sized for the 6.5-inch iPhone display, readable at thumbnail size",
-        "OG image: 1200 &times; 630px, includes product name and a one-line value proposition, derived from your brand sheet",
+        "OG image: 1200 × 630px, includes product name and a one-line value proposition, derived from your brand sheet",
       ],
     },
     {
@@ -37,11 +37,11 @@ const spec: ProjectSpec = {
     },
     {
       title: "Structured feedback format (use for every critique)",
-      body: "Each critique must address all four of these questions. Vague feedback (&ldquo;it feels off&rdquo;) does not count.",
+      body: "Each critique must address all four of these questions. Vague feedback (“it feels off”) does not count.",
       steps: [
         "Visual consistency: does the brand sheet govern the landing page and app screens, or do the three feel like they came from three different products? Name one specific inconsistency if you find one.",
         "Hierarchy and grid: pick one screen or page section and audit it against the 8-point grid and type scale. Name one specific alignment or spacing violation, or confirm it is clean.",
-        "CTA and conversion: does the landing page&rsquo;s primary CTA stand out as the most visually dominant interactive element on the page? If not, name what is competing with it.",
+        "CTA and conversion: does the landing page’s primary CTA stand out as the most visually dominant interactive element on the page? If not, name what is competing with it.",
         "Thumbnail test: look at the App Store screenshots at 25% zoom. Can you read the product name and the primary value proposition? If not, name the specific readability problem.",
       ],
     },
@@ -80,13 +80,13 @@ const spec: ProjectSpec = {
       dimension: "Critique quality: specific, vocabulary-grounded, actionable",
       points: 20,
       notes:
-        "Each critique covers all four structured questions. Feedback cites a specific element and a specific principle. &ldquo;Looks good&rdquo; or &ldquo;feels off&rdquo; without a principle name scores zero.",
+        "Each critique covers all four structured questions. Feedback cites a specific element and a specific principle. “Looks good” or “feels off” without a principle name scores zero.",
     },
     {
       dimension: "Presentation: covers all deliverables, uses course vocabulary to defend decisions",
       points: 20,
       notes:
-        "Presenter names the design decisions behind at least three choices. Defends at least one choice when challenged. Does not say &ldquo;I just liked it.&rdquo;",
+        "Presenter names the design decisions behind at least three choices. Defends at least one choice when challenged. Does not say “I just liked it.”",
     },
     {
       dimension: "Revision quality: changes are documented and traceable to feedback",
@@ -97,9 +97,9 @@ const spec: ProjectSpec = {
   ],
   hints: [
     "The most common launch package failure is a brand sheet that was designed in isolation and never applied to the other deliverables. Before section, open your brand sheet and your landing page side by side. Are they using the same color tokens? The same type scale? If not, fix the landing page to match the brand sheet, not the other way around.",
-    "Seven minutes is not much time. Practice your walkthrough once before section. Know in advance which three decisions you will defend if challenged. The most defensible decisions are the ones tied to a specific principle: &ldquo;I used the 8-point grid&rdquo; or &ldquo;I kept the type scale to five steps.&rdquo;",
+    "Seven minutes is not much time. Practice your walkthrough once before section. Know in advance which three decisions you will defend if challenged. The most defensible decisions are the ones tied to a specific principle: “I used the 8-point grid” or “I kept the type scale to five steps.”",
     "The thumbnail test for App Store screenshots is ruthless. At 25% zoom on a standard monitor, your screenshot is about the size it will appear in a search result on a phone. If you cannot read it, no one can.",
-    "When giving critique, the most useful sentence structure is: &ldquo;[Specific element] violates [specific principle] because [specific reason]. The fix is [specific change].&rdquo; Four parts, one sentence. Anything shorter is vague. Anything longer is an essay.",
+    "When giving critique, the most useful sentence structure is: “[Specific element] violates [specific principle] because [specific reason]. The fix is [specific change].” Four parts, one sentence. Anything shorter is vague. Anything longer is an essay.",
     "If two reviewers independently flag the same problem, act on it. If they contradict each other, that is a judgment call. Write down both views before you decide, and make sure you can defend whichever path you choose.",
   ],
   late:

@@ -18,7 +18,7 @@ const spec: LectureSpec = {
       href: "/c/landing-the-offer-26au/readings/wk03",
     },
     {
-      title: "NeetCode Roadmap: Arrays &amp; Hashing, Two Pointers, Sliding Window",
+      title: "NeetCode Roadmap: Arrays & Hashing, Two Pointers, Sliding Window",
       href: "https://neetcode.io/roadmap",
     },
     {
@@ -28,9 +28,9 @@ const spec: LectureSpec = {
   ],
   followups: [
     "Two Sum is a canonical hash-map problem. Solve it without looking at any resource. Then write out the time and space complexity, naming the data structure that enables each.",
-    "The NeetCode Roadmap places Arrays &amp; Hashing before Two Pointers intentionally. Write one sentence explaining the pedagogical reason: what does knowing hash maps first unlock for two pointers?",
+    "The NeetCode Roadmap places Arrays & Hashing before Two Pointers intentionally. Write one sentence explaining the pedagogical reason: what does knowing hash maps first unlock for two pointers?",
     "Describe a problem shape where two pointers would be tempting but wrong. What property of the input makes two pointers valid, and what property breaks it?",
-    "Write the sliding-window invariant for the &ldquo;longest substring without repeating characters&rdquo; problem. What condition expands the window? What condition shrinks it?",
+    "Write the sliding-window invariant for the “longest substring without repeating characters” problem. What condition expands the window? What condition shrinks it?",
     "NeetCode (2020) says he was trying to understand patterns well enough to derive any solution from scratch, not memorize solutions. What is the practical difference? Give an example of a problem where pattern understanding lets you solve a variant that pure memorization would not.",
   ],
 };

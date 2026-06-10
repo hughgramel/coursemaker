@@ -25,7 +25,7 @@ export function Wk02SectionPage() {
         <p>
           <strong>Prerequisites assumed.</strong> You understand the distinction
           between controllable and fixed traits from Week 1. You have read this
-          week&rsquo;s reading on photo baselines, body measurement, sleep, and
+          week’s reading on photo baselines, body measurement, sleep, and
           habit stacking before arriving.
         </p>
       </ReadingFraming>
@@ -39,8 +39,8 @@ export function Wk02SectionPage() {
       <ol>
         <li>
           <strong>Choose your wall.</strong> Pick a plain, uncluttered wall in a
-          room with a window. Write down its exact location (e.g., &ldquo;north
-          wall of bedroom, two steps from the door&rdquo;). You will return
+          room with a window. Write down its exact location (e.g., “north
+          wall of bedroom, two steps from the door”). You will return
           to this exact spot every week.
         </li>
         <li>
@@ -67,7 +67,7 @@ export function Wk02SectionPage() {
         </li>
         <li>
           <strong>Write down your setup in a place you will find it.</strong>
-          A note on your phone under &ldquo;photo protocol&rdquo; is fine.
+          A note on your phone under “photo protocol” is fine.
           It should contain: wall location, camera height (cm), distance (cm
           or steps), light source, and day and time.
         </li>
@@ -96,9 +96,9 @@ export function Wk02SectionPage() {
         </li>
         <li>
           <strong>Label and store.</strong> Rename each file
-          &ldquo;wk00-front.jpg&rdquo;, &ldquo;wk00-side.jpg&rdquo;,
-          &ldquo;wk00-3q.jpg&rdquo; and put them in a folder called
-          &ldquo;course-baseline&rdquo;. Back them up now.
+          “wk00-front.jpg”, “wk00-side.jpg”,
+          “wk00-3q.jpg” and put them in a folder called
+          “course-baseline”. Back them up now.
         </li>
         <li>
           <strong>Do not edit or filter the photos.</strong> No skin-smoothing,
@@ -167,9 +167,9 @@ export function Wk02SectionPage() {
       <AnchorHeading as="h2" id="part-4">Part 4: Build your habit stack on paper</AnchorHeading>
       <p>
         A habit stack links a new behavior to an existing one using a specific
-        formula. The formula comes from James Clear (2021): &ldquo;After I
-        [CURRENT HABIT], I will [NEW HABIT].&rdquo; The existing behavior is
-        the anchor. The new behavior rides the anchor&rsquo;s inertia.
+        formula. The formula comes from James Clear (2021): “After I
+        [CURRENT HABIT], I will [NEW HABIT].” The existing behavior is
+        the anchor. The new behavior rides the anchor’s inertia.
       </p>
       <p>
         Work through the following steps in writing, on paper or in a note
@@ -184,24 +184,24 @@ export function Wk02SectionPage() {
         </li>
         <li>
           <strong>Choose the anchor closest in time to the behavior you want to build.</strong>
-          For a morning skincare routine (Week 3), &ldquo;after I brush my
-          teeth&rdquo; is better than &ldquo;after I wake up&rdquo; because it
+          For a morning skincare routine (Week 3), “after I brush my
+          teeth” is better than “after I wake up” because it
           is more specific and already happens in the bathroom.
         </li>
         <li>
           <strong>Write your first stack in the formula.</strong> One sentence.
-          Example: &ldquo;After I brush my teeth in the morning, I will apply
-          sunscreen.&rdquo; The new habit must take under two minutes in its
+          Example: “After I brush my teeth in the morning, I will apply
+          sunscreen.” The new habit must take under two minutes in its
           first version.
         </li>
         <li>
           <strong>Write a second stack for a sleep behavior.</strong> This week
-          the target is consistent sleep timing. Example: &ldquo;After I plug
+          the target is consistent sleep timing. Example: “After I plug
           in my phone to charge at night, I will put it face-down and turn off
-          the room lights.&rdquo;
+          the room lights.”
         </li>
         <li>
-          <strong>Set a seven-day trial.</strong> Write today&rsquo;s date and
+          <strong>Set a seven-day trial.</strong> Write today’s date and
           the date seven days from now. Do not judge the habit in fewer than
           seven days. Day three is always the hardest.
         </li>
@@ -209,7 +209,7 @@ export function Wk02SectionPage() {
       <p>
         Bring your written habit-stack document to section. You will share the
         sleep stack with a partner and agree on a check-in at the start of
-        next week&rsquo;s section.
+        next week’s section.
       </p>
 
       <AnchorHeading as="h2" id="what-to-ship">What to ship</AnchorHeading>

@@ -27,11 +27,11 @@ const spec: LectureSpec = {
     },
   ],
   followups: [
-    "Frost (2016) describes &ldquo;templates&rdquo; as the level where content-free wireframes become real page layouts. Open three apps you use daily and identify which navigation pattern each uses (sidebar, top bar, or bottom tabs). What does the pattern choice tell you about the primary device context and the number of top-level destinations?",
-    "Design an empty state for a &ldquo;saved items&rdquo; screen in Figma. Follow the three-part structure from lecture: a reason the state exists, a headline that tells the user what to do next, and a primary action button. Compare your version to the empty state in a real app. What do they share? What did you omit?",
-    "Refactoring UI (Wathan &amp; Schoger, 2019) argues that labels are often a last resort and that format, context, and position can replace explicit labels. Find one form in an app where you think a label could be removed without losing clarity. Redesign the field in Figma without the label. Did the design improve or degrade?",
+    "Frost (2016) describes “templates” as the level where content-free wireframes become real page layouts. Open three apps you use daily and identify which navigation pattern each uses (sidebar, top bar, or bottom tabs). What does the pattern choice tell you about the primary device context and the number of top-level destinations?",
+    "Design an empty state for a “saved items” screen in Figma. Follow the three-part structure from lecture: a reason the state exists, a headline that tells the user what to do next, and a primary action button. Compare your version to the empty state in a real app. What do they share? What did you omit?",
+    "Refactoring UI (Wathan & Schoger, 2019) argues that labels are often a last resort and that format, context, and position can replace explicit labels. Find one form in an app where you think a label could be removed without losing clarity. Redesign the field in Figma without the label. Did the design improve or degrade?",
     "Take a sign-in screen from a real product. Identify every interaction state: default, focus, error, loading, success. Which states did the original designer omit? Design the missing states in Figma using your color tokens from week 4.",
-    "Settings screens are often the last thing a founder designs and the first thing a skeptical user reads. Look at the settings screen of a product you trust and one you distrust. What visual or informational signals drive that trust difference? List three changes you could make to the &ldquo;untrusted&rdquo; settings screen that would shift perception.",
+    "Settings screens are often the last thing a founder designs and the first thing a skeptical user reads. Look at the settings screen of a product you trust and one you distrust. What visual or informational signals drive that trust difference? List three changes you could make to the “untrusted” settings screen that would shift perception.",
   ],
 };
 

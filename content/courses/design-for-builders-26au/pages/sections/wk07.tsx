@@ -21,25 +21,25 @@ const spec: ProjectSpec = {
   ],
   background: [
     "Frost (2016) describes the atomic design hierarchy as atoms, molecules, organisms, templates, and pages. In Figma terms: your tokens (color, type, spacing) are atoms; your button and input components are molecules; a form section combining inputs, labels, and a submit button is an organism; a full sign-in screen is a template; and the working prototype flow is a page. This session asks you to build from atom to page in order.",
-    "Figma&rsquo;s component best-practices guide recommends naming components with slash-separated groups: &ldquo;Button/Primary/Default&rdquo; rather than &ldquo;Button Default Primary.&rdquo; Before you build, write out your naming scheme on paper. Renaming components after publishing to a team library forces downstream updates in every consuming file, so naming discipline now saves time later.",
+    "Figma’s component best-practices guide recommends naming components with slash-separated groups: “Button/Primary/Default” rather than “Button Default Primary.” Before you build, write out your naming scheme on paper. Renaming components after publishing to a team library forces downstream updates in every consuming file, so naming discipline now saves time later.",
     "The five screens (sign-in, empty state, primary task, success, error) are not arbitrary. They represent the five moments when a user is most uncertain about your product. Sign-in establishes trust. Empty state orients a new user. Primary task is the reason the product exists. Success closes the loop. Error tells the user what went wrong and what to do next. Designing all five reveals gaps that single-screen design hides.",
   ],
   instructions: [
     {
       title: "Set up your component page",
-      body: "Create a new page in your Figma file called &ldquo;Components.&rdquo; This page will hold your master components. Do not design your screens directly on this page. On the components page, create four named sections: Button, Input, Card, Modal. Build one master component in each section before moving to screens.",
+      body: "Create a new page in your Figma file called “Components.” This page will hold your master components. Do not design your screens directly on this page. On the components page, create four named sections: Button, Input, Card, Modal. Build one master component in each section before moving to screens.",
     },
     {
       title: "Build your button component",
-      body: "Create a button master component with auto-layout. Add a variant property called &ldquo;State&rdquo; with values: Default, Hover, Pressed, Disabled, Loading. Add a variant property called &ldquo;Hierarchy&rdquo; with values: Primary, Secondary, Ghost. Use your semantic color tokens from week 4 for every fill and stroke. The loading variant should replace the text label with a spinner placeholder (a circle with a dashed stroke works fine as a placeholder).",
+      body: "Create a button master component with auto-layout. Add a variant property called “State” with values: Default, Hover, Pressed, Disabled, Loading. Add a variant property called “Hierarchy” with values: Primary, Secondary, Ghost. Use your semantic color tokens from week 4 for every fill and stroke. The loading variant should replace the text label with a spinner placeholder (a circle with a dashed stroke works fine as a placeholder).",
     },
     {
       title: "Build your text input component",
-      body: "Create a text input master component. Add a variant property called &ldquo;State&rdquo; with values: Default, Focused, Error, Disabled. The error state must include a helper text layer below the input that shows an error message. Use your error color token for the border and helper text. The focused state should use your brand accent color on the border. Check that every state passes WCAG AA contrast for the label text.",
+      body: "Create a text input master component. Add a variant property called “State” with values: Default, Focused, Error, Disabled. The error state must include a helper text layer below the input that shows an error message. Use your error color token for the border and helper text. The focused state should use your brand accent color on the border. Check that every state passes WCAG AA contrast for the label text.",
     },
     {
       title: "Build your card component",
-      body: "Create a card master component with auto-layout for the content area. Add a boolean property called &ldquo;Has image&rdquo; that shows or hides an image slot at the top. Add a boolean property called &ldquo;Has action&rdquo; that shows or hides a bottom action row with a ghost button. The card should work without either property active (text-only card) and with both active (full card). Use your spacing tokens for all padding and gaps.",
+      body: "Create a card master component with auto-layout for the content area. Add a boolean property called “Has image” that shows or hides an image slot at the top. Add a boolean property called “Has action” that shows or hides a bottom action row with a ghost button. The card should work without either property active (text-only card) and with both active (full card). Use your spacing tokens for all padding and gaps.",
     },
     {
       title: "Build your modal component",
@@ -47,7 +47,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Design all five screens",
-      body: "Create a new page called &ldquo;Screens.&rdquo; Design five frames in sequence: (1) Sign-in: email input, password input, submit button, and a secondary link for account recovery. (2) Empty state: an illustration or icon placeholder, a headline, a supporting line, and a primary action button. (3) Primary task: the main UI your product does, using at least two card instances and any navigation pattern from lecture. (4) Success: a confirmation message, a summary of what was completed, and a next-action button. (5) Error: a clear description of what went wrong, any recoverable action, and a way back to safety. Use only components and tokens you have already defined.",
+      body: "Create a new page called “Screens.” Design five frames in sequence: (1) Sign-in: email input, password input, submit button, and a secondary link for account recovery. (2) Empty state: an illustration or icon placeholder, a headline, a supporting line, and a primary action button. (3) Primary task: the main UI your product does, using at least two card instances and any navigation pattern from lecture. (4) Success: a confirmation message, a summary of what was completed, and a next-action button. (5) Error: a clear description of what went wrong, any recoverable action, and a way back to safety. Use only components and tokens you have already defined.",
     },
     {
       title: "Connect the flow and prepare for walkthrough",
@@ -93,10 +93,10 @@ const spec: ProjectSpec = {
     },
   ],
   hints: [
-    "Build your components before your screens. If you start a screen and realize you need a component you haven&rsquo;t built yet, stop and build it on the Components page. Starting screens with one-off shapes means your component library will never catch up.",
-    "Your loading button state will expose a layout problem: when the text label disappears, does the button collapse? Set the button to a fixed width or to &ldquo;fill container&rdquo; to prevent the collapse. This is the kind of edge case that breaks real UIs at runtime.",
-    "The empty state is the most underdesigned screen in most products. A blank area with no explanation tells the user nothing. At minimum, explain why the area is empty and offer one action that would fill it. The empty state for a &ldquo;saved items&rdquo; feature should read differently from the empty state for a &ldquo;notifications&rdquo; feed.",
-    "Component naming: write your naming scheme before you build. A button named &ldquo;Button/Primary/Default&rdquo; and a button named &ldquo;Primary Button Default&rdquo; look identical in your file but behave differently in the assets panel and in team library updates.",
+    "Build your components before your screens. If you start a screen and realize you need a component you haven’t built yet, stop and build it on the Components page. Starting screens with one-off shapes means your component library will never catch up.",
+    "Your loading button state will expose a layout problem: when the text label disappears, does the button collapse? Set the button to a fixed width or to “fill container” to prevent the collapse. This is the kind of edge case that breaks real UIs at runtime.",
+    "The empty state is the most underdesigned screen in most products. A blank area with no explanation tells the user nothing. At minimum, explain why the area is empty and offer one action that would fill it. The empty state for a “saved items” feature should read differently from the empty state for a “notifications” feed.",
+    "Component naming: write your naming scheme before you build. A button named “Button/Primary/Default” and a button named “Primary Button Default” look identical in your file but behave differently in the assets panel and in team library updates.",
     "You do not need a custom illustration for the empty state. A simple icon from Iconify with a headline and subtext reads clearly and takes ten minutes to build. Save illustration work for the capstone polish pass.",
   ],
 };

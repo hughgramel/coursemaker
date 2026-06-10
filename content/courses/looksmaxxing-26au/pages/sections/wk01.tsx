@@ -6,7 +6,7 @@ export function Wk01SectionPage() {
       <AnchorHeading as="h1" id="annotate-forum-posts">
         Section: Annotate three looksmaxxing forum posts
       </AnchorHeading>
-      <p className="fs-6 fw-300">Week 1 &middot; Hands-on worksheet</p>
+      <p className="fs-6 fw-300">Week 1 · Hands-on worksheet</p>
 
       <p>
         This section puts the evidence hierarchy from lecture into practice.
@@ -50,19 +50,19 @@ export function Wk01SectionPage() {
         <li>
           <strong>Unfounded:</strong> The claim is either contradicted by
           existing evidence, relies on a reversed burden of proof
-          (&ldquo;no one has proved it doesn&rsquo;t work, so it works&rdquo;),
+          (“no one has proved it doesn’t work, so it works”),
           or is based solely on anecdote with no plausible mechanism.
         </li>
       </ol>
 
       <AnchorHeading as="h2" id="part-2-post-a">
-        Part 2: Post A &mdash; bonesmashing thread (looksmax.org, 2022)
+        Part 2: Post A ,  bonesmashing thread (looksmax.org, 2022)
       </AnchorHeading>
 
       <p>
         Read the thread at:{" "}
         <a href="https://looksmax.org/threads/theres-no-good-evidence-against-bonesmashing.1051845/">
-          looksmax.org &mdash; &ldquo;There&rsquo;s no good evidence against bonesmashing&rdquo;
+          looksmax.org ,  “There’s no good evidence against bonesmashing”
         </a>
       </p>
 
@@ -70,8 +70,8 @@ export function Wk01SectionPage() {
         <li>
           <strong>List every factual claim in the opening post.</strong> Write
           each claim as a single sentence. A claim is any statement about the
-          world that could in principle be true or false (for example: &ldquo;blunt
-          trauma stimulates periosteal bone remodeling&rdquo;). Ignore opinions
+          world that could in principle be true or false (for example: “blunt
+          trauma stimulates periosteal bone remodeling”). Ignore opinions
           and questions.
         </li>
         <li>
@@ -95,7 +95,7 @@ export function Wk01SectionPage() {
       </ol>
 
       <AnchorHeading as="h2" id="part-3-post-b">
-        Part 3: Post B &mdash; mewing thread (instructor-selected)
+        Part 3: Post B ,  mewing thread (instructor-selected)
       </AnchorHeading>
 
       <p>
@@ -112,7 +112,7 @@ export function Wk01SectionPage() {
         </li>
         <li>
           <strong>Label each claim.</strong> Use the same three-label system.
-          For the &ldquo;bone changes in adults&rdquo; claims, your primary
+          For the “bone changes in adults” claims, your primary
           counterevidence source is the American Association of Orthodontists
           (2023). Note: the AAO reviewed the available literature and found
           zero peer-reviewed studies supporting structural change from mewing
@@ -129,14 +129,14 @@ export function Wk01SectionPage() {
         <li>
           <strong>Identify what the poster would need to submit</strong> for
           you to upgrade their main claim from U to SG. Write this as a
-          one-sentence study design: &ldquo;An RCT of N adults practicing
+          one-sentence study design: “An RCT of N adults practicing
           tongue posture for X weeks, measuring Y with Z imaging method,
-          would be needed.&rdquo;
+          would be needed.”
         </li>
       </ol>
 
       <AnchorHeading as="h2" id="part-4-post-c">
-        Part 4: Post C &mdash; a softmaxxing claim (instructor-selected)
+        Part 4: Post C ,  a softmaxxing claim (instructor-selected)
       </AnchorHeading>
 
       <p>
@@ -150,9 +150,9 @@ export function Wk01SectionPage() {
       <ol start={9}>
         <li>
           <strong>List the factual claims.</strong> Aim for at least five
-          discrete claims. Include claims about mechanism (&ldquo;sleep
-          increases collagen synthesis&rdquo;) as well as claims about outcome
-          (&ldquo;sleeping eight hours improves how you look&rdquo;).
+          discrete claims. Include claims about mechanism (“sleep
+          increases collagen synthesis”) as well as claims about outcome
+          (“sleeping eight hours improves how you look”).
         </li>
         <li>
           <strong>Label each claim.</strong> At least one claim in this post

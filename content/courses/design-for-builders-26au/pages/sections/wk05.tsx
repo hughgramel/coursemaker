@@ -27,7 +27,7 @@ const spec: ProjectSpec = {
       title: "Audit each screenshot for spacing (20 min)",
       body: "For each of the three screenshots, do a written audit before rebuilding anything. Go through the screen and list every spacing value you can identify by eye:",
       steps: [
-        "Inner padding: the space between a container&rsquo;s edge and its content (e.g., the padding inside a button or a card).",
+        "Inner padding: the space between a container’s edge and its content (e.g., the padding inside a button or a card).",
         "Gap: the space between sibling elements within a container (e.g., the gap between an icon and a label, or between list items).",
         "Outer margin: the space between a component and the surrounding layout (e.g., the margin between a card and the column it sits in).",
         "For each value, estimate the pixel amount and classify it: 8-point grid (8, 16, 24, 32, 40, 48), 4-point step (4, 12, 20, 28, 36), or off-grid (anything else).",
@@ -48,9 +48,9 @@ const spec: ProjectSpec = {
       title: "Annotate violations (10 min)",
       body: "Review the third screenshot (the one you did not rebuild) and identify what you now believe are its three most significant spacing violations. For each one, write:",
       steps: [
-        "The location in the screen (e.g., &ldquo;the padding inside the primary button&rdquo;).",
-        "The estimated actual value (e.g., &ldquo;approximately 11px top and bottom&rdquo;).",
-        "What value it should be on the 8-point grid (e.g., &ldquo;should be 12px, a 4-point step&rdquo;).",
+        "The location in the screen (e.g., “the padding inside the primary button”).",
+        "The estimated actual value (e.g., “approximately 11px top and bottom”).",
+        "What value it should be on the 8-point grid (e.g., “should be 12px, a 4-point step”).",
         "One sentence describing the visual cost: does it make the button feel too tight, inconsistent with other components, or just slightly wrong in a way that is hard to name?",
       ],
     },
@@ -100,7 +100,7 @@ const spec: ProjectSpec = {
   hints: [
     "If a padding value looks like it might be 14px or 10px, it is probably intentional off-grid spacing. Ask yourself: is this a rounding decision, a half-step on the 4-point grid, or a genuine violation? The answer matters for the annotation.",
     "Mobile apps often use the 4-point grid more aggressively than desktop because screen real estate is tighter. Do not assume every value should be a multiple of 8. The 4-point half-steps (4, 12, 20, 28) are legitimate choices.",
-    "Auto-layout gap and padding are two different places to set spacing. If a card&rsquo;s children look correctly spaced but the gap is set to 0, check whether the spacing is coming from margins on the children instead. That is an anti-pattern on the 8-point grid.",
+    "Auto-layout gap and padding are two different places to set spacing. If a card’s children look correctly spaced but the gap is set to 0, check whether the spacing is coming from margins on the children instead. That is an anti-pattern on the 8-point grid.",
     "The 8-point grid overlay in Figma (Shift+G to toggle) shows you a visual grid but does not snap to it automatically. You still have to type the correct values. The grid is a checking tool, not an enforcement tool.",
     "HW2 is due this week. If you are close to done but not quite, use the first 10 minutes of section to finish. The teaching staff will accept submissions during section.",
   ],

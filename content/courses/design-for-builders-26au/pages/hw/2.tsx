@@ -8,7 +8,7 @@ const spec: ProjectSpec = {
   outDate: "End of Week 3",
   dueDate: "End of Week 5",
   overview: [
-    "Most founders reach for images, icons, and brand color the moment they open Figma. This assignment removes that option. You will take a real SaaS competitor&rsquo;s landing page and redesign it using only Inter, a neutral gray ramp, and a single accent color. No images. No icons. No decorative elements of any kind. If the redesign communicates clearly, you will have demonstrated the core claim of the first three weeks: typography and spacing carry hierarchy; everything else is optional.",
+    "Most founders reach for images, icons, and brand color the moment they open Figma. This assignment removes that option. You will take a real SaaS competitor’s landing page and redesign it using only Inter, a neutral gray ramp, and a single accent color. No images. No icons. No decorative elements of any kind. If the redesign communicates clearly, you will have demonstrated the core claim of the first three weeks: typography and spacing carry hierarchy; everything else is optional.",
     "The constraint forces a specific skill. When decoration is available, it is easy to lean on it to create emphasis. When it is gone, you have only scale, weight, line-height, measure, and whitespace. Fluency with those five levers is what separates a designer who can build fast from one who needs a full brand system before they can make a decision. Color and spacing systems are introduced in lectures during Weeks 4 and 5, so by the time this is due you will have the vocabulary to apply them with intention.",
   ],
   goals: [
@@ -32,7 +32,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Screenshot the current version as a Figma frame",
-      body: "Use your browser&rsquo;s full-page screenshot tool or a Figma plugin to capture the entire page at 1440px wide. Drop it into a frame named &ldquo;Original&rdquo; in your Figma file. This frame is the baseline that your writeup will reference. Do not alter it after you start designing.",
+      body: "Use your browser’s full-page screenshot tool or a Figma plugin to capture the entire page at 1440px wide. Drop it into a frame named “Original” in your Figma file. This frame is the baseline that your writeup will reference. Do not alter it after you start designing.",
     },
     {
       title: "Build a five-step type scale",
@@ -40,7 +40,7 @@ const spec: ProjectSpec = {
       steps: [
         "Generate your scale at typescale.com or by hand: multiply the base by the ratio four times to get sizes above, divide once to get the size below.",
         "Name each step by its role: caption, body, subhead, heading, display. This naming discipline makes it easier to be consistent and easier to explain your choices in the writeup.",
-        "Create Figma text styles for each combination of scale step, weight (regular and semibold at minimum), and line-height. You will reference these styles throughout the design; styles you apply by hand rather than from the panel will not count toward the &ldquo;consistent use&rdquo; rubric dimension.",
+        "Create Figma text styles for each combination of scale step, weight (regular and semibold at minimum), and line-height. You will reference these styles throughout the design; styles you apply by hand rather than from the panel will not count toward the “consistent use” rubric dimension.",
       ],
     },
     {
@@ -56,11 +56,11 @@ const spec: ProjectSpec = {
     },
     {
       title: "Render the redesign in a second Figma frame",
-      body: "Name the frame &ldquo;Redesign&rdquo; and place it directly to the right of the Original frame at the same width and approximate height. Both frames should be visible in a single Figma share link at 50% zoom. Do not crop either frame.",
+      body: "Name the frame “Redesign” and place it directly to the right of the Original frame at the same width and approximate height. Both frames should be visible in a single Figma share link at 50% zoom. Do not crop either frame.",
     },
     {
       title: "Test contrast on every text and background pair",
-      body: "Use the Figma plugin &ldquo;Contrast&rdquo; or the WebAIM Contrast Checker to verify every combination of text color and background color in your design. Every normal-size text pair must pass 4.5:1. Every large-text pair must pass 3:1. If a pair fails, adjust the gray value or accent value until it passes, then update your text styles so the fix propagates. Record the pass/fail results in your writeup.",
+      body: "Use the Figma plugin “Contrast” or the WebAIM Contrast Checker to verify every combination of text color and background color in your design. Every normal-size text pair must pass 4.5:1. Every large-text pair must pass 3:1. If a pair fails, adjust the gray value or accent value until it passes, then update your text styles so the fix propagates. Record the pass/fail results in your writeup.",
     },
   ],
   deliverables: [
@@ -103,15 +103,15 @@ const spec: ProjectSpec = {
       dimension: "Writeup defends choices in real vocabulary",
       points: 15,
       notes:
-        "Uses terms from the course (modular scale, measure, line-height, neutral ramp, contrast ratio, cap height, x-height) with accuracy. Vague claims like &ldquo;it looks cleaner&rdquo; without a specific reason earn at most 7 points.",
+        "Uses terms from the course (modular scale, measure, line-height, neutral ramp, contrast ratio, cap height, x-height) with accuracy. Vague claims like “it looks cleaner” without a specific reason earn at most 7 points.",
     },
   ],
   hints: [
     "Start with the type scale before you open the competitor page. If you build the scale first and then apply it, you are designing; if you eyeball sizes from the original, you are tracing. The difference shows in the rubric.",
     "The major third (1.250) produces a hierarchy that reads as calm and professional. If you want more contrast between levels, try the perfect fourth (1.333), but document the choice. Do not switch ratios mid-design.",
-    "Measure is harder to control in Figma than it sounds. Set a maximum width on your text frames rather than letting them stretch to fill the column. For a 16px body size, 65ch is approximately 650px at Inter&rsquo;s average character width.",
+    "Measure is harder to control in Figma than it sounds. Set a maximum width on your text frames rather than letting them stretch to fill the column. For a 16px body size, 65ch is approximately 650px at Inter’s average character width.",
     "Your accent color does not need to appear often to work. One application per section is usually enough. If you find yourself reaching for the accent to solve every emphasis problem, the type scale is not doing its job.",
-    "Gray rectangles standing in for images are not a cop-out; they are the constraint. Label each rectangle with the content it represents (for example, &ldquo;product screenshot&rdquo; or &ldquo;customer logo&rdquo;) in caption style so a reader knows what would be there in a final design.",
+    "Gray rectangles standing in for images are not a cop-out; they are the constraint. Label each rectangle with the content it represents (for example, “product screenshot” or “customer logo”) in caption style so a reader knows what would be there in a final design.",
     "Run the contrast check before you finalize colors, not after. If your accent fails against white at normal size, a small adjustment to its lightness value usually fixes it without changing the hue.",
     "The writeup is 15 points. It is not a summary of what you did; it is a defense of why. Write it after you finish the design and ask yourself: if I handed this to a developer to implement, what would they need to know about the decisions I made? That is the standard the grader is applying.",
     "The spacing system from Week 4 is straightforward: every gap, padding, and margin is a multiple of 8px. If you are unsure in advance, use 8, 16, 24, 32, 48, and 64 as your palette. You will refine the system in class, but these values will get you through the assignment without waiting.",

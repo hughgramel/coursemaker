@@ -4,7 +4,7 @@ export function Wk06SectionPage() {
   return (
     <>
       <AnchorHeading as="h1" id="channel-fit-worksheet">Section: Channel-fit worksheet</AnchorHeading>
-      <p className="fs-6 fw-300">Week 6 &middot; Hands-on worksheet</p>
+      <p className="fs-6 fw-300">Week 6 · Hands-on worksheet</p>
 
       <p>
         By the end of this section you will have scored your product against
@@ -63,7 +63,7 @@ export function Wk06SectionPage() {
       <p>
         Fill in the table for your own product. The pre-filled rows show
         example reasoning for a generic SaaS tool aimed at remote workers
-        &mdash; edit every cell to reflect your specific product.
+        ,  edit every cell to reflect your specific product.
       </p>
 
       <div style={{ overflowX: "auto" }}>
@@ -83,7 +83,7 @@ export function Wk06SectionPage() {
               <td style={{ padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>
                 <strong>SEO / organic search</strong>
                 <br />
-                <small style={{ color: "var(--text-muted, #666)" }}>Example: &ldquo;My users search for &lsquo;remote work tool for designers&rsquo; &mdash; strong intent signal.&rdquo;</small>
+                <small style={{ color: "var(--text-muted, #666)" }}>Example: “My users search for ‘remote work tool for designers’ ,  strong intent signal.”</small>
               </td>
               <td style={{ textAlign: "center", padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>4</td>
               <td style={{ textAlign: "center", padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>3</td>
@@ -95,7 +95,7 @@ export function Wk06SectionPage() {
               <td style={{ padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>
                 <strong>Twitter/X (build in public)</strong>
                 <br />
-                <small style={{ color: "var(--text-muted, #666)" }}>Example: &ldquo;Tech-adjacent audience but my users are designers, not developers &mdash; partial fit.&rdquo;</small>
+                <small style={{ color: "var(--text-muted, #666)" }}>Example: “Tech-adjacent audience but my users are designers, not developers ,  partial fit.”</small>
               </td>
               <td style={{ textAlign: "center", padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>2</td>
               <td style={{ textAlign: "center", padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>4</td>
@@ -107,7 +107,7 @@ export function Wk06SectionPage() {
               <td style={{ padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>
                 <strong>TikTok / short video</strong>
                 <br />
-                <small style={{ color: "var(--text-muted, #666)" }}>Example: &ldquo;High reach potential but no video production experience &mdash; effort cost is prohibitive right now.&rdquo;</small>
+                <small style={{ color: "var(--text-muted, #666)" }}>Example: “High reach potential but no video production experience ,  effort cost is prohibitive right now.”</small>
               </td>
               <td style={{ textAlign: "center", padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>3</td>
               <td style={{ textAlign: "center", padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>1</td>
@@ -119,7 +119,7 @@ export function Wk06SectionPage() {
               <td style={{ padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>
                 <strong>Reddit (subreddit targeting)</strong>
                 <br />
-                <small style={{ color: "var(--text-muted, #666)" }}>Example: &ldquo;r/digitalnomad is 700k members; high intent but strict self-promotion rules require genuine engagement.&rdquo;</small>
+                <small style={{ color: "var(--text-muted, #666)" }}>Example: “r/digitalnomad is 700k members; high intent but strict self-promotion rules require genuine engagement.”</small>
               </td>
               <td style={{ textAlign: "center", padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>4</td>
               <td style={{ textAlign: "center", padding: "8px 12px", borderBottom: "1px solid var(--border-color, #e0e0e0)" }}>3</td>
@@ -131,7 +131,7 @@ export function Wk06SectionPage() {
               <td style={{ padding: "8px 12px" }}>
                 <strong>Product Hunt</strong>
                 <br />
-                <small style={{ color: "var(--text-muted, #666)" }}>Example: &ldquo;Great for launch spike but not a repeatable weekly channel &mdash; low compounding value.&rdquo;</small>
+                <small style={{ color: "var(--text-muted, #666)" }}>Example: “Great for launch spike but not a repeatable weekly channel ,  low compounding value.”</small>
               </td>
               <td style={{ textAlign: "center", padding: "8px 12px" }}>3</td>
               <td style={{ textAlign: "center", padding: "8px 12px" }}>4</td>
@@ -154,16 +154,16 @@ export function Wk06SectionPage() {
           week, or direct evidence from week 1-5 experimentation.
         </li>
         <li>
-          <strong>Write your commitment statement.</strong> Format: &ldquo;I am
+          <strong>Write your commitment statement.</strong> Format: “I am
           committing to [channel] for weeks 6-10 because [one sentence of
           evidence]. My first output on this channel will be [specific thing]
-          shipped by [day of week].&rdquo; Write it in your founder journal
+          shipped by [day of week].” Write it in your founder journal
           before posting.
         </li>
         <li>
           <strong>Write the biggest risk.</strong> Every channel has a failure
-          mode. Name yours: &ldquo;This channel will fail for my product
-          if [specific condition].&rdquo; Naming the risk is not a reason to
+          mode. Name yours: “This channel will fail for my product
+          if [specific condition].” Naming the risk is not a reason to
           switch; it is a signal to watch.
         </li>
       </ol>
@@ -177,10 +177,10 @@ export function Wk06SectionPage() {
           and what you will ship this week. Tag three classmates. Example
           post text (edit to your voice and product):
           <blockquote style={{ borderLeft: "3px solid var(--primary, #5b4fcf)", paddingLeft: "1rem", margin: "1rem 0", fontStyle: "italic" }}>
-            &ldquo;I&rsquo;m committing to SEO for the next 4 weeks. My product
+            “I’m committing to SEO for the next 4 weeks. My product
             helps remote teams track time zones; the demand is clearly search-driven.
             First output this week: a 2k-word lighthouse article targeting
-            &lsquo;best time zone converter for distributed teams&rsquo;.&rdquo;
+            ‘best time zone converter for distributed teams’.”
           </blockquote>
         </li>
         <li>
@@ -191,7 +191,7 @@ export function Wk06SectionPage() {
         </li>
       </ol>
 
-      <AnchorHeading as="h2" id="part-4-seo-setup">Part 4: If you chose SEO &mdash; set up now</AnchorHeading>
+      <AnchorHeading as="h2" id="part-4-seo-setup">Part 4: If you chose SEO ,  set up now</AnchorHeading>
 
       <p>
         If your worksheet points to SEO, complete these steps before the end
@@ -210,9 +210,9 @@ export function Wk06SectionPage() {
           process must start today.
         </li>
         <li>
-          <strong>Submit your sitemap.</strong> In GSC: Sitemaps &rarr; enter
+          <strong>Submit your sitemap.</strong> In GSC: Sitemaps → enter
           the path to your sitemap (commonly <code>/sitemap.xml</code>). If you
-          do not have one, generate it with your framework&rsquo;s built-in
+          do not have one, generate it with your framework’s built-in
           tool or a free sitemap generator.
         </li>
         <li>
@@ -223,7 +223,7 @@ export function Wk06SectionPage() {
         </li>
         <li>
           <strong>Record your baseline.</strong> In your founder journal, write
-          today&rsquo;s GSC numbers: impressions, clicks, average position, and
+          today’s GSC numbers: impressions, clicks, average position, and
           total indexed pages. If all are zero, write that. These are your week
           6 baselines; every subsequent week you compare against them.
         </li>

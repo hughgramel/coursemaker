@@ -32,7 +32,7 @@ const spec: LectureSpec = {
     "ByteByteGo System Design 101 (2023) diagrams the difference between a CDN, a load balancer, and a reverse proxy. Draw a request path for a static image in a social media feed that passes through all three. Label what each component does at each hop.",
     "Hussein Nasser (2021) argues that understanding how a database stores data on disk changes every decision you make about caching and sharding. Pick hash-based sharding and explain why the sharding key choice matters for write throughput. What happens when the key has low cardinality?",
     "You are designing a notification system that sends 10 million push notifications per day at unpredictable burst times. Why is a synchronous API call from the application server to the push provider a bad design? What does a message queue solve here, and what does it cost?",
-    "A candidate says &ldquo;I would use Redis for caching.&rdquo; An interviewer asks why not Memcached. The candidate has no answer. Using the System Design Primer and ByteByteGo 101 as sources, write a two-sentence answer that names at least one concrete reason to choose Redis and one scenario where Memcached is the simpler choice.",
+    "A candidate says “I would use Redis for caching.” An interviewer asks why not Memcached. The candidate has no answer. Using the System Design Primer and ByteByteGo 101 as sources, write a two-sentence answer that names at least one concrete reason to choose Redis and one scenario where Memcached is the simpler choice.",
   ],
 };
 

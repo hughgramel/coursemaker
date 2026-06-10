@@ -10,7 +10,7 @@ export function Wk07SectionPage() {
     <ReadingPage
       id="wk07-section"
       title="Week 7 section: Wardrobe audit"
-      kicker="Looksmaxxing &middot; Autumn 2026 &middot; Hands-on worksheet"
+      kicker="Looksmaxxing · Autumn 2026 · Hands-on worksheet"
     >
       <ReadingFraming>
         <p>
@@ -57,7 +57,7 @@ export function Wk07SectionPage() {
           hangs and whether the hem rides up.
         </li>
         <li>
-          <strong>Label each photo.</strong> In your phone&rsquo;s notes or
+          <strong>Label each photo.</strong> In your phone’s notes or
           a simple spreadsheet, record: garment name, brand (optional), and
           photo number. You will add scores in Part 2.
         </li>
@@ -188,8 +188,8 @@ export function Wk07SectionPage() {
         <li>
           <strong>List the garments.</strong> For each look, write down every
           item: top, bottom, outerwear (if needed), shoes. Be specific. Do not
-          write &ldquo;nice shoes&rdquo;; write &ldquo;white leather
-          sneakers&rdquo; or &ldquo;brown leather Chelsea boots.&rdquo;
+          write “nice shoes”; write “white leather
+          sneakers” or “brown leather Chelsea boots.”
         </li>
         <li>
           <strong>Mark what you own vs. what you need to buy.</strong> Items
@@ -215,7 +215,7 @@ export function Wk07SectionPage() {
           keep / tailor / cull decision for each.
         </li>
         <li>
-          A five-look capsule plan with each look&rsquo;s context, garment
+          A five-look capsule plan with each look’s context, garment
           list, own/buy status, color count, and estimated cost. This is your
           HW4 first draft.
         </li>

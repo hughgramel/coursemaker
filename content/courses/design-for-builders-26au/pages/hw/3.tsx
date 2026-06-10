@@ -7,21 +7,21 @@ const spec: ProjectSpec = {
   outDate: "Week 6",
   dueDate: "Week 7",
   overview: [
-    "A landing page is the first thing a stranger sees. It has to earn attention before it can explain anything. This assignment asks you to design a complete landing page for your own product &mdash; not a generic exercise, not a redesign of something that already exists, but a real page for the thing you are actually building. You will work from hero to footer, using the starter kit, type scale, color palette, and 8pt grid you assembled in earlier weeks.",
+    "A landing page is the first thing a stranger sees. It has to earn attention before it can explain anything. This assignment asks you to design a complete landing page for your own product ,  not a generic exercise, not a redesign of something that already exists, but a real page for the thing you are actually building. You will work from hero to footer, using the starter kit, type scale, color palette, and 8pt grid you assembled in earlier weeks.",
     "The constraint is intentional. Everything on the page must come from the system you have already built. If your type scale has no display size large enough for the hero headline, you will feel that gap now, while it is cheap to fix. If your palette has no color that reads as a call-to-action button, you will find out before you hand the page to a developer. Landing pages expose the limits of a design system faster than any other format, which is why this assignment comes at the end of the first half of the course.",
   ],
   goals: [
     "Design a complete landing page layout from hero to footer at full fidelity in Figma.",
     "Apply your type scale, color palette, and 8pt grid consistently across every section.",
-    "Write and position a hero headline and subhead that communicate your product&rsquo;s value in five seconds or less.",
+    "Write and position a hero headline and subhead that communicate your product’s value in five seconds or less.",
     "Demonstrate understanding of social proof, feature presentation, and FAQ as structural page elements.",
     "Produce a responsive mobile variant and articulate the layout decisions that changed between breakpoints.",
   ],
   background: [
-    "A landing page has a known anatomy. Hero section at the top, social-proof band immediately below, feature explanation in the middle, FAQ to remove objections near the bottom, footer with a secondary call-to-action. This order is not arbitrary. It mirrors the mental sequence of a first-time visitor: &ldquo;What is this? Who else uses it? What does it actually do? What are the catches? How do I start?&rdquo; Every section answers one question in that sequence. Reordering the sections means reordering the conversation, which usually breaks trust rather than building it.",
-    "The hero is the section that determines whether a visitor reads anything else. It has four elements: a headline that names the outcome, a subhead that names who it is for and how it works, a primary call-to-action, and a visual (screenshot, illustration, or diagram) that makes the product concrete. The headline and subhead do not need to be clever; they need to be clear. &ldquo;The fastest way to schedule client calls&rdquo; outperforms &ldquo;Reclaim your calendar&rdquo; for most products because it names a specific outcome for a specific person. The visual exists to answer the question &ldquo;but what does it look like?&rdquo; before the visitor has to click anything.",
+    "A landing page has a known anatomy. Hero section at the top, social-proof band immediately below, feature explanation in the middle, FAQ to remove objections near the bottom, footer with a secondary call-to-action. This order is not arbitrary. It mirrors the mental sequence of a first-time visitor: “What is this? Who else uses it? What does it actually do? What are the catches? How do I start?” Every section answers one question in that sequence. Reordering the sections means reordering the conversation, which usually breaks trust rather than building it.",
+    "The hero is the section that determines whether a visitor reads anything else. It has four elements: a headline that names the outcome, a subhead that names who it is for and how it works, a primary call-to-action, and a visual (screenshot, illustration, or diagram) that makes the product concrete. The headline and subhead do not need to be clever; they need to be clear. “The fastest way to schedule client calls” outperforms “Reclaim your calendar” for most products because it names a specific outcome for a specific person. The visual exists to answer the question “but what does it look like?” before the visitor has to click anything.",
     "A feature triplet is three cards or columns, each describing one distinct capability. Parallel structure is mandatory: the same grammatical form, the same number of lines, the same visual weight. Triplets work because three items feel complete without feeling overwhelming. They also respect the grid: three equal columns at desktop width map cleanly onto a 12-column system with four columns each. At mobile width, they stack to a single column without rewriting.",
-    "Social proof belongs above the fold or just below the hero, not at the bottom. Visitors discount proof that appears only after they have already decided to look around. Two common forms are a logo band (five to eight company logos, grayscale, roughly equal size) and a quote block (a single sentence with attribution). If you have no real social proof yet, use clearly labeled placeholders. Do not fabricate logos or names; mark them as &ldquo;Placeholder&rdquo; in the design.",
+    "Social proof belongs above the fold or just below the hero, not at the bottom. Visitors discount proof that appears only after they have already decided to look around. Two common forms are a logo band (five to eight company logos, grayscale, roughly equal size) and a quote block (a single sentence with attribution). If you have no real social proof yet, use clearly labeled placeholders. Do not fabricate logos or names; mark them as “Placeholder” in the design.",
     "The bottom-of-page CTA repeats the primary action for visitors who scrolled the whole page but did not convert at the hero. It should be short: a headline reframing the offer, one sentence of reinforcement, and the same button as the hero. It is the last thing the visitor sees before the footer.",
   ],
   instructions: [
@@ -35,11 +35,11 @@ const spec: ProjectSpec = {
     },
     {
       title: "Build the hero in Figma using your type scale and palette",
-      body: "Create a desktop frame at 1440px wide. Place your headline using the largest display size in your type scale. Place your subhead using the secondary body size. Use your primary action color for the CTA button. Use your 8pt grid: no element should be placed at a y-position that is not a multiple of 8. Add a placeholder visual (a filled rectangle labeled &ldquo;Product screenshot&rdquo; is acceptable) if you do not have a real one.",
+      body: "Create a desktop frame at 1440px wide. Place your headline using the largest display size in your type scale. Place your subhead using the secondary body size. Use your primary action color for the CTA button. Use your 8pt grid: no element should be placed at a y-position that is not a multiple of 8. Add a placeholder visual (a filled rectangle labeled “Product screenshot” is acceptable) if you do not have a real one.",
     },
     {
       title: "Add a social-proof band",
-      body: "Below the hero, add a band containing either five to eight company logos or one quote with attribution. If you have real logos or quotes, use them. If you do not, place rectangles labeled &ldquo;Logo placeholder&rdquo; or a text block labeled &ldquo;[Customer quote placeholder]&rdquo;. Using placeholders is acceptable; unlabeled invented content is not. Keep all logos or quote elements at the same visual weight and align them to the same baseline.",
+      body: "Below the hero, add a band containing either five to eight company logos or one quote with attribution. If you have real logos or quotes, use them. If you do not, place rectangles labeled “Logo placeholder” or a text block labeled “[Customer quote placeholder]”. Using placeholders is acceptable; unlabeled invented content is not. Keep all logos or quote elements at the same visual weight and align them to the same baseline.",
     },
     {
       title: "Add three feature cards",
@@ -59,7 +59,7 @@ const spec: ProjectSpec = {
     },
   ],
   deliverables: [
-    "Figma share link with view access, containing both the desktop frames and the mobile frames. All frames should be named clearly (for example: &ldquo;Desktop &ndash; Hero&rdquo;, &ldquo;Mobile &ndash; Full Page&rdquo;).",
+    "Figma share link with view access, containing both the desktop frames and the mobile frames. All frames should be named clearly (for example: “Desktop - Hero”, “Mobile - Full Page”).",
     "A 300-word written response explaining: why you chose the hero layout you sketched, how you used color to guide attention (CTA, section breaks, footer), how your type hierarchy communicates importance, and what one element you would test first with a real user.",
   ],
   rubric: [

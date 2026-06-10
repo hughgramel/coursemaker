@@ -19,7 +19,7 @@ const spec: ProjectSpec = {
     "Leave the clinic with a written path-to-$10k-MRR plan you can act on Monday morning",
   ],
   background: [
-    "The diagnostic quadrant introduced this week names four reasons MRR stalls. A leak means users sign up but do not activate, or activate but do not retain: the funnel has a hole, and more acquisition pours through it. A ceiling means you have retained a small user base but cannot grow past it: your wedge channel is saturated and you have not found the next one. A price problem means the product delivers value but the price is wrong relative to the user&rsquo;s willingness to pay: the conversion rate from trial to paid is the diagnostic number. A channel problem means the product retains the users it gets, but it cannot find more of them at a viable cost: your CAC ceiling has arrived.",
+    "The diagnostic quadrant introduced this week names four reasons MRR stalls. A leak means users sign up but do not activate, or activate but do not retain: the funnel has a hole, and more acquisition pours through it. A ceiling means you have retained a small user base but cannot grow past it: your wedge channel is saturated and you have not found the next one. A price problem means the product delivers value but the price is wrong relative to the user’s willingness to pay: the conversion rate from trial to paid is the diagnostic number. A channel problem means the product retains the users it gets, but it cannot find more of them at a viable cost: your CAC ceiling has arrived.",
     "Most stalls are combinations. A product with weak D30 retention and a saturated wedge channel has both a leak and a ceiling. The clinic forces you to name the primary quadrant: the one where fixing it first would unlock the others. This is a judgment call. The evidence you bring to the clinic is what the class uses to test your judgment.",
     "The peer diagnosis step is not feedback-as-encouragement. It is a cold read of your numbers. Your peer has 5 minutes. They will say what they see. The norm for this clinic is that disagreement is useful and agreement is cheap. If your peer reaches the same diagnosis you did, that is one kind of signal. If they reach a different one and can point to a number you discounted, that is a more valuable signal.",
   ],
@@ -48,7 +48,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Step 2: 5-minute peer diagnosis",
-      body: "Your assigned peer (rotating by seat order) has 5 minutes. Their job is to diagnose your quadrant cold, from the numbers they just saw, without being influenced by your diagnosis. The ground rules: the peer states what they see, not what they think you want to hear. The presenter listens without defending. After the peer finishes, the presenter has 30 seconds to note whether the peer&rsquo;s diagnosis agrees or disagrees and which number they weighted differently.",
+      body: "Your assigned peer (rotating by seat order) has 5 minutes. Their job is to diagnose your quadrant cold, from the numbers they just saw, without being influenced by your diagnosis. The ground rules: the peer states what they see, not what they think you want to hear. The presenter listens without defending. After the peer finishes, the presenter has 30 seconds to note whether the peer’s diagnosis agrees or disagrees and which number they weighted differently.",
       steps: [
         "Peer: name the quadrant you see in the numbers presented (leak, ceiling, price, or channel). Give the one number that most strongly supports your reading.",
         "Peer: if you saw a different intervention than the one presented, name it. One sentence.",
@@ -58,17 +58,17 @@ const spec: ProjectSpec = {
     },
     {
       title: "Step 3: 5-minute staff guidance",
-      body: "Staff will respond to both the presenter&rsquo;s diagnosis and any peer disagreement. Staff guidance focuses on two things: whether the evidence supports the diagnosed quadrant, and whether the proposed intervention is correctly scoped (one metric, measurable, 30 days). Staff may redirect the intervention if the quadrant diagnosis does not match the numbers, or sharpen the rollback criterion if it is vague.",
+      body: "Staff will respond to both the presenter’s diagnosis and any peer disagreement. Staff guidance focuses on two things: whether the evidence supports the diagnosed quadrant, and whether the proposed intervention is correctly scoped (one metric, measurable, 30 days). Staff may redirect the intervention if the quadrant diagnosis does not match the numbers, or sharpen the rollback criterion if it is vague.",
       steps: [
         "Staff confirms or redirects the quadrant diagnosis based on the numbers presented.",
         "Staff confirms or sharpens the intervention scope: is the metric moveable in 30 days? Is the target specific enough to know if it was hit?",
         "Staff names the single most important question the founder should answer in the first week after the course ends.",
-        "Presenter writes down the staff&rsquo;s one question. This is the week 1 post-course priority.",
+        "Presenter writes down the staff’s one question. This is the week 1 post-course priority.",
       ],
     },
     {
       title: "After all presentations: group pattern recognition",
-      body: "Once all students have presented, the instructor runs a 10-minute group debrief: what quadrants appeared most often across the cohort? Were there common misdiagnoses (products diagnosed as ceiling problems that were actually price problems, or leak problems called channel problems)? What does the cohort&rsquo;s aggregate data say about the most common bottleneck for B2C products at this stage?",
+      body: "Once all students have presented, the instructor runs a 10-minute group debrief: what quadrants appeared most often across the cohort? Were there common misdiagnoses (products diagnosed as ceiling problems that were actually price problems, or leak problems called channel problems)? What does the cohort’s aggregate data say about the most common bottleneck for B2C products at this stage?",
     },
   ],
   deliverables: [
@@ -76,7 +76,7 @@ const spec: ProjectSpec = {
     "A stated diagnostic quadrant with two supporting numbers",
     "A 30-day intervention plan: one metric, one target, one deadline, one rollback criterion",
     "One note on the peer diagnosis: agree or disagree and the specific number at issue",
-    "One note on staff&rsquo;s single most important post-course question",
+    "One note on staff’s single most important post-course question",
   ],
   rubric: [
     {
@@ -107,13 +107,13 @@ const spec: ProjectSpec = {
       dimension: "Post-course question",
       points: 10,
       notes:
-        "Staff&rsquo;s question written down and answerable: specific enough to actually answer in the first week after the course ends",
+        "Staff’s question written down and answerable: specific enough to actually answer in the first week after the course ends",
     },
   ],
   hints: [
     "The hardest part of the clinic is presenting a $0 MRR or a decaying retention curve without apologizing for it. Practice saying the number out loud once before the clinic. It gets easier after the first time.",
     "If your peer disagrees with your quadrant, their disagreement is more useful than their agreement. Do not dismiss it. Ask yourself which number they saw differently and whether they are right.",
-    "A rollback criterion is not &ldquo;if it doesn&rsquo;t work.&rdquo; It is a specific number: &ldquo;if activation rate does not reach 35% by day 30, I revert to the original onboarding flow.&rdquo; Vague rollback criteria mean you will keep running the experiment past the point where it is clearly not working.",
+    "A rollback criterion is not “if it doesn’t work.” It is a specific number: “if activation rate does not reach 35% by day 30, I revert to the original onboarding flow.” Vague rollback criteria mean you will keep running the experiment past the point where it is clearly not working.",
     "The most common misdiagnosis in this clinic is calling a price problem a ceiling problem. If your D30 retention is above 30% but your trial-to-paid conversion is below 5%, you probably have a price problem, not a ceiling. Look at where in the funnel users drop out before you name the quadrant.",
     "The graduate-to-compound mindset from lecture 2 is not for the capstone defense. It is for after the defense. The defense is about the next 30 days. Lifecycle sequences and programmatic SEO clusters are 90-day and 180-day moves.",
   ],

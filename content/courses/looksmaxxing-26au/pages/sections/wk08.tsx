@@ -10,7 +10,7 @@ export function Wk08SectionPage() {
     <ReadingPage
       id="wk08-section"
       title="Week 8 section: Grooming kit show-and-tell"
-      kicker="Looksmaxxing &middot; Autumn 2026 &middot; Hands-on worksheet"
+      kicker="Looksmaxxing · Autumn 2026 · Hands-on worksheet"
     >
       <ReadingFraming>
         <p>
@@ -36,13 +36,13 @@ export function Wk08SectionPage() {
       </p>
       <ol>
         <li>
-          List every tool in each category. Be specific: a &ldquo;razor&rdquo;
+          List every tool in each category. Be specific: a “razor”
           is either a cartridge razor, a safety razor, or a straight razor.
-          A &ldquo;trimmer&rdquo; has a brand name and a guard-size range.
+          A “trimmer” has a brand name and a guard-size range.
         </li>
         <li>
           Mark each item with a frequency: daily, weekly, or rarely / never
-          used. Do not skip &ldquo;rarely.&rdquo; Items you own but never use
+          used. Do not skip “rarely.” Items you own but never use
           tell you something.
         </li>
         <li>
@@ -66,14 +66,14 @@ export function Wk08SectionPage() {
           current approach fits the face shape.
         </li>
         <li>
-          <strong>Neck line check.</strong> Place two fingers above the Adam&rsquo;s
+          <strong>Neck line check.</strong> Place two fingers above the Adam’s
           apple. The neck line should not go above that point. If it does,
           the beard will look like a chin strap. If it goes below the jawline
           entirely, it is a neckbeard. Note where your current line falls.
         </li>
         <li>
           <strong>Face-shape match.</strong> Using the lecture framework
-          (Matty Conrad), name the subject&rsquo;s face shape and state
+          (Matty Conrad), name the subject’s face shape and state
           whether their current beard style adds length, adds width, or does
           neither. A round face that is wearing a round beard shape is working
           against itself. Write down the recommendation.
@@ -115,7 +115,7 @@ export function Wk08SectionPage() {
         <li>
           Look at your nails right now. Are they trimmed straight across with
           a small white edge visible, or uneven? Are the cuticles dry or
-          ragged? This is the visible-signal audit from Lecture 2. A &ldquo;no&rdquo;
+          ragged? This is the visible-signal audit from Lecture 2. A “no”
           to either question is a five-minute fix.
         </li>
         <li>
@@ -127,7 +127,7 @@ export function Wk08SectionPage() {
           What antiperspirant or deodorant do you use, and when do you apply
           it? The correct answer is antiperspirant applied to dry skin at night
           (or in the morning if you shower at night). If your answer is
-          &ldquo;deodorant in the morning after a shower,&rdquo; you are not
+          “deodorant in the morning after a shower,” you are not
           blocking sweat, only masking odor.
         </li>
       </ol>
@@ -140,9 +140,9 @@ export function Wk08SectionPage() {
       </p>
       <ol>
         <li>
-          <strong>Replace or upgrade.</strong> Be specific: &ldquo;replace my
-          trimmer guard set with one that goes down to 0.5 mm&rdquo; is
-          actionable. &ldquo;Get better grooming stuff&rdquo; is not.
+          <strong>Replace or upgrade.</strong> Be specific: “replace my
+          trimmer guard set with one that goes down to 0.5 mm” is
+          actionable. “Get better grooming stuff” is not.
         </li>
         <li>
           <strong>Add.</strong> If you have no fragrance, the add is a decant

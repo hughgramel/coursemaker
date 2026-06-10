@@ -82,7 +82,7 @@ const spec: ProjectSpec = {
       dimension: "Weekly system: minimum viable week described and realistic",
       points: 20,
       notes:
-        "Post types named. Days or cadence specified. System must survive a week where the creator is busy. &ldquo;Post every day&rdquo; without a batch strategy is not a system.",
+        "Post types named. Days or cadence specified. System must survive a week where the creator is busy. “Post every day” without a batch strategy is not a system.",
     },
     {
       dimension: "First 30 posts: hooks written, organized by week",
@@ -94,7 +94,7 @@ const spec: ProjectSpec = {
       dimension: "Peer feedback given: structured, honest, useful",
       points: 10,
       notes:
-        "Evidence of written feedback notes for two peers. Feedback must reference the four structured questions, not just &ldquo;looks good.&rdquo;",
+        "Evidence of written feedback notes for two peers. Feedback must reference the four structured questions, not just “looks good.”",
     },
     {
       dimension: "Revision quality: changes documented and explained",
@@ -107,7 +107,7 @@ const spec: ProjectSpec = {
     "The most common capstone failure is a first-30-posts list that is all the same format. Aim for at least four distinct formats: thread, single post, reply, quote-post.",
     "Milestone targets that match the average for your niche are fine. Targets that are 10x the average require an explanation of what you will do differently.",
     "The weekly system must survive the hardest week of the term, not the easiest. Think about what you will do when you have three deadlines and a family event.",
-    "Peer feedback is most useful when it is specific and negative. &ldquo;The hook on post 12 promises a number but doesn&rsquo;t deliver one&rdquo; is useful. &ldquo;Good work&rdquo; is not.",
+    "Peer feedback is most useful when it is specific and negative. “The hook on post 12 promises a number but doesn’t deliver one” is useful. “Good work” is not.",
     "HW 4 conclusions belong in the playbook. If your experiment showed that threads underperformed single posts, your first 30 days should reflect that.",
     "After section, you can keep building. The 90-day playbook is a living document. The version you submit is the version you start from.",
   ],

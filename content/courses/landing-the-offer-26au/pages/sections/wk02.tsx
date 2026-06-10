@@ -29,7 +29,7 @@ const spec: ProjectSpec = {
     },
     {
       title: "Bullet teardown in pairs (20 minutes)",
-      body: "Pair up with someone. Share your three weak bullets with your partner. For each bullet, your partner asks: &ldquo;What did you do? At what scale? With what result?&rdquo; Your answers become the raw material for the rewrite. Switch roles after 10 minutes. The goal is to surface the real information that is missing from the bullet, not to polish prose.",
+      body: "Pair up with someone. Share your three weak bullets with your partner. For each bullet, your partner asks: “What did you do? At what scale? With what result?” Your answers become the raw material for the rewrite. Switch roles after 10 minutes. The goal is to surface the real information that is missing from the bullet, not to polish prose.",
     },
     {
       title: "Live rewrite (15 minutes)",
@@ -77,11 +77,11 @@ const spec: ProjectSpec = {
     },
   ],
   hints: [
-    "The most common reason a bullet stays weak after a rewrite is that the result field is vague. If you wrote &ldquo;improved performance,&rdquo; push yourself to name a number: how much, measured how, compared to what baseline?",
-    "If you genuinely do not have a metric, use a scoped claim instead of a vague one. &ldquo;Sole backend engineer on a 3-person team that shipped in 6 weeks&rdquo; is specific even without a performance number.",
-    "For the keyword gap audit, prioritize gaps in the &ldquo;Required skills&rdquo; section of the JD over gaps in &ldquo;Nice to have.&rdquo; Closing a required-skills gap is almost always a higher-leverage edit than adding a nice-to-have.",
+    "The most common reason a bullet stays weak after a rewrite is that the result field is vague. If you wrote “improved performance,” push yourself to name a number: how much, measured how, compared to what baseline?",
+    "If you genuinely do not have a metric, use a scoped claim instead of a vague one. “Sole backend engineer on a 3-person team that shipped in 6 weeks” is specific even without a performance number.",
+    "For the keyword gap audit, prioritize gaps in the “Required skills” section of the JD over gaps in “Nice to have.” Closing a required-skills gap is almost always a higher-leverage edit than adding a nice-to-have.",
     "The artifact plan works best when the interesting technical decision is something you genuinely found hard or surprising. If you cannot think of one, that is a sign the project needs more depth, not that you need a better answer.",
-    "This section&rsquo;s bullet rewrites are your raw material for HW 1. Do not leave section without at least one rewrite you feel good about: it will anchor the rest of the assignment.",
+    "This section’s bullet rewrites are your raw material for HW 1. Do not leave section without at least one rewrite you feel good about: it will anchor the rest of the assignment.",
   ],
 };
 
