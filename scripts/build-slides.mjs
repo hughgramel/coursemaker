@@ -43,6 +43,7 @@ function buildOne(srcPath, outPath) {
     "dlx", "@marp-team/marp-cli@latest",
     "--theme", THEME,
     "--allow-local-files",
+    "--html",
     "--pdf",
     "-o", outPath,
     srcPath,
