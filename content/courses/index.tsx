@@ -10,6 +10,7 @@ import { course as growOnX26au } from "./grow-on-x-26au";
 import { course as template } from "./template";
 import { course as landingTheOffer26au } from "./landing-the-offer-26au";
 import { course as looksmaxxing26au } from "./looksmaxxing-26au";
+import { course as designForBuilders26au } from "./design-for-builders-26au";
 
 
 // COURSEMAKER:REGISTRY_START — do not delete this marker.
@@ -17,7 +18,7 @@ export const courses: Course[] = [
   cse457_26sp,
   b2c10kMrr26au,
   growOnX26au,  template,  landingTheOffer26au,
-  looksmaxxing26au,
+  looksmaxxing26au,  designForBuilders26au,
 ];
 // COURSEMAKER:REGISTRY_END — do not delete this marker.
 

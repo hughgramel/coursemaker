@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" fill="none">
+
+  <!-- Background: soft neutral wash on left token panel -->
+  <rect x="60" y="60" width="340" height="280" rx="8" fill="#f6f4ff"/>
+
+  <!-- Token panel: section label lines (calm, textbook grid feel) -->
+  <!-- Row dividers -->
+  <line x1="80" y1="145" x2="380" y2="145" stroke="#7253ed" stroke-width="0.75" stroke-opacity="0.25"/>
+  <line x1="80" y1="225" x2="380" y2="225" stroke="#7253ed" stroke-width="0.75" stroke-opacity="0.25"/>
+
+  <!-- === COLOR TOKENS row (y ~100) === -->
+  <!-- Swatch ramp: 6 circles, left to right, darkening purple -->
+  <circle cx="110" cy="100" r="16" fill="#7253ed" fill-opacity="0.15"/>
+  <circle cx="150" cy="100" r="16" fill="#7253ed" fill-opacity="0.30"/>
+  <circle cx="190" cy="100" r="16" fill="#7253ed" fill-opacity="0.50"/>
+  <circle cx="230" cy="100" r="16" fill="#7253ed" fill-opacity="0.70"/>
+  <circle cx="270" cy="100" r="16" fill="#7253ed" fill-opacity="0.90"/>
+  <!-- Accent dot -->
+  <circle cx="310" cy="100" r="16" fill="#d93c3c" fill-opacity="0.80"/>
+  <!-- Token label lines (simulated text blocks) -->
+  <rect x="108" y="122" width="20" height="4" rx="2" fill="#7253ed" fill-opacity="0.3"/>
+  <rect x="148" y="122" width="20" height="4" rx="2" fill="#7253ed" fill-opacity="0.3"/>
+  <rect x="188" y="122" width="20" height="4" rx="2" fill="#7253ed" fill-opacity="0.3"/>
+  <rect x="228" y="122" width="20" height="4" rx="2" fill="#7253ed" fill-opacity="0.3"/>
+  <rect x="268" y="122" width="20" height="4" rx="2" fill="#7253ed" fill-opacity="0.3"/>
+  <rect x="308" y="122" width="20" height="4" rx="2" fill="#d93c3c" fill-opacity="0.3"/>
+
+  <!-- === TYPOGRAPHY TOKENS row (y ~185) === -->
+  <!-- Large "A" glyph outlines — three sizes, construction style -->
+  <!-- Large A -->
+  <text x="100" y="210" font-family="Georgia, serif" font-size="48" fill="#7253ed" fill-opacity="0.85">A</text>
+  <!-- Medium A -->
+  <text x="168" y="205" font-family="Georgia, serif" font-size="34" fill="#7253ed" fill-opacity="0.60">A</text>
+  <!-- Small A -->
+  <text x="222" y="200" font-family="Georgia, serif" font-size="22" fill="#7253ed" fill-opacity="0.40">A</text>
+  <!-- Baseline rule -->
+  <line x1="96" y1="212" x2="260" y2="212" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.3"/>
+  <!-- Simulated type-size label bars -->
+  <rect x="298" y="175" width="60" height="5" rx="2.5" fill="#7253ed" fill-opacity="0.5"/>
+  <rect x="298" y="186" width="44" height="4" rx="2" fill="#7253ed" fill-opacity="0.35"/>
+  <rect x="298" y="196" width="30" height="3" rx="1.5" fill="#7253ed" fill-opacity="0.25"/>
+  <rect x="298" y="205" width="20" height="2.5" rx="1.25" fill="#7253ed" fill-opacity="0.18"/>
+
+  <!-- === SPACING TOKENS row (y ~260) === -->
+  <!-- Spacing dots: 5 dots with increasing gap, ruler-style -->
+  <circle cx="105" cy="260" r="3.5" fill="#7253ed" fill-opacity="0.6"/>
+  <circle cx="122" cy="260" r="3.5" fill="#7253ed" fill-opacity="0.6"/>
+  <circle cx="147" cy="260" r="3.5" fill="#7253ed" fill-opacity="0.6"/>
+  <circle cx="183" cy="260" r="3.5" fill="#7253ed" fill-opacity="0.6"/>
+  <circle cx="235" cy="260" r="3.5" fill="#7253ed" fill-opacity="0.6"/>
+  <!-- Bracket lines showing the spacing -->
+  <line x1="105" y1="272" x2="235" y2="272" stroke="#7253ed" stroke-width="0.9" stroke-opacity="0.35"/>
+  <line x1="105" y1="268" x2="105" y2="275" stroke="#7253ed" stroke-width="0.9" stroke-opacity="0.35"/>
+  <line x1="122" y1="268" x2="122" y2="275" stroke="#7253ed" stroke-width="0.9" stroke-opacity="0.35"/>
+  <line x1="147" y1="268" x2="147" y2="275" stroke="#7253ed" stroke-width="0.9" stroke-opacity="0.35"/>
+  <line x1="183" y1="268" x2="183" y2="275" stroke="#7253ed" stroke-width="0.9" stroke-opacity="0.35"/>
+  <line x1="235" y1="268" x2="235" y2="275" stroke="#7253ed" stroke-width="0.9" stroke-opacity="0.35"/>
+  <!-- Spacing label bars -->
+  <rect x="290" y="250" width="14" height="4" rx="2" fill="#7253ed" fill-opacity="0.5"/>
+  <rect x="311" y="250" width="20" height="4" rx="2" fill="#7253ed" fill-opacity="0.5"/>
+  <rect x="338" y="250" width="28" height="4" rx="2" fill="#7253ed" fill-opacity="0.5"/>
+
+  <!-- =========================================================== -->
+  <!-- Flow arrow: tokens → screen                                 -->
+  <!-- =========================================================== -->
+  <!-- Horizontal connector lines, three rows, converging -->
+  <path d="M 400 100 C 480 100 510 200 560 200" stroke="#7253ed" stroke-width="1.5" stroke-opacity="0.35" fill="none"/>
+  <path d="M 400 185 C 450 185 510 200 560 200" stroke="#7253ed" stroke-width="1.5" stroke-opacity="0.35" fill="none"/>
+  <path d="M 400 260 C 480 260 510 200 560 200" stroke="#7253ed" stroke-width="1.5" stroke-opacity="0.35" fill="none"/>
+  <!-- Arrow tip -->
+  <polygon points="555,193 568,200 555,207" fill="#7253ed" fill-opacity="0.5"/>
+
+  <!-- =========================================================== -->
+  <!-- Product screen mock (right side)                            -->
+  <!-- =========================================================== -->
+  <!-- Outer frame / window chrome -->
+  <rect x="575" y="60" width="560" height="280" rx="10" fill="white" stroke="#7253ed" stroke-width="1.5" stroke-opacity="0.6"/>
+  <!-- Window bar -->
+  <rect x="575" y="60" width="560" height="32" rx="10" fill="#7253ed" fill-opacity="0.08"/>
+  <line x1="575" y1="92" x2="1135" y2="92" stroke="#7253ed" stroke-width="1" stroke-opacity="0.2"/>
+  <!-- Traffic-light dots (window buttons, abstract) -->
+  <circle cx="598" cy="76" r="5" fill="#d93c3c" fill-opacity="0.55"/>
+  <circle cx="616" cy="76" r="5" fill="#7253ed" fill-opacity="0.25"/>
+  <circle cx="634" cy="76" r="5" fill="#7253ed" fill-opacity="0.25"/>
+  <!-- URL bar placeholder -->
+  <rect x="680" y="68" width="200" height="16" rx="8" fill="#7253ed" fill-opacity="0.08" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.25"/>
+
+  <!-- Nav bar inside screen -->
+  <rect x="595" y="108" width="520" height="28" rx="4" fill="#7253ed" fill-opacity="0.06"/>
+  <!-- Nav brand bar -->
+  <rect x="608" y="117" width="48" height="9" rx="4.5" fill="#7253ed" fill-opacity="0.55"/>
+  <!-- Nav links (right side) -->
+  <rect x="950" y="118" width="28" height="7" rx="3.5" fill="#7253ed" fill-opacity="0.25"/>
+  <rect x="986" y="118" width="28" height="7" rx="3.5" fill="#7253ed" fill-opacity="0.25"/>
+  <rect x="1022" y="118" width="44" height="7" rx="3.5" fill="#d93c3c" fill-opacity="0.55"/>
+
+  <!-- Hero section inside screen -->
+  <!-- Hero headline -->
+  <rect x="608" y="154" width="260" height="14" rx="7" fill="#7253ed" fill-opacity="0.7"/>
+  <rect x="608" y="174" width="200" height="14" rx="7" fill="#7253ed" fill-opacity="0.5"/>
+  <!-- Sub-headline -->
+  <rect x="608" y="198" width="300" height="8" rx="4" fill="#7253ed" fill-opacity="0.2"/>
+  <rect x="608" y="212" width="260" height="8" rx="4" fill="#7253ed" fill-opacity="0.2"/>
+  <rect x="608" y="226" width="180" height="8" rx="4" fill="#7253ed" fill-opacity="0.2"/>
+  <!-- CTA button -->
+  <rect x="608" y="248" width="100" height="30" rx="6" fill="#7253ed"/>
+  <rect x="720" y="248" width="80" height="30" rx="6" fill="#7253ed" fill-opacity="0.12" stroke="#7253ed" stroke-width="1" stroke-opacity="0.4"/>
+
+  <!-- Right side of hero: product card / image placeholder -->
+  <rect x="940" y="145" width="155" height="148" rx="8" fill="#f6f4ff" stroke="#7253ed" stroke-width="1" stroke-opacity="0.3"/>
+  <!-- Card inner: color bar at top -->
+  <rect x="940" y="145" width="155" height="32" rx="8" fill="#7253ed" fill-opacity="0.15"/>
+  <!-- Card content lines -->
+  <rect x="956" y="192" width="120" height="8" rx="4" fill="#7253ed" fill-opacity="0.35"/>
+  <rect x="956" y="206" width="90" height="7" rx="3.5" fill="#7253ed" fill-opacity="0.25"/>
+  <rect x="956" y="220" width="108" height="7" rx="3.5" fill="#7253ed" fill-opacity="0.2"/>
+  <!-- Card accent badge -->
+  <rect x="956" y="244" width="52" height="20" rx="4" fill="#d93c3c" fill-opacity="0.7"/>
+  <rect x="1016" y="244" width="52" height="20" rx="4" fill="#7253ed" fill-opacity="0.15" stroke="#7253ed" stroke-width="0.8" stroke-opacity="0.3"/>
+
+</svg>
