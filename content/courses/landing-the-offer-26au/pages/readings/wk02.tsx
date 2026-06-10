@@ -17,17 +17,19 @@ export function Wk02Reading() {
     >
       <ReadingFraming>
         <p>
-          This reading covers four interconnected topics: how the{" "}
-          <strong>resume-keyword-screen</strong> works and how to pass it, how
-          to write <strong>accomplishment-bullet</strong>s that survive the
-          30-second human read, how to build a <strong>github-portfolio</strong>{" "}
-          and a <strong>linkedin-presence</strong> that confirm your resume
-          rather than contradict it, and how to produce at least one{" "}
-          <strong>public-artifact</strong> that frames your{" "}
-          <strong>project-narrative</strong> for a recruiter scanning in 30
-          seconds. By the end you will be able to audit a resume against an{" "}
-          <strong>ats-system</strong> keyword list, rewrite weak bullets as
-          accomplishments, and outline the one{" "}
+          This reading covers four interconnected topics: how a tech resume
+          actually gets read (the human pipeline, not the ATS-myth version),
+          how to write <strong>accomplishment-bullet</strong>s that survive
+          the 30-second human read, how to present{" "}
+          <strong>languages-and-technologies</strong> so recruiters can
+          quickly verify role fit, and how to build a{" "}
+          <strong>github-portfolio</strong>, a{" "}
+          <strong>linkedin-presence</strong>, and at least one{" "}
+          <strong>public-artifact</strong> that confirm your resume rather
+          than contradict it. By the end you will be able to audit your
+          resume the way a real recruiter does, rewrite weak bullets as
+          accomplishments, choose a Languages and Technologies layout that
+          fits your experience level, and outline the one{" "}
           <strong>positioning</strong> artifact you will ship this term.
         </p>
         <p>
@@ -39,94 +41,146 @@ export function Wk02Reading() {
         </p>
       </ReadingFraming>
 
-      <AnchorHeading as="h2" id="1-two-readers">
-        1. Two readers, two very different goals
+      <AnchorHeading as="h2" id="1-the-myth-and-the-pipeline">
+        1. The ATS myth, and what actually happens
       </AnchorHeading>
       <p>
-        Before a human being sees your resume, an automated system has already
-        scored it. Most large employers route applications through an{" "}
-        <strong>ATS (Applicant Tracking System)</strong>, a piece of software
-        that parses the document into structured fields and measures how well
-        the content matches the job description. The ATS does not evaluate
-        writing quality, narrative arc, or the impressiveness of the project
-        behind a bullet. It counts keyword overlap.
+        Almost every new-grad reads online advice that begins the same way:
+        &ldquo;Before a human sees your resume, an ATS scores it for keyword
+        overlap, and a recruiter never opens your file if the score is too
+        low.&rdquo; This is the most common piece of resume advice on the
+        internet. It is also wrong.
       </p>
       <p>
-        If the keyword score falls below the employer&rsquo;s threshold, a
-        recruiter may never open the file. At high-volume companies during
-        new-grad season, an applicant pool of 10,000 resumes may be reduced to
-        300-500 before any human reads a single word. This is not a bug in the
-        hiring system from the employer&rsquo;s perspective: it is how they
-        manage a funnel they cannot otherwise staff. For you as a candidate, it
-        means the first audience you write for is a parser, not a person.
+        Orosz (2020), based on interviews with more than a dozen technical
+        recruiters across Amazon, Google, Microsoft, Uber, Booking.com, and
+        Silicon Valley startups, is direct about this: an{" "}
+        <strong>ATS (Applicant Tracking System)</strong> is a queue, not a
+        filter. It records the lifecycle of each application (applied,
+        reviewed, phone screen, onsite, offer) so the company can manage
+        thousands of candidates over time. Resume parsing happens, but only
+        to auto-fill fields like name and email, and to support boolean
+        searches by recruiters later. No mainstream ATS uses the parsed
+        content to reject applications automatically.
       </p>
-      <p>
-        The second reader is a recruiter who has passed the threshold items and
-        now has roughly 30 seconds to decide whether to move you to the next
-        step or not. Tay (2023) reports that recruiters at high-volume
-        companies can spend as few as 10-15 seconds on a first pass. In that
-        window they are not reading: they are scanning for the contact
-        information, the school name, the graduation date, the most recent role
-        title, and two or three bullet points near the top. Visual hierarchy
-        determines what they see.
-      </p>
-      <p>
-        Writing for both readers at once is possible, but it requires
-        understanding what each values. The ATS values keyword presence. The
-        recruiter values scannability and signal density. A resume optimized for
-        one reader at the expense of the other fails overall.
-      </p>
-
-      <AnchorHeading as="h2" id="2-passing-the-ats">
-        2. Passing the ATS: keyword strategy and formatting
-      </AnchorHeading>
-      <p>
-        ATS parsers extract text from your resume, segment it into sections,
-        and compare the extracted tokens against the job description. The
-        simplest and most effective strategy is also the most honest one: use
-        the exact technology names that appear in the job description.
-      </p>
-      <p>
-        If the job description says &ldquo;React,&rdquo; do not write
-        &ldquo;ReactJS.&rdquo; If it says &ldquo;PostgreSQL,&rdquo; do not
-        write &ldquo;Postgres.&rdquo; Some parsers normalize these variants;
-        many do not. Tay (2023) recommends listing technologies in a dedicated
-        Skills section using the exact strings from the JD, and also weaving
-        them into bullet context so the parser finds them in multiple locations.
-        Keywords that appear only in a skills list without supporting context
-        sometimes score lower than keywords that also appear in action-item
-        sentences.
-      </p>
-
-      <Callout title="The three-step keyword audit">
+      <Callout title="Recruiters, in their own words">
         <p>
-          (1) Paste the job description into a plain text editor. Highlight
-          every technology name and action verb. (2) Compare the highlighted
-          list against your resume, section by section. (3) Any keyword that
-          appears in the JD but not your resume is a gap. The top three gaps
-          are your highest-priority edits before submitting.
+          <strong>Amy Miller</strong> (Amazon, Google, Microsoft): &ldquo;The
+          list of people in an ATS is organized by date when they applied. A
+          real-life person then makes a decision.&rdquo;
+        </p>
+        <p>
+          <strong>Csudi Csudutov</strong> (20+ years in tech recruiting):
+          &ldquo;No recruiter I know would trust an ATS with filtering, even
+          the slightest. They don&rsquo;t want to risk losing otherwise
+          perfectly good candidates.&rdquo;
+        </p>
+        <p>
+          <strong>Jos&eacute; Marchena</strong> (London-based tech recruiter):
+          &ldquo;ATSes are still so bad at filtering based on resume content
+          that we get poorly formatted CVs, irrelevant profiles, or even
+          blank pages.&rdquo;
         </p>
       </Callout>
+      <p>
+        What actually happens at a large company: applications arrive in the
+        ATS sorted by date. An <strong>inbound sourcer</strong> or recruiter
+        opens them in order and spends 10-15 seconds on each one deciding
+        Yes, Maybe, or No. Knockout questions on the application form (visa
+        status, location, minimum years required) reject a small fraction
+        automatically, but those filters operate on the form, not on your
+        resume content. Everything else is a human read.
+      </p>
+      <p>
+        The implication for you is large. You do not need to game a parser.
+        You do not need to remove your two-column layout because some forum
+        post claimed it confuses an ATS, and you do not need to pay an
+        &ldquo;ATS optimization service&rdquo; to bypass an algorithm that
+        does not exist. What you need is a resume that a real recruiter,
+        scanning in 10-15 seconds, can use to answer one question:{" "}
+        <em>does this candidate plausibly match the role?</em> Everything
+        else in this reading is about writing for that human.
+      </p>
 
+      <AnchorHeading as="h2" id="2-the-people-on-the-other-side">
+        2. The people on the other side
+      </AnchorHeading>
       <p>
-        Formatting is the second ATS failure mode. Parsers expect plain,
-        linear text. Multi-column layouts, tables used to arrange work
-        experience, text boxes, headers and footers, and graphics all confuse
-        parsers that read documents sequentially. A resume that looks beautiful
-        in a PDF viewer may produce garbled output when the ATS parses it,
-        which means the keyword matching runs on noise rather than your actual
-        content. Use a single-column layout. Use standard section names
-        (Education, Experience, Projects, Skills). Export as a standard PDF
-        where the text layer is selectable.
+        The hiring pipeline is staffed by several distinct roles, each with
+        different incentives. Knowing who you are writing for, and who you
+        are talking to at each stage, removes most of the mystery from the
+        process. Orosz (2020) names six roles you will encounter:
       </p>
+      <ul>
+        <li>
+          <strong>Hiring manager.</strong> Runs the show. Defines the role,
+          writes (or commissions) the job description, picks the interview
+          panel, and has the final hire decision. You usually do not talk to
+          them until the onsite. Their goal is to staff their team with
+          people who will help it excel.
+        </li>
+        <li>
+          <strong>Recruiter.</strong> Coordinates the recruitment side and
+          is your main point of contact once your application moves forward.
+          They are measured on filled headcounts and are, contrary to
+          first-time-applicant intuition,{" "}
+          <em>on your side within the constraints the hiring manager set</em>.
+          When a recruiter calls with a rejection, they are usually the
+          messenger, not the decider.
+        </li>
+        <li>
+          <strong>Sourcer.</strong> Proactively reaches out on LinkedIn and
+          other channels to fill the pipeline. The LinkedIn message from a
+          company you did not apply to comes from a sourcer. A sourcer
+          reach-out is a strong signal of interest but not an offer of a
+          job. You still go through the normal interview pipeline.
+        </li>
+        <li>
+          <strong>Inbound sourcer.</strong> At larger companies, a
+          specialized role that screens incoming applications through the
+          jobs site. Referrals usually skip this stage and go to a recruiter
+          directly. The inbound sourcer&rsquo;s job is to forward qualified
+          candidates to the recruiter without wasting the recruiter&rsquo;s
+          time.
+        </li>
+        <li>
+          <strong>Recruitment coordinator.</strong> Handles the logistics:
+          scheduling the technical screen and onsite, swapping interviewers,
+          booking travel. They are who you email when something on your end
+          changes.
+        </li>
+        <li>
+          <strong>Interview panel.</strong> The engineers and managers who
+          actually conduct the technical interviews. At small companies,
+          team members. At large companies, a calibrated pool of engineers
+          above a certain level. The hiring manager picks them.
+        </li>
+      </ul>
       <p>
-        The formatting rule has one implication that surprises students: a
-        clean, plain resume is not less impressive than a designed one. The
-        people who evaluate technical candidates at software companies are
-        engineers and engineering managers who recognize economy and signal
-        density when they see it. Unnecessary design elements suggest the
-        author is optimizing for the wrong audience.
+        Two practical consequences of this map. First, a referral is
+        valuable not because it skips screening but because it changes which
+        queue you land in: a referred application typically goes to a
+        recruiter directly, not to the inbound sourcer&rsquo;s slower queue.
+        Second, when you write for &ldquo;the resume reader,&rdquo; you are
+        almost always writing for an inbound sourcer or recruiter, not the
+        hiring manager. That reader is generalist, fast, and looking for
+        clear signals that match a checklist the hiring manager handed them.
       </p>
+      <Callout title="What recruiters actually look for">
+        <p>
+          Victoria Farelly (Uber, Booking.com, ING) describes the recruiter
+          read: &ldquo;A hiring manager will often say to you: &lsquo;I want
+          these five things, and if a person doesn&rsquo;t have these five
+          things, I&rsquo;m not hiring them.&rsquo; If you&rsquo;re a good
+          recruiter, you&rsquo;re there to advise them...we have the
+          resources to take someone who only has three or four of those
+          five.&rdquo;
+        </p>
+        <p>
+          A tailored resume that maps clearly to the five items wins the
+          first scan. A generic resume that buries the same overlap loses it.
+        </p>
+      </Callout>
 
       <AnchorHeading as="h2" id="3-the-30-second-read">
         3. The 30-second human read
@@ -260,8 +314,92 @@ sole backend engineer on a 4-person class project team.`}</pre>
         what scale, and with what result, and then write down the answer.
       </p>
 
-      <AnchorHeading as="h2" id="6-github">
-        6. GitHub as a portfolio
+      <AnchorHeading as="h2" id="6-languages-and-technologies">
+        6. Languages and Technologies: three approaches
+      </AnchorHeading>
+      <p>
+        One of the first questions a recruiter or hiring manager has when
+        they look at your resume is: &ldquo;What languages and technologies
+        is this person hands-on with?&rdquo; Orosz (2020) documents three
+        legitimate ways to answer that question on the page. Pick the one
+        that fits your situation; do not mix them randomly.
+      </p>
+
+      <h3>Approach 1: a separate Languages and Technologies section</h3>
+      <p>
+        The most common layout. List your relevant technologies in their
+        own section near the top. The name of the section matters less
+        than the contents. List only things you can do day-to-day work in.
+        Do not list expertise levels (&ldquo;expert,&rdquo;
+        &ldquo;proficient&rdquo;), do not list trivial tools (Word, Trello,
+        Sublime), do not list things you have not touched in two years.
+      </p>
+      <p>Before:</p>
+      <pre>{`Relevant Skills
+- Programming languages: Perl, C++, Java (expert), HTML5, CSS3, Bootstrap,
+  JavaScript (ES6, proficient), React.js (expert), PHP
+- Databases: MySQL (expert), Oracle SQL, MSSQL (proficient)
+- Technologies: AWS, Bitbucket, GitHub, Visual Studio, MATLAB, Eclipse,
+  phpMyAdmin, Adobe Photoshop, Oracle Fusion, Rational Rose, Sublime,
+  Trello, Word`}</pre>
+      <p>After:</p>
+      <pre>{`Languages and Technologies
+- Languages:     JavaScript, Java, HTML/CSS, PHP, SQL
+- Technologies:  React.js, Bootstrap, AWS
+- Other:         API design, relational databases, unit, integration and
+                 E2E testing`}</pre>
+      <p>
+        The cleaned version drops self-rated expertise, removes ancient
+        languages the candidate is rusty in (which can also contribute to
+        age bias), and lists the strongest items first. It matches the
+        target job description without padding.
+      </p>
+
+      <h3>Approach 2: woven into the work experience</h3>
+      <p>
+        Drop the separate section. Name the technologies at the end of
+        each role&rsquo;s bullets, either as an explicit &ldquo;Technologies:&rdquo;
+        line or naturally inside the bullet itself. This approach is best
+        when recency of a technology matters: it tells the reader exactly
+        when you last used Java versus when you used Go.
+      </p>
+      <pre>{`Software Engineer, Tax Returns (2024-present)
+- Led the third-party interface integration for two of our largest
+  clients (Microsoft and EPAM), completing on time with 45% cost
+  reduction. Built with Java, Swing, AWS, and MSSQL.
+- Automated error handling for our REST API services, reducing one
+  client's support ticket rate by 80%.`}</pre>
+      <p>
+        Generalist-engineer roles at tech companies tend to value the
+        signal that you have moved between stacks. The woven approach
+        carries that signal more naturally than a separate skills list.
+      </p>
+
+      <h3>Approach 3: split hands-on from working knowledge</h3>
+      <p>
+        When you have real experience in a language but are not currently
+        sharp in it, splitting your list into two tiers is more honest
+        than dropping the language entirely. Useful when applying to a
+        role whose primary language is one you have used in the past but
+        not recently.
+      </p>
+      <pre>{`Languages and Technologies
+- Languages:               JavaScript, Java, HTML/CSS, SQL
+- Technologies:            React.js, Bootstrap, AWS
+- Working knowledge of:    Ruby, Rails, PHP`}</pre>
+      <p>
+        Two rules across all three approaches. First, do not rate yourself
+        with words like &ldquo;expert&rdquo; or &ldquo;proficient.&rdquo;
+        Recruiters who have grilled self-described experts on language
+        depth have learned to discount the rating. Second, match the exact
+        spelling from the job description: &ldquo;React,&rdquo; not
+        &ldquo;ReactJS&rdquo;; &ldquo;PostgreSQL,&rdquo; not
+        &ldquo;Postgres.&rdquo; This is about clarity for the human
+        scanner, not parser keyword matching.
+      </p>
+
+      <AnchorHeading as="h2" id="7-github">
+        7. GitHub as a portfolio
       </AnchorHeading>
       <p>
         GitHub is the public surface that receives the most scrutiny from
@@ -306,8 +444,8 @@ sole backend engineer on a 4-person class project team.`}</pre>
         claim.
       </p>
 
-      <AnchorHeading as="h2" id="7-linkedin">
-        7. LinkedIn for SWE: inbound before outbound
+      <AnchorHeading as="h2" id="8-linkedin">
+        8. LinkedIn for SWE: inbound before outbound
       </AnchorHeading>
       <p>
         LinkedIn&rsquo;s primary value for a new-grad SWE candidate is
@@ -355,8 +493,8 @@ sole backend engineer on a 4-person class project team.`}</pre>
         optimize for being found, not for reaching out.
       </p>
 
-      <AnchorHeading as="h2" id="8-public-artifacts">
-        8. Public artifacts: the narrative layer
+      <AnchorHeading as="h2" id="9-public-artifacts">
+        9. Public artifacts: the narrative layer
       </AnchorHeading>
       <p>
         A public artifact is any piece of work that lives at a public URL,
@@ -399,8 +537,8 @@ sole backend engineer on a 4-person class project team.`}</pre>
         time a hiring manager searches for you.
       </p>
 
-      <AnchorHeading as="h2" id="9-connecting-the-surfaces">
-        9. Connecting the four surfaces
+      <AnchorHeading as="h2" id="10-connecting-the-surfaces">
+        10. Connecting the four surfaces
       </AnchorHeading>
       <p>
         Resume, GitHub, LinkedIn, and public artifact are four angles on the
@@ -428,7 +566,7 @@ sole backend engineer on a 4-person class project team.`}</pre>
         an asset.
       </p>
 
-      <AnchorHeading as="h2" id="10-exercises">10. Exercises</AnchorHeading>
+      <AnchorHeading as="h2" id="11-exercises">11. Exercises</AnchorHeading>
       <p>Work these before or during section this week.</p>
 
       <Exercise n={1}>
@@ -444,12 +582,13 @@ sole backend engineer on a 4-person class project team.`}</pre>
 
       <Exercise n={2}>
         <p>
-          Paste a real job description for a role you plan to apply to into a
-          plain text editor. Highlight every technology name and action verb.
-          Compare the highlighted list against your resume. List the three
-          largest keyword gaps. For each gap, write one sentence explaining
-          whether the gap reflects a missing skill, a skill you have but did
-          not name, or a skill you have but named differently from the JD.
+          Decide which of the three Languages and Technologies approaches
+          fits your current resume best. Write one paragraph defending the
+          choice against the other two. Then refactor your current Skills
+          or Technologies section to follow that approach: cut self-rated
+          expertise, drop trivial tools, match the exact spelling of the
+          technologies named in one real job description you plan to apply
+          to.
         </p>
       </Exercise>
 
@@ -484,7 +623,7 @@ sole backend engineer on a 4-person class project team.`}</pre>
         </p>
       </Exercise>
 
-      <AnchorHeading as="h2" id="11-going-deeper">11. Going deeper</AnchorHeading>
+      <AnchorHeading as="h2" id="12-going-deeper">12. Going deeper</AnchorHeading>
       <ul>
         <li>
           <strong>Section this week.</strong> The section worksheet asks you to
@@ -517,9 +656,17 @@ sole backend engineer on a 4-person class project team.`}</pre>
 
       <Takeaways>
         <li>
-          An ATS scores keyword overlap before any human reads your resume. Use
-          the job description&rsquo;s exact technology names, keep formatting
-          single-column, and audit for keyword gaps before every submission.
+          The ATS is a queue, not a filter. Applications are sorted by date
+          and read by a human (an inbound sourcer or recruiter) in 10-15
+          seconds per resume. Write for that human, not for a parser that
+          does not exist.
+        </li>
+        <li>
+          Six roles staff the pipeline: hiring manager, recruiter, sourcer,
+          inbound sourcer, recruitment coordinator, interview panel. The
+          recruiter and inbound sourcer are who you write your resume for;
+          they are looking for a clear match to a five-item checklist the
+          hiring manager handed them.
         </li>
         <li>
           The 30-second human read starts at the top third of the first page.
@@ -531,6 +678,13 @@ sole backend engineer on a 4-person class project team.`}</pre>
           (ownership verb plus technology), at what scale (team, data, users,
           time), and with what result (metric before and after, or a scoped
           concrete claim).
+        </li>
+        <li>
+          Pick one of three Languages and Technologies layouts and commit:
+          a separate section, woven into work experience, or split into
+          hands-on plus working-knowledge tiers. Drop self-rated expertise,
+          drop trivial tools, match the exact spelling from the job
+          description.
         </li>
         <li>
           GitHub, LinkedIn, and at least one public artifact should tell the
@@ -565,6 +719,20 @@ sole backend engineer on a 4-person class project team.`}</pre>
           concrete public work can partially bypass those filters.
         </p>
         <p>
+          Orosz, Gergely. <em>The Tech Resume Inside Out</em>. 2020.{" "}
+          <a href="https://thetechresume.com/" target="_blank" rel="noopener noreferrer">
+            thetechresume.com
+          </a>
+          . The reference text on tech resumes, built from interviews with
+          12+ tech recruiters across Amazon, Google, Microsoft, Uber,
+          Booking.com, and Silicon Valley startups. Sample chapters cover
+          the hiring pipeline (the six recruitment roles, ATS myths,
+          referrals) and resume structure (work-experience layout, three
+          approaches to Languages and Technologies, the senior structure).
+          The source of every recruiter quote and the L&amp;T before-and-after
+          examples in this reading.
+        </p>
+        <p>
           McKenzie, Patrick. &ldquo;Don&rsquo;t Call Yourself A Programmer,
           And Other Career Advice.&rdquo; 2011.{" "}
           <a href="https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/">
@@ -590,4 +758,4 @@ sole backend engineer on a 4-person class project team.`}</pre>
 }
 
 export const wk02ReadingSearchBody =
-  "resume keyword screen ATS applicant tracking system 30-second read accomplishment bullet action verb scale result quantify one page section order GitHub portfolio README five-question test pinned projects LinkedIn headline skills inbound discovery public artifact project narrative positioning problem decision result Week 2 reading landing the offer SWE job search senior CS students";
+  "resume ATS applicant tracking system myth queue not filter human pipeline recruiter inbound sourcer hiring manager interview panel 30-second read accomplishment bullet action verb scale result quantify one page section order Languages and Technologies three approaches separate woven hands-on working knowledge GitHub portfolio README five-question test pinned projects LinkedIn headline skills inbound discovery public artifact project narrative positioning problem decision result Orosz Tech Resume Inside Out Week 2 reading landing the offer SWE job search senior CS students";

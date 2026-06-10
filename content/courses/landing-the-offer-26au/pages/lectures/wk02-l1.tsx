@@ -6,10 +6,11 @@ const spec: LectureSpec = {
   date: "Week 2, Lecture 1",
   week: 2,
   topics: [
-    "ATS keyword screen: how parsers score your resume against the job description",
+    "The ATS myth, and the human pipeline that actually runs (Orosz 2020)",
+    "Six roles in recruitment: hiring manager, recruiter, sourcer, inbound sourcer, coordinator, interview panel",
     "The 30-second human read: visual hierarchy and the top third of the page",
     "Accomplishment bullets: action verb, scale, and result",
-    "Length and structure: one page, section order, skills formatting",
+    "Languages and Technologies: three layouts and when to use each",
   ],
   slidesHref: "/c/landing-the-offer-26au/slides/wk02-l1.pdf",
   readings: [
@@ -19,14 +20,19 @@ const spec: LectureSpec = {
     },
     {
       title:
+        "Gergely Orosz: The Tech Resume Inside Out (sample chapters 2 and 5)",
+      href: "https://thetechresume.com/",
+    },
+    {
+      title:
         "Yangshun Tay: Practical guide to writing FAANG-ready software engineer resumes",
       href: "https://www.techinterviewhandbook.org/resume/",
     },
   ],
   followups: [
+    "Orosz (2020) interviews tech recruiters who say no ATS filters on resume content. What advice you have read online would you now discard, and what does the truthful pipeline change about how you write the top third of your resume?",
     "Take one bullet from your current resume draft and apply the three-question test: what did you do, at what scale, with what result. If you cannot answer all three, what information would you need to gather to complete it?",
-    "Tay (2023) recommends quantifying every achievement. Find a project bullet where you lack a concrete metric. What proxy measure (team size, time pressure, data volume, adoption count) would make the bullet more specific without being misleading?",
-    "Paste a job description for a role you want into a plain text editor and highlight every technology name and action verb. Count how many appear in your resume. Which three gaps would have the highest impact if you closed them?",
+    "Pick one of the three Languages and Technologies layouts from Orosz: separate section, woven into work experience, or split into hands-on plus working-knowledge. Defend your choice in three sentences against the other two for your specific situation.",
     "Compare the action verb 'helped implement' to 'implemented' for the same piece of work. What different seniority signals does each send to a recruiter scanning in 30 seconds? Write a version of a bullet you own using the stronger verb.",
     "What does your resume look like when printed in black and white at 10pt font? Are section headers distinguishable from bullet text? Is date alignment consistent? List two formatting changes you would make based on this audit.",
   ],
@@ -37,4 +43,4 @@ export function Wk02L1() {
 }
 
 export const wk02L1SearchBody =
-  "resume ATS keyword screen applicant tracking system 30-second human read accomplishment bullet action verb scale result quantify length one page section order skills formatting recruiter hiring manager Week 2 Lecture 1 landing the offer SWE job search";
+  "resume ATS myth queue not filter human pipeline recruiter inbound sourcer hiring manager interview panel six roles 30-second human read accomplishment bullet action verb scale result Languages and Technologies three approaches Orosz Tech Resume Inside Out Week 2 Lecture 1 landing the offer SWE job search";
