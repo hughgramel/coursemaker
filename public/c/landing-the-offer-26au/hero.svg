@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="1200" height="400" fill="#f8f8fb"/>
+
+  <!-- ── LEFT SIDE: Front door / funnel path ─────────────────────────── -->
+
+  <!-- Section label -->
+  <text x="240" y="38" text-anchor="middle" font-size="13" font-weight="600" fill="#7253ed" letter-spacing="0.04em">FRONT DOOR</text>
+
+  <!-- Funnel shape (wide at top, narrow at bottom) -->
+  <!-- Outer funnel outline -->
+  <path d="M100,60 L380,60 L290,200 L150,200 Z" fill="#7253ed" fill-opacity="0.10" stroke="#7253ed" stroke-width="2"/>
+
+  <!-- Candidate icons (5 generic person silhouettes in the top of the funnel) -->
+  <!-- Person 1 -->
+  <circle cx="150" cy="85" r="9" fill="#7253ed" fill-opacity="0.6"/>
+  <path d="M143,110 Q150,105 157,110 L157,130 L143,130 Z" fill="#7253ed" fill-opacity="0.6"/>
+
+  <!-- Person 2 -->
+  <circle cx="192" cy="82" r="9" fill="#7253ed" fill-opacity="0.6"/>
+  <path d="M185,107 Q192,102 199,107 L199,127 L185,127 Z" fill="#7253ed" fill-opacity="0.6"/>
+
+  <!-- Person 3 (center, slightly forward) -->
+  <circle cx="236" cy="79" r="9" fill="#7253ed"/>
+  <path d="M229,104 Q236,99 243,104 L243,124 L229,124 Z" fill="#7253ed"/>
+
+  <!-- Person 4 -->
+  <circle cx="279" cy="82" r="9" fill="#7253ed" fill-opacity="0.6"/>
+  <path d="M272,107 Q279,102 286,107 L286,127 L272,127 Z" fill="#7253ed" fill-opacity="0.6"/>
+
+  <!-- Person 5 -->
+  <circle cx="321" cy="85" r="9" fill="#7253ed" fill-opacity="0.4"/>
+  <path d="M314,110 Q321,105 328,110 L328,130 L314,130 Z" fill="#7253ed" fill-opacity="0.4"/>
+
+  <!-- Narrowing funnel neck: fewer candidates -->
+  <path d="M190,200 L250,200 L240,270 L200,270 Z" fill="#7253ed" fill-opacity="0.12" stroke="#7253ed" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- One surviving candidate at funnel exit -->
+  <circle cx="220" cy="295" r="9" fill="#7253ed"/>
+  <path d="M213,316 Q220,311 227,316 L227,335 L213,335 Z" fill="#7253ed"/>
+
+  <!-- Arrow from funnel exit toward offer -->
+  <line x1="231" y1="315" x2="500" y2="315" stroke="#7253ed" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="500,309 514,315 500,321" fill="#7253ed"/>
+
+  <!-- Tiny rejection marks on the sides of the funnel -->
+  <text x="102" y="175" font-size="11" fill="#d93c3c" font-weight="700">✕</text>
+  <text x="352" y="175" font-size="11" fill="#d93c3c" font-weight="700">✕</text>
+  <text x="130" y="230" font-size="11" fill="#d93c3c" font-weight="700">✕</text>
+  <text x="323" y="230" font-size="11" fill="#d93c3c" font-weight="700">✕</text>
+
+  <!-- Annotation: ATS / screen / interview loop -->
+  <text x="86" y="160" font-size="10" fill="#7253ed" fill-opacity="0.7" text-anchor="middle">apply</text>
+  <text x="86" y="172" font-size="10" fill="#7253ed" fill-opacity="0.7" text-anchor="middle">online</text>
+  <text x="375" y="160" font-size="10" fill="#7253ed" fill-opacity="0.7" text-anchor="start">screen</text>
+  <text x="375" y="172" font-size="10" fill="#7253ed" fill-opacity="0.7" text-anchor="start">loops</text>
+  <text x="220" y="265" font-size="10" fill="#7253ed" fill-opacity="0.8" text-anchor="middle">offer?</text>
+
+
+  <!-- ── CENTER DIVIDER ───────────────────────────────────────────────── -->
+  <line x1="540" y1="30" x2="540" y2="370" stroke="#cccccc" stroke-width="1" stroke-dasharray="3,5"/>
+
+  <!-- VS label -->
+  <rect x="517" y="185" width="46" height="22" rx="11" fill="#eeecfb" stroke="#7253ed" stroke-width="1"/>
+  <text x="540" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="#7253ed">OR</text>
+
+
+  <!-- ── RIGHT SIDE: Side door path ──────────────────────────────────── -->
+
+  <!-- Section label -->
+  <text x="850" y="38" text-anchor="middle" font-size="13" font-weight="600" fill="#10ac7d" letter-spacing="0.04em">SIDE DOOR</text>
+
+  <!-- A single person walking a curved path, bypassing the crowd -->
+  <!-- Path line (bypass arc) -->
+  <path d="M620,340 C660,260 720,220 780,190 C840,160 880,150 920,170 C960,190 980,230 980,270" fill="none" stroke="#10ac7d" stroke-width="2.5" stroke-dasharray="7,4"/>
+
+  <!-- Waypoint 1: Open Source -->
+  <circle cx="700" cy="215" r="22" fill="#10ac7d" fill-opacity="0.12" stroke="#10ac7d" stroke-width="1.5"/>
+  <text x="700" y="211" text-anchor="middle" font-size="9" fill="#10ac7d" font-weight="600">open</text>
+  <text x="700" y="222" text-anchor="middle" font-size="9" fill="#10ac7d" font-weight="600">source</text>
+
+  <!-- Waypoint 2: Unpaid stint / project -->
+  <circle cx="810" cy="167" r="22" fill="#10ac7d" fill-opacity="0.12" stroke="#10ac7d" stroke-width="1.5"/>
+  <text x="810" y="163" text-anchor="middle" font-size="9" fill="#10ac7d" font-weight="600">find a</text>
+  <text x="810" y="174" text-anchor="middle" font-size="9" fill="#10ac7d" font-weight="600">problem</text>
+
+  <!-- Waypoint 3: Network / referred -->
+  <circle cx="920" cy="155" r="22" fill="#10ac7d" fill-opacity="0.12" stroke="#10ac7d" stroke-width="1.5"/>
+  <text x="920" y="151" text-anchor="middle" font-size="9" fill="#10ac7d" font-weight="600">warm</text>
+  <text x="920" y="162" text-anchor="middle" font-size="9" fill="#10ac7d" font-weight="600">referral</text>
+
+  <!-- Side-door walker silhouette (at waypoint 1 entrance) -->
+  <circle cx="630" cy="310" r="9" fill="#10ac7d"/>
+  <path d="M623,331 Q630,326 637,331 L637,350 L623,350 Z" fill="#10ac7d"/>
+
+  <!-- Walking motion lines -->
+  <line x1="616" y1="323" x2="608" y2="323" stroke="#10ac7d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="615" y1="330" x2="607" y2="332" stroke="#10ac7d" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Arrow on the bypass path toward offer -->
+  <line x1="980" y1="270" x2="1030" y2="290" stroke="#10ac7d" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="1030,284 1046,291 1030,297" fill="#10ac7d"/>
+
+
+  <!-- ── OFFER LETTER (shared destination) ──────────────────────────── -->
+
+  <!-- Offer envelope / letter shape -->
+  <rect x="1055" y="270" width="110" height="80" rx="6" fill="white" stroke="#7253ed" stroke-width="2.5"/>
+  <!-- Envelope flap line -->
+  <polyline points="1055,276 1110,316 1165,276" fill="none" stroke="#7253ed" stroke-width="2"/>
+  <!-- Letter lines inside (decorative) -->
+  <line x1="1073" y1="325" x2="1147" y2="325" stroke="#7253ed" stroke-width="1.5" stroke-opacity="0.4"/>
+  <line x1="1073" y1="335" x2="1135" y2="335" stroke="#7253ed" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Offer label -->
+  <text x="1110" y="302" text-anchor="middle" font-size="11" font-weight="700" fill="#7253ed">OFFER</text>
+
+  <!-- Both arrows arriving at the offer letter box -->
+  <!-- front door arrow already drawn (ends ~514,315), extend to box -->
+  <line x1="515" y1="315" x2="1052" y2="315" stroke="#7253ed" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- side door arrow already drawn (ends ~1046,291) -->
+
+
+  <!-- ── BOTTOM CAPTION STRIP ────────────────────────────────────────── -->
+  <rect x="0" y="378" width="1200" height="22" fill="#f0eefb"/>
+  <text x="240" y="393" text-anchor="middle" font-size="11" fill="#7253ed" fill-opacity="0.85">Most candidates queue at the front door: high competition, low signal</text>
+  <text x="850" y="393" text-anchor="middle" font-size="11" fill="#10ac7d" fill-opacity="0.85">The side door: build signal first, then approach, fewer competitors</text>
+
+</svg>
