@@ -394,6 +394,10 @@ pnpm new-course --slug <slug> --title "<title>" \
 
 Then immediately edit `content/courses/<slug>/course.config.ts` to:
 - Set `hero` to `{ src: "/c/<slug>/hero.svg", alt: "<one-line concept>" }`.
+- Confirm `weeks: <N>` is present on the `SiteConfig`. The scaffolder
+  writes it from `--weeks`, but verify. Without it, the homepage course
+  card falls back to "<count> pages" instead of "<N>-week course" (see
+  `app/page.tsx`).
 - Set up ONE navGroup with: Home, Tasks, Syllabus, Lectures, Sections,
   Assignments, Readings. **No `children` arrays** — the sidebar is flat
   (see step 5d). **No Staff page, no Staff nav item.** Until a real

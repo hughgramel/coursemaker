@@ -5,6 +5,7 @@ export const config: SiteConfig = {
   title: "Landing the Offer",
   fullTitle: "Landing the Offer: SWE Job Search for Senior CS Students",
   term: "Autumn 2026",
+  weeks: 10,
   description: "A ten-week course for senior CS students aiming at a new-grad software engineering offer: interview prep, system design, behavioral, side-door paths, negotiation.",
   hero: { src: "/c/landing-the-offer-26au/hero.svg", alt: "A doorway and a side door on the same building, two paths to the same offer" },
   // Flat sidebar. NO children/dropdowns. Each parent links to a real

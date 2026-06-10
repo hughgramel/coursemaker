@@ -99,6 +99,7 @@ export const config: SiteConfig = {
   title: ${JSON.stringify(title)},
   fullTitle: ${JSON.stringify(fullTitle)},
   term: ${JSON.stringify(term)},
+  weeks: ${weeks},
   description: ${JSON.stringify(description)},
   ${heroImage
     ? `hero: { src: ${JSON.stringify(heroImage)}, alt: ${JSON.stringify(fullTitle)} },`

@@ -5,6 +5,7 @@ export const config: SiteConfig = {
   title: "Looksmaxxing",
   fullTitle: "Looksmaxxing: A Ten-Week Evidence-Based Self-Improvement Course",
   term: "Autumn 2026",
+  weeks: 10,
   description:
     "Ten weeks of research-backed self-improvement for men aged 18 to 30. Skin, hair, body, dental, style, posture, sleep. No surgery, no pseudoscience, no rabbit holes.",
   hero: { src: "/c/looksmaxxing-26au/hero.svg", alt: "A man's silhouette framed by the seven pillars of softmaxxing." },
