@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { courses } from "@/content/courses";
 
-const REPO_URL = "https://github.com/hughgramel/coursemaker";
+const REPO_URL = "https://github.com/hughgramel/generate-course";
 
 function GitHubIcon({ size = 22 }: { size?: number }) {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
     <div className="min-h-screen bg-[var(--color-sidebar)]">
       <header className="border-b border-[var(--color-border)] bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
-          <div className="text-xl font-medium text-[var(--color-heading)]">coursemaker</div>
+          <div className="text-xl font-medium text-[var(--color-heading)]">generate-course</div>
           <nav className="flex items-center gap-4 sm:gap-6 text-sm">
             <a
               href={REPO_URL}
@@ -62,7 +62,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="text-[var(--color-primary)] hover:underline"
           >
-            hughgramel/coursemaker
+            hughgramel/generate-course
           </a>
         </p>
 

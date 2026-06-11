@@ -6,7 +6,7 @@ export default function TemplatePage() {
       <header className="bg-white border-b border-[var(--color-border)] sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-6 h-[60px] flex items-center justify-between">
           <Link href="/" className="text-lg font-medium text-[var(--color-heading)] hover:text-[var(--color-primary)]">
-            ← coursemaker
+            ← generate-course
           </Link>
           <span className="text-sm text-[var(--color-muted)]">Create a new course</span>
         </div>
@@ -37,7 +37,7 @@ export default function TemplatePage() {
         <h2 id="claude">2. Prompt for Claude Code</h2>
         <p>Paste this into Claude Code (or any agent that can run shell + write files):</p>
         <blockquote>
-          <strong>Goal:</strong> add a new course to this coursemaker repo for
+          <strong>Goal:</strong> add a new course to this generate-course repo for
           <em> &lt;Course code&gt; — &lt;Course name&gt;, &lt;term&gt;</em>.
           <br />
           <strong>Steps:</strong>

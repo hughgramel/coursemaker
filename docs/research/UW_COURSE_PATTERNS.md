@@ -96,7 +96,7 @@ UW slides we sampled (CSE 446, 457):
 - Generally 30-50 slides per 50-minute lecture
 
 These look reproducible with **Marp** (Markdown → PDF/HTML) using a custom
-theme that matches the coursemaker palette.
+theme that matches the generate-course palette.
 
 ## What we'll build into the template
 
@@ -107,7 +107,5 @@ Based on the above:
   primitives with prefilled section heads
 - Each course owns one `hero.svg` (custom art) instead of a name picked from a
   global animated registry
-- A Marp theme `coursemaker.css` to render slides in the course palette
-- Skills:
-  - `/coursemaker-create <topic>` — research + 12-week scope + fan-out per week
-  - `/coursemaker-slides <course> <lecture>` — slide deck for one lecture
+- A Marp theme (`themes/coursemaker.css`) to render slides in the course palette. The file name retains the old `coursemaker` identifier because every generated slide's frontmatter references `theme: coursemaker`; renaming would require touching every slide file across every course.
+- One skill: `/generate-course <topic>` — research, write the curriculum graph, source library, glossary, then fan out per-week subagents.

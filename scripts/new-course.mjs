@@ -17,7 +17,7 @@
  *   --description  Optional. Defaults to a generic blurb.
  *   --weeks        Optional. Number of instructional weeks (6-12, default 10).
  *                  Currently informational only — the generated home page is
- *                  empty by default; coursemaker-create populates it.
+ *                  empty by default; generate-course populates it.
  *   --hero-image   Optional. Path or URL of the course hero (SVG preferred).
  *   --force        Overwrite the directory if it already exists.
  *
@@ -120,7 +120,7 @@ export const config: SiteConfig = {
     },
   ],
   footer: {
-    lines: ["Built with coursemaker."],
+    lines: ["Built with generate-course."],
   },
 };
 `;
@@ -133,7 +133,7 @@ import { config } from "../course.config";
 
 const base = \`/c/\${config.slug}\`;
 
-// coursemaker-create fills this with real week entries. Until then the
+// generate-course fills this with real week entries. Until then the
 // home page just shows the hero + title + syllabus link.
 const weeks: CourseModule[] = [];
 

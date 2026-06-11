@@ -11,9 +11,9 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "coursemaker: generate a course on anything",
+  title: "generate-course: a publishable course site from one prompt",
   description:
-    "Generate a complete, college-level course on anything. Coursemaker scaffolds the syllabus, weekly readings, lectures, slides, sections, and assignments end to end.",
+    "Turn a single topic prompt into a publishable course site. Scaffolds the syllabus, weekly readings, lectures, slides, sections, assignments, and a per-course glossary end to end.",
 };
 
 export const viewport: Viewport = {

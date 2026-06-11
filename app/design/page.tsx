@@ -32,7 +32,7 @@ export default function DesignLibraryPage() {
       <header className="bg-white border-b border-[var(--color-border)] sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-6 h-[60px] flex items-center justify-between">
           <Link href="/" className="text-lg font-medium text-[var(--color-heading)] hover:text-[var(--color-primary)]">
-            ← coursemaker
+            ← generate-course
           </Link>
           <span className="text-sm text-[var(--color-muted)]">Design library</span>
         </div>
@@ -41,7 +41,7 @@ export default function DesignLibraryPage() {
       <main className="max-w-5xl mx-auto px-6 py-12 prose">
         <AnchorHeading as="h1" id="design-library">Design library</AnchorHeading>
         <p>
-          Every token, type style and component used across the coursemaker
+          Every token, type style and component used across the generate-course
           template. Modeled after the &ldquo;Just the Docs&rdquo; Jekyll theme used
           by the original CSE 457 site.
         </p>
@@ -173,7 +173,7 @@ export default function DesignLibraryPage() {
         <p>
           Each course owns a single piece of static hero art (usually an SVG)
           stored under <code>content/courses/&lt;slug&gt;/</code> and referenced
-          from its <code>course.config.ts</code>. The <code>coursemaker-create</code>{" "}
+          from its <code>course.config.ts</code>. The <code>generate-course</code>{" "}
           skill commissions or generates one as part of new-course setup.
         </p>
 

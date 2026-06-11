@@ -15,7 +15,7 @@ import { useEffect, useId, useRef, useState } from "react";
  *       B -->|no| D[Drop]
  *   `} />
  *
- * Themed to match the coursemaker palette (purple primary, faint grey
+ * Themed to match the generate-course palette (purple primary, faint grey
  * borders, system-ui font). Errors render inline as a code block.
  */
 export function Mermaid({ chart, alt }: { chart: string; alt?: string }) {
