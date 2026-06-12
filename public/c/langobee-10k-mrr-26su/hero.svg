@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <!-- Phase band fills: very muted tints of palette colors + neutrals -->
+    <linearGradient id="band1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2869e6" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#2869e6" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="band2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10ac7d" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#10ac7d" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="band3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7253ed" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#7253ed" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="band4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2869e6" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#2869e6" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="band5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7253ed" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#7253ed" stop-opacity="0.03"/>
+    </linearGradient>
+    <!-- Subtle fill under the stepped line -->
+    <linearGradient id="linefill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2869e6" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#2869e6" stop-opacity="0.01"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="#fafaf9"/>
+
+  <!-- ── Phase band columns (5 phases across 12 weeks) ─────────────────── -->
+  <!-- Phase 1: Foundations  weeks 1–2   x: 100 → 263.6 -->
+  <rect x="100" y="40" width="163.6" height="260" fill="url(#band1)" rx="2"/>
+  <!-- Phase 2: Retention    weeks 3–4   x: 263.6 → 427.2 -->
+  <rect x="263.6" y="40" width="163.6" height="260" fill="url(#band2)" rx="2"/>
+  <!-- Phase 3: Monetization weeks 5–7   x: 427.2 → 672.6 -->
+  <rect x="427.2" y="40" width="245.4" height="260" fill="url(#band3)" rx="2"/>
+  <!-- Phase 4: Distribution weeks 8–10  x: 672.6 → 918 -->
+  <rect x="672.6" y="40" width="245.4" height="260" fill="url(#band4)" rx="2"/>
+  <!-- Phase 5: Synthesis    weeks 11–12 x: 918 → 1100 -->
+  <rect x="918" y="40" width="182" height="260" fill="url(#band5)" rx="2"/>
+
+  <!-- ── Axis baseline ─────────────────────────────────────────────────── -->
+  <line x1="100" y1="300" x2="1100" y2="300" stroke="#c8c8c4" stroke-width="1"/>
+  <!-- Left axis -->
+  <line x1="100" y1="40" x2="100" y2="300" stroke="#c8c8c4" stroke-width="1"/>
+
+  <!-- ── Week tick marks on x-axis ─────────────────────────────────────── -->
+  <!-- 12 ticks at x = 100, 181.8, 263.6, 345.4, 427.2, 509, 590.8, 672.6, 754.4, 836.2, 918, 1000 -->
+  <g stroke="#b0b0aa" stroke-width="1">
+    <line x1="100"   y1="300" x2="100"   y2="308"/>
+    <line x1="181.8" y1="300" x2="181.8" y2="308"/>
+    <line x1="263.6" y1="300" x2="263.6" y2="308"/>
+    <line x1="345.4" y1="300" x2="345.4" y2="308"/>
+    <line x1="427.2" y1="300" x2="427.2" y2="308"/>
+    <line x1="509"   y1="300" x2="509"   y2="308"/>
+    <line x1="590.8" y1="300" x2="590.8" y2="308"/>
+    <line x1="672.6" y1="300" x2="672.6" y2="308"/>
+    <line x1="754.4" y1="300" x2="754.4" y2="308"/>
+    <line x1="836.2" y1="300" x2="836.2" y2="308"/>
+    <line x1="918"   y1="300" x2="918"   y2="308"/>
+    <line x1="1000"  y1="300" x2="1000"  y2="308"/>
+  </g>
+
+  <!-- ── Phase band dividers (subtle vertical rules) ───────────────────── -->
+  <g stroke="#d4d4cf" stroke-width="0.75" stroke-dasharray="3,4">
+    <line x1="263.6" y1="44" x2="263.6" y2="296"/>
+    <line x1="427.2" y1="44" x2="427.2" y2="296"/>
+    <line x1="672.6" y1="44" x2="672.6" y2="296"/>
+    <line x1="918"   y1="44" x2="918"   y2="296"/>
+  </g>
+
+  <!-- ── Phase label lines (tiny eyebrow ticks at top) ─────────────────── -->
+  <!-- Foundations midpoint x ≈ 181.8, Retention ≈ 345.4, Monetization ≈ 549.9, Distribution ≈ 795.3, Synthesis ≈ 1009 -->
+  <g fill="#9e9e9a" font-size="9.5" letter-spacing="0.08em" text-anchor="middle">
+    <text x="181.8" y="35" font-style="italic">Foundations</text>
+    <text x="345.4" y="35" font-style="italic">Retention</text>
+    <text x="549.9" y="35" font-style="italic">Monetization</text>
+    <text x="795.3" y="35" font-style="italic">Distribution</text>
+    <text x="1009"  y="35" font-style="italic">Synthesis</text>
+  </g>
+
+  <!-- ── Stepped line path ──────────────────────────────────────────────── -->
+  <!--
+    Stepped MRR growth across 12 weeks.
+    y=300 → $0, y=40 → $10K   (range = 260px)
+    Approximate stair-step profile (MRR values in $):
+      W1: $0      y=300
+      W2: $200    y=294.8
+      W3: $500    y=287
+      W4: $1000   y=274
+      W5: $1800   y=253.2
+      W6: $2800   y=227.1
+      W7: $4000   y=195.6
+      W8: $5500   y=156.7
+      W9: $6800   y=123.1
+      W10: $8000  y=91.8
+      W11: $9000  y=65.8
+      W12: $10000 y=40
+    Each week: horizontal hold, then vertical rise at next week mark.
+  -->
+
+  <!-- Fill area under the line -->
+  <path d="
+    M 100,300
+    H 181.8 V 294.8
+    H 263.6 V 287
+    H 345.4 V 274
+    H 427.2 V 253.2
+    H 509   V 227.1
+    H 590.8 V 195.6
+    H 672.6 V 156.7
+    H 754.4 V 123.1
+    H 836.2 V 91.8
+    H 918   V 65.8
+    H 1000  V 40
+    H 1000  V 300
+    Z
+  " fill="url(#linefill)"/>
+
+  <!-- The stepped line itself -->
+  <path d="
+    M 100,300
+    H 181.8 V 294.8
+    H 263.6 V 287
+    H 345.4 V 274
+    H 427.2 V 253.2
+    H 509   V 227.1
+    H 590.8 V 195.6
+    H 672.6 V 156.7
+    H 754.4 V 123.1
+    H 836.2 V 91.8
+    H 918   V 65.8
+    H 1000  V 40
+  "
+    fill="none"
+    stroke="#2869e6"
+    stroke-width="2"
+    stroke-linejoin="miter"
+    stroke-linecap="square"/>
+
+  <!-- ── Y-axis labels ──────────────────────────────────────────────────── -->
+  <g fill="#6b6b66" font-size="11.5" text-anchor="end" font-style="italic">
+    <text x="90" y="303">$0</text>
+    <text x="90" y="43">$10K</text>
+  </g>
+  <!-- Mid-axis tick hint -->
+  <line x1="96" y1="170" x2="104" y2="170" stroke="#c8c8c4" stroke-width="0.75"/>
+  <text x="90" y="173.5" fill="#aaa9a4" font-size="10" text-anchor="end" font-style="italic">$5K</text>
+
+  <!-- ── Hexagon endpoint marker ────────────────────────────────────────── -->
+  <!--
+    Flat-top hexagon centered at (1000, 40), radius ~7.
+    Vertices for flat-top hex (r=7):
+      Angles 0°, 60°, 120°, 180°, 240°, 300° from center
+      but rotated 90° for pointy-top: 30°, 90°, 150°, 210°, 270°, 330°
+    Pointy-top (r=7): approx
+      (1000+7*cos30, 40-7*sin30) = (1006.06, 36.5)
+      (1000+7*cos90, 40-7*sin90) = (1000, 33)
+      (1000+7*cos150, 40-7*sin150) = (993.94, 36.5)
+      (1000+7*cos210, 40-7*sin210) = (993.94, 43.5)
+      (1000+7*cos270, 40-7*sin270) = (1000, 47)
+      (1000+7*cos330, 40-7*sin330) = (1006.06, 43.5)
+  -->
+  <polygon
+    points="1006.06,36.5 1000,33 993.94,36.5 993.94,43.5 1000,47 1006.06,43.5"
+    fill="#2869e6"
+    fill-opacity="0.15"
+    stroke="#2869e6"
+    stroke-width="1.5"
+    stroke-linejoin="round"/>
+
+  <!-- Small dot at start -->
+  <circle cx="100" cy="300" r="2.5" fill="#2869e6" fill-opacity="0.5"/>
+
+</svg>
