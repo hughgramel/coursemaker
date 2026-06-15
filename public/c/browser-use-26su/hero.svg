@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <rect width="1200" height="400" fill="white"/>
+
+  <!-- Browser window -->
+  <rect x="60" y="60" width="460" height="280" rx="8" ry="8" fill="#f5f5f7" stroke="#d0d0d8" stroke-width="2"/>
+  <!-- Browser chrome bar -->
+  <rect x="60" y="60" width="460" height="40" rx="8" ry="8" fill="#e2e2e8" stroke="#d0d0d8" stroke-width="2"/>
+  <rect x="60" y="80" width="460" height="20" fill="#e2e2e8"/>
+  <!-- Traffic lights -->
+  <circle cx="88" cy="80" r="6" fill="#f97066"/>
+  <circle cx="108" cy="80" r="6" fill="#fbbf24"/>
+  <circle cx="128" cy="80" r="6" fill="#34d399"/>
+  <!-- URL bar -->
+  <rect x="148" y="70" width="240" height="20" rx="4" fill="white" stroke="#c0c0cc" stroke-width="1.2"/>
+  <text x="268" y="84" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#888">https://example.com</text>
+
+  <!-- Browser content area -->
+  <!-- Element 0: nav/header bar -->
+  <rect x="80" y="118" width="420" height="30" rx="4" fill="none" stroke="#7253ed" stroke-width="1.8" stroke-dasharray="4,3"/>
+  <rect x="82" y="109" width="16" height="16" rx="3" fill="#7253ed"/>
+  <text x="90" y="120" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="white">0</text>
+
+  <!-- Element 1: main image/banner -->
+  <rect x="80" y="162" width="200" height="80" rx="4" fill="none" stroke="#7253ed" stroke-width="1.8" stroke-dasharray="4,3"/>
+  <rect x="82" y="153" width="16" height="16" rx="3" fill="#7253ed"/>
+  <text x="90" y="164" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="white">1</text>
+  <!-- placeholder image lines -->
+  <line x1="92" y1="195" x2="267" y2="195" stroke="#c8c8d8" stroke-width="1.5"/>
+  <line x1="92" y1="207" x2="240" y2="207" stroke="#c8c8d8" stroke-width="1.5"/>
+  <line x1="92" y1="219" x2="255" y2="219" stroke="#c8c8d8" stroke-width="1.5"/>
+
+  <!-- Element 2: button -->
+  <rect x="80" y="258" width="100" height="30" rx="5" fill="none" stroke="#7253ed" stroke-width="1.8" stroke-dasharray="4,3"/>
+  <rect x="82" y="249" width="16" height="16" rx="3" fill="#7253ed"/>
+  <text x="90" y="260" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="white">2</text>
+  <text x="130" y="278" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#444">Submit</text>
+
+  <!-- Element 3: input field -->
+  <rect x="296" y="162" width="204" height="30" rx="4" fill="none" stroke="#7253ed" stroke-width="1.8" stroke-dasharray="4,3"/>
+  <rect x="298" y="153" width="16" height="16" rx="3" fill="#7253ed"/>
+  <text x="306" y="164" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="white">3</text>
+  <line x1="308" y1="178" x2="488" y2="178" stroke="#c8c8d8" stroke-width="1"/>
+
+  <!-- Sidebar/text block -->
+  <rect x="296" y="210" width="204" height="78" rx="4" fill="#ededf2" stroke="none"/>
+  <line x1="308" y1="228" x2="488" y2="228" stroke="#c0c0cc" stroke-width="1.3"/>
+  <line x1="308" y1="244" x2="480" y2="244" stroke="#c0c0cc" stroke-width="1.3"/>
+  <line x1="308" y1="260" x2="470" y2="260" stroke="#c0c0cc" stroke-width="1.3"/>
+  <line x1="308" y1="276" x2="488" y2="276" stroke="#c0c0cc" stroke-width="1.3"/>
+
+  <!-- LLM node in center -->
+  <rect x="510" y="148" width="180" height="104" rx="12" fill="#2869e6" stroke="none"/>
+  <!-- LLM label -->
+  <text x="600" y="194" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="26" font-weight="700" fill="white">LLM</text>
+  <text x="600" y="220" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.75)">agent</text>
+
+  <!-- Tool output / action node on right -->
+  <rect x="760" y="148" width="380" height="104" rx="10" fill="#f5f5f7" stroke="#d0d0d8" stroke-width="2"/>
+  <!-- Action content -->
+  <text x="950" y="190" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#333" font-weight="600">click(2)</text>
+  <text x="950" y="212" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#666">type(3, "search query")</text>
+  <text x="950" y="234" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#666">navigate("https://...")</text>
+
+  <!-- Label for action box -->
+  <text x="950" y="164" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#888" letter-spacing="1">TOOL CALL</text>
+
+  <!-- ARROWS -->
+
+  <!-- perceive: browser -> LLM (top arc going right) -->
+  <!-- Arrow from browser right edge to LLM left edge, curving above -->
+  <path d="M 522 148 C 522 90, 490 75, 415 70 C 340 66, 250 66, 225 70 C 180 76, 150 100, 150 108" fill="none" stroke="#10ac7d" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="150,108 143,95 157,95" fill="#10ac7d"/>
+  <!-- perceive label -->
+  <text x="340" y="54" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#10ac7d" letter-spacing="0.5">perceive</text>
+
+  <!-- decide: internal to LLM (just a label inside / implied) -->
+  <!-- We'll put "decide" below the LLM node -->
+  <text x="600" y="275" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#2869e6" letter-spacing="0.5">decide</text>
+  <!-- small downward indicator -->
+  <line x1="600" y1="252" x2="600" y2="264" stroke="#2869e6" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="600,264 595,255 605,255" fill="#2869e6"/>
+
+  <!-- act: LLM -> tool call box -->
+  <path d="M 690 200 L 758 200" fill="none" stroke="#7253ed" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="758,200 748,194 748,206" fill="#7253ed"/>
+  <!-- act label -->
+  <text x="724" y="190" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#7253ed" letter-spacing="0.5">act</text>
+
+  <!-- act result: tool call box back to browser (bottom arc) -->
+  <path d="M 760 252 C 700 280, 620 310, 540 320 C 440 330, 330 330, 260 320 C 200 310, 155 295, 155 292" fill="none" stroke="#7253ed" stroke-width="2" stroke-dasharray="6,4" stroke-linecap="round"/>
+  <polygon points="155,292 148,305 162,305" fill="#7253ed"/>
+
+  <!-- Title area -->
+  <text x="600" y="370" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" fill="#1a1a2e" letter-spacing="-0.3">Browser Use: How LLM Agents Drive the Web</text>
+</svg>
